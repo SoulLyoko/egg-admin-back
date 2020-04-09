@@ -88,10 +88,10 @@ class UploadService extends Service {
       } else {
         if (kind) {
           res = await this.ctx.model.Attachment.find({ extname: { $in: attachmentKind[`${kind}`]} }).skip(skip).limit(Number(pageSize)).sort({ createdAt: -1 }).exec()
-          count = await this.ctx.model.Attachment.count({ extname: { $in: attachmentKind[`${kind}`]} }).exec()
+          count = await this.ctx.model.Attachment.countDocuments({ extname: { $in: attachmentKind[`${kind}`]} }).exec()
         }else{
           res = await this.ctx.model.Attachment.find({}).skip(skip).limit(Number(pageSize)).sort({ createdAt: -1 }).exec()
-          count = await this.ctx.model.Attachment.count({}).exec()
+          count = await this.ctx.model.Attachment.countDocuments({}).exec()
         }
       }
     } else {
@@ -105,10 +105,10 @@ class UploadService extends Service {
       } else {
         if (kind) {
           res = await this.ctx.model.Attachment.find({extname: { $in: attachmentKind[`${kind}`]} }).sort({ createdAt: -1 }).exec()
-          count = await this.ctx.model.Attachment.count({ extname: { $in: attachmentKind[`${kind}`]} }).exec()
+          count = await this.ctx.model.Attachment.countDocuments({ extname: { $in: attachmentKind[`${kind}`]} }).exec()
         }else{
           res = await this.ctx.model.Attachment.find({}).sort({ createdAt: -1 }).exec()
-          count = await this.ctx.model.Attachment.count({}).exec()
+          count = await this.ctx.model.Attachment.countDocuments({}).exec()
         }
       }
     }

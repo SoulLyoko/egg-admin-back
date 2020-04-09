@@ -1,7 +1,7 @@
 {
-  "name": "egg-d2admin",
+  "name": "egg-admin",
   "version": "1.0.0",
-  "description": "egg-d2admin",
+  "description": "egg-admin",
   "private": true,
   "dependencies": {
     "await-stream-ready": "^1.0.0",

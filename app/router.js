@@ -3,31 +3,11 @@
  * @param {Egg.Application} app - egg application
  */
 module.exports = app => {
-  const { router, controller, jwt } = app
+  const { router, controller } = app
+  router.get('/', controller.home.index)
 
-  // role
-  // router.post('/api/role', controller.role.create)
-  // router.delete('/api/role/:id', controller.role.destroy)
-  // router.put('/api/role/:id', controller.role.update)
-  // router.get('/api/role/:id', controller.role.show)
-  // router.get('/api/role', controller.role.index)
-  router.delete('/api/role', controller.role.removes)
-  router.resources('role', '/api/role', controller.role)
-
-  // userAccess
-  router.post('/api/user/access/login', controller.userAccess.login)
-  router.get('/api/user/access/current', jwt, controller.userAccess.current)
-  router.get('/api/user/access/logout', controller.userAccess.logout)
-  router.put('/api/user/access/resetPsw', jwt, controller.userAccess.resetPsw)
-
-  // user
-  // router.post('/api/user', controller.user.create)
-  // router.delete('/api/user/:id', controller.user.destroy)
-  // router.put('/api/user/:id', controller.user.update)
-  // router.get('/api/user/:id', controller.user.show)
-  // router.get('/api/user', controller.user.index)
-  router.delete('/api/user', controller.user.removes)
-  router.resources('user', '/api/user', controller.user)
+  // genenerator
+  router.post('/api/generator', controller.gen.generator)
 
   // upload
   router.post('/api/upload', controller.upload.create)
@@ -41,4 +21,58 @@ module.exports = app => {
   router.get('/api/upload', controller.upload.index)
   router.delete('/api/upload', controller.upload.removes)
   // router.resources('upload', '/api/upload', controller.upload)
+
+  // test
+  router.resources('test', '/api/test', app.jwt, controller.test)
+  router.put('/api/test', app.jwt, controller.test.update)
+  router.delete('/api/test', app.jwt, controller.test.removes)
+
+  // token
+  router.post('/api/token', controller.token.token)
+
+  // user
+  router.resources('user', '/api/user', app.jwt, controller.user)
+  router.post('/api/user/login', controller.user.login)
+  router.put('/api/user', app.jwt, controller.user.update)
+  router.delete('/api/user', app.jwt, controller.user.removes)
+  router.put('/api/user/password', app.jwt, controller.user.resetPsw)
+  // router.get('/api/user/current', app.jwt, controller.user.current)
+
+  // menu
+  router.resources('menu', '/api/menu', app.jwt, controller.menu)
+  router.put('/api/menu', app.jwt, controller.menu.update)
+  router.delete('/api/menu', app.jwt, controller.menu.removes)
+  // router.get('/api/menu/nav', app.jwt, controller.menu.nav)
+  // router.get('/api/menu/list', app.jwt, controller.menu.list)
+  // router.get('/api/menu/permissions', app.jwt, app.jwt, controller.menu.permissions)
+  router.get('/api/sys/info', app.jwt, controller.menu.sysInfo)
+
+  // dept
+  router.resources('dept', '/api/dept', app.jwt, controller.dept)
+  // router.put('/api/dept', app.jwt, controller.dept.update)
+  // router.delete('/api/dept', app.jwt, controller.dept.removes)
+  // router.get('/api/dept/list', app.jwt, controller.dept.list)
+
+  // role
+  router.resources('role', '/api/role', app.jwt, controller.role)
+  router.put('/api/role', app.jwt, controller.role.update)
+  router.delete('/api/role', app.jwt, controller.role.removes)
+
+  // log
+  router.resources('role', '/api/log', app.jwt, controller.log)
+  router.put('/api/log', app.jwt, controller.log.update)
+  router.delete('/api/log', app.jwt, controller.log.removes)
+  // router.get('/api/log/login', app.jwt, controller.log.login)
+  // router.get('/api/log/action', app.jwt, controller.log.action)
+  // router.get('/api/log/error', app.jwt, controller.log.error)
+
+  // dict
+  router.resources('dict', '/api/dict', app.jwt, controller.dict)
+  router.put('/api/dict', app.jwt, controller.dict.update)
+  router.delete('/api/dict', app.jwt, controller.dict.removes)
+
+  // param
+  router.resources('param', '/api/param', app.jwt, controller.param)
+  router.put('/api/param', app.jwt, controller.param.update)
+  router.delete('/api/param', app.jwt, controller.param.removes)
 }

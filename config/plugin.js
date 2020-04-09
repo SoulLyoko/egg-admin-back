@@ -24,3 +24,8 @@ exports.cors = {
   enable: true,
   package: 'egg-cors',
 }
+
+exports.swaggerdoc = {
+  enable: true,
+  package: 'egg-swagger-doc',
+}
