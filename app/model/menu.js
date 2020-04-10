@@ -1,5 +1,5 @@
-module.exports = app => {
-  const mongoose = app.mongoose
+module.exports = (app) => {
+  const mongoose = app.mongoose;
   const MenuSchema = new mongoose.Schema({
     pid: { type: String, required: true },
     name: { type: String, required: true },
@@ -10,8 +10,11 @@ module.exports = app => {
     createDate: { type: Date, default: Date.now },
     parentName: { type: String, required: true },
     children: { type: Array },
-    cache: { type: Boolean, default: false }
-  })
+    cache: { type: Boolean, default: false },
+    title: { type: String },
+    path: { type: String },
+    component: { type: String }
+  });
 
-  return mongoose.model('Menu', MenuSchema)
-}
+  return mongoose.model("Menu", MenuSchema);
+};

@@ -1,0 +1,22155 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : mongodb
+ Source Server Type    : MongoDB
+ Source Server Version : 40009
+ Source Host           : localhost:27017
+ Source Schema         : egg-admin
+
+ Target Server Type    : MongoDB
+ Target Server Version : 40009
+ File Encoding         : 65001
+
+ Date: 10/04/2020 17:50:35
+*/
+
+
+// ----------------------------
+// Collection structure for attachments
+// ----------------------------
+db.getCollection("attachments").drop();
+db.createCollection("attachments");
+
+// ----------------------------
+// Documents of attachments
+// ----------------------------
+db.getCollection("attachments").insert([ {
+    _id: ObjectId("5d64e07ba2eed43df8e10147"),
+    createdAt: ISODate("2019-08-27T07:49:15.431Z"),
+    extname: ".png",
+    filename: "avatar.png",
+    url: "/uploads/5d64e07ba2eed43df8e10147.png",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("attachments").insert([ {
+    _id: ObjectId("5d64e0a4bc0e9445f05fd65a"),
+    createdAt: ISODate("2019-08-27T07:49:56.179Z"),
+    extname: ".png",
+    filename: "avatar.png",
+    url: "/uploads/5d64e0a4bc0e9445f05fd65a.png",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("attachments").insert([ {
+    _id: ObjectId("5d64e122a05337450cf4829e"),
+    createdAt: ISODate("2019-08-27T07:52:02.108Z"),
+    extname: ".png",
+    filename: "avatar.png",
+    url: "/uploads/5d64e122a05337450cf4829e.png",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("attachments").insert([ {
+    _id: ObjectId("5d64e1ba2bd233557c5a5cac"),
+    createdAt: ISODate("2019-08-27T07:54:34.255Z"),
+    extname: ".png",
+    filename: "avatar.png",
+    url: "/uploads/5d64e1ba2bd233557c5a5cac.png",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("attachments").insert([ {
+    _id: ObjectId("5d64e562ca409252d4ff78f3"),
+    createdAt: ISODate("2019-08-27T08:10:10.967Z"),
+    extname: ".png",
+    filename: "avatar.png",
+    url: "/uploads/5d64e562ca409252d4ff78f3.png",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("attachments").insert([ {
+    _id: ObjectId("5d64e56aca409252d4ff78f5"),
+    createdAt: ISODate("2019-08-27T08:10:18.396Z"),
+    extname: ".png",
+    filename: "avatar.png",
+    url: "/uploads/5d64e56aca409252d4ff78f5.png",
+    __v: NumberInt("0")
+} ]);
+
+// ----------------------------
+// Collection structure for depts
+// ----------------------------
+db.getCollection("depts").drop();
+db.createCollection("depts");
+
+// ----------------------------
+// Documents of depts
+// ----------------------------
+db.getCollection("depts").insert([ {
+    _id: ObjectId("5d2ecffb14bc4247ac00674e"),
+    pid: "0",
+    children: [ ],
+    name: "人人开源集团",
+    sort: NumberInt("0"),
+    createDate: ISODate("2018-12-28T22:20:17.000Z"),
+    parentName: "一级部门"
+} ]);
+db.getCollection("depts").insert([ {
+    _id: ObjectId("5d2fde5814bc42288c0045e2"),
+    pid: "5d2ecffb14bc4247ac00674e",
+    children: [ ],
+    name: "上海分公司",
+    sort: NumberInt("0"),
+    createDate: ISODate("2018-12-28T22:20:16.000Z"),
+    parentName: "人人开源集团"
+} ]);
+db.getCollection("depts").insert([ {
+    _id: ObjectId("5d2fde5814bc42288c0045e3"),
+    pid: "5d2fde5814bc42288c0045e2",
+    children: [ ],
+    name: "市场部",
+    sort: NumberInt("0"),
+    createDate: ISODate("2018-12-28T22:20:16.000Z"),
+    parentName: "上海分公司"
+} ]);
+db.getCollection("depts").insert([ {
+    _id: ObjectId("5d2fde5814bc42288c0045e4"),
+    pid: "5d2fde5814bc42288c0045e2",
+    children: [ ],
+    name: "销售部",
+    sort: NumberInt("1"),
+    createDate: ISODate("2018-12-28T22:20:17.000Z"),
+    parentName: "上海分公司"
+} ]);
+db.getCollection("depts").insert([ {
+    _id: ObjectId("5d2fde5814bc42288c0045e5"),
+    pid: "5d2ecffb14bc4247ac00674e",
+    children: [ ],
+    name: "长沙分公司",
+    sort: NumberInt("1"),
+    createDate: ISODate("2018-12-28T22:20:16.000Z"),
+    parentName: "人人开源集团"
+} ]);
+db.getCollection("depts").insert([ {
+    _id: ObjectId("5d2fde5814bc42288c0045e6"),
+    pid: "5d2fde5814bc42288c0045e5",
+    children: [ ],
+    name: "产品部",
+    sort: NumberInt("0"),
+    createDate: ISODate("2018-12-28T22:20:17.000Z"),
+    parentName: "长沙分公司"
+} ]);
+db.getCollection("depts").insert([ {
+    _id: ObjectId("5d2fde5814bc42288c0045e7"),
+    pid: "5d2fde5814bc42288c0045e5",
+    children: [ ],
+    name: "技术部",
+    sort: NumberInt("1"),
+    createDate: ISODate("2018-12-28T22:20:16.000Z"),
+    parentName: "长沙分公司"
+} ]);
+
+// ----------------------------
+// Collection structure for dicts
+// ----------------------------
+db.getCollection("dicts").drop();
+db.createCollection("dicts");
+
+// ----------------------------
+// Documents of dicts
+// ----------------------------
+db.getCollection("dicts").insert([ {
+    _id: ObjectId("5d5e441614bc4222080064c2"),
+    pid: "0",
+    dictType: "gender",
+    dictName: "性别",
+    dictValue: "",
+    remark: "",
+    sort: 0,
+    createDate: "2019-08-06 22:08:15"
+} ]);
+db.getCollection("dicts").insert([ {
+    _id: ObjectId("5d5e47f814bc4222080064c3"),
+    pid: "5d5e441614bc4222080064c2",
+    dictType: "gender",
+    dictName: "男",
+    dictValue: "1",
+    remark: "",
+    sort: "1",
+    createDate: ISODate("2019-08-06T14:08:15.000Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("dicts").insert([ {
+    _id: ObjectId("5d5e480414bc4222080064c4"),
+    pid: "5d5e441614bc4222080064c2",
+    dictType: "gender",
+    dictName: "女",
+    dictValue: "0",
+    remark: "",
+    sort: "0",
+    createDate: ISODate("2019-08-06T14:08:15.000Z")
+} ]);
+db.getCollection("dicts").insert([ {
+    _id: ObjectId("5d5e4aabfc8e474ecc6c043e"),
+    pid: "0",
+    dictName: "合同类型",
+    dictType: "contract",
+    dictValue: "",
+    sort: "1",
+    remark: "",
+    createDate: ISODate("2019-08-22T07:56:27.675Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("dicts").insert([ {
+    _id: ObjectId("5d5e4bda1f079e0d304addc9"),
+    pid: "5d5e4aabfc8e474ecc6c043e",
+    dictName: "采购合同",
+    dictType: "contract",
+    dictValue: "1",
+    sort: "0",
+    remark: "",
+    createDate: ISODate("2019-08-22T08:01:30.72Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("dicts").insert([ {
+    _id: ObjectId("5d5e4bf51f079e0d304addcc"),
+    pid: "5d5e441614bc4222080064c2",
+    dictName: "人妖",
+    dictType: "gender",
+    dictValue: "10",
+    sort: "2",
+    remark: "",
+    createDate: ISODate("2019-08-22T08:01:30.72Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("dicts").insert([ {
+    _id: ObjectId("5d5e4c6d1f079e0d304addcf"),
+    pid: "5d5e4aabfc8e474ecc6c043e",
+    dictName: "销售合同",
+    dictType: "contract",
+    dictValue: "2",
+    sort: "1",
+    remark: "",
+    createDate: ISODate("2019-08-22T07:56:27.675Z"),
+    __v: NumberInt("0")
+} ]);
+
+// ----------------------------
+// Collection structure for logs
+// ----------------------------
+db.getCollection("logs").drop();
+db.createCollection("logs");
+
+// ----------------------------
+// Documents of logs
+// ----------------------------
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d412aa29c65d306949eb6ee"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/user",
+    error: "MongoError: E11000 duplicate key error collection: d2admin.users index: username_1 dup key: { : \"test\" }",
+    ip: "127.0.0.1",
+    params: "{\"id\":\"5d410435e09d5d08803762f3\",\"username\":\"test\",\"deptId\":\"5d2ecffb14bc4247ac00674e\",\"deptName\":\"人人开源集团\",\"password\":\"$2a$10$umO9G6KNOQ25MWNwAa3IXuMP8Lq6Uh012f/KQump/J9DmzMHr9dzG\",\"comfirmPassword\":\"\",\"realName\":\"\",\"gender\":0,\"email\":\"\",\"mobile\":\"\",\"roleIdList\":[],\"status\":1,\"_id\":\"5d410435e09d5d08803762f3\",\"createDate\":\"2019-07-31T03:00:05.955Z\",\"__v\":0,\"superAdmin\":1}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "21.134ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-07-31T05:44:02.327Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d412bf32c658a48b8c26080"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/login",
+    error: "密码错误",
+    ip: "127.0.0.1",
+    params: "",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "64.505ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-07-31T05:49:39.617Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d412c139f15df591067cbb1"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/login",
+    error: "NotFoundError: 密码错误",
+    ip: "127.0.0.1",
+    params: "",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "87.126ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-07-31T05:50:11.998Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d412c289f15df591067cbb2"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "65.884ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-07-31T05:50:32.053Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d412c319f15df591067cbb3"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/user",
+    error: "MongoError: E11000 duplicate key error collection: d2admin.users index: username_1 dup key: { : \"test\" }",
+    ip: "127.0.0.1",
+    params: "{\"id\":\"5d410435e09d5d08803762f3\",\"username\":\"test\",\"deptId\":\"5d2ecffb14bc4247ac00674e\",\"deptName\":\"人人开源集团\",\"password\":\"$2a$10$umO9G6KNOQ25MWNwAa3IXuMP8Lq6Uh012f/KQump/J9DmzMHr9dzG\",\"comfirmPassword\":\"\",\"realName\":\"\",\"gender\":0,\"email\":\"\",\"mobile\":\"\",\"roleIdList\":[],\"status\":1,\"_id\":\"5d410435e09d5d08803762f3\",\"createDate\":\"2019-07-31T03:00:05.955Z\",\"__v\":0,\"superAdmin\":1}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "8.272ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-07-31T05:50:41.338Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d412c5c9f15df591067cbb4"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/test/5d36d49714bc421c100022b4",
+    error: "UnprocessableEntityError: Validation Failed",
+    ip: "127.0.0.1",
+    params: "{\"name\":333}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "2.331ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-07-31T05:51:24.207Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d412cb7a5f759545c1089ef"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/test/5d36d49714bc421c100022b4",
+    error: "Validation Failed:[{\"message\":\"should be a string\",\"code\":\"invalid\",\"field\":\"name\"}]",
+    ip: "127.0.0.1",
+    params: "{\"name\":333}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "7.523ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-07-31T05:52:55.759Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d412ce2a5f759545c1089f0"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/user",
+    error: "E11000 duplicate key error collection: d2admin.users index: username_1 dup key: { : \"test\" }:undefined",
+    ip: "127.0.0.1",
+    params: "{\"id\":\"5d410435e09d5d08803762f3\",\"username\":\"test\",\"deptId\":\"5d2ecffb14bc4247ac00674e\",\"deptName\":\"人人开源集团\",\"password\":\"$2a$10$umO9G6KNOQ25MWNwAa3IXuMP8Lq6Uh012f/KQump/J9DmzMHr9dzG\",\"comfirmPassword\":\"\",\"realName\":\"\",\"gender\":0,\"email\":\"\",\"mobile\":\"\",\"roleIdList\":[],\"status\":1,\"_id\":\"5d410435e09d5d08803762f3\",\"createDate\":\"2019-07-31T03:00:05.955Z\",\"__v\":0,\"superAdmin\":1}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "8.778ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-07-31T05:53:38.546Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d412d597ecc8955388fbe20"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/user",
+    error: "E11000 duplicate key error collection: d2admin.users index: username_1 dup key: { : \"test\" }",
+    ip: "127.0.0.1",
+    params: "{\"id\":\"5d410435e09d5d08803762f3\",\"username\":\"test\",\"deptId\":\"5d2ecffb14bc4247ac00674e\",\"deptName\":\"人人开源集团\",\"password\":\"$2a$10$umO9G6KNOQ25MWNwAa3IXuMP8Lq6Uh012f/KQump/J9DmzMHr9dzG\",\"comfirmPassword\":\"\",\"realName\":\"\",\"gender\":0,\"email\":\"\",\"mobile\":\"\",\"roleIdList\":[],\"status\":1,\"_id\":\"5d410435e09d5d08803762f3\",\"createDate\":\"2019-07-31T03:00:05.955Z\",\"__v\":0,\"superAdmin\":1}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "21.244ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-07-31T05:55:37.703Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d412d7b7ecc8955388fbe21"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"id\":\"5d410435e09d5d08803762f3\",\"username\":\"test1\",\"deptId\":\"5d2ecffb14bc4247ac00674e\",\"deptName\":\"人人开源集团\",\"password\":\"$2a$10$umO9G6KNOQ25MWNwAa3IXuMP8Lq6Uh012f/KQump/J9DmzMHr9dzG\",\"comfirmPassword\":\"\",\"realName\":\"\",\"gender\":0,\"email\":\"\",\"mobile\":\"\",\"roleIdList\":[],\"status\":1,\"_id\":\"5d410435e09d5d08803762f3\",\"createDate\":\"2019-07-31T03:00:05.955Z\",\"__v\":0,\"superAdmin\":1}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "4.204ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-07-31T05:56:11.686Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d412d877ecc8955388fbe22"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/login",
+    error: "密码错误",
+    ip: "127.0.0.1",
+    params: "",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "77.163ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-07-31T05:56:23.919Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d412d9e7ecc8955388fbe23"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/test/5d36d49714bc421c100022b4",
+    error: "Validation Failed:[{\"message\":\"should be a string\",\"code\":\"invalid\",\"field\":\"name\"}]",
+    ip: "127.0.0.1",
+    params: "{\"name\":333}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "1.980ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-07-31T05:56:46.007Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d412dc37ecc8955388fbe24"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "66.152ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-07-31T05:57:23.467Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d412dcb7ecc8955388fbe25"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/resetPsw",
+    error: "Validation Failed:[{\"message\":\"length should bigger than 6\",\"code\":\"invalid\",\"field\":\"password\"}]",
+    ip: "127.0.0.1",
+    params: "{\"oldPassword\":\"123456\",\"password\":\"admin\",\"comfirmPassword\":\"admin\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "1.619ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-07-31T05:57:31.963Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d412e01bc77c454e83074ae"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/resetPsw",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"oldPassword\":\"123456\",\"password\":\"$2a$10$7Gq02/rJGWqLzgcp3V8Nw.ZXvUgDizMetZ8JdfQNiJ96s9e.XeNjS\",\"comfirmPassword\":\"admin\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "153.646ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-07-31T05:58:25.572Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d412e07bc77c454e83074af"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "66.738ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-07-31T05:58:31.06Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d413b0f23306d4e8c4039ab"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "88.280ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-07-31T06:54:07.613Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d413b2f23306d4e8c4039ac"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "63.736ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-07-31T06:54:39.624Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d413be9cd337e50b8d4ed8a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "76.655ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-07-31T06:57:45.572Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d413ff3832bb92e40d3c30c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "88.239ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-07-31T07:14:59.056Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d414001832bb92e40d3c30d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "63.664ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-07-31T07:15:13.263Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d41400ded98f21a0ca901db"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "87.623ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-07-31T07:15:25.252Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d414d3ef4027c0480309568"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"admin\",\"uuid\":\"\",\"captcha\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "78.948ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-07-31T08:11:42.716Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d414d41f4027c0480309569"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"admin\",\"uuid\":\"\",\"captcha\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "63.034ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-07-31T08:11:45.472Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d414e7107da115540024fac"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"admin\",\"uuid\":\"\",\"captcha\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "86.546ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-07-31T08:16:49.189Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d41539ab0bcc25894d9c420"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"id\":\"5d410435e09d5d08803762f3\",\"username\":\"test1\",\"deptId\":\"5d2ecffb14bc4247ac00674e\",\"deptName\":\"人人开源集团\",\"password\":\"$2a$10$umO9G6KNOQ25MWNwAa3IXuMP8Lq6Uh012f/KQump/J9DmzMHr9dzG\",\"comfirmPassword\":\"\",\"realName\":\"\",\"gender\":0,\"email\":\"\",\"mobile\":\"\",\"roleIdList\":[],\"status\":1,\"_id\":\"5d410435e09d5d08803762f3\",\"createDate\":\"2019-07-31T03:00:05.955Z\",\"__v\":0,\"superAdmin\":1}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "7.200ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-07-31T08:38:50.612Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d4153c9b0bcc25894d9c421"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/user",
+    error: "E11000 duplicate key error collection: d2admin.users index: username_1 dup key: { : \"test\" }",
+    ip: "127.0.0.1",
+    params: "{\"id\":\"5d410435e09d5d08803762f3\",\"username\":\"test\",\"deptId\":\"5d2ecffb14bc4247ac00674e\",\"deptName\":\"人人开源集团\",\"password\":\"$2a$10$umO9G6KNOQ25MWNwAa3IXuMP8Lq6Uh012f/KQump/J9DmzMHr9dzG\",\"comfirmPassword\":\"\",\"realName\":\"\",\"gender\":0,\"email\":\"\",\"mobile\":\"\",\"roleIdList\":[],\"status\":1,\"_id\":\"5d410435e09d5d08803762f3\",\"createDate\":\"2019-07-31T03:00:05.955Z\",\"__v\":0,\"superAdmin\":1}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "5.068ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-07-31T08:39:37.224Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d4154dc9b3a734804feb33f"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"id\":\"5d410435e09d5d08803762f3\",\"username\":\"test1\",\"deptId\":\"5d2ecffb14bc4247ac00674e\",\"deptName\":\"人人开源集团\",\"password\":\"$2a$10$umO9G6KNOQ25MWNwAa3IXuMP8Lq6Uh012f/KQump/J9DmzMHr9dzG\",\"comfirmPassword\":\"\",\"realName\":\"\",\"gender\":0,\"email\":\"\",\"mobile\":\"\",\"roleIdList\":[],\"status\":1,\"_id\":\"5d410435e09d5d08803762f3\",\"createDate\":\"2019-07-31T03:00:05.955Z\",\"__v\":0,\"superAdmin\":1}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "7.555ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-07-31T08:44:12.117Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d4154df9b3a734804feb340"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"id\":\"5d410435e09d5d08803762f3\",\"username\":\"test2\",\"deptId\":\"5d2ecffb14bc4247ac00674e\",\"deptName\":\"人人开源集团\",\"password\":\"$2a$10$umO9G6KNOQ25MWNwAa3IXuMP8Lq6Uh012f/KQump/J9DmzMHr9dzG\",\"comfirmPassword\":\"\",\"realName\":\"\",\"gender\":0,\"email\":\"\",\"mobile\":\"\",\"roleIdList\":[],\"status\":1,\"_id\":\"5d410435e09d5d08803762f3\",\"createDate\":\"2019-07-31T03:00:05.955Z\",\"__v\":0,\"superAdmin\":1}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "3.250ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-07-31T08:44:15.715Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d42966c318a7f4b9ca4e928"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/userLogin",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"Lyoko\",\"password\":\"123456\",\"uuid\":\"\",\"captcha\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "87.349ms",
+    type: "login",
+    username: "Lyoko",
+    createDate: ISODate("2019-08-01T07:36:12.922Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d521c679b066c319c69f594"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/userLogin",
+    error: "密码错误",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"uuid\":\"\",\"captcha\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "126.444ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T02:11:51.544Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d521c6a9b066c319c69f595"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/userLogin",
+    error: "密码错误",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"uuid\":\"\",\"captcha\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "65.285ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T02:11:54.86Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d521c729b066c319c69f596"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/userLogin",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"admin\",\"uuid\":\"\",\"captcha\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "64.783ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T02:12:02.006Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d521c7c9b066c319c69f597"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/userPsw",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"oldPassword\":\"admin\",\"password\":\"$2a$10$Shq.1ddzPuvQhcHcAv0ideHaxZrwxaARXMbBzAfC45rESRrGWJ8BC\",\"comfirmPassword\":\"123456\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "130.265ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-13T02:12:12.6Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d521c809b066c319c69f598"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/userLogin",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"uuid\":\"\",\"captcha\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "64.318ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T02:12:16.956Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d521cd7a477425da0786352"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/userLogin",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"uuid\":\"\",\"captcha\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "86.978ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T02:13:43.908Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d521ce3a477425da0786353"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/userLogin",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"uuid\":\"\",\"captcha\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "64.146ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T02:13:55.893Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d521d02307fa630047d9add"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/userLogin",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"uuid\":\"\",\"captcha\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "77.263ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T02:14:26.803Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5224dc40aea4221438f76b"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "0.649ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T02:47:56.684Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5224ec40aea4221438f76c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"Lyoko\",\"password\":\"123456\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "0.147ms",
+    type: "login",
+    username: "Lyoko",
+    createDate: ISODate("2019-08-13T02:48:12.594Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5224f6d457ff1ee487e39e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"Lyoko\",\"password\":\"123456\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "1.654ms",
+    type: "login",
+    username: "Lyoko",
+    createDate: ISODate("2019-08-13T02:48:22.233Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d522542805d7d3a241deaba"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"Lyoko\",\"password\":\"123456\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "1.670ms",
+    type: "login",
+    username: "Lyoko",
+    createDate: ISODate("2019-08-13T02:49:38.178Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d522567a76dd33740e714b8"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "84.584ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T02:50:15.469Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d522645d6f9a808f4e70d6a"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/user",
+    error: "用户名已被使用",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test233\",\"password\":\"123456\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "17.594ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-13T02:53:57.382Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d52265bd6f9a808f4e70d6c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2333\",\"password\":\"$2a$10$Up7GhilLP9zxzqsJTkYwHuGs3e/IjFfxVne8ZIs3Hwvtd/qlfG2Bi\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "77.368ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-13T02:54:19.883Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d52273f38b51903845b947d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "85.004ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T02:58:07.783Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d52279438b51903845b947e"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d52265bd6f9a808f4e70d6b",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "5.547ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-13T02:59:32.586Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d52280f38b51903845b947f"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/userLogin",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"uuid\":\"\",\"captcha\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "0.117ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T03:01:35.997Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d52281938b51903845b9480"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/userLogin",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"uuid\":\"\",\"captcha\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "0.091ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T03:01:45.133Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d52282538b51903845b9481"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/userLogin",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"uuid\":\"\",\"captcha\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "0.087ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T03:01:57.67Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d52282e38b51903845b9482"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/userLogin",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"uuid\":\"\",\"captcha\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "0.087ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T03:02:06.845Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d52284038b51903845b9483"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"uuid\":\"\",\"captcha\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "63.195ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T03:02:24.099Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d522ed8d372cc37acb3b559"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/menu",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"type\":0,\"name\":\"1\",\"pid\":\"0\",\"parentName\":\"一级菜单\",\"url\":\"\",\"permissions\":\"\",\"sort\":0,\"icon\":\"\",\"cache\":false}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "7.427ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-13T03:30:32.85Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d522edbd372cc37acb3b55a"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/menu/5d522ed8d372cc37acb3b558",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "5.222ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-13T03:30:35.719Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5231d04325372fd4d91d6a"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/user/password",
+    error: "Validation Failed:[{\"message\":\"required\",\"field\":\"username\",\"code\":\"missing_field\"}]",
+    ip: "127.0.0.1",
+    params: "{\"oldPassword\":\"123456\",\"password\":\"123456\",\"comfirmPassword\":\"123456\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "6.729ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-13T03:43:12.897Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5231e34325372fd4d91d6b"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/user/password",
+    error: "Validation Failed:[{\"message\":\"required\",\"field\":\"username\",\"code\":\"missing_field\"}]",
+    ip: "127.0.0.1",
+    params: "{\"oldPassword\":\"123456\",\"password\":\"123456\",\"comfirmPassword\":\"123456\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "2.402ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-13T03:43:31.789Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5231e94325372fd4d91d6c"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/user/password",
+    error: "Validation Failed:[{\"message\":\"required\",\"field\":\"username\",\"code\":\"missing_field\"}]",
+    ip: "127.0.0.1",
+    params: "{\"oldPassword\":\"123456\",\"password\":\"admin\",\"comfirmPassword\":\"admin\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "1.916ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-13T03:43:37.323Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5232074325372fd4d91d6d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"uuid\":\"\",\"captcha\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "76.936ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T03:44:07.199Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d523296cf17e63b04ba59e9"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/user/password",
+    error: "Validation Failed:[{\"message\":\"required\",\"field\":\"username\",\"code\":\"missing_field\"}]",
+    ip: "127.0.0.1",
+    params: "{\"oldPassword\":\"123456\",\"password\":\"123456789\",\"comfirmPassword\":\"123456789\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "6.698ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-13T03:46:30.214Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d52335314c32335b06a36bc"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/user/password",
+    error: "Validation Failed:[{\"message\":\"required\",\"field\":\"username\",\"code\":\"missing_field\"}]",
+    ip: "127.0.0.1",
+    params: "{\"oldPassword\":\"123456\",\"password\":\"admin\",\"comfirmPassword\":\"admin\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "3.301ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-13T03:49:39.101Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d52336614c32335b06a36bd"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/user/password",
+    error: "Validation Failed:[{\"message\":\"required\",\"field\":\"username\",\"code\":\"missing_field\"}]",
+    ip: "127.0.0.1",
+    params: "{\"oldPassword\":\"123456\",\"password\":\"admin\",\"comfirmPassword\":\"admin\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "1.945ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-13T03:49:58.5Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5233d50137ed2084dfcc98"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/password",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"oldPassword\":\"123456\",\"password\":\"$2a$10$cKWFVP0O5WaqMFEnyTr3VeIjQjR4opyMz/dj67UzI5U9i4IWsGZcG\",\"comfirmPassword\":\"admin\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "144.219ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-13T03:51:49.442Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5233da0137ed2084dfcc99"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"admin\",\"uuid\":\"\",\"captcha\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "65.176ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T03:51:54.138Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5233e70137ed2084dfcc9a"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/password",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"oldPassword\":\"admin\",\"password\":\"$2a$10$9olmWv2SR9pliNwUt8Q77e0xU74ZZilzRES7DjGQIFm39JKH8QRvS\",\"comfirmPassword\":\"123456\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "126.631ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-13T03:52:07.216Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5233e90137ed2084dfcc9b"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"uuid\":\"\",\"captcha\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "64.540ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T03:52:09.768Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5233f90137ed2084dfcc9c"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"id\":\"5d52261958b994230817fe0d\",\"username\":\"test1\",\"deptId\":\"5d2ecffb14bc4247ac00674e\",\"deptName\":\"人人开源集团\",\"password\":\"$2a$10$qCMoMzn2ngqwmcx0oWItA.PPuZ3qjgjGmuJRk4fTGNF5E4ehrAyu2\",\"comfirmPassword\":\"\",\"realName\":\"\",\"gender\":0,\"email\":\"\",\"mobile\":\"\",\"roleIdList\":[],\"status\":1,\"_id\":\"5d52261958b994230817fe0d\",\"createDate\":\"2019-08-13T02:53:13.214Z\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "2.839ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-13T03:52:25.812Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5233fc0137ed2084dfcc9d"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d52261958b994230817fe0d\"]",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "2.367ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-13T03:52:28.859Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5233ff0137ed2084dfcc9e"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d410435e09d5d08803762f3\"]",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "1.162ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-13T03:52:31.324Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5234620137ed2084dfcca0"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"deptId\":\"0\",\"deptName\":\"\",\"password\":\"$2a$10$NIsND9nTt64aoU8lNOmjX.kgTHQKfi4zrJGxXNBops56DTpgnG606\",\"comfirmPassword\":\"123456\",\"realName\":\"\",\"gender\":0,\"email\":\"\",\"mobile\":\"\",\"roleIdList\":[],\"status\":1,\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "64.883ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-13T03:54:10.042Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5234b80137ed2084dfcca1"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d5234620137ed2084dfcc9f\"]",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "1.102ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-13T03:55:36.796Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d524d933f09db4554572746"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"id\":\"5d3fe4a33955b91b581f346f\",\"username\":\"test1\",\"deptId\":\"5d2ecffb14bc4247ac00674e\",\"deptName\":\"人人开源集团\",\"password\":\"$2a$10$8NrkzOdrjsAlbeX/8rV12uWWmS7nnW/xXd7tiiPnJnvSkRZcgRRFy\",\"comfirmPassword\":\"\",\"realName\":\"666\",\"gender\":0,\"email\":\"\",\"mobile\":\"\",\"roleIdList\":[\"5d2d884d14bc421d10003a5c\"],\"status\":1,\"_id\":\"5d3fe4a33955b91b581f346f\",\"createDate\":\"2019-07-30T06:33:07.975Z\",\"superAdmin\":1,\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "7.421ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-13T05:41:39.768Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d524da43f09db4554572747"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"id\":\"5d3fe4a33955b91b581f346f\",\"username\":\"test\",\"deptId\":\"5d2ecffb14bc4247ac00674e\",\"deptName\":\"人人开源集团\",\"password\":\"$2a$10$8NrkzOdrjsAlbeX/8rV12uWWmS7nnW/xXd7tiiPnJnvSkRZcgRRFy\",\"comfirmPassword\":\"\",\"realName\":\"666\",\"gender\":0,\"email\":\"\",\"mobile\":\"\",\"roleIdList\":[\"5d2d884d14bc421d10003a5c\"],\"status\":1,\"_id\":\"5d3fe4a33955b91b581f346f\",\"createDate\":\"2019-07-30T06:33:07.975Z\",\"superAdmin\":1,\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "2.617ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-13T05:41:56.689Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d524dab3f09db4554572748"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"uuid\":\"\",\"captcha\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "75.972ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T05:42:03.33Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d527cbd0a10640d60fce8e9"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.516ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:02:53.013Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d527cc9290d89501c782d98"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "89.300ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:03:05.883Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d527d00f5356f340c7f4f53"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "85.543ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:04:00.645Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d527e180c4d1d4540f667a1"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.997ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:08:40.439Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d527e7327160d4f60bb3d2b"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.215ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:10:11.004Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d527e85d009dd32c4e55e00"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "85.692ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:10:29.295Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d527e9abdaf125c904eba2d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.281ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:10:50.503Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d527ea61ab01719b43d409c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.572ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:11:02.993Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d527eb2737a376054d799ca"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "85.570ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:11:14.628Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d527f2439fc7809f02ea6f2"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "85.580ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:13:08.721Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5280412dee854358ac3852"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.215ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:17:53.765Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d52807b17e36f58789b4401"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.131ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:18:51.349Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d528243a9da6632845b8d57"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "密码错误",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"12345\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.078ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:26:27.588Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d52827b1c53e837742051bc"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "密码错误",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"12345\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "85.493ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:27:23.835Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5282914eb46a082059ae14"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "85.529ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:27:45.259Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5282a96dbefc387821fa39"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.035ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:28:09.083Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5282b79c5d73335898bc4d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "85.736ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:28:23.032Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d52835354e1830a6070d9b5"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "88.554ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:30:59.207Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d52839bb543001bdc1fd30e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.137ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:32:11.759Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5283a68967e42ea05be4ca"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "85.647ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:32:22.068Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5283ee7cee20562016301d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "85.796ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:33:34.225Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5284360bb26c53901ea178"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.131ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:34:46.506Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d528479deec8c039880a29e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.362ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:35:53.866Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5285065c04e35f447aa6e0"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.644ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:38:14.981Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d52851fa0036858d4b274ae"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.209ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:38:39.193Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5285a4b1277f5a5453b3c1"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.349ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:40:52.35Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5285d0a7322e59401aa1eb"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.097ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:41:36.439Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5285f0f3c94e5e085e8568"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "85.746ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:42:08.747Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d52861c1e23370914ba1cce"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "85.799ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:42:52.275Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d52862dcee88d2b6c61836a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.589ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:43:09.547Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d52865b510d1915082f684e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "85.344ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:43:55.099Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d52866b9228db47800ce4a5"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "85.767ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:44:11.587Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d528688dd22545458942dd9"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "88.261ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:44:40.868Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5286ae6defb662bc124866"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.889ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:45:18.702Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5286c040f5ad4c9830dbef"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "85.829ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:45:36.211Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5287dccff03c00f410f0ea"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.949ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:50:20.509Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5287e514ac8c26f4291ed2"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "85.781ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:50:29.011Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5287ed09340b05301f0704"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.986ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:50:37.18Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5287fd5a359852483ef6ba"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "85.946ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-13T09:50:53.357Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d537a714d2b9910c47e7783"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "89.366ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T03:05:21.575Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d537a8cdc43253f54f2019f"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.120ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T03:05:48.358Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d537a9b44dbe126649fd6a4"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.159ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T03:06:03.479Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d537aa85528ad32c09ca93b"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.366ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T03:06:16.671Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d537d5b22bca92a0cbd9ed3"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.324ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T03:17:47.46Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d537ddf58e6a2215836ccc0"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.284ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T03:19:59.01Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d537e1e854bcf25945c24d9"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "84.992ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T03:21:02.729Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d537e2a7087a34034a4b95c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.279ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T03:21:14.477Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d537e3bd177ab26c456fd56"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "85.585ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T03:21:31.156Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d537f4cb6c6da306c55f0dd"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "85.325ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T03:26:04.734Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d537f4cb6c6da306c55f0df"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test\",\"password\":\"$2a$10$ihgZMcwa7PeO9SQIOPN2muQviVK8TKgSzMKGvj0Pd5yt52nMLQA4e\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.897ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:26:04.835Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d537f5a0b2261572cb3c007"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "85.728ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T03:26:18.18Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d537f5a0b2261572cb3c008"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/user",
+    error: "用户名已被使用",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "3.201ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:26:18.222Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d537f71b8cb4a1f2c2ceda5"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.001ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T03:26:41.521Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d537f71b8cb4a1f2c2ceda7"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test\",\"password\":\"$2a$10$ohoVSOfKxpdQReBRivGMM.OA3LjO6W.uBfRecp1qaWCx5iK.eQ3py\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.259ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:26:41.625Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d537fd323b76d5e8ce887c4"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.196ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T03:28:19.795Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d537fd323b76d5e8ce887c5"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/user",
+    error: "用户名已被使用",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "4.195ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:28:19.838Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d537fd323b76d5e8ce887c6"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/user",
+    error: "找不到用户",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"testtest\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "3.877ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:28:19.849Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d537fdd74765160fc0598d8"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.229ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T03:28:29.95Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d537fde74765160fc0598da"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test\",\"password\":\"$2a$10$jSFA3yaOYrzpChxvbDWjXuexTWpJPxnqgPaehEgVTYTk02qc6e/WS\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.065ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:28:30.054Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d537fde74765160fc0598db"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d537fde74765160fc0598d9\",\"username\":\"testtest\",\"password\":\"$2a$10$jSFA3yaOYrzpChxvbDWjXuexTWpJPxnqgPaehEgVTYTk02qc6e/WS\",\"createDate\":\"2019-08-14T03:28:30.052Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "8.124ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:28:30.069Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53804fe8ab451f14df6869"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "85.578ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T03:30:23.139Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53804fe8ab451f14df686b"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test\",\"password\":\"$2a$10$oPnQFKhzr1ARI4Sk8snhK.f6/cnDTBQlFKuIp0.YIGY0uYc..b8Eu\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.047ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:30:23.243Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53804fe8ab451f14df686c"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d53804fe8ab451f14df686a\",\"username\":\"testtest\",\"password\":\"$2a$10$oPnQFKhzr1ARI4Sk8snhK.f6/cnDTBQlFKuIp0.YIGY0uYc..b8Eu\",\"createDate\":\"2019-08-14T03:30:23.240Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "7.851ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:30:23.258Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53804fe8ab451f14df686d"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d53804fe8ab451f14df686a",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.045ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:30:23.265Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5380ce47bfb1343c0e8e10"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "85.458ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T03:32:30.189Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5380ce47bfb1343c0e8e12"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test\",\"password\":\"$2a$10$Ykul2arBQRubTK3XIuINyuiAAbnuKwRZX.K9Gn6Bmrb7WmFvth4HG\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "65.817ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:32:30.293Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5380ce47bfb1343c0e8e13"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5380ce47bfb1343c0e8e11\",\"username\":\"testtest\",\"password\":\"$2a$10$Ykul2arBQRubTK3XIuINyuiAAbnuKwRZX.K9Gn6Bmrb7WmFvth4HG\",\"createDate\":\"2019-08-14T03:32:30.290Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.043ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:32:30.304Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5380ce47bfb1343c0e8e14"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d5380ce47bfb1343c0e8e11",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.308ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:32:30.312Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d538164d51e5525ecb79df2"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.587ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T03:35:00.568Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d538164d51e5525ecb79df4"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test\",\"password\":\"$2a$10$RKX4xLGnOkLDFE7WSSxT8O/dahgKH4f/Z7k9xyysivVfgWlHxgXVG\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.191ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:35:00.672Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d538164d51e5525ecb79df5"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d538164d51e5525ecb79df3\",\"username\":\"testtest\",\"password\":\"$2a$10$RKX4xLGnOkLDFE7WSSxT8O/dahgKH4f/Z7k9xyysivVfgWlHxgXVG\",\"createDate\":\"2019-08-14T03:35:00.669Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.220ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:35:00.683Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d538164d51e5525ecb79df6"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d538164d51e5525ecb79df3",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.395ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:35:00.692Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5381c23a7dd4511c3164b8"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.187ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T03:36:34.822Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5381c23a7dd4511c3164ba"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test\",\"password\":\"$2a$10$pGaBuOhrDBYBNB3uIrJK6e8eZWL8K1zxmR5TnWIswBtj6TIeZ/VTy\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.950ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:36:34.918Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5381c23a7dd4511c3164bb"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5381c23a7dd4511c3164b9\",\"username\":\"testtest\",\"password\":\"$2a$10$pGaBuOhrDBYBNB3uIrJK6e8eZWL8K1zxmR5TnWIswBtj6TIeZ/VTy\",\"createDate\":\"2019-08-14T03:36:34.916Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.339ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:36:34.936Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5381c23a7dd4511c3164bc"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d5381c23a7dd4511c3164b9",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.329ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:36:34.944Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53831108629e22a06cf2e2"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.238ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T03:42:09.032Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53831108629e22a06cf2e4"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$SelaQRzzluAoqr0k1ktLDe1Su84/G0rbARSqTfZ87ahqqIqMRWD9u\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.132ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:42:09.129Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5383396fe03721c43e6a26"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.070ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T03:42:49.716Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5383396fe03721c43e6a28"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$dvmAhTkreiPNYe1wuUbCvOC9pA/Q6q63tMvadQ.bFOvpiH/VdMaUK\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.866ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:42:49.812Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5383396fe03721c43e6a2a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$CfpVAKoUNHBiqAFHOEXez.pDdHMLqLN3ZJ9nNf8g9h35WQwdM96dO\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.780ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:42:49.883Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5383396fe03721c43e6a2c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$WnUaTVNMLg1FX28YeiEYquTLH7J6H8l.vmHpZDn7WokYLkDNm3Bza\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.496ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:42:49.954Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5383396fe03721c43e6a2d"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/user",
+    error: "找不到用户",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"testtest\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "4.173ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:42:49.967Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53834071a2985620ed62ff"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.325ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T03:42:56.007Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53834071a2985620ed6300"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/user",
+    error: "用户名已被使用",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "3.208ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:42:56.044Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53834071a2985620ed6301"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/user",
+    error: "找不到用户",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"testtest\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.930ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:42:56.055Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53834a1fe6fe3b68aaabbe"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "85.531ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T03:43:06.278Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53834a1fe6fe3b68aaabc0"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$BstRRgFhMqQMAMHuK13FHeapV.J3FaEdnU5D2RIJbyUO0aY33opd2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "66.145ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:43:06.376Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53834a1fe6fe3b68aaabc2"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$XnSBl9Z7kDp9108RD0P50egKXskQClAZ.7O/OjaHnKJyFb6RNGsxC\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.453ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:43:06.444Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53834a1fe6fe3b68aaabc4"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$jyBvWHS3a0u7Z8rBYXWNaOfcSc6Ds.i/zB8i7xxD09LNnduBU/uey\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.539ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:43:06.513Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53834a1fe6fe3b68aaabc5"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d53834a1fe6fe3b68aaabbf\",\"username\":\"testtest\",\"password\":\"$2a$10$BstRRgFhMqQMAMHuK13FHeapV.J3FaEdnU5D2RIJbyUO0aY33opd2\",\"createDate\":\"2019-08-14T03:43:06.373Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.387ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:43:06.53Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53834a1fe6fe3b68aaabc6"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d53834a1fe6fe3b68aaabbf",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.243ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:43:06.539Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5383a8c4022b0f304f8547"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "85.255ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T03:44:40.873Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5383a8c4022b0f304f8549"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$PC5i/hn5o5sxKNDnYyVh3ugxvB06HuXvGvI7nKmGB6Ge0sMJMbfsS\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.005ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:44:40.969Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5383a8c4022b0f304f854a"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/user",
+    error: "用户名已被使用",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "3.137ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:44:40.979Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5383a8c4022b0f304f854b"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/user",
+    error: "找不到用户",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"testtest\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "3.144ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:44:40.991Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5383a9c4022b0f304f854c"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[]",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.310ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:44:41.000Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5383b644355413441926ed"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.088ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T03:44:54.733Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5383b644355413441926ef"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$RHVZxGgzW25VWsQBNRDYHO2doXm8Ap5ZMmOfCs0WHLn.0kRo7/3XW\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.961ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:44:54.829Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5383b644355413441926f1"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$2hppyBWRYsljxUA5VjNGsuaLbrRKxpWg4DBkkV/AfD/6o./azYqoq\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.831ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:44:54.898Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5383b644355413441926f3"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$FixoDFJuqA7ZxYlO9vTZF.u9CWgnPBniZlBkC1FY7STZv8P6urT62\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.844ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:44:54.966Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5383b644355413441926f4"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5383b644355413441926ee\",\"username\":\"testtest\",\"password\":\"$2a$10$RHVZxGgzW25VWsQBNRDYHO2doXm8Ap5ZMmOfCs0WHLn.0kRo7/3XW\",\"createDate\":\"2019-08-14T03:44:54.826Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.368ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:44:54.983Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5383b644355413441926f5"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d5383b644355413441926ee",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.266ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:44:54.991Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5383b644355413441926f6"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d5383b644355413441926ee\",\"5d5383b644355413441926f0\",\"5d5383b644355413441926f2\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.030ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:44:54.999Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5384106e7e761cf053d120"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "85.718ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T03:46:24.453Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5384106e7e761cf053d122"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$xvKBDq.LVsGe1/LaIB9/QeOC85Cbr14BMyKkdr4BKDdQUH/l7Agwi\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.820ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:46:24.549Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5384106e7e761cf053d124"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$yymZNscyx0Ns93p6VZkHGeEa3VoNxR0ft4dAA/.Lj73oGaVKnOe9q\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.833ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:46:24.618Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5384106e7e761cf053d126"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$sLCNpvNXU4YC4f4p067dyuAP9qW8.ZRaxPugS4B3yFyNnglJCxbbm\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.721ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:46:24.687Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5384106e7e761cf053d127"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5384106e7e761cf053d121\",\"username\":\"testtest\",\"password\":\"$2a$10$xvKBDq.LVsGe1/LaIB9/QeOC85Cbr14BMyKkdr4BKDdQUH/l7Agwi\",\"createDate\":\"2019-08-14T03:46:24.547Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.331ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:46:24.704Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5384106e7e761cf053d128"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d5384106e7e761cf053d121",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.263ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:46:24.712Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5384106e7e761cf053d129"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d5384106e7e761cf053d121\",\"5d5384106e7e761cf053d123\",\"5d5384106e7e761cf053d125\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.236ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:46:24.721Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5384fb990e54145837094b"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "85.584ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T03:50:19.917Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5384fc990e54145837094d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$DRoUBohWkLljnoUzQ/z.h.ZvLoq60HVSYw2Xs6R3shGD8EGTQdcfy\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.963ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:50:20.014Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5384fc990e54145837094f"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$qaNObzILzigcURMLwSfy9etrk.EkSdyP/sw9MTM9QR3BlrPPskl5a\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.857ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:50:20.083Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5384fc990e541458370951"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$72n1VHOOSl.uUbwajFhSKO6SAsaBj2dU//lEV5NqPAtO74KqdbTG6\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.268ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:50:20.151Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5384fc990e541458370952"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5384fc990e54145837094c\",\"username\":\"testtest\",\"password\":\"$2a$10$DRoUBohWkLljnoUzQ/z.h.ZvLoq60HVSYw2Xs6R3shGD8EGTQdcfy\",\"createDate\":\"2019-08-14T03:50:20.012Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.200ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:50:20.168Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5384fc990e541458370953"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d5384fc990e54145837094c",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.063ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:50:20.175Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5384fc990e541458370954"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d5384fc990e54145837094c\",\"5d5384fc990e54145837094e\",\"5d5384fc990e541458370950\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.875ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:50:20.183Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5385b6eb5f565d3407741d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "85.895ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T03:53:26.864Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5385b6eb5f565d3407741f"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$AQXJjmqmGWEuBfT1sPpKxuvV5z4XgRbvN09/MswuKSDT/eOnpCO2m\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.035ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:53:26.962Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5385b7eb5f565d34077421"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$fIBoTKWtKl1U5DtvAobwG.tTXa.ZgFZgQ9qGHaAfmjVoQ3pxFa6wi\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.897ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:53:27.031Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5385b7eb5f565d34077423"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$v7vAd6znmxBtwOyjbvN55e4jelFV94ORTGadmxxczccQc4N/26.8S\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.705ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:53:27.1Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5385b7eb5f565d34077424"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5385b6eb5f565d3407741e\",\"username\":\"testtest\",\"password\":\"$2a$10$AQXJjmqmGWEuBfT1sPpKxuvV5z4XgRbvN09/MswuKSDT/eOnpCO2m\",\"createDate\":\"2019-08-14T03:53:26.960Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.349ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:53:27.116Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5385b7eb5f565d34077425"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d5385b6eb5f565d3407741e",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.098ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:53:27.124Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5385b7eb5f565d34077426"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d5385b6eb5f565d3407741e\",\"5d5385b7eb5f565d34077420\",\"5d5385b7eb5f565d34077422\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.817ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:53:27.132Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5385e93a50a84ef05772f1"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "88.636ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T03:54:17.552Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5385e93a50a84ef05772f3"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$lz/6Ty1JMwtDKvjjSWHAo.6dbsE43bCC7MxHPcCsjBdLnwXsMJNLK\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.038ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:54:17.648Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5385e93a50a84ef05772f5"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$0RzdA8vNOGWPEorWLRsaw.bAktei9myFL3gzhA0VMJG3DRG1giFeq\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.777ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:54:17.717Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5385e93a50a84ef05772f7"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$aFxY5t3qVSofLr4gVzyCHOYs1C9q9iycaY.3imoV9KiZ4d4zrvkZe\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.823ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:54:17.786Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5385e93a50a84ef05772f8"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5385e93a50a84ef05772f2\",\"username\":\"testtest\",\"password\":\"$2a$10$lz/6Ty1JMwtDKvjjSWHAo.6dbsE43bCC7MxHPcCsjBdLnwXsMJNLK\",\"createDate\":\"2019-08-14T03:54:17.646Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.313ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:54:17.803Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5385e93a50a84ef05772f9"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d5385e93a50a84ef05772f2",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.406ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:54:17.811Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5385e93a50a84ef05772fa"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d5385e93a50a84ef05772f2\",\"5d5385e93a50a84ef05772f4\",\"5d5385e93a50a84ef05772f6\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.840ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:54:17.819Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5385f541b4684c8cce84a4"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.374ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T03:54:29.63Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5385f541b4684c8cce84a6"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$.xvIYW9pjuI4MgDST59z2u2A3zA8wY5/dy.alLx6QjgJ4o.lAifPO\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.917ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:54:29.729Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5385f541b4684c8cce84a8"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$Yf877qD5zyD1EqmwuUV3POBLZfuRnjgU3.4S2Yh3PEagMR7PPNHw.\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.782ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:54:29.798Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5385f541b4684c8cce84aa"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$1mgA4bma.zd/do0bMgm4lu1Zb3ltOmlVCif3ex4q4RZapl2Kef.mu\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.843ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:54:29.866Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5385f541b4684c8cce84ab"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5385f541b4684c8cce84a5\",\"username\":\"testtest\",\"password\":\"$2a$10$.xvIYW9pjuI4MgDST59z2u2A3zA8wY5/dy.alLx6QjgJ4o.lAifPO\",\"createDate\":\"2019-08-14T03:54:29.726Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.068ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:54:29.883Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5385f541b4684c8cce84ac"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d5385f541b4684c8cce84a5",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.171ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:54:29.891Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5385f541b4684c8cce84ad"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d5385f541b4684c8cce84a5\",\"5d5385f541b4684c8cce84a7\",\"5d5385f541b4684c8cce84a9\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.149ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:54:29.9Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5385fc1e02095c9ced94b8"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "89.463ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T03:54:36.149Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5385fc1e02095c9ced94ba"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$ZK0VhXhKDWz5sS.DxwG1bef3Ckailv1UWaLuaH9R04760cmeaB2b2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.221ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:54:36.246Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5385fc1e02095c9ced94bc"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$HnNNluEj5x6kV9Lu/havA.Kp4VScJSfEjBc5R7f4KPG4gvJi9.j.y\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.067ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:54:36.316Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5385fc1e02095c9ced94be"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$zSSM.1tR/Dad1hMQcMb33es2p4h.SmOjM/9WJnl1vmMRvGNMolIYq\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.930ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:54:36.385Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5385fc1e02095c9ced94bf"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5385fc1e02095c9ced94b9\",\"username\":\"testtest\",\"password\":\"$2a$10$ZK0VhXhKDWz5sS.DxwG1bef3Ckailv1UWaLuaH9R04760cmeaB2b2\",\"createDate\":\"2019-08-14T03:54:36.244Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.315ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:54:36.402Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5385fc1e02095c9ced94c0"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d5385fc1e02095c9ced94b9",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.280ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:54:36.411Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5385fc1e02095c9ced94c1"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d5385fc1e02095c9ced94b9\",\"5d5385fc1e02095c9ced94bb\",\"5d5385fc1e02095c9ced94bd\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.846ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T03:54:36.419Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53d3471753d563cc50251d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "90.726ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T09:24:23.361Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53d3471753d563cc50251e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.333ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T09:24:23.439Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53d3471753d563cc502520"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$r.Z3wYHzYPQEpJ9x/C6jSOw8cKAmOaS4sC611g/4e6xZOsb04HZuS\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.723ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T09:24:23.527Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53d3471753d563cc502522"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$TfwPx2Yv0nr2z5wRriILfe8dGVJb.3j7GWP3yzaOXKthYcxZtGUMa\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.878ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T09:24:23.596Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53d3471753d563cc502524"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$o2JYqr6Z6M5/mQ9bqY6P/OzT75A9XprumFYFBDZZjvIn3HbRs0RXq\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.887ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T09:24:23.665Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53d3471753d563cc502525"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d53d3471753d563cc50251f\",\"username\":\"testtest\",\"password\":\"$2a$10$r.Z3wYHzYPQEpJ9x/C6jSOw8cKAmOaS4sC611g/4e6xZOsb04HZuS\",\"createDate\":\"2019-08-14T09:24:23.525Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "4.980ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T09:24:23.682Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53d3471753d563cc502526"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d53d3471753d563cc50251f",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.313ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T09:24:23.69Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53d3471753d563cc502527"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d53d3471753d563cc50251f\",\"5d53d3471753d563cc502521\",\"5d53d3471753d563cc502523\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.898ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T09:24:23.698Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53d53eab70640c946ff71c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.757ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T09:32:46.939Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53d53fab70640c946ff71d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.525ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T09:32:47.025Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53d53fab70640c946ff71f"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$oKwU2wTRKGTR9UVrZ5cYG.wpDSoTjg1baZLeiJvFBdM19dWxyynfK\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.674ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T09:32:47.112Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53d53fab70640c946ff721"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$Gv29/IqOvHokMfbHsEWtqeoNprFQ8Dpe4wRZBcKJLGxCjswgbl9EG\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.805ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T09:32:47.181Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53d53fab70640c946ff723"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$sgBHSsZnXs5i2P5SoFUiXeKIdxiER1vMc3p1i/16ualugbTaiDI5S\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.976ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T09:32:47.25Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53d53fab70640c946ff724"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d53d53fab70640c946ff71e\",\"username\":\"testtest\",\"password\":\"$2a$10$oKwU2wTRKGTR9UVrZ5cYG.wpDSoTjg1baZLeiJvFBdM19dWxyynfK\",\"createDate\":\"2019-08-14T09:32:47.110Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "4.987ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T09:32:47.266Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53d53fab70640c946ff725"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d53d53fab70640c946ff71e",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.270ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T09:32:47.274Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53d53fab70640c946ff726"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d53d53fab70640c946ff71e\",\"5d53d53fab70640c946ff720\",\"5d53d53fab70640c946ff722\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.944ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-14T09:32:47.282Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53d566f52b8d195021c6a1"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.320ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T09:33:26.131Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53d597c3cfb061dc0dc6ce"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "88.340ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T09:34:15.951Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53d5c603eeab4574de9702"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.045ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T09:35:02.005Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53d5e8a8da7647709c9f76"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.307ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T09:35:36.795Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53d701dc1b1730b406d359"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.688ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T09:40:17.601Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d53d71f3b5e1f46a440b556"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.901ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-14T09:40:47.832Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b2f00835b519fc90e574"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.515ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T01:18:40.915Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b36822cf243f54fd5a6a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "88.827ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T01:20:40.923Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b37d309e9524f489241d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.689ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T01:21:01.057Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b47011241f20d4cb32d9"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.407ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T01:25:04.414Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b620d4fdb12e60672f5d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "88.981ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T01:32:16.186Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b620d4fdb12e60672f5f"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test\",\"password\":\"$2a$10$QzEF5/qutZ7GQSi3KpWd.OE6.70j19mZD8EsQFBqRJVMsj2gv7yaq\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.548ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T01:32:16.277Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b7a32f7c5926e0b9a8b8"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "88.913ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T01:38:43.345Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b7a32f7c5926e0b9a8b9"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/user",
+    error: "Validation Failed:[{\"message\":\"required\",\"field\":\"username\",\"code\":\"missing_field\"},{\"message\":\"required\",\"field\":\"password\",\"code\":\"missing_field\"}]",
+    ip: "127.0.0.1",
+    params: "[{\"username\":\"test1\",\"password\":\"123456\"},{\"username\":\"test2\",\"password\":\"123456\"},{\"username\":\"test3\",\"password\":\"123456\"}]",
+    userAgent: "node-superagent/3.8.3",
+    time: "4.217ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T01:38:43.376Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b7b84b10171b0887bb38"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.775ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T01:39:04.579Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b7b84b10171b0887bb3a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$14OeEkcvt0uIbL9GhlixsOCt7LUUWyT0d9iJtJut.yBKd.1UrYgkO\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.360ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T01:39:04.67Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b7b84b10171b0887bb3c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$u0kpAfekV0N1EOpontN9nO5VoAW4VPsICUO.rFyHpG7XN4idFnftu\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.423ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T01:39:04.738Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b7b84b10171b0887bb3e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$KY6AdTVQzM9k3zb.IrEQfeQEMmnwgsXph7a9lvzWHoQslwfY42Gmy\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.582ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T01:39:04.807Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b7de8f53c2632c01eff4"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.502ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T01:39:42.365Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b7de8f53c2632c01eff6"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$OcCTFYJeok/A68Cx4buo9uhgggUZWSzLiQl7KtehhmVzJQ3LpJWzu\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.097ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T01:39:42.455Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b7de8f53c2632c01eff8"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$FEuAaIQw37yT/ROUlmikAOjtpHbl4J9074l88spC2fA69eIa7SRG6\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.280ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T01:39:42.526Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b7de8f53c2632c01effa"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$gyDa3Ao9fGTKvG5is5lL8OEeP/O6AKUy0sUVyyu88a/5dsNVpjUHe\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.543ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T01:39:42.594Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b8127bd4b303e8dc6f45"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.096ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T01:40:34.978Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b8137bd4b303e8dc6f46"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/user",
+    error: "用户名已被使用",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "3.763ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T01:40:35.009Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b82281d3764eece31765"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.123ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T01:40:50.298Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b82281d3764eece31767"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$M/fgWprRI.u4ing2q4trluYkM8FvKxbmGDOYRH5r4R0GRn0yWnyQO\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.072ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T01:40:50.389Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b82281d3764eece31769"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$vrqHJY6gSX4bRI5/7/5E8evU9r7fzrxi3j5Cu7bNmmtBEd7u11U3O\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.918ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T01:40:50.458Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b82281d3764eece3176b"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$9JMMgn9H6IcgLxnIqzvdVuqFsxEmY4NO3ha6yvVOptqLKn9HgAPGO\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.759ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T01:40:50.526Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b999c54e3c2564cf2b4a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.318ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T01:47:05.628Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b999c54e3c2564cf2b4b"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/user",
+    error: "用户名已被使用",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "3.571ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T01:47:05.658Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b9a4a437c74d5450299a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.491ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T01:47:16.755Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b9a4a437c74d5450299c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$he.ngULtU1Fcfgr153kWGuW7EJo8FIL2LYS8/v5dnY0mUsiK1hqCy\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.303ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T01:47:16.846Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b9b25ea83c5f004acb16"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.160ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T01:47:30.664Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b9b25ea83c5f004acb17"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/user",
+    error: "用户名已被使用",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "3.773ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T01:47:30.698Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b9b92540b553b0383240"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.843ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T01:47:37.384Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b9b92540b553b0383242"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$ITx547.LmXwZhjZI5uQ59ebUGjeejQqc.achQjyCs9T9dMu6tj.Ey\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "68.973ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T01:47:37.479Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b9b92540b553b0383244"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$zfmVXu2Y/SZky7KfCHD86eMcKQW1uDwl6ndBSw02zA3SgmUQ70GCy\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.494ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T01:47:37.549Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54b9b92540b553b0383246"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$jXj0FABnBbT7HqmySEOwkOm6vYpLl59mFtbzOdee.aaXYQUuvimCS\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.020ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T01:47:37.618Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54bbaab7d74920d4dc1166"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.814ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T01:55:54.38Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54bbaab7d74920d4dc1168"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$zc9R1OgY/z/Up7LjNJ1p0udBaQm7y5hiF8oooNxZA9Qr7ubnMwBdu\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.078ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T01:55:54.469Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54bbaab7d74920d4dc116a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$K8Y24R61AF.IDaxYMaydquRD2hnJcZi2Od.4z2hAWXW0PAbjB72Me\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.052ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T01:55:54.538Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54bbaab7d74920d4dc116c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$9efppzmLZyerbOhc09mP3ucYzel5tjna04IEt/lsAMS0gQ1BcWrjW\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.647ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T01:55:54.607Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54bbd6f283b96310cc542e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.207ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T01:56:38.392Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54bbd6f283b96310cc5430"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$vI50ViCpx4cRCqGaoptQ8OQg8kux6.PphkRKqUGG0elk1ByrMoW.W\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.965ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T01:56:38.482Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54bbd6f283b96310cc5432"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$PsmveevzoUfZpgWGb3mFJO3qTk8BYDgGhOvlFo6k0lWpbMTNFvGyi\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.586ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T01:56:38.551Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54bbd6f283b96310cc5434"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$Eq8clDUivsJ/SqCrMhaufeUV0yA2sjp/b8oxwtox4oipHgBAqNKaq\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.738ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T01:56:38.62Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54bc11f8813f3608c88c59"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.925ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T01:57:37.993Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54bc12f8813f3608c88c5b"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$I23W8aPFOHW4UhIdL3vufu5eoEtjf1zHhTJicTkzYRK3u4Yeo1gYO\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.371ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T01:57:38.085Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54bc12f8813f3608c88c5d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$imi7gIkrSHkFVXzoeJV3NOdYQf5MubzY2GYPk4/65DvJwf1q.IPdu\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.904ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T01:57:38.154Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54bc12f8813f3608c88c5f"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$mkOPcqplgPHoWAyQrP7YCOmlY0R4mOAOG2YtmROJ3xizkkjH31pX2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.939ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T01:57:38.223Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54bc6491f486200864c1ab"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "88.325ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T01:59:00.065Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54bc6491f486200864c1ad"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$VpxJfFRLEF1//Peb4b0k8.s/XdfCPqsTScK4Cl0vK2L08aMCMqOaO\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "67.168ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T01:59:00.16Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54bc6491f486200864c1af"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$xvLKSPsWKNUB8cEVDxqJ/O9ZpPUtIH6ANNEM4WP6qSmW.I1eThMf6\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.130ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T01:59:00.231Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54bc6491f486200864c1b1"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$ESHIFrs5MkJFS4wlERPsc.UUEagVgPZMyckvkeggqQTEJgjRbnO.a\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.425ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T01:59:00.3Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c30b77de403424a0a282"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "89.808ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T02:27:23.725Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c30b77de403424a0a284"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$x3tER2K/.zR9fcmpGiXDceca6TAsi1UMUpAjvHDxkoclq.aYEsw9i\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.273ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:27:23.816Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c30b77de403424a0a286"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$vi6j7cDqGnE.fNaCE.GpiOz3fchgRxajwq.V4dNoTtKwNza3BQFWG\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.077ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:27:23.885Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c30b77de403424a0a288"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$moUq6RgY0UQqAa34RKn5r.FnE0tNvGqnZAl0EpOwtM3h.pvwnhqp.\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.078ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:27:23.955Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c33457500d25642abca6"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.702ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T02:28:04.965Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c33557500d25642abca8"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$/EBQOz0JYPIv9fgtwkST7uqnH11xkL9GmalbbOkc0XSzTExxpDR2a\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.334ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:28:05.055Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c352d03f844518e24768"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "89.338ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T02:28:34.367Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c352d03f844518e2476a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$ldKL2t5yQgiiqrdOC3TFNed9qPc1qxsW6BL5Yj5QiKQS4xMspiKm.\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "65.740ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:28:34.459Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c3b1c4c69959dc6a64c6"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.928ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T02:30:09.687Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c3b1c4c69959dc6a64c8"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$gof27nnBV45rbPBAIOeV9.V1Ci2v5RXPx9GtdceN9/kLfip7JQtXS\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.146ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:30:09.778Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c3cbcb7be81ea02b2e26"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "88.099ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T02:30:35.596Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c3cbcb7be81ea02b2e27"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/user",
+    error: "用户名已被使用",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "3.713ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:30:35.627Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c3d9a070605dc89e10c7"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.788ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T02:30:49.388Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c3d9a070605dc89e10c9"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$F0j3HBitAIkWsMLN/RFetej/DZm5pkZTY.3QeADGfupJeujUn0vHW\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.145ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:30:49.479Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c4130d307438e493e024"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "89.751ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T02:31:47.49Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c4130d307438e493e026"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$NxDaCInrw.75Oi8HkQ3Eje8uDrW2ZzklmRHQ93qym9Tqvjt2/6GE.\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.217ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:31:47.585Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c4130d307438e493e028"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$HNkXFz0XPiIsI0408qlYFe.nCHXne3xwBUGD88DOKxyknrRUw7NvO\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.002ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:31:47.655Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c4130d307438e493e02a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$eFDkeUpKd1D91iYalrjorODpEFxLyV1tIDIt10PsNKIHb2ZtgXaEa\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.156ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:31:47.724Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c4362a3a0363703bd22b"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.789ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T02:32:22.432Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c4362a3a0363703bd22c"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/user",
+    error: "用户名已被使用",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "3.568ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:32:22.463Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c4406e3ed350689edcb7"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.319ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T02:32:32.149Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c4406e3ed350689edcb9"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$BF61EufGmFA9E3UHPZBFD.bDjJbiIB/Agk2z2bkhVWONZUhcoiOl.\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.251ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:32:32.24Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c4406e3ed350689edcbb"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$dVQ8MJxdQB.I5m4R2bHvxeinGD2CkfrbELkXpPA1RGwMz5W67OxyC\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.075ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:32:32.31Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c4406e3ed350689edcbd"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$JlVIi.UAGxj0QK5wzWR82e63IprerJleFaC6FZf5BGqerz4xm//7.\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.788ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:32:32.378Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c4960ac2184428f3f409"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "88.315ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T02:33:58.137Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c4960ac2184428f3f40b"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$FaoEhnVxMN42uk6Yf.za1.9YFiKyOoYTKvTfDcxUu6BgtnVMhU6Ly\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.443ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:33:58.229Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c4960ac2184428f3f40d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$aHRyjRH3DgkelFgOGLmup.aqWW2VZUpw6ba/2ij/m8HXL0HtVyboa\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.727ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:33:58.3Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c4960ac2184428f3f40f"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$E.li0uFn.T/3omXZW72XWeODjH00HEvxa9/PPVtJjcZoBi1PZ2nbq\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.923ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:33:58.369Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c4ba8d02024ef893479a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.007ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T02:34:34.477Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c4ba8d02024ef893479c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$DNRBsx3CI34Pr0Kr72NgyuMYslFyulQi5YXJ9eXC8tqNSXnGZR88G\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.562ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:34:34.569Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c4ba8d02024ef893479e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$0jARkW/8kj7rFJr1F6/T5uuAMQU1XLiN3YweQP89D12K9kMo38CfW\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.227ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:34:34.639Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c4ba8d02024ef89347a0"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$UPe07f4FYJ2EYXYLtDBUcuL/Si3deQBVliTzK0A6RxMqxpXKh/wgy\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.006ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:34:34.708Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c4ba8d02024ef89347a1"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54c4ba8d02024ef893479b\",\"username\":\"testtest\",\"password\":\"$2a$10$DNRBsx3CI34Pr0Kr72NgyuMYslFyulQi5YXJ9eXC8tqNSXnGZR88G\",\"createDate\":\"2019-08-15T02:34:34.566Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.390ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:34:34.726Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c4f7ff3337211cc4f476"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.754ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T02:35:35.468Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c4f7ff3337211cc4f478"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$r4JAXIIzL/VncnWdOCqHj.apC8/0NBoAKKnyvQYQdbCzOULzSQ6i2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.433ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:35:35.559Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c4f7ff3337211cc4f47a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$fcyuu0mtxZ4oIXVbwfekLu3cvG.OyIlJbw9JGlW2drqk0vrrpu/Zy\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.954ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:35:35.628Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c4f7ff3337211cc4f47c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$CLpdLjlMYUHV9JpGYnAVJuZbqrRceu4YU1hQXfk3/TJbWKecv3tnu\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.785ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:35:35.697Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c4f7ff3337211cc4f47d"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54c4f7ff3337211cc4f477\",\"username\":\"testtest\",\"password\":\"$2a$10$r4JAXIIzL/VncnWdOCqHj.apC8/0NBoAKKnyvQYQdbCzOULzSQ6i2\",\"createDate\":\"2019-08-15T02:35:35.556Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.064ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:35:35.715Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c54fe2e16b0d64f17f0e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "88.471ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T02:37:03.364Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c54fe2e16b0d64f17f10"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$AKZkNg7JgKFk0l41Q1WB6uc2dQ3WjHIyImuonCFXeb7pLZf4J0FPq\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.217ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:37:03.456Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c54fe2e16b0d64f17f12"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$3OANWBivBSAH9y7ln0fVue2Rhelp5vZ50669EfUEkCdgbhhPARn0W\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.725ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:37:03.525Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c54fe2e16b0d64f17f14"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$c4CwG.B2ae844ouRH3d1t.X0FeOe83TjHYCLQ4kzvFR0KObfPI4t.\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.613ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:37:03.593Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c54fe2e16b0d64f17f15"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54c54fe2e16b0d64f17f0f\",\"username\":\"testtest\",\"password\":\"$2a$10$AKZkNg7JgKFk0l41Q1WB6uc2dQ3WjHIyImuonCFXeb7pLZf4J0FPq\",\"createDate\":\"2019-08-15T02:37:03.453Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.107ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:37:03.61Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c7d97c36cc3a04c51d0a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.378ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T02:47:53.252Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c7d97c36cc3a04c51d0c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$4ZmhOLrAFFchI35G2nOYmelBriKzh4ZZUefTd5GKq8e9FdjF8NB8K\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.158ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:47:53.342Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c7d97c36cc3a04c51d0e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$5LBYl4syGkhFl9/Nk1xEh.4ile76E0CmOfkT5GstYiC53jrZ.pJce\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.171ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:47:53.411Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c7d97c36cc3a04c51d10"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$YIkyz.Sh0hEltz6WWwL3OuGpAEuUc3KDHCYka.hC/wSF.9alFdzHm\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.899ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:47:53.48Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c7d97c36cc3a04c51d11"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54c7d97c36cc3a04c51d0b\",\"username\":\"testtest\",\"password\":\"$2a$10$4ZmhOLrAFFchI35G2nOYmelBriKzh4ZZUefTd5GKq8e9FdjF8NB8K\",\"createDate\":\"2019-08-15T02:47:53.339Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.382ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:47:53.497Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c7ea9a3ed225040d9153"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.085ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T02:48:10.561Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c7ea9a3ed225040d9155"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$.F8/2MpSleZjdva53AZqm.e0gtnQTRubjVr9.gFGKa2RYiLqZ.h62\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.269ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:48:10.651Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c7ea9a3ed225040d9157"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$0Gc8yw4Ni4dp/b0RXuIfw.Y15I1wQ7k6gc7UAVUxnLNonve871VTO\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.844ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:48:10.72Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c7ea9a3ed225040d9159"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$TXl.LJG83f6O9AfLRooxU.pe7OIgbUCFKi4fNa9cloaz6m2a1Ry0a\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.752ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:48:10.789Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c7ea9a3ed225040d915a"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54c7ea9a3ed225040d9154\",\"username\":\"testtest\",\"password\":\"$2a$10$.F8/2MpSleZjdva53AZqm.e0gtnQTRubjVr9.gFGKa2RYiLqZ.h62\",\"createDate\":\"2019-08-15T02:48:10.648Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.144ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:48:10.806Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c7ea9a3ed225040d915b"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54c7ea9a3ed225040d9154",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54c7ea9a3ed225040d9154\",\"username\":\"test1\",\"password\":\"$2a$10$.F8/2MpSleZjdva53AZqm.e0gtnQTRubjVr9.gFGKa2RYiLqZ.h62\",\"createDate\":\"2019-08-15T02:48:10.648Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.262ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:48:10.815Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c88c721d6a622cd7ac3c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.152ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T02:50:52.579Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c88c721d6a622cd7ac3e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$8JWETbLj5DGBlBNMLbqCSeZRawBMMPhnRaELvX2gXpuay0oETpoHS\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "65.594ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:50:52.671Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c88c721d6a622cd7ac40"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$8lqz/JDKzlhZrMvp/bEQ1eZS2ONrbQeYQYxqZ0NF8QoD7JgRZLMNi\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.413ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:50:52.742Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c88c721d6a622cd7ac42"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$x/gKS6Mgt47p4/zc6bKYT.Z4fPTwWGfu4f1w28jtEJqMyZVHNBZti\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.433ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:50:52.811Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c88c721d6a622cd7ac43"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54c88c721d6a622cd7ac3d\",\"username\":\"testtest\",\"password\":\"$2a$10$8JWETbLj5DGBlBNMLbqCSeZRawBMMPhnRaELvX2gXpuay0oETpoHS\",\"createDate\":\"2019-08-15T02:50:52.668Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.063ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:50:52.827Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c88c721d6a622cd7ac44"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54c88c721d6a622cd7ac3d",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54c88c721d6a622cd7ac3d\",\"username\":\"test1\",\"password\":\"$2a$10$8JWETbLj5DGBlBNMLbqCSeZRawBMMPhnRaELvX2gXpuay0oETpoHS\",\"createDate\":\"2019-08-15T02:50:52.668Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.005ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:50:52.835Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c88c721d6a622cd7ac45"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54c88c721d6a622cd7ac3d",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.340ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:50:52.844Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c8cc1a66b14604ca5632"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.521ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T02:51:56.929Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c8cd1a66b14604ca5634"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$lAmLEx2qZEqOvX2fBcLfz.7Le0FnbCgYoVokclnh78UE4KAHaZYf6\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "65.209ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:51:57.022Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c8cd1a66b14604ca5636"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$ZGLbumGsEmJFTTdHS1vGGeWERlvQxhazLeQTSpVzRRqIMqA2NZdQ2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.127ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:51:57.091Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c8cd1a66b14604ca5638"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$4W69B.MKVrhJ0vFuNHztNeHLY3zwb6icCZKiuEC9Zr8xjGYt2Fb9e\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.204ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:51:57.16Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c8cd1a66b14604ca5639"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54c8cd1a66b14604ca5633\",\"username\":\"testtest\",\"password\":\"$2a$10$lAmLEx2qZEqOvX2fBcLfz.7Le0FnbCgYoVokclnh78UE4KAHaZYf6\",\"createDate\":\"2019-08-15T02:51:57.019Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.185ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:51:57.178Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c8cd1a66b14604ca563a"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54c8cd1a66b14604ca5633",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54c8cd1a66b14604ca5633\",\"username\":\"test1\",\"password\":\"$2a$10$lAmLEx2qZEqOvX2fBcLfz.7Le0FnbCgYoVokclnh78UE4KAHaZYf6\",\"createDate\":\"2019-08-15T02:51:57.019Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.152ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:51:57.187Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c8cd1a66b14604ca563b"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54c8cd1a66b14604ca5633",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.125ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:51:57.194Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c8dcb820995c3c3de022"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.297ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T02:52:12.637Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c8dcb820995c3c3de024"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$Rw4BI4Bmg/P53K2ymLtOtu73qTJtrE/J1hsTr8c/qqec8JnlXy5WG\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.268ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:52:12.729Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c8dcb820995c3c3de026"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$i6VZAzXaZWL9Wsn5qkNCGeQio3oxykGK3YXwO4C5fsyXZmK70KXhG\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.688ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:52:12.798Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c8dcb820995c3c3de028"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$OjGS7hFvdh.bG46vp3IfVuRa36betnJnpjJ2keLV.H9WV.ZqF4gDO\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.773ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:52:12.867Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c8dcb820995c3c3de029"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54c8dcb820995c3c3de023\",\"username\":\"testtest\",\"password\":\"$2a$10$Rw4BI4Bmg/P53K2ymLtOtu73qTJtrE/J1hsTr8c/qqec8JnlXy5WG\",\"createDate\":\"2019-08-15T02:52:12.726Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.295ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:52:12.884Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c8dcb820995c3c3de02a"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54c8dcb820995c3c3de023",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54c8dcb820995c3c3de023\",\"username\":\"test1\",\"password\":\"$2a$10$Rw4BI4Bmg/P53K2ymLtOtu73qTJtrE/J1hsTr8c/qqec8JnlXy5WG\",\"createDate\":\"2019-08-15T02:52:12.726Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.047ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:52:12.892Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c8dcb820995c3c3de02b"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54c8dcb820995c3c3de023",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.306ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:52:12.9Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c8f25a1f1e428096af42"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.853ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T02:52:34.929Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c8f35a1f1e428096af44"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$LIFB6xgkCpeMaa0aTlz3gumkZKrIiib6mQAlG.Qvg1wIzJ9VSjb22\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.145ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:52:35.02Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c8f35a1f1e428096af46"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$4EqgRnpSHW1b71H2D8T3V.2sP5BzJ1jq81fTrG2lFnATuvVVVFm4.\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.330ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:52:35.088Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c8f35a1f1e428096af48"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$.Hc4nR5FlufkpxmcDASv1.b3uVCY9gcR4EvFalsmZJy4sRFpDxz42\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.212ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:52:35.157Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c8f35a1f1e428096af49"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54c8f35a1f1e428096af43\",\"username\":\"testtest\",\"password\":\"$2a$10$LIFB6xgkCpeMaa0aTlz3gumkZKrIiib6mQAlG.Qvg1wIzJ9VSjb22\",\"createDate\":\"2019-08-15T02:52:35.017Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.105ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:52:35.173Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c8f35a1f1e428096af4a"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54c8f35a1f1e428096af43",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54c8f35a1f1e428096af43\",\"username\":\"test1\",\"password\":\"$2a$10$LIFB6xgkCpeMaa0aTlz3gumkZKrIiib6mQAlG.Qvg1wIzJ9VSjb22\",\"createDate\":\"2019-08-15T02:52:35.017Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.317ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:52:35.182Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c8f35a1f1e428096af4b"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54c8f35a1f1e428096af43",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.266ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:52:35.19Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54c8f35a1f1e428096af4c"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54c8f35a1f1e428096af43\",\"5d54c8f35a1f1e428096af45\",\"5d54c8f35a1f1e428096af47\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.934ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:52:35.198Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54caab58e97d1c4876253d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.666ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T02:59:55.358Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54caab58e97d1c4876253f"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$hxGMv4deu3gDvXnQwCiqVeX7gkDyTuF4nV08NhY6QYokhQwnhDc/q\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.953ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:59:55.449Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54caab58e97d1c48762541"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$rM3rRobLzGRmhwY6DmHlGOrhukQLq2cBzfnbotBpJKXyjXxzwl4Ty\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.632ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:59:55.518Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54caab58e97d1c48762543"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$Qg/DQAJAb4mX16OkXIzkiOLlb3jIR9vI/2jvwFgsTwyUp1gkxF9iC\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.939ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:59:55.586Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54caab58e97d1c48762544"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54caab58e97d1c4876253e\",\"username\":\"testtest\",\"password\":\"$2a$10$hxGMv4deu3gDvXnQwCiqVeX7gkDyTuF4nV08NhY6QYokhQwnhDc/q\",\"createDate\":\"2019-08-15T02:59:55.446Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.319ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:59:55.604Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54caab58e97d1c48762545"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54caab58e97d1c4876253e",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54caab58e97d1c4876253e\",\"username\":\"test1\",\"password\":\"$2a$10$hxGMv4deu3gDvXnQwCiqVeX7gkDyTuF4nV08NhY6QYokhQwnhDc/q\",\"createDate\":\"2019-08-15T02:59:55.446Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.119ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:59:55.612Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54caab58e97d1c48762546"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54caab58e97d1c4876253e",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.279ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:59:55.62Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54caab58e97d1c48762547"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54caab58e97d1c4876253e\",\"5d54caab58e97d1c48762540\",\"5d54caab58e97d1c48762542\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.797ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T02:59:55.628Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cb71ff0e8467ac553d27"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.463ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T03:03:13.117Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cb71ff0e8467ac553d29"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$7EiQopYmgGQiWqi/RjyzO.NKmVdmB32bLfHl62SEgBfNZYUgMk8eO\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.079ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:03:13.207Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cb71ff0e8467ac553d2b"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$VuDFf.SZgO51FJfLf062Yu5jt3oiwPv/xEBMZ/rxuXmO61N2S7CIi\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.608ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:03:13.276Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cb71ff0e8467ac553d2d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$crHDV9pd7GQAMco0.CBwFeF6qbTDIJBl1ouFfIN.O/yMM9r1Gc5Vy\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.637ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:03:13.344Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cb71ff0e8467ac553d2e"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54cb71ff0e8467ac553d28\",\"username\":\"testtest\",\"password\":\"$2a$10$7EiQopYmgGQiWqi/RjyzO.NKmVdmB32bLfHl62SEgBfNZYUgMk8eO\",\"createDate\":\"2019-08-15T03:03:13.204Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.247ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:03:13.384Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cb71ff0e8467ac553d2f"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54cb71ff0e8467ac553d28",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54cb71ff0e8467ac553d28\",\"username\":\"test1\",\"password\":\"$2a$10$7EiQopYmgGQiWqi/RjyzO.NKmVdmB32bLfHl62SEgBfNZYUgMk8eO\",\"createDate\":\"2019-08-15T03:03:13.204Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.082ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:03:13.392Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cb71ff0e8467ac553d30"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54cb71ff0e8467ac553d28",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.258ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:03:13.4Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cb71ff0e8467ac553d31"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54cb71ff0e8467ac553d28\",\"5d54cb71ff0e8467ac553d2a\",\"5d54cb71ff0e8467ac553d2c\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.892ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:03:13.408Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cb9a4da2b346841535f6"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.942ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T03:03:54.576Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cb9a4da2b346841535f8"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$.f68M3DVr9OetJPiTHncyeT4qm8HOV8/TgHe5OIcTLCLO2wxJDlva\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.456ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:03:54.667Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cb9a4da2b346841535fa"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$pi5zCD1cw5ACxDP3a8MFYeDQUPtQbp0/wLtPZY3ya9Mpni0JreDAW\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.160ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:03:54.737Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cb9a4da2b346841535fc"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$VwGvBjwNQa4djgnocBU8QeIXczN7ggZuP8jZS5KEi5VxJmxVjcqMa\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.257ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:03:54.807Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cb9a4da2b346841535fd"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54cb9a4da2b346841535f7\",\"username\":\"testtest\",\"password\":\"$2a$10$.f68M3DVr9OetJPiTHncyeT4qm8HOV8/TgHe5OIcTLCLO2wxJDlva\",\"createDate\":\"2019-08-15T03:03:54.664Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.285ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:03:54.824Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cb9a4da2b346841535fe"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54cb9a4da2b346841535f7",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54cb9a4da2b346841535f7\",\"username\":\"test1\",\"password\":\"$2a$10$.f68M3DVr9OetJPiTHncyeT4qm8HOV8/TgHe5OIcTLCLO2wxJDlva\",\"createDate\":\"2019-08-15T03:03:54.664Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.091ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:03:54.833Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cb9a4da2b346841535ff"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54cb9a4da2b346841535f7",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.276ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:03:54.841Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cb9a4da2b34684153600"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54cb9a4da2b346841535f7\",\"5d54cb9a4da2b346841535f9\",\"5d54cb9a4da2b346841535fb\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.813ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:03:54.849Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cc070cb2e9272c8a6417"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.332ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T03:05:43.366Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cc070cb2e9272c8a6419"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$QitGh/nFiq2W3N2yfK9DduQK4MiIoharY37H04/f2JctTvj7SSgj.\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.044ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:05:43.456Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cc070cb2e9272c8a641b"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$eKQhUhLLeSwdMSnz1slhx.MIgXhx8851ay9iNwB0ajx2uFj.XBCSK\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.657ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:05:43.525Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cc070cb2e9272c8a641d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$gpDKrfEARbuaPfmP..WtPekxECakmKSnx0/2iNKoxQMBfGlst0/Uu\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.063ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:05:43.595Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cc070cb2e9272c8a641e"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54cc070cb2e9272c8a6418\",\"username\":\"testtest\",\"password\":\"$2a$10$QitGh/nFiq2W3N2yfK9DduQK4MiIoharY37H04/f2JctTvj7SSgj.\",\"createDate\":\"2019-08-15T03:05:43.453Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.252ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:05:43.613Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cc070cb2e9272c8a641f"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54cc070cb2e9272c8a6418",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54cc070cb2e9272c8a6418\",\"username\":\"test1\",\"password\":\"$2a$10$QitGh/nFiq2W3N2yfK9DduQK4MiIoharY37H04/f2JctTvj7SSgj.\",\"createDate\":\"2019-08-15T03:05:43.453Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.076ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:05:43.621Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cc070cb2e9272c8a6420"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54cc070cb2e9272c8a6418",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.047ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:05:43.629Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cc070cb2e9272c8a6421"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54cc070cb2e9272c8a6418\",\"5d54cc070cb2e9272c8a641a\",\"5d54cc070cb2e9272c8a641c\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.891ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:05:43.637Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cc61d165c95be8f25f86"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "88.968ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T03:07:13.851Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cc61d165c95be8f25f88"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$Y472b6VAwGa8mTKwpu/4Q.vmKmb0.YGDK1jC3GYEugT6VspAdcO.i\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "65.451ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:07:13.943Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cc62d165c95be8f25f8a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$DrwSnPLyh4a/.6jNNUqGB.syy2FBCneoIK8AAbgbF5YHrG5POZIOq\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.402ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:07:14.014Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cc62d165c95be8f25f8c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$j69zME0QcCMTw2y.ok5SM.9UGcTViTzzFeloBQwnDLI.P1dNGzkaG\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.492ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:07:14.082Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cc62d165c95be8f25f8d"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54cc61d165c95be8f25f87\",\"username\":\"testtest\",\"password\":\"$2a$10$Y472b6VAwGa8mTKwpu/4Q.vmKmb0.YGDK1jC3GYEugT6VspAdcO.i\",\"createDate\":\"2019-08-15T03:07:13.940Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.050ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:07:14.099Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cc62d165c95be8f25f8e"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54cc61d165c95be8f25f87",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54cc61d165c95be8f25f87\",\"username\":\"test1\",\"password\":\"$2a$10$Y472b6VAwGa8mTKwpu/4Q.vmKmb0.YGDK1jC3GYEugT6VspAdcO.i\",\"createDate\":\"2019-08-15T03:07:13.940Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.110ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:07:14.107Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cc62d165c95be8f25f8f"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54cc61d165c95be8f25f87",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.312ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:07:14.116Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cc62d165c95be8f25f90"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54cc61d165c95be8f25f87\",\"5d54cc62d165c95be8f25f89\",\"5d54cc62d165c95be8f25f8b\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.859ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:07:14.124Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cc9957a97d5dd4c50fa5"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.193ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T03:08:09.952Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cc9a57a97d5dd4c50fa7"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$p99zVQ24/cP5mHFmxqISFOUk.BmsxugA.Z9d7a4CFfrIeiVdXeQPm\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.646ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:08:10.043Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cc9a57a97d5dd4c50fa9"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$vWlSeBDryyRQz8JmwXkKAesLGLL05UucctCAfuh36DZPC3IaJrISi\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.868ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:08:10.112Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cc9a57a97d5dd4c50fab"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$mHiyg0NQkPiaXp4zl4fFsuLUiCNNmpJ/3ypzlXZD3vP1WPLgYSluC\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.979ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:08:10.181Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cc9a57a97d5dd4c50fac"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54cc9a57a97d5dd4c50fa6\",\"username\":\"testtest\",\"password\":\"$2a$10$p99zVQ24/cP5mHFmxqISFOUk.BmsxugA.Z9d7a4CFfrIeiVdXeQPm\",\"createDate\":\"2019-08-15T03:08:10.040Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.300ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:08:10.198Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cc9a57a97d5dd4c50fad"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54cc9a57a97d5dd4c50fa6",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54cc9a57a97d5dd4c50fa6\",\"username\":\"test1\",\"password\":\"$2a$10$p99zVQ24/cP5mHFmxqISFOUk.BmsxugA.Z9d7a4CFfrIeiVdXeQPm\",\"createDate\":\"2019-08-15T03:08:10.040Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.321ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:08:10.207Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cc9a57a97d5dd4c50fae"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54cc9a57a97d5dd4c50fa6",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.313ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:08:10.215Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cc9a57a97d5dd4c50faf"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54cc9a57a97d5dd4c50fa6\",\"5d54cc9a57a97d5dd4c50fa8\",\"5d54cc9a57a97d5dd4c50faa\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.884ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:08:10.223Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ccaa974de53c0410274c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.485ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T03:08:26.171Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ccaa974de53c0410274e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$EH7Ha3FX96uPjP6MOMUusuWZIFjGtbp7LQUZ36p6fWC5l/Zqd2hTC\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.348ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:08:26.263Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ccaa974de53c04102750"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$cU8Wr.cX84mdkj6LyT87Kei6LzNeEQ6wYgYxIPjiFEZ57bQClRf2q\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.734ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:08:26.332Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ccaa974de53c04102752"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$nJNVZxc40YDHim8hV8SOF.5dR72x1mKK2Mu1O7BVg0Q.HYhgK0.ya\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.771ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:08:26.401Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ccaa974de53c04102753"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54ccaa974de53c0410274d\",\"username\":\"testtest\",\"password\":\"$2a$10$EH7Ha3FX96uPjP6MOMUusuWZIFjGtbp7LQUZ36p6fWC5l/Zqd2hTC\",\"createDate\":\"2019-08-15T03:08:26.260Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.300ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:08:26.418Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ccaa974de53c04102754"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54ccaa974de53c0410274d",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54ccaa974de53c0410274d\",\"username\":\"test1\",\"password\":\"$2a$10$EH7Ha3FX96uPjP6MOMUusuWZIFjGtbp7LQUZ36p6fWC5l/Zqd2hTC\",\"createDate\":\"2019-08-15T03:08:26.260Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.300ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:08:26.427Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ccaa974de53c04102755"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54ccaa974de53c0410274d",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.198ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:08:26.435Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ccaa974de53c04102756"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54ccaa974de53c0410274d\",\"5d54ccaa974de53c0410274f\",\"5d54ccaa974de53c04102751\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.871ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:08:26.443Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ccda8d35b7655067e68c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.721ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T03:09:14.259Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ccda8d35b7655067e68e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$TKAvOidzKi4mmz3gWWjSseIxO4PlGNoG8um6at5BZtWdvD.2XP39S\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.294ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:09:14.349Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ccda8d35b7655067e690"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$NC9QafrLaFc7AT6./7Nv3OSvf89NPO3hERo2pE8uDPiwu8aBP1bzi\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.867ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:09:14.418Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ccda8d35b7655067e692"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$3Z9776L2YYHyiDS9ngrvO.0vROpMdIKiQ6Xrd4IwwDn3wWTdQVlRK\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.826ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:09:14.487Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ccda8d35b7655067e693"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54ccda8d35b7655067e68d\",\"username\":\"testtest\",\"password\":\"$2a$10$TKAvOidzKi4mmz3gWWjSseIxO4PlGNoG8um6at5BZtWdvD.2XP39S\",\"createDate\":\"2019-08-15T03:09:14.346Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.205ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:09:14.505Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ccda8d35b7655067e694"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54ccda8d35b7655067e68d",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54ccda8d35b7655067e68d\",\"username\":\"test1\",\"password\":\"$2a$10$TKAvOidzKi4mmz3gWWjSseIxO4PlGNoG8um6at5BZtWdvD.2XP39S\",\"createDate\":\"2019-08-15T03:09:14.346Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.151ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:09:14.513Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ccda8d35b7655067e695"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54ccda8d35b7655067e68d",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.128ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:09:14.521Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ccda8d35b7655067e696"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54ccda8d35b7655067e68d\",\"5d54ccda8d35b7655067e68f\",\"5d54ccda8d35b7655067e691\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.960ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:09:14.529Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cd04996f2743a839a499"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.476ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T03:09:56.442Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cd04996f2743a839a49b"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$yoNHvqJ9xyQlYFZVV5BiXeK5B5ZOL5eXKDQsy8fwaVbpGPbuY3inq\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.209ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:09:56.533Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cd04996f2743a839a49d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$zvotpiD8aHBhsXM3bx27UOKE3N24hVEBp4u2ow/7.VPZbmpAUUQ4u\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.361ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:09:56.604Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cd04996f2743a839a49f"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$SOtGDmFdcCtF.mKwGSL.Yun8a9y1r7zWp.FwWQB8EL7T5vFVXcOcC\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.490ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:09:56.672Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cd04996f2743a839a4a0"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54cd04996f2743a839a49a\",\"username\":\"testtest\",\"password\":\"$2a$10$yoNHvqJ9xyQlYFZVV5BiXeK5B5ZOL5eXKDQsy8fwaVbpGPbuY3inq\",\"createDate\":\"2019-08-15T03:09:56.530Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.306ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:09:56.69Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cd04996f2743a839a4a1"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54cd04996f2743a839a49a",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54cd04996f2743a839a49a\",\"username\":\"test1\",\"password\":\"$2a$10$yoNHvqJ9xyQlYFZVV5BiXeK5B5ZOL5eXKDQsy8fwaVbpGPbuY3inq\",\"createDate\":\"2019-08-15T03:09:56.530Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.051ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:09:56.698Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cd04996f2743a839a4a2"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54cd04996f2743a839a49a",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.256ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:09:56.707Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cd04996f2743a839a4a3"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54cd04996f2743a839a49a\",\"5d54cd04996f2743a839a49c\",\"5d54cd04996f2743a839a49e\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.893ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:09:56.715Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cd6883374a192839f562"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "88.228ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T03:11:36.186Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cd6883374a192839f564"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$Nt0Sytg7kHTKEYJXJr.HaOJX3gfs1GLGkpvF4YzdbItgs.yLkB/CW\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.059ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:11:36.276Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cd6883374a192839f566"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$ixpXMnr8nBtMOxZ7myRmdepOfPew3t11B3ON7cGhE4PZnvEe8ZbkS\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.645ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:11:36.344Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cd6883374a192839f568"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$r6EL1pXSHBfoa73IK0BS/uWoZEj0ztgt.or0yjZ.DIQrBJ9yVpDVa\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.615ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:11:36.413Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cd6883374a192839f569"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54cd6883374a192839f563\",\"username\":\"testtest\",\"password\":\"$2a$10$Nt0Sytg7kHTKEYJXJr.HaOJX3gfs1GLGkpvF4YzdbItgs.yLkB/CW\",\"createDate\":\"2019-08-15T03:11:36.273Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.087ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:11:36.429Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cd6883374a192839f56a"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54cd6883374a192839f563",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54cd6883374a192839f563\",\"username\":\"test1\",\"password\":\"$2a$10$Nt0Sytg7kHTKEYJXJr.HaOJX3gfs1GLGkpvF4YzdbItgs.yLkB/CW\",\"createDate\":\"2019-08-15T03:11:36.273Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.107ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:11:36.437Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cd6883374a192839f56b"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54cd6883374a192839f563",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.267ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:11:36.445Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cd6883374a192839f56c"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54cd6883374a192839f563\",\"5d54cd6883374a192839f565\",\"5d54cd6883374a192839f567\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.844ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:11:36.453Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cdbe19002e03701703af"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"uuid\":\"\",\"captcha\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "87.649ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T03:13:02.335Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce0a073ad442a0e73965"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.780ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T03:14:18.867Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce0a073ad442a0e73967"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$qc7qv6lboahPfPrv4m0CJ.NBCVYiifZr91cutkYavsA6wx4BmZXxi\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "65.522ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:14:18.96Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce0b073ad442a0e73969"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$7d9aLMvkm3HGAgcdNiaiSef7ot2/nOHRL/4hjhb09EgLlgmfpJ1xC\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.275ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:14:19.029Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce0b073ad442a0e7396b"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$AI81vv5qHv79Z8l73slhiuwgZI9QwK3B8BX5YBtGPgYlxJM2grL6W\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.765ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:14:19.098Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce0b073ad442a0e7396c"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54ce0a073ad442a0e73966\",\"username\":\"testtest\",\"password\":\"$2a$10$qc7qv6lboahPfPrv4m0CJ.NBCVYiifZr91cutkYavsA6wx4BmZXxi\",\"createDate\":\"2019-08-15T03:14:18.956Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.477ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:14:19.115Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce0b073ad442a0e7396d"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54ce0a073ad442a0e73966",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54ce0a073ad442a0e73966\",\"username\":\"test1\",\"password\":\"$2a$10$qc7qv6lboahPfPrv4m0CJ.NBCVYiifZr91cutkYavsA6wx4BmZXxi\",\"createDate\":\"2019-08-15T03:14:18.956Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.126ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:14:19.124Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce0b073ad442a0e7396e"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54ce0a073ad442a0e73966",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.330ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:14:19.133Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce0b073ad442a0e7396f"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54ce0a073ad442a0e73966\",\"5d54ce0b073ad442a0e73968\",\"5d54ce0b073ad442a0e7396a\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.898ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:14:19.141Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce1dc921373d0c020737"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.488ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T03:14:37.935Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce1ec921373d0c020739"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$w3erfBgEQa29kB/jbTgrb.5FLl7xY/Kz1RMJHG7dJPgr1UtOEOl3O\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.043ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:14:38.026Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce1ec921373d0c02073b"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$0ryiB4iPR1f8eO/wKyyN2.Pz8uSoPS451eXdPA2gyNNSVPqwk0io2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.594ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:14:38.095Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce1ec921373d0c02073d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$3trDixc5/UY5Mnj1mXRP8.A3iSCrnXsWBq1yI.BCUT4p9izWL86nq\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.520ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:14:38.163Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce1ec921373d0c02073e"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54ce1ec921373d0c020738\",\"username\":\"testtest\",\"password\":\"$2a$10$w3erfBgEQa29kB/jbTgrb.5FLl7xY/Kz1RMJHG7dJPgr1UtOEOl3O\",\"createDate\":\"2019-08-15T03:14:38.023Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.492ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:14:38.181Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce1ec921373d0c02073f"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54ce1ec921373d0c020738",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54ce1ec921373d0c020738\",\"username\":\"test1\",\"password\":\"$2a$10$w3erfBgEQa29kB/jbTgrb.5FLl7xY/Kz1RMJHG7dJPgr1UtOEOl3O\",\"createDate\":\"2019-08-15T03:14:38.023Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.039ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:14:38.189Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce1ec921373d0c020740"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54ce1ec921373d0c020738",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.349ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:14:38.197Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce1ec921373d0c020741"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54ce1ec921373d0c020738\",\"5d54ce1ec921373d0c02073a\",\"5d54ce1ec921373d0c02073c\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.905ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:14:38.206Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce473a79ec6af47ca498"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "89.401ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T03:15:19.153Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce473a79ec6af47ca49a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$dv0/034M9Sq7Djrlp2JQOutGdDLHziOpW.ClT6atsmml2GmhvhpzG\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.354ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:15:19.244Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce473a79ec6af47ca49c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$scP.wV7rpTGzjmg5zrWwg.AGGV.oQoJsKLm1sTrczAyj6DW5971HS\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.538ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:15:19.315Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce473a79ec6af47ca49e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$Z1n8yUMoo5qOTafcWOXXSuWp5/HaOfFoWsWHRcvPj8Ya/Wkqf9532\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.690ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:15:19.383Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce473a79ec6af47ca49f"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54ce473a79ec6af47ca499\",\"username\":\"testtest\",\"password\":\"$2a$10$dv0/034M9Sq7Djrlp2JQOutGdDLHziOpW.ClT6atsmml2GmhvhpzG\",\"createDate\":\"2019-08-15T03:15:19.241Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.018ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:15:19.4Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce473a79ec6af47ca4a0"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54ce473a79ec6af47ca499",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54ce473a79ec6af47ca499\",\"username\":\"test1\",\"password\":\"$2a$10$dv0/034M9Sq7Djrlp2JQOutGdDLHziOpW.ClT6atsmml2GmhvhpzG\",\"createDate\":\"2019-08-15T03:15:19.241Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.039ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:15:19.407Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce473a79ec6af47ca4a1"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54ce473a79ec6af47ca499",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.095ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:15:19.415Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce473a79ec6af47ca4a2"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54ce473a79ec6af47ca499\",\"5d54ce473a79ec6af47ca49b\",\"5d54ce473a79ec6af47ca49d\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.861ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:15:19.423Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce7f10686d6bb40e867a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.660ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T03:16:15.582Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce7f10686d6bb40e867c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$bVORj0VCNKov4ySivZLXi.vzj2kH5/E7gQnQdCoAvyiPPxfVUzSO.\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.354ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:16:15.673Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce7f10686d6bb40e867e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$Kt.xBAMRLg67OD74XQi8xOUGdF84y0g2l/fBkS3GDSOp9LKBjxOg2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.996ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:16:15.743Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce7f10686d6bb40e8680"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$..4Kee5DsuzXVVkLNxvpL.VopsjVM3g0fDQ.ZVQaViYYwKIXC54TK\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.876ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:16:15.811Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce7f10686d6bb40e8681"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54ce7f10686d6bb40e867b\",\"username\":\"testtest\",\"password\":\"$2a$10$bVORj0VCNKov4ySivZLXi.vzj2kH5/E7gQnQdCoAvyiPPxfVUzSO.\",\"createDate\":\"2019-08-15T03:16:15.671Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.492ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:16:15.828Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce7f10686d6bb40e8682"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54ce7f10686d6bb40e867b",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54ce7f10686d6bb40e867b\",\"username\":\"test1\",\"password\":\"$2a$10$bVORj0VCNKov4ySivZLXi.vzj2kH5/E7gQnQdCoAvyiPPxfVUzSO.\",\"createDate\":\"2019-08-15T03:16:15.671Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.977ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:16:15.836Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce7f10686d6bb40e8683"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54ce7f10686d6bb40e867b",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.125ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:16:15.844Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ce7f10686d6bb40e8684"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54ce7f10686d6bb40e867b\",\"5d54ce7f10686d6bb40e867d\",\"5d54ce7f10686d6bb40e867f\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.798ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:16:15.851Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cef3e6d6eb6a443fffb3"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "89.341ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T03:18:11.759Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cef3e6d6eb6a443fffb5"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$GehdWr9sgOLmEVSMLFpEaO.iBE.04HYWHqBKZ.dyku8igw197JGS2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.167ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:18:11.85Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cef3e6d6eb6a443fffb7"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$Pf6R5peKB1JkswoFA/TFqeno6mU/d7UAq3Lx9aRL2i4YOeLW1uA/u\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.318ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:18:11.92Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cef3e6d6eb6a443fffb9"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$tr4XnudNQcoYbENHC2HWFun2tMHDgcu.6ujPeAB576wo05z9htRLi\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.977ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:18:11.989Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cef4e6d6eb6a443fffba"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54cef3e6d6eb6a443fffb4\",\"username\":\"testtest\",\"password\":\"$2a$10$GehdWr9sgOLmEVSMLFpEaO.iBE.04HYWHqBKZ.dyku8igw197JGS2\",\"createDate\":\"2019-08-15T03:18:11.847Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.162ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:18:12.008Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cef4e6d6eb6a443fffbb"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54cef3e6d6eb6a443fffb4",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54cef3e6d6eb6a443fffb4\",\"username\":\"test1\",\"password\":\"$2a$10$GehdWr9sgOLmEVSMLFpEaO.iBE.04HYWHqBKZ.dyku8igw197JGS2\",\"createDate\":\"2019-08-15T03:18:11.847Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.991ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:18:12.016Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cef4e6d6eb6a443fffbc"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54cef3e6d6eb6a443fffb4",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.416ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:18:12.024Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cef4e6d6eb6a443fffbd"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54cef3e6d6eb6a443fffb4\",\"5d54cef3e6d6eb6a443fffb6\",\"5d54cef3e6d6eb6a443fffb8\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.847ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:18:12.033Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cf02abd2cf67f8a6bfa5"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "88.267ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T03:18:26.695Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cf02abd2cf67f8a6bfa7"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$LTagw17es2KtEIdIxPA8teUQBthRQF1mbNYLEat7JlGY6bsRvm30G\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.974ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:18:26.786Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cf02abd2cf67f8a6bfa9"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$VgSXmGN1OfuLqEGq2ONrZOlszHWLt9YRiQqDXUVV.ZBjg4Q38RwkG\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.519ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:18:26.855Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cf02abd2cf67f8a6bfab"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$ljBL/.ZA81V6hyao5.86O.KpB.sLYgIZCEWSSdhv.LbquC36G/dL6\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.536ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:18:26.923Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cf02abd2cf67f8a6bfac"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54cf02abd2cf67f8a6bfa6\",\"username\":\"testtest\",\"password\":\"$2a$10$LTagw17es2KtEIdIxPA8teUQBthRQF1mbNYLEat7JlGY6bsRvm30G\",\"createDate\":\"2019-08-15T03:18:26.783Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.099ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:18:26.939Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cf02abd2cf67f8a6bfad"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54cf02abd2cf67f8a6bfa6",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54cf02abd2cf67f8a6bfa6\",\"username\":\"test1\",\"password\":\"$2a$10$LTagw17es2KtEIdIxPA8teUQBthRQF1mbNYLEat7JlGY6bsRvm30G\",\"createDate\":\"2019-08-15T03:18:26.783Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.058ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:18:26.947Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cf02abd2cf67f8a6bfae"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54cf02abd2cf67f8a6bfa6",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.290ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:18:26.955Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cf02abd2cf67f8a6bfaf"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54cf02abd2cf67f8a6bfa6\",\"5d54cf02abd2cf67f8a6bfa8\",\"5d54cf02abd2cf67f8a6bfaa\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.824ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:18:26.963Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cf4378b3571d20884e4f"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.693ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T03:19:31.246Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cf4378b3571d20884e51"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$laVNUcdxKFVPalHOj7gTj.I8HCrTqZx3Z61Na42KTR0kB8A6YwPji\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.282ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:19:31.337Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cf4378b3571d20884e53"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$oY.Tla3MbyojRZMRLUZzI.8OnO04g95d.etG3uE1e.9WZOk7ExOEG\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.864ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:19:31.406Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cf4378b3571d20884e55"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$Fh1niY/P4JU2BXDFyEWs9OsYL/N5/Wueu2flbZ5VdDt6hQj5DZjn6\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.904ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:19:31.475Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cf4378b3571d20884e56"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54cf4378b3571d20884e50\",\"username\":\"testtest\",\"password\":\"$2a$10$laVNUcdxKFVPalHOj7gTj.I8HCrTqZx3Z61Na42KTR0kB8A6YwPji\",\"createDate\":\"2019-08-15T03:19:31.334Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.093ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:19:31.492Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cf4378b3571d20884e57"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54cf4378b3571d20884e50",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54cf4378b3571d20884e50\",\"username\":\"test1\",\"password\":\"$2a$10$laVNUcdxKFVPalHOj7gTj.I8HCrTqZx3Z61Na42KTR0kB8A6YwPji\",\"createDate\":\"2019-08-15T03:19:31.334Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.235ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:19:31.501Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cf4378b3571d20884e58"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54cf4378b3571d20884e50",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.166ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:19:31.51Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cf4378b3571d20884e59"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54cf4378b3571d20884e50\",\"5d54cf4378b3571d20884e52\",\"5d54cf4378b3571d20884e54\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.894ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:19:31.519Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cfb062ba9a68809bceb3"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "85.927ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T03:21:20.647Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cfc7245e0759e89f68d8"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.455ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T03:21:43.494Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cfc7245e0759e89f68da"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$JrpjxjtZBrNoyIMd.XkrbOscqSv6JjUuZzrxZ6ALEh57e2HtLEyCa\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.233ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:21:43.585Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cfc7245e0759e89f68dc"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$/qPd4OfBDTaus4fdBz2j9.QCOuK/tgjAqgX7RGBZnAQ3Q8rgE8HLy\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.823ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:21:43.654Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cfc7245e0759e89f68de"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$KdN.SWwFNIwamtSmJO2HGuwLC9a/Cib2j.bQD05651cBZcEbZ2/KS\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.903ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:21:43.723Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cfc7245e0759e89f68df"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54cfc7245e0759e89f68d9\",\"username\":\"testtest\",\"password\":\"$2a$10$JrpjxjtZBrNoyIMd.XkrbOscqSv6JjUuZzrxZ6ALEh57e2HtLEyCa\",\"createDate\":\"2019-08-15T03:21:43.582Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.159ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:21:43.74Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cfc7245e0759e89f68e0"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54cfc7245e0759e89f68d9",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54cfc7245e0759e89f68d9\",\"username\":\"test1\",\"password\":\"$2a$10$JrpjxjtZBrNoyIMd.XkrbOscqSv6JjUuZzrxZ6ALEh57e2HtLEyCa\",\"createDate\":\"2019-08-15T03:21:43.582Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.092ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:21:43.748Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cfc7245e0759e89f68e1"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54cfc7245e0759e89f68d9",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.127ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:21:43.756Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54cfc7245e0759e89f68e2"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54cfc7245e0759e89f68d9\",\"5d54cfc7245e0759e89f68db\",\"5d54cfc7245e0759e89f68dd\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.846ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:21:43.764Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d0534d85766694f83273"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "89.125ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T03:24:03.304Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d0534d85766694f83275"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$XRp5C.DbS5SCkPv8S4oqo.mZ9DQEy1CZsklGVdPeaTwIcme25GkDy\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.479ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:24:03.395Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d0534d85766694f83277"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$wpDk93VXhr6X/qEBMo9yCeb1J73Ldnz4vpFW42MMULqJILONiP/Lm\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.131ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:24:03.464Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d0534d85766694f83279"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$91NjeQxq6g4zChnWh/qslOB4Q5ROJ4XjdA8k4G3OMb47gcU07gdoa\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.126ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:24:03.534Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d0534d85766694f8327a"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54d0534d85766694f83274\",\"username\":\"testtest\",\"password\":\"$2a$10$XRp5C.DbS5SCkPv8S4oqo.mZ9DQEy1CZsklGVdPeaTwIcme25GkDy\",\"createDate\":\"2019-08-15T03:24:03.392Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.274ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:24:03.551Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d0534d85766694f8327b"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54d0534d85766694f83274",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54d0534d85766694f83274\",\"username\":\"test1\",\"password\":\"$2a$10$XRp5C.DbS5SCkPv8S4oqo.mZ9DQEy1CZsklGVdPeaTwIcme25GkDy\",\"createDate\":\"2019-08-15T03:24:03.392Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.189ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:24:03.562Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d0534d85766694f8327c"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54d0534d85766694f83274",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.366ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:24:03.57Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d0534d85766694f8327d"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54d0534d85766694f83274\",\"5d54d0534d85766694f83276\",\"5d54d0534d85766694f83278\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.923ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:24:03.578Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d0d646ee076344307d4f"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "88.550ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T03:26:14.778Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d0d646ee076344307d51"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$5jcHZbzbpaqs9ZzFEvKbC.BClgoQ7rD0RZlj4SXtZ7SYVNj7Obxre\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.074ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:26:14.868Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d0d646ee076344307d53"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$607HpzPqL/HFqbnikSxyLORyBlEg9vy4UW126G3z.W70sY.XQfPlK\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.502ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:26:14.937Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d0d746ee076344307d55"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$nqYcVOKQ5HPyK8u.75OT8uNfQImPeWmAJ/qkwTkVg81Z4o88Dj1te\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.742ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:26:15.006Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d0d746ee076344307d56"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54d0d646ee076344307d50\",\"username\":\"testtest\",\"password\":\"$2a$10$5jcHZbzbpaqs9ZzFEvKbC.BClgoQ7rD0RZlj4SXtZ7SYVNj7Obxre\",\"createDate\":\"2019-08-15T03:26:14.865Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.228ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:26:15.023Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d0d746ee076344307d57"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54d0d646ee076344307d50",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54d0d646ee076344307d50\",\"username\":\"test1\",\"password\":\"$2a$10$5jcHZbzbpaqs9ZzFEvKbC.BClgoQ7rD0RZlj4SXtZ7SYVNj7Obxre\",\"createDate\":\"2019-08-15T03:26:14.865Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.064ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:26:15.031Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d0d746ee076344307d58"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54d0d646ee076344307d50",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.392ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:26:15.04Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d0d746ee076344307d59"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54d0d646ee076344307d50\",\"5d54d0d646ee076344307d52\",\"5d54d0d746ee076344307d54\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.787ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:26:15.047Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d1eb2860301cc00528a7"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "89.561ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T03:30:51.736Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d1eb2860301cc00528a9"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$w6jCNOAasGX/MWDA2fq7z.HlL7uXByDVXkc80V0hYGRHb9Fgl10Va\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.947ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:30:51.827Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d1eb2860301cc00528ab"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$gpsub9dN1bBJzMQGcM4vyuM2idBmluJc1sFQs1rRfLa3fg.S1SZfy\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.807ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:30:51.896Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d1eb2860301cc00528ad"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$gbcYtdJo33GA11.KwqfEYeptc90N74tTL5jcUlhBIVkef0BMWxISS\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.761ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:30:51.965Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d1eb2860301cc00528ae"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54d1eb2860301cc00528a8\",\"username\":\"testtest\",\"password\":\"$2a$10$w6jCNOAasGX/MWDA2fq7z.HlL7uXByDVXkc80V0hYGRHb9Fgl10Va\",\"createDate\":\"2019-08-15T03:30:51.825Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "4.970ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:30:51.982Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d1eb2860301cc00528af"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54d1eb2860301cc00528a8",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54d1eb2860301cc00528a8\",\"username\":\"test1\",\"password\":\"$2a$10$w6jCNOAasGX/MWDA2fq7z.HlL7uXByDVXkc80V0hYGRHb9Fgl10Va\",\"createDate\":\"2019-08-15T03:30:51.825Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.964ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:30:51.99Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d1eb2860301cc00528b0"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54d1eb2860301cc00528a8",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.264ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:30:51.998Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d1ec2860301cc00528b1"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54d1eb2860301cc00528a8\",\"5d54d1eb2860301cc00528aa\",\"5d54d1eb2860301cc00528ac\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.006ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:30:52.007Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d2269cffbd333ca41654"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.675ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T03:31:50.405Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d2269cffbd333ca41656"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$aQ09kvbWLXsZ7oLOYNaR1.RnqMTxl0Tpu2OZHacnrBEllaob84ARe\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.869ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:31:50.494Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d2269cffbd333ca41658"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$4eaG0Tyts2ak7KxBaYDWbucMmPbd9PLBYbVeeegUu8QE5/V2J19GS\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.833ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:31:50.563Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d2269cffbd333ca4165a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$HQBW.mwHNoFjr10U4JgPYe2YnJcj5HtUgSntZSJ7Y3kp1bELwBjy2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.700ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:31:50.631Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d2269cffbd333ca4165b"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54d2269cffbd333ca41655\",\"username\":\"testtest\",\"password\":\"$2a$10$aQ09kvbWLXsZ7oLOYNaR1.RnqMTxl0Tpu2OZHacnrBEllaob84ARe\",\"createDate\":\"2019-08-15T03:31:50.491Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.167ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:31:50.648Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d2269cffbd333ca4165c"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54d2269cffbd333ca41655",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54d2269cffbd333ca41655\",\"username\":\"test1\",\"password\":\"$2a$10$aQ09kvbWLXsZ7oLOYNaR1.RnqMTxl0Tpu2OZHacnrBEllaob84ARe\",\"createDate\":\"2019-08-15T03:31:50.491Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.052ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:31:50.656Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d2269cffbd333ca4165d"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54d2269cffbd333ca41655",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.270ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:31:50.664Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d2269cffbd333ca4165e"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54d2269cffbd333ca41655\",\"5d54d2269cffbd333ca41657\",\"5d54d2269cffbd333ca41659\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.817ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:31:50.672Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d3865fcaa561ac30b609"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.098ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T03:37:42.875Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d3865fcaa561ac30b60b"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$ykuA2xEmoB3sqQk6YQgGJ.IrogCyeVHDHkf4D3mebMOsp1QL4Q3vW\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "65.731ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:37:42.967Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d3875fcaa561ac30b60d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$eo6tOEYWKpQoxVLQ/wOzh.McP1zPHEdahvU1XYIfIOYz/spzqZMXW\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.959ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:37:43.036Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d3875fcaa561ac30b60f"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$LIDrK31EvN.l3jST/KtrkO38pHDHH0hsrybB9JJlrpUyeideg5sKO\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.866ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:37:43.105Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d3875fcaa561ac30b610"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54d3865fcaa561ac30b60a\",\"username\":\"testtest\",\"password\":\"$2a$10$ykuA2xEmoB3sqQk6YQgGJ.IrogCyeVHDHkf4D3mebMOsp1QL4Q3vW\",\"createDate\":\"2019-08-15T03:37:42.964Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.490ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:37:43.122Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d3875fcaa561ac30b611"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54d3865fcaa561ac30b60a",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54d3865fcaa561ac30b60a\",\"username\":\"test1\",\"password\":\"$2a$10$ykuA2xEmoB3sqQk6YQgGJ.IrogCyeVHDHkf4D3mebMOsp1QL4Q3vW\",\"createDate\":\"2019-08-15T03:37:42.964Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.090ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:37:43.13Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d3875fcaa561ac30b612"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54d3865fcaa561ac30b60a",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.248ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:37:43.138Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d3875fcaa561ac30b613"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54d3865fcaa561ac30b60a\",\"5d54d3875fcaa561ac30b60c\",\"5d54d3875fcaa561ac30b60e\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.916ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:37:43.146Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d54777b98933b067a741"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "89.817ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T03:45:11.416Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d54777b98933b067a743"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$Te7cDoThoEB/pYYx2LVA7OB.OPsILKbBI8W2sbuhXzksso0O4VLba\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.532ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:45:11.507Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d54777b98933b067a745"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$nksgDigqM4ngYij/7xOne.Stu0uO/gefVs2B3f4/cRgdE5lIXZljC\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.921ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:45:11.576Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d54777b98933b067a747"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$hznVRqgcmtg6zN4SG0EH/uDgHBNI0I.jm5gmUJiDfAEb/mzHW/sjm\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.476ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:45:11.645Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d54777b98933b067a748"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54d54777b98933b067a742\",\"username\":\"testtest\",\"password\":\"$2a$10$Te7cDoThoEB/pYYx2LVA7OB.OPsILKbBI8W2sbuhXzksso0O4VLba\",\"createDate\":\"2019-08-15T03:45:11.504Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.114ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:45:11.661Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d54777b98933b067a749"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54d54777b98933b067a742",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54d54777b98933b067a742\",\"username\":\"test1\",\"password\":\"$2a$10$Te7cDoThoEB/pYYx2LVA7OB.OPsILKbBI8W2sbuhXzksso0O4VLba\",\"createDate\":\"2019-08-15T03:45:11.504Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.038ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:45:11.669Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d54777b98933b067a74a"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54d54777b98933b067a742",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.212ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:45:11.677Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d54777b98933b067a74b"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54d54777b98933b067a742\",\"5d54d54777b98933b067a744\",\"5d54d54777b98933b067a746\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.835ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:45:11.685Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d5638d357d64480c3074"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "89.708ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T03:45:39.242Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d5638d357d64480c3076"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$v7NYDYSV4VKrIfB7uZyWXevF3ZMXo6d1AR2.XwaYzQynC7FvEw2ri\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.211ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:45:39.332Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d5638d357d64480c3078"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$wpMqsgGnKny2J0b33kMxKuHmlfeS4Mge/BBiooZnx7oOGY96HBzuy\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.795ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:45:39.401Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d5638d357d64480c307a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$Bur14NMjDdSMAswa4UDBt.3EMcEhcElEyrwwsqypPtbx7ofu7j36q\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.085ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:45:39.471Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d5638d357d64480c307b"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54d5638d357d64480c3075\",\"username\":\"testtest\",\"password\":\"$2a$10$v7NYDYSV4VKrIfB7uZyWXevF3ZMXo6d1AR2.XwaYzQynC7FvEw2ri\",\"createDate\":\"2019-08-15T03:45:39.329Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.129ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:45:39.488Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d5638d357d64480c307c"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54d5638d357d64480c3075",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54d5638d357d64480c3075\",\"username\":\"test1\",\"password\":\"$2a$10$v7NYDYSV4VKrIfB7uZyWXevF3ZMXo6d1AR2.XwaYzQynC7FvEw2ri\",\"createDate\":\"2019-08-15T03:45:39.329Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.983ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:45:39.496Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d5638d357d64480c307d"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54d5638d357d64480c3075",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.049ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:45:39.503Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d5638d357d64480c307e"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54d5638d357d64480c3075\",\"5d54d5638d357d64480c3077\",\"5d54d5638d357d64480c3079\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.785ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:45:39.511Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d5fdbe37683100050ee7"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.920ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T03:48:13.581Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d5fdbe37683100050ee9"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$YNYd/yQBeodrHvVFyGOBX.37Ij7sqL5skAbQKgC5m6UjBz1.YgySG\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.244ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:48:13.672Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d5fdbe37683100050eeb"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$ahIJE31nKUYcMikiXovp4eF2h3nd2OOrOylE8kTvWgqNK5oHMG6.e\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.833ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:48:13.741Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d5fdbe37683100050eed"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$LwcGJQz31hXHJXEUBcUOguL5r.ZMuH/Hkjw1lmLf2Nbs1kA/9UzjC\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.626ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:48:13.811Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d5fdbe37683100050eee"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54d5fdbe37683100050ee8\",\"username\":\"testtest\",\"password\":\"$2a$10$YNYd/yQBeodrHvVFyGOBX.37Ij7sqL5skAbQKgC5m6UjBz1.YgySG\",\"createDate\":\"2019-08-15T03:48:13.669Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.172ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:48:13.828Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d5fdbe37683100050eef"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54d5fdbe37683100050ee8",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54d5fdbe37683100050ee8\",\"username\":\"test1\",\"password\":\"$2a$10$YNYd/yQBeodrHvVFyGOBX.37Ij7sqL5skAbQKgC5m6UjBz1.YgySG\",\"createDate\":\"2019-08-15T03:48:13.669Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.227ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:48:13.836Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d5fdbe37683100050ef0"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54d5fdbe37683100050ee8",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.136ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:48:13.844Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54d5fdbe37683100050ef1"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54d5fdbe37683100050ee8\",\"5d54d5fdbe37683100050eea\",\"5d54d5fdbe37683100050eec\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.901ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T03:48:13.858Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f5b498a26557dc9575aa"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "88.069ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T06:03:32.21Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f5b498a26557dc9575ac"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$/TNigbwJPgZgYg0wjh5lXOaKKq4t3dGOESTdQo8EKFKh8FJps.Qfe\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.962ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:03:32.3Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f5b498a26557dc9575ae"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$lv7Ve5eCQFhyTqhFw.S7GezTbtUf55am3W3RGddP6ntE6HTAasR8m\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.962ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:03:32.369Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f5b498a26557dc9575b0"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$8Eb.hbjAa5TZT488Er9OCey.O7.B10Cfp2CGh8q9r862iUK2WusD6\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.920ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:03:32.438Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f5b498a26557dc9575b1"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54f5b498a26557dc9575ab\",\"username\":\"testtest\",\"password\":\"$2a$10$/TNigbwJPgZgYg0wjh5lXOaKKq4t3dGOESTdQo8EKFKh8FJps.Qfe\",\"createDate\":\"2019-08-15T06:03:32.297Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "4.944ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:03:32.454Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f5b498a26557dc9575b2"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54f5b498a26557dc9575ab",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54f5b498a26557dc9575ab\",\"username\":\"test1\",\"password\":\"$2a$10$/TNigbwJPgZgYg0wjh5lXOaKKq4t3dGOESTdQo8EKFKh8FJps.Qfe\",\"createDate\":\"2019-08-15T06:03:32.297Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.947ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:03:32.462Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f5b498a26557dc9575b3"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54f5b498a26557dc9575ab",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.208ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:03:32.47Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f5b498a26557dc9575b4"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54f5b498a26557dc9575ab\",\"5d54f5b498a26557dc9575ad\",\"5d54f5b498a26557dc9575af\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.952ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:03:32.478Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f68f30b4d66e78fd2e03"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.497ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T06:07:11.093Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f68f30b4d66e78fd2e05"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$Bzdexj0uiljbW3tmdQjt4eh7iYcfvB4w.C8lR8iaGnoIs88zEw5o.\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.041ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:07:11.182Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f68f30b4d66e78fd2e07"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$9JXlqCIovFGfU4DnKWjVGeV7Qe/onW9CxVFOJmYuauwxOYQAt6NLG\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.303ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:07:11.252Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f68f30b4d66e78fd2e09"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$5MvM60ychDSyt9q7YNFE2OpgJI89N52JHPJmO7GcSMLmtfqSDfGsq\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.777ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:07:11.321Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f68f30b4d66e78fd2e0a"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54f68f30b4d66e78fd2e04\",\"username\":\"testtest\",\"password\":\"$2a$10$Bzdexj0uiljbW3tmdQjt4eh7iYcfvB4w.C8lR8iaGnoIs88zEw5o.\",\"createDate\":\"2019-08-15T06:07:11.179Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.210ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:07:11.337Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f68f30b4d66e78fd2e0b"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54f68f30b4d66e78fd2e04",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54f68f30b4d66e78fd2e04\",\"username\":\"test1\",\"password\":\"$2a$10$Bzdexj0uiljbW3tmdQjt4eh7iYcfvB4w.C8lR8iaGnoIs88zEw5o.\",\"createDate\":\"2019-08-15T06:07:11.179Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.257ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:07:11.346Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f68f30b4d66e78fd2e0c"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54f68f30b4d66e78fd2e04",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.218ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:07:11.354Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f68f30b4d66e78fd2e0d"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54f68f30b4d66e78fd2e04\",\"5d54f68f30b4d66e78fd2e06\",\"5d54f68f30b4d66e78fd2e08\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.830ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:07:11.361Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f80b6859dc23eca1a395"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.764ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T06:13:31.364Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f80b6859dc23eca1a397"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$tNPjHNPwtHWZvX0/yj57aeZBNxDWmMcBGG67VKmk.holPJbTDrk.6\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.173ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:13:31.454Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f80b6859dc23eca1a399"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$m08sv.jXrDOlz7ojp0Y/6OujYil4kckeTBnTmnzI7dByHFsCdqjkS\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.791ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:13:31.523Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f80b6859dc23eca1a39b"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$eHghGVKCCOC9oRMB6DGi4uwmJSclBgg/sm/vW6ucsjrH2SMQ0r856\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.734ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:13:31.592Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f80b6859dc23eca1a39c"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54f80b6859dc23eca1a396\",\"username\":\"testtest\",\"password\":\"$2a$10$tNPjHNPwtHWZvX0/yj57aeZBNxDWmMcBGG67VKmk.holPJbTDrk.6\",\"createDate\":\"2019-08-15T06:13:31.451Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.305ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:13:31.609Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f80b6859dc23eca1a39d"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54f80b6859dc23eca1a396",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54f80b6859dc23eca1a396\",\"username\":\"test1\",\"password\":\"$2a$10$tNPjHNPwtHWZvX0/yj57aeZBNxDWmMcBGG67VKmk.holPJbTDrk.6\",\"createDate\":\"2019-08-15T06:13:31.451Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.138ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:13:31.617Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f80b6859dc23eca1a39e"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54f80b6859dc23eca1a396",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.328ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:13:31.625Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f80b6859dc23eca1a39f"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54f80b6859dc23eca1a396\",\"5d54f80b6859dc23eca1a398\",\"5d54f80b6859dc23eca1a39a\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.881ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:13:31.633Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f82a88e8f92bd0fefa2c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "85.960ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T06:14:02.922Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f82b88e8f92bd0fefa2e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$VIqbGYFEnn5SaXWLRWfaguo7TVR9DbmVI2xnyGjN3q9Ee7yENNQgW\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.165ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:14:03.014Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f82b88e8f92bd0fefa30"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$IRZ1yC9DGTNImpTtB3vJAOuiGnwmB9Az3eeKoziS.cRLmn3Pzdz9G\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.792ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:14:03.083Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f82b88e8f92bd0fefa32"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$LKJyrx1lUFeG0ITXrbwLZOD0Pp6RoW.H79J1oIuGLb6Gf4F2IFHBO\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.767ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:14:03.151Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f82b88e8f92bd0fefa33"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54f82b88e8f92bd0fefa2d\",\"username\":\"testtest\",\"password\":\"$2a$10$VIqbGYFEnn5SaXWLRWfaguo7TVR9DbmVI2xnyGjN3q9Ee7yENNQgW\",\"createDate\":\"2019-08-15T06:14:03.011Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.022ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:14:03.167Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f82b88e8f92bd0fefa34"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54f82b88e8f92bd0fefa2d",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54f82b88e8f92bd0fefa2d\",\"username\":\"test1\",\"password\":\"$2a$10$VIqbGYFEnn5SaXWLRWfaguo7TVR9DbmVI2xnyGjN3q9Ee7yENNQgW\",\"createDate\":\"2019-08-15T06:14:03.011Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.103ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:14:03.175Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f82b88e8f92bd0fefa35"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54f82b88e8f92bd0fefa2d",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.344ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:14:03.183Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f82b88e8f92bd0fefa36"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54f82b88e8f92bd0fefa2d\",\"5d54f82b88e8f92bd0fefa2f\",\"5d54f82b88e8f92bd0fefa31\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.817ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:14:03.191Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f9334fe7bc33f8b775ef"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "88.868ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T06:18:27.088Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f9334fe7bc33f8b775f1"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$63o7Sq4ZfPj3WwZO6uj/eOKFuWENvyxLWrUMcVOAqM0A0APsdq.z2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.217ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:18:27.179Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f9334fe7bc33f8b775f3"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$EoK3PitSapihUzhABzkhxugYqqjDYw74rpgUbO1E/wwhjsHg0Fe5S\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.793ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:18:27.248Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f9334fe7bc33f8b775f5"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$O6.QXGs0OwV.wx7RZb0ade03aMbSslqU9MxUqMcQmXNVXde.hbA0S\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.647ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:18:27.317Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f9334fe7bc33f8b775f6"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54f9334fe7bc33f8b775f0\",\"username\":\"testtest\",\"password\":\"$2a$10$63o7Sq4ZfPj3WwZO6uj/eOKFuWENvyxLWrUMcVOAqM0A0APsdq.z2\",\"createDate\":\"2019-08-15T06:18:27.176Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.491ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:18:27.334Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f9334fe7bc33f8b775f7"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54f9334fe7bc33f8b775f0",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54f9334fe7bc33f8b775f0\",\"username\":\"test1\",\"password\":\"$2a$10$63o7Sq4ZfPj3WwZO6uj/eOKFuWENvyxLWrUMcVOAqM0A0APsdq.z2\",\"createDate\":\"2019-08-15T06:18:27.176Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.059ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:18:27.342Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f9334fe7bc33f8b775f8"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54f9334fe7bc33f8b775f0",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.054ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:18:27.349Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f9334fe7bc33f8b775f9"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54f9334fe7bc33f8b775f0\",\"5d54f9334fe7bc33f8b775f2\",\"5d54f9334fe7bc33f8b775f4\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.921ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:18:27.357Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f940caa69861f4f9b9c7"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "90.495ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T06:18:40.566Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f940caa69861f4f9b9c9"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$M4olZ5L.jP/tDTiPPgjZOuLr78e/074uIl0doW9Pa6Hya7f23M59K\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.338ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:18:40.659Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f940caa69861f4f9b9cb"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$nZrq2JmOnL0pA0/59rQ6z.iWgFGj0fyYUZ6BMeay/syytTwMal4h2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.973ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:18:40.728Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f940caa69861f4f9b9cd"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$cGNR2X/kmSz14EV1LYHwy.zVI7hcrBjO8v1LkV4iRqUaBFMltsp7e\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.846ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:18:40.796Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f940caa69861f4f9b9ce"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54f940caa69861f4f9b9c8\",\"username\":\"testtest\",\"password\":\"$2a$10$M4olZ5L.jP/tDTiPPgjZOuLr78e/074uIl0doW9Pa6Hya7f23M59K\",\"createDate\":\"2019-08-15T06:18:40.656Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.457ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:18:40.813Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f940caa69861f4f9b9cf"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54f940caa69861f4f9b9c8",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54f940caa69861f4f9b9c8\",\"username\":\"test1\",\"password\":\"$2a$10$M4olZ5L.jP/tDTiPPgjZOuLr78e/074uIl0doW9Pa6Hya7f23M59K\",\"createDate\":\"2019-08-15T06:18:40.656Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.006ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:18:40.82Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f940caa69861f4f9b9d0"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54f940caa69861f4f9b9c8",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.316ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:18:40.829Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54f940caa69861f4f9b9d1"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54f940caa69861f4f9b9c8\",\"5d54f940caa69861f4f9b9ca\",\"5d54f940caa69861f4f9b9cc\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.901ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:18:40.836Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fa39345ddb6848a82106"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.008ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T06:22:49.987Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fa3a345ddb6848a82108"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$Ij0Y5hZiRSh7qd1K17iAJeCwLSIrM3IyLgKsOaqvF2K2vW7.bDova\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "65.575ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:22:50.078Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fa3a345ddb6848a8210a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$ybbUeu75l8BnDJiRFl0ZruWGm.DpjPaUYC1l4DUoZGCJqlh1KyDqy\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.743ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:22:50.147Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fa3a345ddb6848a8210c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$4d5sw40k1nyCDNXoffpOTuEXRCjE0cJnWf6318qdtILNeDy1bO6FO\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.807ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:22:50.216Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fa3a345ddb6848a8210d"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54fa3a345ddb6848a82107\",\"username\":\"testtest\",\"password\":\"$2a$10$Ij0Y5hZiRSh7qd1K17iAJeCwLSIrM3IyLgKsOaqvF2K2vW7.bDova\",\"createDate\":\"2019-08-15T06:22:50.075Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.060ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:22:50.233Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fa3a345ddb6848a8210e"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54fa3a345ddb6848a82107",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54fa3a345ddb6848a82107\",\"username\":\"test1\",\"password\":\"$2a$10$Ij0Y5hZiRSh7qd1K17iAJeCwLSIrM3IyLgKsOaqvF2K2vW7.bDova\",\"createDate\":\"2019-08-15T06:22:50.075Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.280ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:22:50.241Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fa3a345ddb6848a8210f"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54fa3a345ddb6848a82107",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.192ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:22:50.249Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fa3a345ddb6848a82110"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54fa3a345ddb6848a82107\",\"5d54fa3a345ddb6848a82109\",\"5d54fa3a345ddb6848a8210b\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.759ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:22:50.257Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fa4513405855ecff677c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.507ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T06:23:01.882Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fa4513405855ecff677e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$REVN86/SE.iIFEjccAuEQO1wrI7G/bjAE7UwLZOvBI884yN0WipmC\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.320ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:23:01.972Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fa4613405855ecff6780"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$xIeAN6X4FvvS2DtZ3c6byu9Q2YjRKyT9D3Z9iumjnK.5.aOmOwlMq\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.000ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:23:02.041Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fa4613405855ecff6782"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$MbEeanrRDozUhR8XQrS9l.Wt6hDAnkwnEGUvrOPhV4XVEKC3Ldr0C\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.819ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:23:02.11Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fa4613405855ecff6783"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54fa4513405855ecff677d\",\"username\":\"testtest\",\"password\":\"$2a$10$REVN86/SE.iIFEjccAuEQO1wrI7G/bjAE7UwLZOvBI884yN0WipmC\",\"createDate\":\"2019-08-15T06:23:01.969Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.200ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:23:02.127Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fa4613405855ecff6784"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54fa4513405855ecff677d",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54fa4513405855ecff677d\",\"username\":\"test1\",\"password\":\"$2a$10$REVN86/SE.iIFEjccAuEQO1wrI7G/bjAE7UwLZOvBI884yN0WipmC\",\"createDate\":\"2019-08-15T06:23:01.969Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.137ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:23:02.135Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fa4613405855ecff6785"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54fa4513405855ecff677d",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.076ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:23:02.143Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fa4613405855ecff6786"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54fa4513405855ecff677d\",\"5d54fa4613405855ecff677f\",\"5d54fa4613405855ecff6781\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.822ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:23:02.15Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54faa9c657f627fca1e204"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/user/login?username=admin&password=123456",
+    error: "Validation Failed:[{\"message\":\"required\",\"field\":\"username\",\"code\":\"missing_field\"},{\"message\":\"required\",\"field\":\"password\",\"code\":\"missing_field\"}]",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "10.578ms",
+    type: "login",
+    createDate: ISODate("2019-08-15T06:24:41.786Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb32b70bd667b429f2bd"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.060ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T06:26:58.083Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb32b70bd667b429f2bf"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$3hlGZm8Kug.rtChZfVuQxOuorv32NHmnquVnF3aI9oDIYWHzIdc.m\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "65.743ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:26:58.172Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb32b70bd667b429f2c1"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$6iYF02t3L9mIITsL7YiEheJcA4UVK3wIYVahdxj5wa0LDD1HhFite\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.986ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:26:58.241Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb32b70bd667b429f2c3"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$apm25iclkUkfuXzT.FuYKOrt6RtHPUBB0.WH0coL/JDYctevh839q\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.653ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:26:58.31Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb32b70bd667b429f2c4"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54fb32b70bd667b429f2be\",\"username\":\"testtest\",\"password\":\"$2a$10$3hlGZm8Kug.rtChZfVuQxOuorv32NHmnquVnF3aI9oDIYWHzIdc.m\",\"createDate\":\"2019-08-15T06:26:58.169Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.331ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:26:58.321Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb32b70bd667b429f2c5"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54fb32b70bd667b429f2be",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54fb32b70bd667b429f2be\",\"username\":\"test1\",\"password\":\"$2a$10$3hlGZm8Kug.rtChZfVuQxOuorv32NHmnquVnF3aI9oDIYWHzIdc.m\",\"createDate\":\"2019-08-15T06:26:58.169Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.047ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:26:58.329Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb32b70bd667b429f2c6"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54fb32b70bd667b429f2be",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.415ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:26:58.338Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb32b70bd667b429f2c7"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54fb32b70bd667b429f2be\",\"5d54fb32b70bd667b429f2c0\",\"5d54fb32b70bd667b429f2c2\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.848ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:26:58.345Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb428fbd596f087fd29f"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.607ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T06:27:14.695Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb428fbd596f087fd2a1"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$H4Lv1WfEpCcE76IyMF79YuO7iNoScq5/rJIE1MeETiQiWD8Ubxu.y\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "65.817ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:27:14.817Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb428fbd596f087fd2a3"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$18CUTC4t/9Ivu.CzU08RauyQJ71Yf4CxjydNXLHhKmnqjPQOkewgK\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.876ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:27:14.886Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb428fbd596f087fd2a5"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$x9Fsya8Yx9SvIj5nErnVzef2KmJZPi.5qINGR05.nLzTt0maeKK2S\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.856ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:27:14.955Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb428fbd596f087fd2a6"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54fb428fbd596f087fd2a0\",\"username\":\"testtest\",\"password\":\"$2a$10$H4Lv1WfEpCcE76IyMF79YuO7iNoScq5/rJIE1MeETiQiWD8Ubxu.y\",\"createDate\":\"2019-08-15T06:27:14.814Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.340ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:27:14.972Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb428fbd596f087fd2a7"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54fb428fbd596f087fd2a0",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54fb428fbd596f087fd2a0\",\"username\":\"test1\",\"password\":\"$2a$10$H4Lv1WfEpCcE76IyMF79YuO7iNoScq5/rJIE1MeETiQiWD8Ubxu.y\",\"createDate\":\"2019-08-15T06:27:14.814Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.110ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:27:14.98Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb428fbd596f087fd2a8"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54fb428fbd596f087fd2a0",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.348ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:27:14.989Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb428fbd596f087fd2a9"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54fb428fbd596f087fd2a0\",\"5d54fb428fbd596f087fd2a2\",\"5d54fb428fbd596f087fd2a4\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.950ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:27:14.997Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb5dc0abaf2080b2d881"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.994ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T06:27:41.912Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb5ec0abaf2080b2d883"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$FWShFd3WX0LxFu8XAcY8Ee.2LnP6OI8BLF9it6Oe1fdAyZpc2HmyG\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.920ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:27:42.047Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb5ec0abaf2080b2d885"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$arlMVsrlCZdc7QfKr54lyuC7XEyjiGAAzyPpZaevPS7nAgR.F.4I6\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.289ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:27:42.117Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb5ec0abaf2080b2d887"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$aDDJw1YmuJ09WgNELCoB2eE7tbXphqZiGzWJcidEGfrydF8l6BNhC\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.417ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:27:42.187Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb5ec0abaf2080b2d888"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54fb5ec0abaf2080b2d882\",\"username\":\"testtest\",\"password\":\"$2a$10$FWShFd3WX0LxFu8XAcY8Ee.2LnP6OI8BLF9it6Oe1fdAyZpc2HmyG\",\"createDate\":\"2019-08-15T06:27:42.044Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "6.020ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:27:42.207Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb5ec0abaf2080b2d889"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54fb5ec0abaf2080b2d882",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54fb5ec0abaf2080b2d882\",\"username\":\"test1\",\"password\":\"$2a$10$FWShFd3WX0LxFu8XAcY8Ee.2LnP6OI8BLF9it6Oe1fdAyZpc2HmyG\",\"createDate\":\"2019-08-15T06:27:42.044Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.120ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:27:42.215Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb5ec0abaf2080b2d88a"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54fb5ec0abaf2080b2d882",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.233ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:27:42.223Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb5ec0abaf2080b2d88b"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54fb5ec0abaf2080b2d882\",\"5d54fb5ec0abaf2080b2d884\",\"5d54fb5ec0abaf2080b2d886\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.720ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:27:42.231Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb644cffed60fca5488e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "90.734ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T06:27:48.852Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb644cffed60fca54890"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$AZ36qypARJ0DMgpUSA38yODIwFTfUCxPnfNImufHZc.GWSBocUF5C\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "65.931ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:27:48.946Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb654cffed60fca54892"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$gfhXWCr583RjHr9SrcRXZ.7JJlDnb3mBFA6ddzsXmcezbYT3hcUye\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.360ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:27:49.016Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb654cffed60fca54894"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$zJAiq1vYfynLuk1vVz3Fl.5LGYElmF3QNpxVBdvuJZd6756fnSUoW\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.773ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:27:49.087Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb654cffed60fca54895"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54fb644cffed60fca5488f\",\"username\":\"testtest\",\"password\":\"$2a$10$AZ36qypARJ0DMgpUSA38yODIwFTfUCxPnfNImufHZc.GWSBocUF5C\",\"createDate\":\"2019-08-15T06:27:48.943Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.677ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:27:49.105Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb654cffed60fca54896"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54fb644cffed60fca5488f",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54fb644cffed60fca5488f\",\"username\":\"test1\",\"password\":\"$2a$10$AZ36qypARJ0DMgpUSA38yODIwFTfUCxPnfNImufHZc.GWSBocUF5C\",\"createDate\":\"2019-08-15T06:27:48.943Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.139ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:27:49.114Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb654cffed60fca54897"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54fb644cffed60fca5488f",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.614ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:27:49.123Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fb654cffed60fca54898"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54fb644cffed60fca5488f\",\"5d54fb654cffed60fca54891\",\"5d54fb654cffed60fca54893\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.794ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:27:49.131Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fc683a38e01ea08a3de0"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "88.051ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T06:32:08.157Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fc683a38e01ea08a3de2"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$nAtG3nQI2tNLy1YZLGAPA.JVdWqv2XXda4S1v0MEBlFn2jXFeecRC\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.008ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:32:08.247Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fc683a38e01ea08a3de4"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$BbY68deTR6Jl54ujO/1dr.Qtvw0uAkr252C90ylTU8Pu4pi4Jm8Ba\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.753ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:32:08.316Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fc683a38e01ea08a3de6"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$DLe0IewcPqVghpGlmGcumO6X8XXRoGqFYHMsSuQ80wHH.rNBJJhGu\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.216ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:32:08.386Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fc683a38e01ea08a3de7"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54fc683a38e01ea08a3de1\",\"username\":\"testtest\",\"password\":\"$2a$10$nAtG3nQI2tNLy1YZLGAPA.JVdWqv2XXda4S1v0MEBlFn2jXFeecRC\",\"createDate\":\"2019-08-15T06:32:08.244Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.054ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:32:08.403Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fc683a38e01ea08a3de8"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54fc683a38e01ea08a3de1",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54fc683a38e01ea08a3de1\",\"username\":\"test1\",\"password\":\"$2a$10$nAtG3nQI2tNLy1YZLGAPA.JVdWqv2XXda4S1v0MEBlFn2jXFeecRC\",\"createDate\":\"2019-08-15T06:32:08.244Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.160ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:32:08.411Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fc683a38e01ea08a3de9"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54fc683a38e01ea08a3de1",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.194ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:32:08.419Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fc683a38e01ea08a3dea"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54fc683a38e01ea08a3de1\",\"5d54fc683a38e01ea08a3de3\",\"5d54fc683a38e01ea08a3de5\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.831ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:32:08.427Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fe5e7162d354cca49b8b"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "88.322ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T06:40:30.75Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fe5e7162d354cca49b8d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$ZaDY.wWWW683prS3XnKlouDWIq6LOtb7xvEfFpkgfcj.L2EjrfkUm\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.052ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:40:30.84Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fe5e7162d354cca49b8f"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$L/iSAPM8zGJpeBZ6Nw/XyugnBA3rilFbJHf/nVvNsvo1fXKLS5nFK\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.761ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:40:30.909Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fe5e7162d354cca49b91"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$3NKAvCiDklx4j9VH70TpvusufA/XyuZJHC25bmaqjIsEd5euvmWRe\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.648ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:40:30.977Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fe5e7162d354cca49b92"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54fe5e7162d354cca49b8c\",\"username\":\"testtest\",\"password\":\"$2a$10$ZaDY.wWWW683prS3XnKlouDWIq6LOtb7xvEfFpkgfcj.L2EjrfkUm\",\"createDate\":\"2019-08-15T06:40:30.837Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.182ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:40:30.994Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fe5f7162d354cca49b93"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54fe5e7162d354cca49b8c",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54fe5e7162d354cca49b8c\",\"username\":\"test1\",\"password\":\"$2a$10$ZaDY.wWWW683prS3XnKlouDWIq6LOtb7xvEfFpkgfcj.L2EjrfkUm\",\"createDate\":\"2019-08-15T06:40:30.837Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.321ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:40:31.003Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fe5f7162d354cca49b94"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54fe5e7162d354cca49b8c",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.181ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:40:31.011Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fe5f7162d354cca49b95"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54fe5e7162d354cca49b8c\",\"5d54fe5e7162d354cca49b8e\",\"5d54fe5e7162d354cca49b90\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.753ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:40:31.018Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fe81e5b1f015eca4d73c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.858ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T06:41:05.624Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fe81e5b1f015eca4d73e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$b/f5KGtTQPd/klN9qKN4X.Dln4Gf3fNh/EN7RdALbEqw5XAl8bWmW\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.268ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:41:05.715Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fe81e5b1f015eca4d740"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$qETEo83iWc3wWlu3qqK0mu8J9dR.sIWhduZHa4aI7vOL/IY0sh7M2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.774ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:41:05.784Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fe81e5b1f015eca4d742"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$zIk4uGF9JOcdfPtnWgwFBudfmHBP8QDr8QjVXtBBS4YGXHSdlBK2u\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.338ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:41:05.854Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fe81e5b1f015eca4d743"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54fe81e5b1f015eca4d73d\",\"username\":\"testtest\",\"password\":\"$2a$10$b/f5KGtTQPd/klN9qKN4X.Dln4Gf3fNh/EN7RdALbEqw5XAl8bWmW\",\"createDate\":\"2019-08-15T06:41:05.712Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.338ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:41:05.871Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fe81e5b1f015eca4d744"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54fe81e5b1f015eca4d73d",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54fe81e5b1f015eca4d73d\",\"username\":\"test1\",\"password\":\"$2a$10$b/f5KGtTQPd/klN9qKN4X.Dln4Gf3fNh/EN7RdALbEqw5XAl8bWmW\",\"createDate\":\"2019-08-15T06:41:05.712Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.181ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:41:05.88Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fe81e5b1f015eca4d745"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54fe81e5b1f015eca4d73d",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.249ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:41:05.888Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fe81e5b1f015eca4d746"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54fe81e5b1f015eca4d73d\",\"5d54fe81e5b1f015eca4d73f\",\"5d54fe81e5b1f015eca4d741\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.624ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:41:05.896Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fe91d66ba26f30b09803"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.103ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T06:41:21.209Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fe91d66ba26f30b09805"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$e4Irftiz65frx9fxGkFXu.gQwDwbpdKJ/1z/ekSqGk2WErrJddgZe\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.200ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:41:21.301Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fe91d66ba26f30b09807"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$iAqFqKeSE9ayGlqvuNqCM.GU1pJsVLThksJW6QhGXmRxOwUYWJeRG\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.134ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:41:21.37Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fe91d66ba26f30b09809"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$BMlJKflICFTru6fUoCbnEugFvZlRHdlhFXrjmn8g7OI7xteb5VP2u\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.125ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:41:21.439Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fe91d66ba26f30b0980a"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54fe91d66ba26f30b09804\",\"username\":\"testtest\",\"password\":\"$2a$10$e4Irftiz65frx9fxGkFXu.gQwDwbpdKJ/1z/ekSqGk2WErrJddgZe\",\"createDate\":\"2019-08-15T06:41:21.298Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.194ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:41:21.456Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fe91d66ba26f30b0980b"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54fe91d66ba26f30b09804",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54fe91d66ba26f30b09804\",\"username\":\"test1\",\"password\":\"$2a$10$e4Irftiz65frx9fxGkFXu.gQwDwbpdKJ/1z/ekSqGk2WErrJddgZe\",\"createDate\":\"2019-08-15T06:41:21.298Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.108ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:41:21.465Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fe91d66ba26f30b0980c"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54fe91d66ba26f30b09804",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.415ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:41:21.473Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54fe91d66ba26f30b0980d"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54fe91d66ba26f30b09804\",\"5d54fe91d66ba26f30b09806\",\"5d54fe91d66ba26f30b09808\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.699ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:41:21.481Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ff233a2d266c04211bdd"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "Validation Failed:[{\"message\":\"required\",\"field\":\"username\",\"code\":\"missing_field\"},{\"message\":\"required\",\"field\":\"password\",\"code\":\"missing_field\"}]",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "12.205ms",
+    type: "login",
+    createDate: ISODate("2019-08-15T06:43:47.871Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ff48877b0b3d8836c073"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "88.487ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T06:44:24.385Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ff48877b0b3d8836c075"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$8Q2zZ74TwpkIwCMQe6Aer.Yq05XzXCVCZS10ZvRP2bEukUFttJsj6\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.892ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:44:24.475Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ff48877b0b3d8836c077"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$1pOMgf.gvYPWFu.acuS/c.Ax1LIfnxQsriotP1aZNve8UkMcRgqCC\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.839ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:44:24.544Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ff48877b0b3d8836c079"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$GHSld0LGewCKlijViyqNO.sHjyGB4uvMxPC/OgXFBqZCXnyOeazO2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.590ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:44:24.612Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ff48877b0b3d8836c07a"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54ff48877b0b3d8836c074\",\"username\":\"testtest\",\"password\":\"$2a$10$8Q2zZ74TwpkIwCMQe6Aer.Yq05XzXCVCZS10ZvRP2bEukUFttJsj6\",\"createDate\":\"2019-08-15T06:44:24.472Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.024ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:44:24.628Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ff48877b0b3d8836c07b"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54ff48877b0b3d8836c074",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54ff48877b0b3d8836c074\",\"username\":\"test1\",\"password\":\"$2a$10$8Q2zZ74TwpkIwCMQe6Aer.Yq05XzXCVCZS10ZvRP2bEukUFttJsj6\",\"createDate\":\"2019-08-15T06:44:24.472Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.113ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:44:24.636Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ff48877b0b3d8836c07c"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54ff48877b0b3d8836c074",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.417ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:44:24.645Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ff48877b0b3d8836c07d"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54ff48877b0b3d8836c074\",\"5d54ff48877b0b3d8836c076\",\"5d54ff48877b0b3d8836c078\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.921ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:44:24.653Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ffd3763ebd05ec990f1e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.361ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-15T06:46:43.63Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ffd3763ebd05ec990f20"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$NPdZV9lyIUg1AMOxguKZceZaZjhOxRqJUrLcK7tQGVgJzfnyB0LBq\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.488ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:46:43.722Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ffd3763ebd05ec990f22"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$wJCyvculZRokBqvcnuP2i.va8/GxUlHC8nTJl0m/ZWVk8JSFkeX82\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.913ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:46:43.791Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ffd3763ebd05ec990f24"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$nUErTO0Mdszi0LeaIH5mo.ZaTEb3Zj.iuaoA0gIrDKYKA2mIk73yS\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.820ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:46:43.859Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ffd3763ebd05ec990f25"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54ffd3763ebd05ec990f1f\",\"username\":\"testtest\",\"password\":\"$2a$10$NPdZV9lyIUg1AMOxguKZceZaZjhOxRqJUrLcK7tQGVgJzfnyB0LBq\",\"createDate\":\"2019-08-15T06:46:43.719Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.164ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:46:43.876Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ffd3763ebd05ec990f26"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d54ffd3763ebd05ec990f1f",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d54ffd3763ebd05ec990f1f\",\"username\":\"test1\",\"password\":\"$2a$10$NPdZV9lyIUg1AMOxguKZceZaZjhOxRqJUrLcK7tQGVgJzfnyB0LBq\",\"createDate\":\"2019-08-15T06:46:43.719Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.040ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:46:43.884Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ffd3763ebd05ec990f27"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d54ffd3763ebd05ec990f1f",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.175ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:46:43.892Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d54ffd3763ebd05ec990f28"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d54ffd3763ebd05ec990f1f\",\"5d54ffd3763ebd05ec990f21\",\"5d54ffd3763ebd05ec990f23\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.917ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-15T06:46:43.9Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5641bb2d20ef0b0489d6e1"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "145.411ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T05:40:11.621Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5641bb2d20ef0b0489d6e3"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$fBQAcLKD80YEPj6KDtc4tOLnGjaukTVXlJCBTSHPLlPW9cHd3VyoS\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.245ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T05:40:11.737Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5641bb2d20ef0b0489d6e5"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$85RHO0q/CuHfvwwuykcpheAqmuBpIn0fZ4cbcmmpGW6q.RrbwcmUq\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.565ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T05:40:11.807Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5641bb2d20ef0b0489d6e7"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$hDg4artM03XfO61UYUb94eBAn6nbF4AV7fa4k0RUXM5m30ZfTK/V.\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.462ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T05:40:11.878Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5641bb2d20ef0b0489d6e8"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5641bb2d20ef0b0489d6e2\",\"username\":\"testtest\",\"password\":\"$2a$10$fBQAcLKD80YEPj6KDtc4tOLnGjaukTVXlJCBTSHPLlPW9cHd3VyoS\",\"createDate\":\"2019-08-16T05:40:11.711Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.340ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T05:40:11.895Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5641bb2d20ef0b0489d6e9"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d5641bb2d20ef0b0489d6e2",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5641bb2d20ef0b0489d6e2\",\"username\":\"test1\",\"password\":\"$2a$10$fBQAcLKD80YEPj6KDtc4tOLnGjaukTVXlJCBTSHPLlPW9cHd3VyoS\",\"createDate\":\"2019-08-16T05:40:11.711Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.108ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T05:40:11.902Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5641bb2d20ef0b0489d6ea"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d5641bb2d20ef0b0489d6e2",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.186ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T05:40:11.91Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5641bb2d20ef0b0489d6eb"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d5641bb2d20ef0b0489d6e2\",\"5d5641bb2d20ef0b0489d6e4\",\"5d5641bb2d20ef0b0489d6e6\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.869ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T05:40:11.918Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564a4d5e7da03f30bc9a1b"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.138ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:16:45.975Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564a4e5e7da03f30bc9a1d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$xi4gk2iE0K/9aDvR/DF43u65PQIm.l9Mw0zHtyu25oc6lbl.MyE0O\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.235ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:16:46.091Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564a4e5e7da03f30bc9a1f"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$XJjH0j2KvHFVMvsyXtZZzuz2piDDc0kGdc1UCP8SmtYP7lg24Qg82\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.203ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:16:46.161Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564a4e5e7da03f30bc9a21"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$xXVDTorDaQaz/d2jX72wxO.rvECRWCZU3qMfaMzLGKO2XKMPaN8gO\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.414ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:16:46.229Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564a4e5e7da03f30bc9a22"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d564a4e5e7da03f30bc9a1c\",\"username\":\"testtest\",\"password\":\"$2a$10$xi4gk2iE0K/9aDvR/DF43u65PQIm.l9Mw0zHtyu25oc6lbl.MyE0O\",\"createDate\":\"2019-08-16T06:16:46.088Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "4.953ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:16:46.245Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564a4e5e7da03f30bc9a23"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d564a4e5e7da03f30bc9a1c",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d564a4e5e7da03f30bc9a1c\",\"username\":\"test1\",\"password\":\"$2a$10$xi4gk2iE0K/9aDvR/DF43u65PQIm.l9Mw0zHtyu25oc6lbl.MyE0O\",\"createDate\":\"2019-08-16T06:16:46.088Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.312ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:16:46.254Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564a4e5e7da03f30bc9a24"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d564a4e5e7da03f30bc9a1c",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.259ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:16:46.262Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564a4e5e7da03f30bc9a25"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d564a4e5e7da03f30bc9a1c\",\"5d564a4e5e7da03f30bc9a1e\",\"5d564a4e5e7da03f30bc9a20\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.898ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:16:46.27Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564a7bfa933a3ad430169e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.236ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:17:31.368Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564a7bfa933a3ad43016a0"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$TTr1gEKHX1y3yOInBwmhhu7YZg46Uujic0CDQfeYpwmj4ZcyXkx4G\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.938ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:17:31.485Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564a7bfa933a3ad43016a2"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$BuybOrrRFctv.wHslU.SGeQEXUkZPycsvKdm82vDVossw4OLKGhXq\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.002ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:17:31.554Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564a7bfa933a3ad43016a4"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$5OxTm6.bHMEpe7jgbiUiAOjdEWHkP6R0eNhSjDNxx3Xp0bGo22ICS\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.692ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:17:31.625Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564a7bfa933a3ad43016a5"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d564a7bfa933a3ad430169f\",\"username\":\"testtest\",\"password\":\"$2a$10$TTr1gEKHX1y3yOInBwmhhu7YZg46Uujic0CDQfeYpwmj4ZcyXkx4G\",\"createDate\":\"2019-08-16T06:17:31.482Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.031ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:17:31.641Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564a7bfa933a3ad43016a6"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d564a7bfa933a3ad430169f",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d564a7bfa933a3ad430169f\",\"username\":\"test1\",\"password\":\"$2a$10$TTr1gEKHX1y3yOInBwmhhu7YZg46Uujic0CDQfeYpwmj4ZcyXkx4G\",\"createDate\":\"2019-08-16T06:17:31.482Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.144ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:17:31.65Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564a7bfa933a3ad43016a7"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d564a7bfa933a3ad430169f",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.307ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:17:31.658Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564a7bfa933a3ad43016a8"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d564a7bfa933a3ad430169f\",\"5d564a7bfa933a3ad43016a1\",\"5d564a7bfa933a3ad43016a3\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.921ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:17:31.666Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564b04cf7f320ee4ead888"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.648ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:19:48.633Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564b04cf7f320ee4ead88a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$ti6QuhtM7LDel6LDGgTudOIeBprDTLiyxbqple7v4J5C0mIEWsxKG\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "66.435ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:19:48.752Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564b04cf7f320ee4ead88c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$PdsobiqouYCc2gPvnZI.Muz/q9SjJXzVTXFomRFkC6oK2iFmFOzlq\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.211ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:19:48.821Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564b04cf7f320ee4ead88e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$uWjcDSv86/go0bEEMGEtqulOMzpK8dL996UKvUbf7gMR5rEOvAzUu\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.960ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:19:48.89Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564b04cf7f320ee4ead88f"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d564b04cf7f320ee4ead889\",\"username\":\"testtest\",\"password\":\"$2a$10$ti6QuhtM7LDel6LDGgTudOIeBprDTLiyxbqple7v4J5C0mIEWsxKG\",\"createDate\":\"2019-08-16T06:19:48.749Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "4.956ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:19:48.907Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564b04cf7f320ee4ead890"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d564b04cf7f320ee4ead889",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d564b04cf7f320ee4ead889\",\"username\":\"test1\",\"password\":\"$2a$10$ti6QuhtM7LDel6LDGgTudOIeBprDTLiyxbqple7v4J5C0mIEWsxKG\",\"createDate\":\"2019-08-16T06:19:48.749Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.190ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:19:48.915Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564b04cf7f320ee4ead891"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d564b04cf7f320ee4ead889",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.329ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:19:48.923Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564b04cf7f320ee4ead892"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d564b04cf7f320ee4ead889\",\"5d564b04cf7f320ee4ead88b\",\"5d564b04cf7f320ee4ead88d\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.809ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:19:48.931Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564ba6cbec963f8ce8e76c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.732ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:22:30.63Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564ba6cbec963f8ce8e76d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.956ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:22:30.732Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564ba6cbec963f8ce8e76f"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$TMHCS4/3Mdb8XTCWQHuYcu/41csu/nIoz0i.4oFdftuw7gZPSvWp.\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.925ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:22:30.813Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564ba6cbec963f8ce8e771"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$4Ze59yCw5nsAjgvGT/KpkeQKMMl9G04VIXIb//W3PRTL3irHUXdby\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.883ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:22:30.882Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564ba6cbec963f8ce8e773"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$V3/tXTF7fButcVxhBF1B5e/pato.S5khM9RONjzG426f3ISdRJc9O\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.334ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:22:30.95Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564ba6cbec963f8ce8e774"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d564ba6cbec963f8ce8e76e\",\"username\":\"testtest\",\"password\":\"$2a$10$TMHCS4/3Mdb8XTCWQHuYcu/41csu/nIoz0i.4oFdftuw7gZPSvWp.\",\"createDate\":\"2019-08-16T06:22:30.810Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.026ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:22:30.966Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564ba6cbec963f8ce8e775"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d564ba6cbec963f8ce8e76e",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d564ba6cbec963f8ce8e76e\",\"username\":\"test1\",\"password\":\"$2a$10$TMHCS4/3Mdb8XTCWQHuYcu/41csu/nIoz0i.4oFdftuw7gZPSvWp.\",\"createDate\":\"2019-08-16T06:22:30.810Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.198ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:22:30.974Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564ba6cbec963f8ce8e776"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d564ba6cbec963f8ce8e76e",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.706ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:22:30.982Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564ba6cbec963f8ce8e777"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d564ba6cbec963f8ce8e76e\",\"5d564ba6cbec963f8ce8e770\",\"5d564ba6cbec963f8ce8e772\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.813ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:22:30.99Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564be8290f1215ec774181"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.986ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:23:36.851Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564be8290f1215ec774182"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.424ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:23:36.958Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564be9290f1215ec774184"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$eEQYg181W2WY2QkSSV6Qfux.pIAQ8ekScNHf5R5orq6cndt6NJk4G\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.308ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:23:37.039Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564be9290f1215ec774186"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$.9z4.VQnqYRQ5nmjRx4d6OzyfraS655jZQto3fjIST0YtAvHJ9Iiq\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.088ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:23:37.108Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564be9290f1215ec774188"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$6uVHSTC6W/OiQGPwTGUUjOj9cIvxplWcPJ3Fzx4jyG1aFLiaRbj6K\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.855ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:23:37.177Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564be9290f1215ec774189"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d564be9290f1215ec774183\",\"username\":\"testtest\",\"password\":\"$2a$10$eEQYg181W2WY2QkSSV6Qfux.pIAQ8ekScNHf5R5orq6cndt6NJk4G\",\"createDate\":\"2019-08-16T06:23:37.037Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.141ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:23:37.193Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564be9290f1215ec77418a"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d564be9290f1215ec774183",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d564be9290f1215ec774183\",\"username\":\"test1\",\"password\":\"$2a$10$eEQYg181W2WY2QkSSV6Qfux.pIAQ8ekScNHf5R5orq6cndt6NJk4G\",\"createDate\":\"2019-08-16T06:23:37.037Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.103ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:23:37.201Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564be9290f1215ec77418b"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d564be9290f1215ec774183",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.045ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:23:37.209Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564be9290f1215ec77418c"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d564be9290f1215ec774183\",\"5d564be9290f1215ec774185\",\"5d564be9290f1215ec774187\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.882ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:23:37.217Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564c0f9009e731c457f0c3"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.514ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:24:15.565Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564c0f9009e731c457f0c4"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.615ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:24:15.667Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564c0f9009e731c457f0c6"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$IzlbnUKl02F6cbbtpaxDDuzNaVVcRnciv04xRq/ER/84OtYicFZA.\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.612ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:24:15.748Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564c0f9009e731c457f0c8"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$N4GEaeLujN.MSV50ONCE..XwrGJ6c1rUSRNSj55Ai.XDeTam.kuke\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.217ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:24:15.818Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564c0f9009e731c457f0ca"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$.R8VabsQqgx8V/bDgjByZedNqP0JzsEi5dBWaIS82yXELUigIats.\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.130ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:24:15.887Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564c0f9009e731c457f0cb"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d564c0f9009e731c457f0c5\",\"username\":\"testtest\",\"password\":\"$2a$10$IzlbnUKl02F6cbbtpaxDDuzNaVVcRnciv04xRq/ER/84OtYicFZA.\",\"createDate\":\"2019-08-16T06:24:15.745Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "4.986ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:24:15.903Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564c0f9009e731c457f0cc"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d564c0f9009e731c457f0c5",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d564c0f9009e731c457f0c5\",\"username\":\"test1\",\"password\":\"$2a$10$IzlbnUKl02F6cbbtpaxDDuzNaVVcRnciv04xRq/ER/84OtYicFZA.\",\"createDate\":\"2019-08-16T06:24:15.745Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.344ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:24:15.911Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564c0f9009e731c457f0cd"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d564c0f9009e731c457f0c5",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.112ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:24:15.919Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564c0f9009e731c457f0ce"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d564c0f9009e731c457f0c5\",\"5d564c0f9009e731c457f0c7\",\"5d564c0f9009e731c457f0c9\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.800ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:24:15.926Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564cc7647dac2d387d89e4"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.955ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:27:19.43Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564cc7647dac2d387d89e5"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.683ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:27:19.539Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564cc7647dac2d387d89e7"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$zm/t6LJERemi08NnGO0tSOmHBH9TGpSa2qjVpfA9OipuCQ1RMcIS.\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.707ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:27:19.62Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564cc7647dac2d387d89e9"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$a/lc88rPrxfZdyd8tom9M.sh7R1Lb2B8cRbbO48SgmnRSDKtmKp/S\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.562ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:27:19.688Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564cc7647dac2d387d89eb"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$S1BI/GpNZMKKC8hQQ6GGyuWzfwisacq804MFmtEXThmFJsxf5/LEK\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.435ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:27:19.757Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564cc7647dac2d387d89ec"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d564cc7647dac2d387d89e6\",\"username\":\"testtest\",\"password\":\"$2a$10$zm/t6LJERemi08NnGO0tSOmHBH9TGpSa2qjVpfA9OipuCQ1RMcIS.\",\"createDate\":\"2019-08-16T06:27:19.617Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.641ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:27:19.774Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564cc7647dac2d387d89ed"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d564cc7647dac2d387d89e6",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d564cc7647dac2d387d89e6\",\"username\":\"test1\",\"password\":\"$2a$10$zm/t6LJERemi08NnGO0tSOmHBH9TGpSa2qjVpfA9OipuCQ1RMcIS.\",\"createDate\":\"2019-08-16T06:27:19.617Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.209ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:27:19.783Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564cc7647dac2d387d89ee"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d564cc7647dac2d387d89e6",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.405ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:27:19.791Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564cc7647dac2d387d89ef"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d564cc7647dac2d387d89e6\",\"5d564cc7647dac2d387d89e8\",\"5d564cc7647dac2d387d89ea\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.780ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:27:19.802Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564ce53d83bf2f186a9b01"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.317ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:27:49.237Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564ce53d83bf2f186a9b02"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.255ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:27:49.353Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564ce53d83bf2f186a9b04"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test1\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.484ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:27:49.37Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564ce53d83bf2f186a9b06"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.084ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:27:49.377Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564ce53d83bf2f186a9b08"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test3\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.122ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:27:49.384Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564ce53d83bf2f186a9b09"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/test",
+    error: "找不到数据",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"testtest\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "3.535ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:27:49.401Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564cf26a613e42485c64da"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.279ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:28:02.062Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564cf26a613e42485c64db"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.196ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:28:02.174Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564cf26a613e42485c64dd"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test1\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.443ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:28:02.192Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564cf26a613e42485c64df"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.080ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:28:02.199Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564cf26a613e42485c64e1"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test3\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.059ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:28:02.206Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564cf26a613e42485c64e2"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/test",
+    error: "找不到数据",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"testtest\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.526ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:28:02.222Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564d2d5524b542a43e7b9b"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.134ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:29:01.488Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564d2d5524b542a43e7b9c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "65.159ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:29:01.602Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564d2d5524b542a43e7b9e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test1\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.525ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:29:01.621Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564d2d5524b542a43e7ba0"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.169ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:29:01.629Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564d2d5524b542a43e7ba2"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test3\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.091ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:29:01.636Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564d2d5524b542a43e7ba3"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/test",
+    error: "找不到数据",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"testtest\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.521ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:29:01.652Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564d544f06b733c83588cd"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.807ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:29:40.549Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564d544f06b733c83588ce"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.812ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:29:40.663Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564d544f06b733c83588d0"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test1\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.488ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:29:40.682Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564d544f06b733c83588d2"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.120ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:29:40.69Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564d544f06b733c83588d4"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test3\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.160ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:29:40.697Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564d544f06b733c83588d5"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/test",
+    error: "找不到数据",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"testtest\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "3.607ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:29:40.715Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564dabdda66a3a805e3389"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.630ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:31:07.066Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564dabdda66a3a805e338a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.715ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:31:07.177Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564dabdda66a3a805e338c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test1\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.481ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:31:07.196Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564dabdda66a3a805e338e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "0.985ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:31:07.203Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564dabdda66a3a805e3390"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test3\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "0.924ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:31:07.209Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564dabdda66a3a805e3391"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/test",
+    error: "找不到数据",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"testtest\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.346ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:31:07.224Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564dc1fa884f3e449595b5"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.433ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:31:29.893Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564dc1fa884f3e449595b7"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$gE2.qLIJnhcXHTEZ39OM5e2fJtOrfODmiFs0I39Zj4nGCHYSWi2Di\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.091ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:31:29.983Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564dc2fa884f3e449595b9"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$6aMsWy7UZ9o12emf1SkFuumWzGrQelNE7L4n4Juc96iHXSdPX9yza\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.888ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:31:30.052Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564dc2fa884f3e449595bb"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$UKAIQwfSF.aiOgs4k7p.fOUcWZaYo6RYoL.nKYMNun4dUgjmB3BxO\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.799ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:31:30.121Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564dc2fa884f3e449595bc"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d564dc1fa884f3e449595b6\",\"username\":\"testtest\",\"password\":\"$2a$10$gE2.qLIJnhcXHTEZ39OM5e2fJtOrfODmiFs0I39Zj4nGCHYSWi2Di\",\"createDate\":\"2019-08-16T06:31:29.980Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "4.912ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:31:30.137Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564dc2fa884f3e449595bd"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d564dc1fa884f3e449595b6",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d564dc1fa884f3e449595b6\",\"username\":\"test1\",\"password\":\"$2a$10$gE2.qLIJnhcXHTEZ39OM5e2fJtOrfODmiFs0I39Zj4nGCHYSWi2Di\",\"createDate\":\"2019-08-16T06:31:29.980Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.194ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:31:30.146Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564dc2fa884f3e449595be"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d564dc1fa884f3e449595b6",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.245ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:31:30.154Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564dc2fa884f3e449595bf"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d564dc1fa884f3e449595b6\",\"5d564dc2fa884f3e449595b8\",\"5d564dc2fa884f3e449595ba\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.855ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:31:30.162Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564e196282a93448c0e199"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.233ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:32:57.114Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564e196282a93448c0e19a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.425ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:32:57.229Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564e196282a93448c0e19c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$U9vnIZT8sQxmYx4Pb/iBTen9xtfnmmjCNQsSrQ9UB/nwkW.S6aft.\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.689ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:32:57.31Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564e196282a93448c0e19e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$jPD8ieLD1RjLhuTSsUv9AeUuDACGuGMO1xW5AiTsGi7LzbCs1thQ.\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.829ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:32:57.379Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564e196282a93448c0e1a0"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$mCAccsOEJ3GdnjhDMO64ceZTiV6ZnWSAXtAS0k0JnpOOSoffnOwe.\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.952ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:32:57.449Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564e196282a93448c0e1a1"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d564e196282a93448c0e19b\",\"username\":\"testtest\",\"password\":\"$2a$10$U9vnIZT8sQxmYx4Pb/iBTen9xtfnmmjCNQsSrQ9UB/nwkW.S6aft.\",\"createDate\":\"2019-08-16T06:32:57.307Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.274ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:32:57.465Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564e196282a93448c0e1a2"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d564e196282a93448c0e19b",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d564e196282a93448c0e19b\",\"username\":\"test1\",\"password\":\"$2a$10$U9vnIZT8sQxmYx4Pb/iBTen9xtfnmmjCNQsSrQ9UB/nwkW.S6aft.\",\"createDate\":\"2019-08-16T06:32:57.307Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.056ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:32:57.474Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564e196282a93448c0e1a3"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d564e196282a93448c0e19b",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.087ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:32:57.481Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564e196282a93448c0e1a4"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d564e196282a93448c0e19b\",\"5d564e196282a93448c0e19d\",\"5d564e196282a93448c0e19f\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.819ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:32:57.489Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564e63f6c9f8336c5cae1e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "85.847ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:34:11.316Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564e63f6c9f8336c5cae1f"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.365ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:34:11.427Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564e63f6c9f8336c5cae21"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$3DNA6Y.tXxa/6Gt8W/PSGeSxJEqooGHE5tyjpfGhF23R3VWq3p9Sq\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.062ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:34:11.509Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564e63f6c9f8336c5cae23"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$vPF7EnuGQXtwzHeAIIc/YO8NAaVY5VRBCFvHA8VZ8NZKZ5fuJa9Ty\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.799ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:34:11.578Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564e63f6c9f8336c5cae25"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$ZkoRbGp01xgbdvhLs7fOau7aLq7tM6JxgoI8bpmdG8EbwGFu4xV9a\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.632ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:34:11.646Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564e63f6c9f8336c5cae26"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d564e63f6c9f8336c5cae20\",\"username\":\"testtest\",\"password\":\"$2a$10$3DNA6Y.tXxa/6Gt8W/PSGeSxJEqooGHE5tyjpfGhF23R3VWq3p9Sq\",\"createDate\":\"2019-08-16T06:34:11.506Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.513ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:34:11.663Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564e63f6c9f8336c5cae27"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d564e63f6c9f8336c5cae20",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d564e63f6c9f8336c5cae20\",\"username\":\"test1\",\"password\":\"$2a$10$3DNA6Y.tXxa/6Gt8W/PSGeSxJEqooGHE5tyjpfGhF23R3VWq3p9Sq\",\"createDate\":\"2019-08-16T06:34:11.506Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.200ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:34:11.671Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564e63f6c9f8336c5cae28"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d564e63f6c9f8336c5cae20",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.201ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:34:11.679Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d564e63f6c9f8336c5cae29"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d564e63f6c9f8336c5cae20\",\"5d564e63f6c9f8336c5cae22\",\"5d564e63f6c9f8336c5cae24\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.835ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:34:11.686Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5651237cc53328885517d8"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.063ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:45:55.584Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5651237cc53328885517da"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$grsblXFF0.7plSA6mx9Jge6PQASEtNzcj4tss4eFbqY3SYOHJxbna\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.886ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:45:55.681Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5651237cc53328885517dc"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$10lvcy5vrnUVURi37QFr0.yD.bovLag9JfueCI7ai6g4ldm4zxTH.\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.663ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:45:55.749Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5651237cc53328885517de"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$wiWFh2ep3Hrxi9KBuRYUJOKvH074R/8BP0wMoCnHfI2RuTXDIZAbW\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.754ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:45:55.818Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5651237cc53328885517df"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5651237cc53328885517d9\",\"username\":\"testtest\",\"password\":\"$2a$10$grsblXFF0.7plSA6mx9Jge6PQASEtNzcj4tss4eFbqY3SYOHJxbna\",\"createDate\":\"2019-08-16T06:45:55.678Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.103ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:45:55.834Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5651237cc53328885517e0"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d5651237cc53328885517d9",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.217ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:45:55.842Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5651237cc53328885517e1"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d5651237cc53328885517d9\",\"5d5651237cc53328885517db\",\"5d5651237cc53328885517dd\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.795ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:45:55.849Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5651237cc53328885517e2"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.746ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:45:55.918Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5651237cc53328885517e4"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$gUcsKSlPnn5X2aRwfkd3fu8s36B0pugHfti3cCJFglyPAbExgX/7G\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.849ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:45:55.994Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5651247cc53328885517e6"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$dnVhARTY37bli9gJFsMg/OixBOkcNackG5pIHWFAuz8xvfOVbTDlO\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.856ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:45:56.063Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5651247cc53328885517e8"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$uAM1UaymfBIOmUrwOj42e.bdAPJGbvf6Iu8bXpf7IxKv.SMW33DVO\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.559ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:45:56.132Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5651247cc53328885517e9"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5651237cc53328885517e3\",\"username\":\"testtest\",\"password\":\"$2a$10$gUcsKSlPnn5X2aRwfkd3fu8s36B0pugHfti3cCJFglyPAbExgX/7G\",\"createDate\":\"2019-08-16T06:45:55.992Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.250ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:45:56.145Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5651247cc53328885517ea"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d5651237cc53328885517e3",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5651237cc53328885517e3\",\"username\":\"test1\",\"password\":\"$2a$10$gUcsKSlPnn5X2aRwfkd3fu8s36B0pugHfti3cCJFglyPAbExgX/7G\",\"createDate\":\"2019-08-16T06:45:55.992Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.781ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:45:56.153Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5651247cc53328885517eb"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d5651237cc53328885517e3",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "3.909ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:45:56.162Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5651247cc53328885517ec"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d5651237cc53328885517e3\",\"5d5651247cc53328885517e5\",\"5d5651247cc53328885517e7\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "0.975ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:45:56.169Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56515fd217d531a4b1f9e0"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.917ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:46:55.754Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56515fd217d531a4b1f9e2"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$bvYsLSQvb6Voxy.yDcKNiuF.AzIum2sG0qJ9VkxVTLh85wBLlRPfq\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.914ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:46:55.85Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56515fd217d531a4b1f9e4"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$VHgNJjccx/Z0UOYC./4t7.4BH9rumsFGqauCY38jZm9WGdAk6OD2u\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.560ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:46:55.919Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56515fd217d531a4b1f9e6"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$dU/ylp6YqQS/KmrlxN0lCOrbF93U5moEnygmnM61AVXFcXvzxSi5m\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.481ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:46:55.987Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565160d217d531a4b1f9e7"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d56515fd217d531a4b1f9e1\",\"username\":\"testtest\",\"password\":\"$2a$10$bvYsLSQvb6Voxy.yDcKNiuF.AzIum2sG0qJ9VkxVTLh85wBLlRPfq\",\"createDate\":\"2019-08-16T06:46:55.848Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.268ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:46:56.004Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565160d217d531a4b1f9e8"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d56515fd217d531a4b1f9e1",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.312ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:46:56.012Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565160d217d531a4b1f9e9"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d56515fd217d531a4b1f9e1\",\"5d56515fd217d531a4b1f9e3\",\"5d56515fd217d531a4b1f9e5\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.860ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:46:56.02Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565160d217d531a4b1f9ea"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.821ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:46:56.089Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565160d217d531a4b1f9ec"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$vkvKlDctFSF3OiBFIIB5qeEY7Zv9oE2edZxFDzfBgD33tMoFiFtRe\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.775ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:46:56.165Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565160d217d531a4b1f9ee"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$PU/vjTCHWomh.yvqdFQbM.qmpk.zMCEbCHSgGy4NgHWxr1dTncQhq\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.690ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:46:56.234Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565160d217d531a4b1f9f0"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$0eIGwz4UBupw9eUjaI0.XO5kWSYKh7ZJ8jMyGOaDh36yY9VYu7Uhq\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.388ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:46:56.303Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565160d217d531a4b1f9f1"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565160d217d531a4b1f9eb\",\"username\":\"testtest\",\"password\":\"$2a$10$vkvKlDctFSF3OiBFIIB5qeEY7Zv9oE2edZxFDzfBgD33tMoFiFtRe\",\"createDate\":\"2019-08-16T06:46:56.163Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.037ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:46:56.317Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565160d217d531a4b1f9f2"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d565160d217d531a4b1f9eb",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565160d217d531a4b1f9eb\",\"username\":\"test1\",\"password\":\"$2a$10$vkvKlDctFSF3OiBFIIB5qeEY7Zv9oE2edZxFDzfBgD33tMoFiFtRe\",\"createDate\":\"2019-08-16T06:46:56.163Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.913ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:46:56.324Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565160d217d531a4b1f9f3"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d565160d217d531a4b1f9eb",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.761ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:46:56.334Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565160d217d531a4b1f9f4"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565160d217d531a4b1f9eb\",\"5d565160d217d531a4b1f9ed\",\"5d565160d217d531a4b1f9ef\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "0.996ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:46:56.341Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56518afc0e453a8878092a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.964ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:47:38.549Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56518afc0e453a8878092b"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.233ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:47:38.66Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56518afc0e453a8878092d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$0fs7XFmlq8f0943JORR3TeE6qNP5o6IPG3AeF390lkgU6jHkIW1r6\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.858ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:47:38.74Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56518afc0e453a8878092f"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$YLdvViquFxcXdmxNEUP6te5hqbJbQ2o8V2n2Fijz.lZRiu9Tv.vmq\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.662ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:47:38.809Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56518afc0e453a88780931"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$tnwzObw2FvsjEuKjv3iWQeVVMR04q32xhqho8kyIHuMUmO.WkvZD.\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.501ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:47:38.878Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56518afc0e453a88780932"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d56518afc0e453a8878092c\",\"username\":\"testtest\",\"password\":\"$2a$10$0fs7XFmlq8f0943JORR3TeE6qNP5o6IPG3AeF390lkgU6jHkIW1r6\",\"createDate\":\"2019-08-16T06:47:38.738Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.094ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:47:38.894Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56518afc0e453a88780933"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d56518afc0e453a8878092c",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d56518afc0e453a8878092c\",\"username\":\"test1\",\"password\":\"$2a$10$0fs7XFmlq8f0943JORR3TeE6qNP5o6IPG3AeF390lkgU6jHkIW1r6\",\"createDate\":\"2019-08-16T06:47:38.738Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.981ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:47:38.902Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56518afc0e453a88780934"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d56518afc0e453a8878092c",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.161ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:47:38.91Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56518afc0e453a88780935"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d56518afc0e453a8878092c\",\"5d56518afc0e453a8878092e\",\"5d56518afc0e453a88780930\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.977ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:47:38.918Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56523c4931be36a02ddf5d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.740ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:50:36.986Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56523d4931be36a02ddf5e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.372ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T06:50:37.096Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56523d4931be36a02ddf60"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$5uJi9FeRJKypmPVU1Pk/.OlLRTrIgZxh6hxAx2l5Kx3DxkeEnFoei\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.015ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:50:37.177Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56523d4931be36a02ddf62"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$EWuuy27n4P0tbc7jlK6SkOVBK2lL3LRJMRtCp3k5M4HIRRrbTlzp6\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.168ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:50:37.246Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56523d4931be36a02ddf64"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$dVcg6ZHgnhaFlpoQd5EoFeCAdvjscC96WMa9ekmIERIj2L3s7ldmW\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.676ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:50:37.315Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56523d4931be36a02ddf65"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d56523d4931be36a02ddf5f\",\"username\":\"testtest\",\"password\":\"$2a$10$5uJi9FeRJKypmPVU1Pk/.OlLRTrIgZxh6hxAx2l5Kx3DxkeEnFoei\",\"createDate\":\"2019-08-16T06:50:37.174Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.116ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:50:37.331Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56523d4931be36a02ddf66"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d56523d4931be36a02ddf5f",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d56523d4931be36a02ddf5f\",\"username\":\"test1\",\"password\":\"$2a$10$5uJi9FeRJKypmPVU1Pk/.OlLRTrIgZxh6hxAx2l5Kx3DxkeEnFoei\",\"createDate\":\"2019-08-16T06:50:37.174Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.069ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:50:37.339Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56523d4931be36a02ddf67"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d56523d4931be36a02ddf5f",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.165ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:50:37.347Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56523d4931be36a02ddf68"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d56523d4931be36a02ddf5f\",\"5d56523d4931be36a02ddf61\",\"5d56523d4931be36a02ddf63\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.765ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T06:50:37.355Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654b81164293f98374423"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.492ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:01:12.339Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654b81164293f98374425"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$AgvSKndgVxV1K2OqMrlhBOzTWSm79XNIiSU/NhynvpZG.ivtBpSZa\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.147ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:01:12.43Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654b81164293f98374427"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$T3/Mxzywy9ksWYFmmJ6eCed4Z5Iku9vK2dpBThjLN5JkFGLcyUVXK\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.838ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:01:12.499Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654b81164293f98374429"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$njgPKLDqCF8h9EVPja/a5e.IlD7DlDSWyHRrkEJKtlQhWbx1H3K1a\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.908ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:01:12.568Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654b81164293f9837442a"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5654b81164293f98374424\",\"username\":\"testtest\",\"password\":\"$2a$10$AgvSKndgVxV1K2OqMrlhBOzTWSm79XNIiSU/NhynvpZG.ivtBpSZa\",\"createDate\":\"2019-08-16T07:01:12.427Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.191ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:01:12.585Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654b81164293f9837442b"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d5654b81164293f98374424",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5654b81164293f98374424\",\"username\":\"test1\",\"password\":\"$2a$10$AgvSKndgVxV1K2OqMrlhBOzTWSm79XNIiSU/NhynvpZG.ivtBpSZa\",\"createDate\":\"2019-08-16T07:01:12.427Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.049ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:01:12.593Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654b81164293f9837442c"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d5654b81164293f98374424",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.079ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:01:12.601Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654b81164293f9837442d"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d5654b81164293f98374424\",\"5d5654b81164293f98374426\",\"5d5654b81164293f98374428\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.852ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:01:12.608Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654c6d3fd5f3a38decf8b"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.696ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:01:26.526Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654c6d3fd5f3a38decf8d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$o.bclfQTSBqK5yQeG/j50OZKtk061wPI/2krTFTP/VFnbdFrLI.ai\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.475ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:01:26.617Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654c6d3fd5f3a38decf8f"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$nnbN/cojtiyezQgNF0TRL.R.tFgj9xv7I7bomFCO7ARJmDryVppnS\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.812ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:01:26.686Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654c6d3fd5f3a38decf91"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$AgKkmJz6IOX0NjagbnzT/.81G0g/joxVlDRTiaxbhrxRVIUUNU8f6\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.549ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:01:26.754Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654c6d3fd5f3a38decf92"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5654c6d3fd5f3a38decf8c\",\"username\":\"testtest\",\"password\":\"$2a$10$o.bclfQTSBqK5yQeG/j50OZKtk061wPI/2krTFTP/VFnbdFrLI.ai\",\"createDate\":\"2019-08-16T07:01:26.614Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.404ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:01:26.772Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654c6d3fd5f3a38decf93"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d5654c6d3fd5f3a38decf8c",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5654c6d3fd5f3a38decf8c\",\"username\":\"test1\",\"password\":\"$2a$10$o.bclfQTSBqK5yQeG/j50OZKtk061wPI/2krTFTP/VFnbdFrLI.ai\",\"createDate\":\"2019-08-16T07:01:26.614Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.003ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:01:26.78Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654c6d3fd5f3a38decf94"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d5654c6d3fd5f3a38decf8c",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.218ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:01:26.787Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654c6d3fd5f3a38decf95"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d5654c6d3fd5f3a38decf8c\",\"5d5654c6d3fd5f3a38decf8e\",\"5d5654c6d3fd5f3a38decf90\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.808ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:01:26.795Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654ef7a97761efcdabc93"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.351ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:02:07.418Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654ef7a97761efcdabc95"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$kozKbzN6u4cwUjuW1JGi5O.UXqe7JgVfSOxbAX7cmvJUStYk.mySa\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.976ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:02:07.508Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654ef7a97761efcdabc97"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$TgIGrdY9t/KLHV8DmRNOseQuFusCgl/MaQEOhZMXZbijd6fgotLR2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.825ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:02:07.578Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654ef7a97761efcdabc99"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$.BNwEhCo3Yl/sogxbMh3Ie5r2j/bOVEevyivsVUebWJlGOzDO7nj2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.625ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:02:07.646Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654ef7a97761efcdabc9a"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5654ef7a97761efcdabc94\",\"username\":\"testtest\",\"password\":\"$2a$10$kozKbzN6u4cwUjuW1JGi5O.UXqe7JgVfSOxbAX7cmvJUStYk.mySa\",\"createDate\":\"2019-08-16T07:02:07.505Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.215ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:02:07.663Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654ef7a97761efcdabc9b"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d5654ef7a97761efcdabc94",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5654ef7a97761efcdabc94\",\"username\":\"test1\",\"password\":\"$2a$10$kozKbzN6u4cwUjuW1JGi5O.UXqe7JgVfSOxbAX7cmvJUStYk.mySa\",\"createDate\":\"2019-08-16T07:02:07.505Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.104ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:02:07.672Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654ef7a97761efcdabc9c"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d5654ef7a97761efcdabc94",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.410ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:02:07.68Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654ef7a97761efcdabc9d"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d5654ef7a97761efcdabc94\",\"5d5654ef7a97761efcdabc96\",\"5d5654ef7a97761efcdabc98\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.907ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:02:07.688Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654ef7a97761efcdabc9e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.881ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:02:07.767Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654ef7a97761efcdabca0"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$59xB47EWzs1Wdoz444ELxuzmkgFmD0/oSyFwCW1bH6L8qbuLtbofe\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "65.294ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:02:07.845Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654ef7a97761efcdabca2"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$Fu33U97wBZTva/iaH8ygrOPXt6.DxmfkRit6D8t6YEBA4.BsZLFvi\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.074ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:02:07.915Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654ef7a97761efcdabca4"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$UI0UHNkn6z8kSH27LFbFKOGHm8Ul4/XjaYBqDIDOy0BUKHJo3hlSe\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.097ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:02:07.984Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654f07a97761efcdabca5"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/user",
+    error: "找不到用户",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5654ef7a97761efcdabc94\",\"username\":\"testtest\",\"password\":\"$2a$10$kozKbzN6u4cwUjuW1JGi5O.UXqe7JgVfSOxbAX7cmvJUStYk.mySa\",\"createDate\":\"2019-08-16T07:02:07.505Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.700ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:02:08.002Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654f07a97761efcdabca6"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/user/5d5654ef7a97761efcdabc94",
+    error: "找不到用户",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5654ef7a97761efcdabc94\",\"username\":\"test1\",\"password\":\"$2a$10$kozKbzN6u4cwUjuW1JGi5O.UXqe7JgVfSOxbAX7cmvJUStYk.mySa\",\"createDate\":\"2019-08-16T07:02:07.505Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.834ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:02:08.012Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654f07a97761efcdabca7"),
+    status: NumberInt("0"),
+    method: "DELETE",
+    url: "/api/user/5d5654ef7a97761efcdabc94",
+    error: "找不到用户",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.610ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:02:08.019Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5654f07a97761efcdabca8"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d5654ef7a97761efcdabc94\",\"5d5654ef7a97761efcdabc96\",\"5d5654ef7a97761efcdabc98\",\"5d5654ef7a97761efcdabc9f\",\"5d5654ef7a97761efcdabca1\",\"5d5654ef7a97761efcdabca3\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.046ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:02:08.027Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5655415784900808169bc8"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.492ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:03:29.313Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5655415784900808169bca"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$2ENAvwbOTgmwKzZXkmseIewmSUIyzqRuEilFNhaYb1Z3NukEjbnoS\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.220ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:03:29.404Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5655415784900808169bcc"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$JhJhGkHVGrxIsCOk81OHA.ILzsCTFP3UncKY.y6RPKpw9xyWPVdii\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.804ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:03:29.473Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5655415784900808169bce"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$odFt9otwr18Wyhr3uSRgUu2gp9TGPP65zrC1vFIhCWu2K64BDtG8e\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.047ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:03:29.542Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5655415784900808169bcf"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5655415784900808169bc9\",\"username\":\"testtest\",\"password\":\"$2a$10$2ENAvwbOTgmwKzZXkmseIewmSUIyzqRuEilFNhaYb1Z3NukEjbnoS\",\"createDate\":\"2019-08-16T07:03:29.401Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.239ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:03:29.559Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5655415784900808169bd0"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d5655415784900808169bc9",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5655415784900808169bc9\",\"username\":\"test1\",\"password\":\"$2a$10$2ENAvwbOTgmwKzZXkmseIewmSUIyzqRuEilFNhaYb1Z3NukEjbnoS\",\"createDate\":\"2019-08-16T07:03:29.401Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.289ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:03:29.568Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5655415784900808169bd1"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d5655415784900808169bc9",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.153ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:03:29.576Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5655415784900808169bd2"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d5655415784900808169bc9\",\"5d5655415784900808169bcb\",\"5d5655415784900808169bcd\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.868ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:03:29.584Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5655415784900808169bd3"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.460ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:03:29.653Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5655415784900808169bd5"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$/SBJbwpSoWaXM7te5pMCgeV8HOno8kcHLuNEfV0eUFEePkuI0DhM2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.212ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:03:29.73Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5655415784900808169bd7"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$vUlU.ZV8iVjLtYHVc/JVW.WwEpm3mUllf9oYXeKu63ME0ad9hG0dC\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.815ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:03:29.799Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5655415784900808169bd9"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$ZDEw9FSpY7Uscmza.kqWVuQkYc98VpKGLtkiwfbkRYtw2/YRuWfZ2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "65.190ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:03:29.87Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5655415784900808169bda"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/user",
+    error: "找不到用户",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5655415784900808169bc9\",\"username\":\"testtest\",\"password\":\"$2a$10$2ENAvwbOTgmwKzZXkmseIewmSUIyzqRuEilFNhaYb1Z3NukEjbnoS\",\"createDate\":\"2019-08-16T07:03:29.401Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.925ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:03:29.886Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5655415784900808169bdb"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/user/5d5655415784900808169bc9",
+    error: "找不到用户",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5655415784900808169bc9\",\"username\":\"test1\",\"password\":\"$2a$10$2ENAvwbOTgmwKzZXkmseIewmSUIyzqRuEilFNhaYb1Z3NukEjbnoS\",\"createDate\":\"2019-08-16T07:03:29.401Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "3.554ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:03:29.896Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5655415784900808169bdc"),
+    status: NumberInt("0"),
+    method: "DELETE",
+    url: "/api/user/5d5655415784900808169bc9",
+    error: "找不到用户",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.570ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:03:29.903Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5655415784900808169bdd"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d5655415784900808169bc9\",\"5d5655415784900808169bcb\",\"5d5655415784900808169bcd\",\"5d5655415784900808169bd4\",\"5d5655415784900808169bd6\",\"5d5655415784900808169bd8\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "0.981ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:03:29.91Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565567493c7c2304074b17"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "85.925ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:04:07.13Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565567493c7c2304074b19"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$R6BUhljeiRYOk0Xvv5OyzOprGbNv6xBUk8ZDDWJIma3vSasMH/DTO\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.153ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:04:07.22Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565567493c7c2304074b1b"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$Y6QP9O4xfR5.igx4vU0NSeBEa2sRRAHrGawObDGx2Ya/KfxnNcdmC\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.532ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:04:07.288Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565567493c7c2304074b1d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$xkzzO809jjnc/TLsZSOL9epqtL8r/dEOFapT2QfdBVsjqALaqZPrC\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.724ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:04:07.357Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565567493c7c2304074b1e"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565567493c7c2304074b18\",\"username\":\"testtest\",\"password\":\"$2a$10$R6BUhljeiRYOk0Xvv5OyzOprGbNv6xBUk8ZDDWJIma3vSasMH/DTO\",\"createDate\":\"2019-08-16T07:04:07.217Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "4.997ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:04:07.373Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565567493c7c2304074b1f"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d565567493c7c2304074b18",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565567493c7c2304074b18\",\"username\":\"test1\",\"password\":\"$2a$10$R6BUhljeiRYOk0Xvv5OyzOprGbNv6xBUk8ZDDWJIma3vSasMH/DTO\",\"createDate\":\"2019-08-16T07:04:07.217Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.007ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:04:07.381Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565567493c7c2304074b20"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d565567493c7c2304074b18",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.164ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:04:07.389Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565567493c7c2304074b21"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565567493c7c2304074b18\",\"5d565567493c7c2304074b1a\",\"5d565567493c7c2304074b1c\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.794ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:04:07.396Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56557c747dcb3a44b93afc"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.647ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:04:28.436Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56557c747dcb3a44b93afe"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test1\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.640ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:04:28.465Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56557c747dcb3a44b93b00"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "0.987ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:04:28.472Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56557c747dcb3a44b93b02"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test3\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.088ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:04:28.479Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56557c747dcb3a44b93b03"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/test",
+    error: "找不到数据",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"testtest\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "3.279ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:04:28.497Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56557c747dcb3a44b93b04"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.617ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:04:28.577Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56557c747dcb3a44b93b06"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test1\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.138ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:04:28.592Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56557c747dcb3a44b93b08"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.082ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:04:28.599Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56557c747dcb3a44b93b0a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test3\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "0.952ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:04:28.606Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56557c747dcb3a44b93b0b"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/test",
+    error: "找不到数据",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"testtest\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.841ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:04:28.615Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565801928dd339b03a04e5"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.441ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:15:13.127Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565801928dd339b03a04e6"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.363ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:15:13.235Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565801928dd339b03a04e7"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/user",
+    error: "Validation Failed:[{\"message\":\"required\",\"field\":\"username\",\"code\":\"missing_field\"},{\"message\":\"required\",\"field\":\"password\",\"code\":\"missing_field\"}]",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test1\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "3.155ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:15:13.256Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565961b59f492188c10163"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.578ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:21:05.185Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565961b59f492188c10165"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$uawrmJJqPd1fwZG6KFwN/OR9ypmcbxjXHlpokSrHm7NCzCln78x5O\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.309ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:21:05.276Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565961b59f492188c10167"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$JxmYOhfyknOKw1ap8iv5u.pJ5LbQuV2ZRGRa/ywuDNw..zYArBK7i\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.780ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:21:05.345Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565961b59f492188c10169"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$Ahrwe2NXFU8nALMsuPjv2u76yo3jUeviqPYdW831w04DMU/z85ugG\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.944ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:21:05.414Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565961b59f492188c1016a"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565961b59f492188c10164\",\"username\":\"testtest\",\"password\":\"$2a$10$uawrmJJqPd1fwZG6KFwN/OR9ypmcbxjXHlpokSrHm7NCzCln78x5O\",\"createDate\":\"2019-08-16T07:21:05.273Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.071ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:21:05.43Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565961b59f492188c1016b"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d565961b59f492188c10164",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565961b59f492188c10164\",\"username\":\"test1\",\"password\":\"$2a$10$uawrmJJqPd1fwZG6KFwN/OR9ypmcbxjXHlpokSrHm7NCzCln78x5O\",\"createDate\":\"2019-08-16T07:21:05.273Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.025ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:21:05.438Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565961b59f492188c1016c"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d565961b59f492188c10164",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.240ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:21:05.446Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565961b59f492188c1016d"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565961b59f492188c10164\",\"5d565961b59f492188c10166\",\"5d565961b59f492188c10168\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.869ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:21:05.454Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56597e9dc6e03790d84290"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.567ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:21:34.584Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56597e9dc6e03790d84292"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$sV5xFPnWG19jrMl8wOf3ZO0uA.tyOWguFUTYqmjhFlPgYufRDY5yq\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.169ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:21:34.674Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56597e9dc6e03790d84294"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$2cyG825v6yplEeiwpzEITu/Hcx1453QQDI89t4wcTi0QsSk46lyda\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.000ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:21:34.744Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56597e9dc6e03790d84296"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$wU8/K/Ys06ka9ZNAdHErTeP.jBZEobiHaF.8WrnWTdHq0PhZinqvi\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.655ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:21:34.812Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56597e9dc6e03790d84297"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d56597e9dc6e03790d84291\",\"username\":\"testtest\",\"password\":\"$2a$10$sV5xFPnWG19jrMl8wOf3ZO0uA.tyOWguFUTYqmjhFlPgYufRDY5yq\",\"createDate\":\"2019-08-16T07:21:34.671Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "4.908ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:21:34.828Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56597e9dc6e03790d84298"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d56597e9dc6e03790d84291",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d56597e9dc6e03790d84291\",\"username\":\"test1\",\"password\":\"$2a$10$sV5xFPnWG19jrMl8wOf3ZO0uA.tyOWguFUTYqmjhFlPgYufRDY5yq\",\"createDate\":\"2019-08-16T07:21:34.671Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.878ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:21:34.836Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56597e9dc6e03790d84299"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d56597e9dc6e03790d84291",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.030ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:21:34.844Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56597e9dc6e03790d8429a"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d56597e9dc6e03790d84291\",\"5d56597e9dc6e03790d84293\",\"5d56597e9dc6e03790d84295\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.799ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:21:34.851Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56599c15f76815e85f5701"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.153ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:22:04.678Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56599c15f76815e85f5703"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$GEazqfW6mmvfh0juHhcY4eN.h32I38Ayx5se4AbzIrGyz.q3U7jUi\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.053ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:22:04.769Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56599c15f76815e85f5705"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$QWgPA7BQklaRJ7b/Y8Y5NesgzXBck.EV17JF/NqsQv2/IfiHtkJ6q\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.733ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:22:04.838Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56599c15f76815e85f5707"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$Bj2uy4j7KTnsyrg9XNKDg.bxFTPhl5dLGIf3.r6aY.NmqCsdxAoh2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.571ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:22:04.907Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56599c15f76815e85f5708"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d56599c15f76815e85f5702\",\"username\":\"testtest\",\"password\":\"$2a$10$GEazqfW6mmvfh0juHhcY4eN.h32I38Ayx5se4AbzIrGyz.q3U7jUi\",\"createDate\":\"2019-08-16T07:22:04.766Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.009ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:22:04.923Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56599c15f76815e85f5709"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d56599c15f76815e85f5702",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d56599c15f76815e85f5702\",\"username\":\"test1\",\"password\":\"$2a$10$GEazqfW6mmvfh0juHhcY4eN.h32I38Ayx5se4AbzIrGyz.q3U7jUi\",\"createDate\":\"2019-08-16T07:22:04.766Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.190ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:22:04.931Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56599c15f76815e85f570a"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d56599c15f76815e85f5702",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.154ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:22:04.939Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56599c15f76815e85f570b"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d56599c15f76815e85f5702\",\"5d56599c15f76815e85f5704\",\"5d56599c15f76815e85f5706\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.750ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:22:04.946Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5659c812e5a234cc31f2a1"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.538ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:22:48.022Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5659c812e5a234cc31f2a2"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.673ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:22:48.138Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5659c812e5a234cc31f2a3"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/user",
+    error: "Validation Failed:[{\"message\":\"required\",\"field\":\"username\",\"code\":\"missing_field\"},{\"message\":\"required\",\"field\":\"password\",\"code\":\"missing_field\"}]",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test1\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "3.067ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:22:48.159Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565a343a16183a2c21c946"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.608ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:24:36.773Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565a343a16183a2c21c948"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$a1SjjDqycylC82ptYEZxru9q8FgSIbH9A0mIPhAU9n70l4RjCKS1u\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.839ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:24:36.864Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565a343a16183a2c21c94a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$tlBYoiWUsCTCuTlJ1dPzK.YOtCQYGEOEV1OPx.ccPciOJDrAhAzQ.\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.603ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:24:36.933Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565a353a16183a2c21c94c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$mHvUTpy/lAedZzNpIXGP6O6A8lK3V1/BxxGvXpXvohGqJDQLLO07G\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.649ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:24:37.001Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565a353a16183a2c21c94d"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565a343a16183a2c21c947\",\"username\":\"testtest\",\"password\":\"$2a$10$a1SjjDqycylC82ptYEZxru9q8FgSIbH9A0mIPhAU9n70l4RjCKS1u\",\"createDate\":\"2019-08-16T07:24:36.861Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "4.924ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:24:37.018Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565a353a16183a2c21c94e"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d565a343a16183a2c21c947",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565a343a16183a2c21c947\",\"username\":\"test1\",\"password\":\"$2a$10$a1SjjDqycylC82ptYEZxru9q8FgSIbH9A0mIPhAU9n70l4RjCKS1u\",\"createDate\":\"2019-08-16T07:24:36.861Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.213ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:24:37.026Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565a353a16183a2c21c94f"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d565a343a16183a2c21c947",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.227ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:24:37.034Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565a353a16183a2c21c950"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565a343a16183a2c21c947\",\"5d565a343a16183a2c21c949\",\"5d565a343a16183a2c21c94b\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.896ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:24:37.042Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565a4f012eb444a427660a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.650ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:25:03.724Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565a4f012eb444a427660c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$GK9Mx7OJDXIV83khw7i.KetmEqhPwZYvEwcJnkMKhmhBJNPvmfGxu\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.083ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:25:03.814Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565a4f012eb444a427660e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$R45eKOd2EcKnVC0g1X1mf.doTi6Ekk7ZL.09D.YA3xpxj1DoFbfu.\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.812ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:25:03.883Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565a4f012eb444a4276610"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$W5Qd5pdoCfB7duFCsDKSR.VMA1JWxTxcH9UGxbSm/QZIluyzpPEei\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.530ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:25:03.951Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565a4f012eb444a4276611"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565a4f012eb444a427660b\",\"username\":\"testtest\",\"password\":\"$2a$10$GK9Mx7OJDXIV83khw7i.KetmEqhPwZYvEwcJnkMKhmhBJNPvmfGxu\",\"createDate\":\"2019-08-16T07:25:03.811Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.107ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:25:03.967Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565a4f012eb444a4276612"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d565a4f012eb444a427660b",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565a4f012eb444a427660b\",\"username\":\"test1\",\"password\":\"$2a$10$GK9Mx7OJDXIV83khw7i.KetmEqhPwZYvEwcJnkMKhmhBJNPvmfGxu\",\"createDate\":\"2019-08-16T07:25:03.811Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.943ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:25:03.975Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565a4f012eb444a4276613"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d565a4f012eb444a427660b",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.260ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:25:03.983Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565a4f012eb444a4276614"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565a4f012eb444a427660b\",\"5d565a4f012eb444a427660d\",\"5d565a4f012eb444a427660f\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.852ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:25:03.991Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565a50012eb444a4276616"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$10HbTYQqv8y/ycCLFWYeC.0RSCvXMqdGwVRm9IdDLT67T94g7yNlO\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.885ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:25:04.065Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565a50012eb444a4276618"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$/JRDuVHWxEvNp6FGyQGL4OIpteZsLfAHx58hpG1FDzyDoaHHM/8u2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.066ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:25:04.135Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565a50012eb444a427661a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$wO4G6czdx4oBbF9u2P9rRuJ5kyw13AcIYQg.rxroA2mW9CHXOsm9y\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.176ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:25:04.204Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565a50012eb444a427661b"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/user",
+    error: "找不到用户",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565a4f012eb444a427660b\",\"username\":\"testtest\",\"password\":\"$2a$10$GK9Mx7OJDXIV83khw7i.KetmEqhPwZYvEwcJnkMKhmhBJNPvmfGxu\",\"createDate\":\"2019-08-16T07:25:03.811Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.531ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:25:04.22Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565a50012eb444a427661c"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/user/5d565a4f012eb444a427660b",
+    error: "找不到用户",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565a4f012eb444a427660b\",\"username\":\"test1\",\"password\":\"$2a$10$GK9Mx7OJDXIV83khw7i.KetmEqhPwZYvEwcJnkMKhmhBJNPvmfGxu\",\"createDate\":\"2019-08-16T07:25:03.811Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.432ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:25:04.227Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565a50012eb444a427661d"),
+    status: NumberInt("0"),
+    method: "DELETE",
+    url: "/api/user/5d565a4f012eb444a427660b",
+    error: "找不到用户",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.314ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:25:04.236Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565a50012eb444a427661e"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565a4f012eb444a427660b\",\"5d565a4f012eb444a427660d\",\"5d565a4f012eb444a427660f\",\"5d565a50012eb444a4276615\",\"5d565a50012eb444a4276617\",\"5d565a50012eb444a4276619\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.140ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:25:04.244Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565bc7c1aee026fc7edd0a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "88.418ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:31:19.537Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565bc7c1aee026fc7edd0c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$Z5Qb4NbjxOmRwOFbxciraeFNp5Mn1quLcB9yD1IdtS3Xh1q6LdjyS\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.481ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:31:19.628Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565bc7c1aee026fc7edd0e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$k6UMp3meZpUIt/x0gtSgm.ZLlqPavq4Z6YhxYpK6ArjJGlFMRHbla\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.367ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:31:19.698Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565bc7c1aee026fc7edd10"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$tpSCP3Da6GiZ/DRSqm2H4e4u4yyej2QpbGCEihLVaHsyu74QRftBu\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.749ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:31:19.767Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565bc7c1aee026fc7edd11"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565bc7c1aee026fc7edd0b\",\"username\":\"testtest\",\"password\":\"$2a$10$Z5Qb4NbjxOmRwOFbxciraeFNp5Mn1quLcB9yD1IdtS3Xh1q6LdjyS\",\"createDate\":\"2019-08-16T07:31:19.625Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.028ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:31:19.783Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565bc7c1aee026fc7edd12"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d565bc7c1aee026fc7edd0b",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565bc7c1aee026fc7edd0b\",\"username\":\"test1\",\"password\":\"$2a$10$Z5Qb4NbjxOmRwOFbxciraeFNp5Mn1quLcB9yD1IdtS3Xh1q6LdjyS\",\"createDate\":\"2019-08-16T07:31:19.625Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.085ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:31:19.791Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565bc7c1aee026fc7edd13"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d565bc7c1aee026fc7edd0b",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.077ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:31:19.799Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565bc7c1aee026fc7edd14"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565bc7c1aee026fc7edd0b\",\"5d565bc7c1aee026fc7edd0d\",\"5d565bc7c1aee026fc7edd0f\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.137ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:31:19.807Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565be1bf937e39ec20129e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$tDOMj19DLHIGEnagx0rxGeF1gFNUOFIQOKqN2lEzrHNi/Jw4fqlTG\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "82.405ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:31:45.158Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565be1bf937e39ec2012a0"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$105EOAH/kmJYVyVgzusM9eketeWrAENDwQlxB9BJU3t3Nih8vzSv2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.462ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:31:45.229Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565be1bf937e39ec2012a2"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$5V4eLIHRlOHj6jReinV12uNSMFKZ0aGGy0eW/OP6fKTyMqdp0W3fe\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.668ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:31:45.297Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565be1bf937e39ec2012a3"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565be1bf937e39ec20129d\",\"username\":\"testtest\",\"password\":\"$2a$10$tDOMj19DLHIGEnagx0rxGeF1gFNUOFIQOKqN2lEzrHNi/Jw4fqlTG\",\"createDate\":\"2019-08-16T07:31:45.151Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.127ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:31:45.314Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565be1bf937e39ec2012a4"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d565be1bf937e39ec20129d",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565be1bf937e39ec20129d\",\"username\":\"test1\",\"password\":\"$2a$10$tDOMj19DLHIGEnagx0rxGeF1gFNUOFIQOKqN2lEzrHNi/Jw4fqlTG\",\"createDate\":\"2019-08-16T07:31:45.151Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.988ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:31:45.322Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565be1bf937e39ec2012a5"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d565be1bf937e39ec20129d",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.095ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:31:45.329Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565be1bf937e39ec2012a6"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565be1bf937e39ec20129d\",\"5d565be1bf937e39ec20129f\",\"5d565be1bf937e39ec2012a1\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.929ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:31:45.337Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565bf5831884006459135e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$Tqb/CB9e4NEy0ZN7PGoHCOSo2oF54sHzVerxgtWggufyhDxAmkzH2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "83.108ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:32:05.222Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565bf58318840064591360"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$s4Fl096SyBKtZYNouQpCcuUw8D7L2owKrS9E17nTWjawCqMxy1oWC\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.144ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:32:05.292Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565bf58318840064591362"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$CEW.C18afxQBMDUuUa6BW.QTPLN0s54J.i7FKBTgEYeQS02YD2hke\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.545ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:32:05.362Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565bf58318840064591363"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565bf5831884006459135d\",\"username\":\"testtest\",\"password\":\"$2a$10$Tqb/CB9e4NEy0ZN7PGoHCOSo2oF54sHzVerxgtWggufyhDxAmkzH2\",\"createDate\":\"2019-08-16T07:32:05.215Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.161ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:32:05.379Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565bf58318840064591364"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d565bf5831884006459135d",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565bf5831884006459135d\",\"username\":\"test1\",\"password\":\"$2a$10$Tqb/CB9e4NEy0ZN7PGoHCOSo2oF54sHzVerxgtWggufyhDxAmkzH2\",\"createDate\":\"2019-08-16T07:32:05.215Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.100ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:32:05.388Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565bf58318840064591365"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d565bf5831884006459135d",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.267ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:32:05.396Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565bf58318840064591366"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565bf5831884006459135d\",\"5d565bf5831884006459135f\",\"5d565bf58318840064591361\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.851ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:32:05.404Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565bf58318840064591368"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test1\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.493ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:32:05.425Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565bf5831884006459136a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.028ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:32:05.432Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565bf5831884006459136c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test3\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "0.967ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:32:05.439Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565bf5831884006459136d"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/test",
+    error: "找不到数据",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"testtest\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "3.148ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:32:05.456Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565c653597943cbc11ffcf"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$.SGT.XZhUpQJtdDGOfruR.dfHOMGWf0Ner/dAfAbBDQmVtGlL0xzm\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "83.875ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:33:57.594Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565c653597943cbc11ffd1"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$//L2xtiFZwbO2t/EWOVyiei33P57p7Qe4I4.me4OTbYll9HzhBlIa\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.049ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:33:57.664Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565c653597943cbc11ffd3"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$C17YGU4SmQMf5e5RvZTEf.0EFZp/RpG03BiEnEjxz1.t/Ysb5Jmau\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.779ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:33:57.733Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565c653597943cbc11ffd4"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565c653597943cbc11ffce\",\"username\":\"testtest\",\"password\":\"$2a$10$.SGT.XZhUpQJtdDGOfruR.dfHOMGWf0Ner/dAfAbBDQmVtGlL0xzm\",\"createDate\":\"2019-08-16T07:33:57.587Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "4.998ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:33:57.75Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565c653597943cbc11ffd5"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d565c653597943cbc11ffce",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565c653597943cbc11ffce\",\"username\":\"test1\",\"password\":\"$2a$10$.SGT.XZhUpQJtdDGOfruR.dfHOMGWf0Ner/dAfAbBDQmVtGlL0xzm\",\"createDate\":\"2019-08-16T07:33:57.587Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.004ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:33:57.758Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565c653597943cbc11ffd6"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d565c653597943cbc11ffce",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.619ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:33:57.766Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565c653597943cbc11ffd7"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565c653597943cbc11ffce\",\"5d565c653597943cbc11ffd0\",\"5d565c653597943cbc11ffd2\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.934ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:33:57.774Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565c653597943cbc11ffd9"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test1\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.355ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:33:57.793Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565c653597943cbc11ffdb"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "0.990ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:33:57.8Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565c653597943cbc11ffdd"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test3\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.008ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:33:57.807Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565c653597943cbc11ffde"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/test",
+    error: "找不到数据",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"testtest\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "3.060ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:33:57.824Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ca76979f435c4f2897b"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$Sv/YWrG1GeGxEVdcaoDwT.K1TvXqUmoCCC.QotbsJ8FGMLZjNf0hm\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "83.689ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:35:03.18Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ca76979f435c4f2897d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$QAKKuYmbNprpSP/T4QE3ceZeMa7L909IXqmJPRbUYnx4e7Unyt96y\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.884ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:35:03.25Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ca76979f435c4f2897f"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$XpAvxkd/oIlHJo2LvQ5Ll.hRLzrVC25qSdEaMSd.JJrCE5cy.Idvq\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.505ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:35:03.318Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ca76979f435c4f28980"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565ca76979f435c4f2897a\",\"username\":\"testtest\",\"password\":\"$2a$10$Sv/YWrG1GeGxEVdcaoDwT.K1TvXqUmoCCC.QotbsJ8FGMLZjNf0hm\",\"createDate\":\"2019-08-16T07:35:03.173Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.273ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:35:03.337Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ca76979f435c4f28981"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d565ca76979f435c4f2897a",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565ca76979f435c4f2897a\",\"username\":\"test1\",\"password\":\"$2a$10$Sv/YWrG1GeGxEVdcaoDwT.K1TvXqUmoCCC.QotbsJ8FGMLZjNf0hm\",\"createDate\":\"2019-08-16T07:35:03.173Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.126ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:35:03.347Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ca76979f435c4f28982"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d565ca76979f435c4f2897a",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.208ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:35:03.356Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ca76979f435c4f28983"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565ca76979f435c4f2897a\",\"5d565ca76979f435c4f2897c\",\"5d565ca76979f435c4f2897e\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.749ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:35:03.363Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ca76979f435c4f28985"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test1\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.253ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:35:03.383Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ca76979f435c4f28987"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.025ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:35:03.39Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ca76979f435c4f28989"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test3\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "0.911ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:35:03.397Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ca76979f435c4f2898a"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/test",
+    error: "找不到数据",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"testtest\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "3.185ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:35:03.414Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565cfad357854128e828fc"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$sCoGBx3DTfWb0H.CPL/eiORtZ2E3G1K8odl3wKlWZTI4N9cpS3yrG\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "82.657ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:36:26.053Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565cfad357854128e828fe"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$6EEs2QeFoxWBhXhQe8NauOHbXSXBonskOR9BRVcodQNYXzTzsUq6O\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.842ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:36:26.123Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565cfad357854128e82900"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$olEnL6ciEfl/iUI/Yz2TbuqEcoZ5DZbNde/LHq3EK2TUsXLsudkUO\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.789ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:36:26.191Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565cfad357854128e82901"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565cfad357854128e828fb\",\"username\":\"testtest\",\"password\":\"$2a$10$sCoGBx3DTfWb0H.CPL/eiORtZ2E3G1K8odl3wKlWZTI4N9cpS3yrG\",\"createDate\":\"2019-08-16T07:36:26.046Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "4.975ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:36:26.209Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565cfad357854128e82902"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d565cfad357854128e828fb",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565cfad357854128e828fb\",\"username\":\"test1\",\"password\":\"$2a$10$sCoGBx3DTfWb0H.CPL/eiORtZ2E3G1K8odl3wKlWZTI4N9cpS3yrG\",\"createDate\":\"2019-08-16T07:36:26.046Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.058ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:36:26.217Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565cfad357854128e82903"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d565cfad357854128e828fb",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.422ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:36:26.237Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565cfad357854128e82904"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565cfad357854128e828fb\",\"5d565cfad357854128e828fd\",\"5d565cfad357854128e828ff\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.860ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:36:26.245Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565cfad357854128e82906"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test1\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.392ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:36:26.264Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565cfad357854128e82908"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.041ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:36:26.271Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565cfad357854128e8290a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test3\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.026ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:36:26.278Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565cfad357854128e8290b"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"_id\":\"5d565cfad357854128e82905\",\"name\":\"testtest\",\"createDate\":\"2019-08-16T07:36:26.262Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.867ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:36:26.291Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565cfad357854128e8290c"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/test/5d565cfad357854128e82905",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"_id\":\"5d565cfad357854128e82905\",\"name\":\"test1\",\"createDate\":\"2019-08-16T07:36:26.262Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.861ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:36:26.299Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565cfad357854128e8290d"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/test/5d565cfad357854128e82905",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.692ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:36:26.306Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565cfad357854128e8290e"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565cfad357854128e82905\",\"5d565cfad357854128e82907\",\"5d565cfad357854128e82909\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "0.984ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:36:26.313Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565d344f308c4134206558"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "88.173ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:37:24.373Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565d344f308c4134206559"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.000ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:37:24.48Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565d344f308c413420655b"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test1\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.639ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:37:24.498Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565d344f308c413420655d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.065ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:37:24.505Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565d344f308c413420655f"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test3\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.072ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:37:24.512Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565d344f308c4134206560"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"_id\":\"5d565d344f308c413420655a\",\"name\":\"testtest\",\"createDate\":\"2019-08-16T07:37:24.495Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "4.541ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:37:24.528Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565d344f308c4134206561"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/test/5d565d344f308c413420655a",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"_id\":\"5d565d344f308c413420655a\",\"name\":\"test1\",\"createDate\":\"2019-08-16T07:37:24.495Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.770ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:37:24.536Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565d344f308c4134206562"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/test/5d565d344f308c413420655a",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.912ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:37:24.544Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565d344f308c4134206563"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565d344f308c413420655a\",\"5d565d344f308c413420655c\",\"5d565d344f308c413420655e\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.775ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:37:24.551Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e04d4692334a0b762cf"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.584ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:40:52.692Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e04d4692334a0b762d1"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test1\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.630ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:40:52.751Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e04d4692334a0b762d3"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.068ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:40:52.758Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e04d4692334a0b762d5"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test3\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.129ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:40:52.766Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e04d4692334a0b762d6"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"_id\":\"5d565e04d4692334a0b762d0\",\"name\":\"testtest\",\"createDate\":\"2019-08-16T07:40:52.748Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "4.620ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:40:52.783Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e04d4692334a0b762d7"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/test/5d565e04d4692334a0b762d0",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"_id\":\"5d565e04d4692334a0b762d0\",\"name\":\"test1\",\"createDate\":\"2019-08-16T07:40:52.748Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.795ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:40:52.79Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e04d4692334a0b762d8"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/test/5d565e04d4692334a0b762d0",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.926ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:40:52.798Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e04d4692334a0b762d9"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565e04d4692334a0b762d0\",\"5d565e04d4692334a0b762d2\",\"5d565e04d4692334a0b762d4\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.947ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:40:52.812Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e5f7442162e1810cc06"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$nHL/NW2V09EIe7bDCX3jB.H9E6fG3lJGwqZfs6IlZwZKGgmxBu4vy\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "82.425ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:42:23.584Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e5f7442162e1810cc08"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$UiVVy9wSgONmTfdTpFz.qu3Ln6F6o2nBirmNyXFTewRlzeEfFV58u\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.806ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:42:23.654Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e5f7442162e1810cc0a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$3lbYJaju0wQKUEWQ4neQzOpn3ZwfoqLfaMayYEL.vprkxguQ/aZH2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.955ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:42:23.723Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e5f7442162e1810cc0b"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565e5f7442162e1810cc05\",\"username\":\"testtest\",\"password\":\"$2a$10$nHL/NW2V09EIe7bDCX3jB.H9E6fG3lJGwqZfs6IlZwZKGgmxBu4vy\",\"createDate\":\"2019-08-16T07:42:23.577Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "4.877ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:42:23.739Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e5f7442162e1810cc0c"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d565e5f7442162e1810cc05",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565e5f7442162e1810cc05\",\"username\":\"test1\",\"password\":\"$2a$10$nHL/NW2V09EIe7bDCX3jB.H9E6fG3lJGwqZfs6IlZwZKGgmxBu4vy\",\"createDate\":\"2019-08-16T07:42:23.577Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.942ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:42:23.746Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e5f7442162e1810cc0d"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d565e5f7442162e1810cc05",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.068ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:42:23.754Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e5f7442162e1810cc0e"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565e5f7442162e1810cc05\",\"5d565e5f7442162e1810cc07\",\"5d565e5f7442162e1810cc09\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.840ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:42:23.762Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e5f7442162e1810cc10"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test1\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.400ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:42:23.781Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e5f7442162e1810cc12"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.007ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:42:23.788Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e5f7442162e1810cc14"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test3\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "0.894ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:42:23.794Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e5f7442162e1810cc15"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"_id\":\"5d565e5f7442162e1810cc0f\",\"name\":\"testtest\",\"createDate\":\"2019-08-16T07:42:23.779Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.898ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:42:23.807Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e5f7442162e1810cc16"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/test/5d565e5f7442162e1810cc0f",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"_id\":\"5d565e5f7442162e1810cc0f\",\"name\":\"test1\",\"createDate\":\"2019-08-16T07:42:23.779Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.620ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:42:23.814Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e5f7442162e1810cc17"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/test/5d565e5f7442162e1810cc0f",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.855ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:42:23.822Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e5f7442162e1810cc18"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565e5f7442162e1810cc0f\",\"5d565e5f7442162e1810cc11\",\"5d565e5f7442162e1810cc13\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.020ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:42:23.829Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e7a3153330824b70060"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.245ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:42:50.438Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e7a3153330824b70062"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$ZvJbEApqbR0faf87pVsr7uMEAG5R4RkLBDw8jcfYeo6PjNKSg6sou\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.394ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:42:50.528Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e7a3153330824b70064"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$jL.9iAVDRlgL06XoExj70eOrpp9i7fyCbBt9Hv7nTKIdQg5XNLKdm\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.913ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:42:50.598Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e7a3153330824b70066"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$L1VZEG/giXxcdrx.yX5o1u5Ck49wMF908FCCuHI.ibexIIJuX89/q\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.080ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:42:50.667Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e7a3153330824b70067"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565e7a3153330824b70061\",\"username\":\"testtest\",\"password\":\"$2a$10$ZvJbEApqbR0faf87pVsr7uMEAG5R4RkLBDw8jcfYeo6PjNKSg6sou\",\"createDate\":\"2019-08-16T07:42:50.526Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.013ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:42:50.683Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e7a3153330824b70068"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d565e7a3153330824b70061",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565e7a3153330824b70061\",\"username\":\"test1\",\"password\":\"$2a$10$ZvJbEApqbR0faf87pVsr7uMEAG5R4RkLBDw8jcfYeo6PjNKSg6sou\",\"createDate\":\"2019-08-16T07:42:50.526Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.982ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:42:50.691Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e7a3153330824b70069"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d565e7a3153330824b70061",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.780ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:42:50.7Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e7a3153330824b7006a"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565e7a3153330824b70061\",\"5d565e7a3153330824b70063\",\"5d565e7a3153330824b70065\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.807ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:42:50.708Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e7a3153330824b7006c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test1\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.494ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:42:50.74Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e7a3153330824b7006e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.125ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:42:50.747Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e7a3153330824b70070"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test3\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "0.968ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:42:50.754Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e7a3153330824b70071"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"_id\":\"5d565e7a3153330824b7006b\",\"name\":\"testtest\",\"createDate\":\"2019-08-16T07:42:50.738Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.050ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:42:50.767Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e7a3153330824b70072"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/test/5d565e7a3153330824b7006b",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"_id\":\"5d565e7a3153330824b7006b\",\"name\":\"test1\",\"createDate\":\"2019-08-16T07:42:50.738Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.756ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:42:50.775Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e7a3153330824b70073"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/test/5d565e7a3153330824b7006b",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.662ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:42:50.783Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e7a3153330824b70074"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565e7a3153330824b7006b\",\"5d565e7a3153330824b7006d\",\"5d565e7a3153330824b7006f\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "0.967ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:42:50.789Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e871f23fe330094f7e6"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.680ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:43:03.948Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e881f23fe330094f7e8"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$1cHdPi.3mnu/XT427RfkdOHj0i7dEvXAWFe9jEsbsYQM3hXt758Du\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.504ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:43:04.039Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e881f23fe330094f7ea"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$7WT9YSebdoISuvv5tur7W.9Hid/kDR/omDcmC4e2U8wvCagRk22ZK\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.751ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:43:04.108Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e881f23fe330094f7ec"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$DasRZCtDDqnLX3papmZwBOj/fkH2gkhMN49Fo/VSpFDEcyzD.pxhO\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.810ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:43:04.176Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e881f23fe330094f7ed"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565e881f23fe330094f7e7\",\"username\":\"testtest\",\"password\":\"$2a$10$1cHdPi.3mnu/XT427RfkdOHj0i7dEvXAWFe9jEsbsYQM3hXt758Du\",\"createDate\":\"2019-08-16T07:43:04.036Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.339ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:43:04.193Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e881f23fe330094f7ee"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d565e881f23fe330094f7e7",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565e881f23fe330094f7e7\",\"username\":\"test1\",\"password\":\"$2a$10$1cHdPi.3mnu/XT427RfkdOHj0i7dEvXAWFe9jEsbsYQM3hXt758Du\",\"createDate\":\"2019-08-16T07:43:04.036Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.003ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:43:04.201Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e881f23fe330094f7ef"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d565e881f23fe330094f7e7",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.191ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:43:04.209Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e881f23fe330094f7f0"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565e881f23fe330094f7e7\",\"5d565e881f23fe330094f7e9\",\"5d565e881f23fe330094f7eb\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.852ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:43:04.216Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e881f23fe330094f7f2"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test1\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.377ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:43:04.235Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e881f23fe330094f7f4"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.121ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:43:04.242Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e881f23fe330094f7f6"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test3\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.004ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:43:04.249Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e881f23fe330094f7f7"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"_id\":\"5d565e881f23fe330094f7f1\",\"name\":\"testtest\",\"createDate\":\"2019-08-16T07:43:04.233Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.826ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:43:04.262Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e881f23fe330094f7f8"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/test/5d565e881f23fe330094f7f1",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"_id\":\"5d565e881f23fe330094f7f1\",\"name\":\"test1\",\"createDate\":\"2019-08-16T07:43:04.233Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.895ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:43:04.269Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e881f23fe330094f7f9"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/test/5d565e881f23fe330094f7f1",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.617ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:43:04.276Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565e881f23fe330094f7fa"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565e881f23fe330094f7f1\",\"5d565e881f23fe330094f7f3\",\"5d565e881f23fe330094f7f5\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.004ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:43:04.283Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ecfccab9a37bcf8e771"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.712ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:44:15.322Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ecfccab9a37bcf8e773"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$PfiPk3VGJiUC1Ulk8iF7s.7VHFVjkOntC1GEzUwMIYRtD2UE1gGWy\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.211ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:15.414Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ecfccab9a37bcf8e775"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$Qlu/k2CoinxB7lJklbc/net76RYUhKP3kJWPnshqF/8febYHonUri\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.904ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:15.483Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ecfccab9a37bcf8e777"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$AruLm9ucWEoBHNJpkRgBAOOTme0BzK9gZE5dzs6jAAmupPfFxQ4Nq\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.922ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:15.552Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ecfccab9a37bcf8e778"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565ecfccab9a37bcf8e772\",\"username\":\"testtest\",\"password\":\"$2a$10$PfiPk3VGJiUC1Ulk8iF7s.7VHFVjkOntC1GEzUwMIYRtD2UE1gGWy\",\"createDate\":\"2019-08-16T07:44:15.411Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.262ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:15.568Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ecfccab9a37bcf8e779"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d565ecfccab9a37bcf8e772",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565ecfccab9a37bcf8e772\",\"username\":\"test1\",\"password\":\"$2a$10$PfiPk3VGJiUC1Ulk8iF7s.7VHFVjkOntC1GEzUwMIYRtD2UE1gGWy\",\"createDate\":\"2019-08-16T07:44:15.411Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.278ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:15.577Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ecfccab9a37bcf8e77a"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d565ecfccab9a37bcf8e772",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.299ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:15.585Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ecfccab9a37bcf8e77b"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565ecfccab9a37bcf8e772\",\"5d565ecfccab9a37bcf8e774\",\"5d565ecfccab9a37bcf8e776\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.853ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:15.593Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ecfccab9a37bcf8e77d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test1\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.933ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:15.616Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ecfccab9a37bcf8e77f"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.229ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:15.624Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ecfccab9a37bcf8e781"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test3\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.312ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:15.632Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ecfccab9a37bcf8e782"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"_id\":\"5d565ecfccab9a37bcf8e77c\",\"name\":\"testtest\",\"createDate\":\"2019-08-16T07:44:15.613Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.799ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:15.648Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ecfccab9a37bcf8e783"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/test/5d565ecfccab9a37bcf8e77c",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"_id\":\"5d565ecfccab9a37bcf8e77c\",\"name\":\"test1\",\"createDate\":\"2019-08-16T07:44:15.613Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.042ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:15.656Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ecfccab9a37bcf8e784"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/test/5d565ecfccab9a37bcf8e77c",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.963ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:15.665Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ecfccab9a37bcf8e785"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565ecfccab9a37bcf8e77c\",\"5d565ecfccab9a37bcf8e77e\",\"5d565ecfccab9a37bcf8e780\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.250ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:15.672Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565eda9043d516fc418479"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.028ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:44:26.63Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565eda9043d516fc41847b"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$jHIhhu2MosaL96J6nUL1UeucqQBL9zMJH3s7rsKaT6/xXlZ2eph3y\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.259ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:26.723Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565eda9043d516fc41847d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$B5OrQegNEbnhWsZL0YC2L.cZZhNG/q0dvjQekQQ1XcWUoHfkG8K1u\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.735ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:26.791Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565eda9043d516fc41847f"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$4vOTLuMmHz9OQgId/chZq.lJ.kgMt.PCHEDHiaRJ7s8lBkvHowDQy\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.604ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:26.86Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565eda9043d516fc418480"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565eda9043d516fc41847a\",\"username\":\"testtest\",\"password\":\"$2a$10$jHIhhu2MosaL96J6nUL1UeucqQBL9zMJH3s7rsKaT6/xXlZ2eph3y\",\"createDate\":\"2019-08-16T07:44:26.720Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.093ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:26.876Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565eda9043d516fc418481"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d565eda9043d516fc41847a",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565eda9043d516fc41847a\",\"username\":\"test1\",\"password\":\"$2a$10$jHIhhu2MosaL96J6nUL1UeucqQBL9zMJH3s7rsKaT6/xXlZ2eph3y\",\"createDate\":\"2019-08-16T07:44:26.720Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.165ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:26.884Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565eda9043d516fc418482"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d565eda9043d516fc41847a",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.323ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:26.893Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565eda9043d516fc418483"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565eda9043d516fc41847a\",\"5d565eda9043d516fc41847c\",\"5d565eda9043d516fc41847e\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.944ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:26.901Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565eda9043d516fc418485"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test1\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.477ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:26.922Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565eda9043d516fc418487"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "0.990ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:26.928Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565eda9043d516fc418489"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test3\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.153ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:26.936Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565eda9043d516fc41848a"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"_id\":\"5d565eda9043d516fc418484\",\"name\":\"testtest\",\"createDate\":\"2019-08-16T07:44:26.920Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.184ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:26.949Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565eda9043d516fc41848b"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/test/5d565eda9043d516fc418484",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"_id\":\"5d565eda9043d516fc418484\",\"name\":\"test1\",\"createDate\":\"2019-08-16T07:44:26.920Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.837ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:26.957Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565eda9043d516fc41848c"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/test/5d565eda9043d516fc418484",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.942ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:26.965Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565eda9043d516fc41848d"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565eda9043d516fc418484\",\"5d565eda9043d516fc418486\",\"5d565eda9043d516fc418488\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.156ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:26.972Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ee99df0b41cd83f47ac"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.353ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:44:41.487Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ee99df0b41cd83f47ae"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test1\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.667ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:41.54Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ee99df0b41cd83f47b0"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.142ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:41.547Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ee99df0b41cd83f47b2"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test3\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "0.964ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:41.554Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ee99df0b41cd83f47b3"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"_id\":\"5d565ee99df0b41cd83f47ad\",\"name\":\"testtest\",\"createDate\":\"2019-08-16T07:44:41.537Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.086ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:41.571Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ee99df0b41cd83f47b4"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/test/5d565ee99df0b41cd83f47ad",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"_id\":\"5d565ee99df0b41cd83f47ad\",\"name\":\"test1\",\"createDate\":\"2019-08-16T07:44:41.537Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.824ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:41.578Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ee99df0b41cd83f47b5"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/test/5d565ee99df0b41cd83f47ad",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.130ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:41.586Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565ee99df0b41cd83f47b6"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565ee99df0b41cd83f47ad\",\"5d565ee99df0b41cd83f47af\",\"5d565ee99df0b41cd83f47b1\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.858ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:44:41.594Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565efd805b293c0c7903ce"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.634ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:45:01.675Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565efd805b293c0c7903d0"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test1\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.627ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:01.727Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565efd805b293c0c7903d2"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "0.997ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:01.734Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565efd805b293c0c7903d4"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test3\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "0.994ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:01.741Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565efd805b293c0c7903d5"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"_id\":\"5d565efd805b293c0c7903cf\",\"name\":\"testtest\",\"createDate\":\"2019-08-16T07:45:01.724Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "4.843ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:01.758Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565efd805b293c0c7903d6"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/test/5d565efd805b293c0c7903cf",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"_id\":\"5d565efd805b293c0c7903cf\",\"name\":\"test1\",\"createDate\":\"2019-08-16T07:45:01.724Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.255ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:01.767Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565efd805b293c0c7903d7"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/test/5d565efd805b293c0c7903cf",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.060ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:01.775Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565efd805b293c0c7903d8"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565efd805b293c0c7903cf\",\"5d565efd805b293c0c7903d1\",\"5d565efd805b293c0c7903d3\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.936ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:01.783Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f04aab6162d38393023"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.959ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:45:08.905Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f04aab6162d38393025"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$o7MSrhGL45N3sWfUhYfuku.xJtSUAc57J0cAENUmQG9cgjjVtParm\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "65.995ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:08.998Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f05aab6162d38393027"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$1Wa9Alv24KJbGtmFRLJHk.9c/XSiEi3qvmXqvVMgKLz8RkcZjePbi\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.482ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:09.068Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f05aab6162d38393029"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$Tw1sK9ZLpDLhMvM5wsiUjuq8Pw622EKhwAD4sERVvUCkd9zqk5SGG\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.033ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:09.137Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f05aab6162d3839302a"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565f04aab6162d38393024\",\"username\":\"testtest\",\"password\":\"$2a$10$o7MSrhGL45N3sWfUhYfuku.xJtSUAc57J0cAENUmQG9cgjjVtParm\",\"createDate\":\"2019-08-16T07:45:08.995Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.137ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:09.153Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f05aab6162d3839302b"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d565f04aab6162d38393024",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565f04aab6162d38393024\",\"username\":\"test1\",\"password\":\"$2a$10$o7MSrhGL45N3sWfUhYfuku.xJtSUAc57J0cAENUmQG9cgjjVtParm\",\"createDate\":\"2019-08-16T07:45:08.995Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.070ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:09.161Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f05aab6162d3839302c"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d565f04aab6162d38393024",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.246ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:09.169Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f05aab6162d3839302d"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565f04aab6162d38393024\",\"5d565f05aab6162d38393026\",\"5d565f05aab6162d38393028\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.006ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:09.177Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f05aab6162d3839302f"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test1\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.554ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:09.198Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f05aab6162d38393031"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.061ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:09.205Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f05aab6162d38393033"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test3\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.100ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:09.212Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f05aab6162d38393034"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"_id\":\"5d565f05aab6162d3839302e\",\"name\":\"testtest\",\"createDate\":\"2019-08-16T07:45:09.196Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.085ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:09.226Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f05aab6162d38393035"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/test/5d565f05aab6162d3839302e",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"_id\":\"5d565f05aab6162d3839302e\",\"name\":\"test1\",\"createDate\":\"2019-08-16T07:45:09.196Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.872ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:09.234Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f05aab6162d38393036"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/test/5d565f05aab6162d3839302e",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.750ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:09.241Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f05aab6162d38393037"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565f05aab6162d3839302e\",\"5d565f05aab6162d38393030\",\"5d565f05aab6162d38393032\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.178ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:09.249Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f24e97c1610e4663b7e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.268ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:45:40.237Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f24e97c1610e4663b80"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$QN3Ch9rySpq6lnYSWUeSXejTj.YyN4ZHD3qGf5td14ebcHu3NTigG\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.019ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:40.328Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f24e97c1610e4663b82"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$0/ehvDJhPChhdWAtnUdxvugUOfy.JFzj4e038J00QZMhFla1gaAK.\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.584ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:40.397Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f24e97c1610e4663b84"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$wZF1WATfTt8OKmZ/199j4OExppnhswKBYMevPyXO69LzQVIwj9wKi\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.090ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:40.465Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f24e97c1610e4663b85"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565f24e97c1610e4663b7f\",\"username\":\"testtest\",\"password\":\"$2a$10$QN3Ch9rySpq6lnYSWUeSXejTj.YyN4ZHD3qGf5td14ebcHu3NTigG\",\"createDate\":\"2019-08-16T07:45:40.325Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.014ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:40.482Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f24e97c1610e4663b86"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d565f24e97c1610e4663b7f",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565f24e97c1610e4663b7f\",\"username\":\"test1\",\"password\":\"$2a$10$QN3Ch9rySpq6lnYSWUeSXejTj.YyN4ZHD3qGf5td14ebcHu3NTigG\",\"createDate\":\"2019-08-16T07:45:40.325Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.155ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:40.49Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f24e97c1610e4663b87"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d565f24e97c1610e4663b7f",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.282ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:40.501Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f24e97c1610e4663b88"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565f24e97c1610e4663b7f\",\"5d565f24e97c1610e4663b81\",\"5d565f24e97c1610e4663b83\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.855ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:40.509Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f24e97c1610e4663b8a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test1\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.484ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:40.53Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f24e97c1610e4663b8c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.047ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:40.537Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f24e97c1610e4663b8e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test3\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "0.996ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:40.543Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f24e97c1610e4663b8f"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"_id\":\"5d565f24e97c1610e4663b89\",\"name\":\"testtest\",\"createDate\":\"2019-08-16T07:45:40.528Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.867ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:40.557Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f24e97c1610e4663b90"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/test/5d565f24e97c1610e4663b89",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"_id\":\"5d565f24e97c1610e4663b89\",\"name\":\"test1\",\"createDate\":\"2019-08-16T07:45:40.528Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.888ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:40.565Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f24e97c1610e4663b91"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/test/5d565f24e97c1610e4663b89",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.680ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:40.573Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f24e97c1610e4663b92"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565f24e97c1610e4663b89\",\"5d565f24e97c1610e4663b8b\",\"5d565f24e97c1610e4663b8d\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.118ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:45:40.58Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f39d8a6df3f8c64de7d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.246ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:46:01.238Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f39d8a6df3f8c64de7f"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$3cGYSRRHrHHjmGPaRKtpdu/UxugV.pSMh4nhJZcXFWHD7IvfFeSWu\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.336ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:46:01.332Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f39d8a6df3f8c64de81"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$kWNMU7MoSjVe.hh/XSN/KeE3us0U8VYmUdyuNkxRYBayJm.YEjp3K\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.887ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:46:01.401Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f39d8a6df3f8c64de83"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$GI5czoPBgf4uvV./J5XuV.wNcOxE2dy4OvQztYZKXtBFk0/SYtQ0e\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.654ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:46:01.47Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f39d8a6df3f8c64de84"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565f39d8a6df3f8c64de7e\",\"username\":\"testtest\",\"password\":\"$2a$10$3cGYSRRHrHHjmGPaRKtpdu/UxugV.pSMh4nhJZcXFWHD7IvfFeSWu\",\"createDate\":\"2019-08-16T07:46:01.329Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.431ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:46:01.487Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f39d8a6df3f8c64de85"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d565f39d8a6df3f8c64de7e",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d565f39d8a6df3f8c64de7e\",\"username\":\"test1\",\"password\":\"$2a$10$3cGYSRRHrHHjmGPaRKtpdu/UxugV.pSMh4nhJZcXFWHD7IvfFeSWu\",\"createDate\":\"2019-08-16T07:46:01.329Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.319ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:46:01.496Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f39d8a6df3f8c64de86"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d565f39d8a6df3f8c64de7e",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.209ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:46:01.504Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f39d8a6df3f8c64de87"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565f39d8a6df3f8c64de7e\",\"5d565f39d8a6df3f8c64de80\",\"5d565f39d8a6df3f8c64de82\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.884ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:46:01.512Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f39d8a6df3f8c64de88"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.412ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:46:01.588Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f39d8a6df3f8c64de8a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test1\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.425ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:46:01.601Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f39d8a6df3f8c64de8c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.004ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:46:01.608Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f39d8a6df3f8c64de8e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"test3\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.086ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:46:01.616Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f39d8a6df3f8c64de8f"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"_id\":\"5d565f39d8a6df3f8c64de89\",\"name\":\"testtest\",\"createDate\":\"2019-08-16T07:46:01.600Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.031ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:46:01.629Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f39d8a6df3f8c64de90"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/test/5d565f39d8a6df3f8c64de89",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"_id\":\"5d565f39d8a6df3f8c64de89\",\"name\":\"test1\",\"createDate\":\"2019-08-16T07:46:01.600Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.782ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:46:01.637Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f39d8a6df3f8c64de91"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/test/5d565f39d8a6df3f8c64de89",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.842ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:46:01.645Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f39d8a6df3f8c64de92"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/test",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d565f39d8a6df3f8c64de89\",\"5d565f39d8a6df3f8c64de8b\",\"5d565f39d8a6df3f8c64de8d\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.513ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T07:46:01.654Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f7d68f3f130a09b1fc0"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "88.021ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:47:09.509Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f7d68f3f130a09b1fc1"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.224ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:47:09.602Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f93b3061f3c0c45f980"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.911ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:47:31.597Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565f93b3061f3c0c45f981"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.246ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:47:31.689Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565fc75f0ba1445c8a91bd"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "91.589ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:48:23.514Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565fc75f0ba1445c8a91be"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.432ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:48:23.606Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565fd30a35933c7026b770"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.090ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:48:35.824Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d565fd30a35933c7026b771"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.533ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:48:35.915Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56626756124131c02b5b7e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.485ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T07:59:35.298Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5662e3e659470598113fbc"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.057ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T08:01:39.634Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5662fafff7f618acdd14f4"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.927ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T08:02:02.654Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d566321ff3d123c54e193c5"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.070ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T08:02:41.923Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5664692d154147e0144015"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.425ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T08:08:09.973Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56647b1acc242ae0e9cf1f"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.026ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T08:08:27.248Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56648955adfb3138e40f2a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.013ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T08:08:41.221Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56649b628df93a38246b08"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.877ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T08:08:59.999Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5664c7a28b9b28dca0fb22"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.613ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T08:09:43.985Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5664f8e41c1008f82eef48"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "88.053ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T08:10:32.179Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5665439bd18946dc154dc9"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.746ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T08:11:47.908Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5665449bd18946dc154dcb"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$f3cHoeDArCoOWVjC4LwKFOnJFkpcDEaAFmFdCI9H7977j9Qa6g5dy\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.506ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:11:48.024Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5665449bd18946dc154dcd"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$h7g0Iu0Pt6.VtFvofekZQ.Lab88DavDXUv1yhELwLTzTug3MAlbNK\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.075ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:11:48.094Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5665449bd18946dc154dcf"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$xgLAsRFyR8MmNNUgjEUymONRob0w0WW4yBTqsS5vmVlcTawc9Sp6O\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.677ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:11:48.162Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5665449bd18946dc154dd0"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5665449bd18946dc154dca\",\"username\":\"testtest\",\"password\":\"$2a$10$f3cHoeDArCoOWVjC4LwKFOnJFkpcDEaAFmFdCI9H7977j9Qa6g5dy\",\"createDate\":\"2019-08-16T08:11:48.022Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.290ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:11:48.178Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5665449bd18946dc154dd1"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d5665449bd18946dc154dca",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5665449bd18946dc154dca\",\"username\":\"test1\",\"password\":\"$2a$10$f3cHoeDArCoOWVjC4LwKFOnJFkpcDEaAFmFdCI9H7977j9Qa6g5dy\",\"createDate\":\"2019-08-16T08:11:48.022Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.128ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:11:48.187Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5665449bd18946dc154dd2"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d5665449bd18946dc154dca",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.081ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:11:48.194Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5665449bd18946dc154dd3"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d5665449bd18946dc154dca\",\"5d5665449bd18946dc154dcc\",\"5d5665449bd18946dc154dce\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.860ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:11:48.202Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5666cb5dbbc707206c59dd"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.511ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T08:18:19.194Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5666cb5dbbc707206c59df"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$c6P7ocQ.2V23M6fjs/ws4e8t7SSTdt1bZ0CvfULQ0vSQ519WH5seC\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "65.944ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:18:19.287Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5666cb5dbbc707206c59e1"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$rPjHPq.RLRHgLvCNmc4dhu7DXMJmpl439Mlin/iXjobOuO1FxoRv.\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.938ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:18:19.356Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5666cb5dbbc707206c59e3"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$FsQGLaNBxecVM/74siesvuPPLH8ikZ.z5T3dEyOfA1BWswbSDOMD6\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.856ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:18:19.425Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5666cb5dbbc707206c59e4"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5666cb5dbbc707206c59de\",\"username\":\"testtest\",\"password\":\"$2a$10$c6P7ocQ.2V23M6fjs/ws4e8t7SSTdt1bZ0CvfULQ0vSQ519WH5seC\",\"createDate\":\"2019-08-16T08:18:19.284Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "4.991ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:18:19.442Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5666cb5dbbc707206c59e5"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d5666cb5dbbc707206c59de",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5666cb5dbbc707206c59de\",\"username\":\"test1\",\"password\":\"$2a$10$c6P7ocQ.2V23M6fjs/ws4e8t7SSTdt1bZ0CvfULQ0vSQ519WH5seC\",\"createDate\":\"2019-08-16T08:18:19.284Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.946ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:18:19.449Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5666cb5dbbc707206c59e6"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d5666cb5dbbc707206c59de",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.261ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:18:19.458Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5666cb5dbbc707206c59e7"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d5666cb5dbbc707206c59de\",\"5d5666cb5dbbc707206c59e0\",\"5d5666cb5dbbc707206c59e2\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.993ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:18:19.466Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5666dcb338802710135a12"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.288ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T08:18:36.876Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5666dcb338802710135a14"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$X5Be8LjeHV/SgEFrNnWKJuK9YwxTNVHjXu5our8AXwr2axA5dtAHa\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.333ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:18:36.967Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5666ddb338802710135a16"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$MrUuHfvl2Utyw5zKBUOz.OFn4MZkdKezCMV4J.nudg8YTGh9G8TIi\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.803ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:18:37.036Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5666ddb338802710135a18"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$NKuufkbWnBbUbSbBl8dX8OmdBFGY.G0JFl1LXq7JdLtWScaTigKFK\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.592ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:18:37.104Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5666ddb338802710135a19"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5666dcb338802710135a13\",\"username\":\"testtest\",\"password\":\"$2a$10$X5Be8LjeHV/SgEFrNnWKJuK9YwxTNVHjXu5our8AXwr2axA5dtAHa\",\"createDate\":\"2019-08-16T08:18:36.964Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "4.950ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:18:37.121Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5666ddb338802710135a1a"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d5666dcb338802710135a13",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5666dcb338802710135a13\",\"username\":\"test1\",\"password\":\"$2a$10$X5Be8LjeHV/SgEFrNnWKJuK9YwxTNVHjXu5our8AXwr2axA5dtAHa\",\"createDate\":\"2019-08-16T08:18:36.964Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.016ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:18:37.129Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5666ddb338802710135a1b"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d5666dcb338802710135a13",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.255ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:18:37.137Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5666ddb338802710135a1c"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d5666dcb338802710135a13\",\"5d5666ddb338802710135a15\",\"5d5666ddb338802710135a17\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.886ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:18:37.145Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5666e78ac5853abc884bcf"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.153ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T08:18:47.488Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5666e78ac5853abc884bd0"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.096ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T08:18:47.589Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5666e78ac5853abc884bd2"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$nTy1F6krkBgmj5Gpsq5KveHx/OXsFwzsmHrabMGoW.xDEYgJomSk.\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.666ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:18:47.67Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5666e78ac5853abc884bd4"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$pj465MdmeKZIYePlGKP1nO/DZgzcHe8ogDfQhM1HnKP5W/YR4M.1K\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.588ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:18:47.738Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5666e78ac5853abc884bd6"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$T.PvMHiEw/cwwb602GwW2.M8IQ.1v9FWEIfRJjoE7H3NF2N0kWcYa\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.828ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:18:47.807Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5666e78ac5853abc884bd7"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5666e78ac5853abc884bd1\",\"username\":\"testtest\",\"password\":\"$2a$10$nTy1F6krkBgmj5Gpsq5KveHx/OXsFwzsmHrabMGoW.xDEYgJomSk.\",\"createDate\":\"2019-08-16T08:18:47.667Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "4.972ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:18:47.823Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5666e78ac5853abc884bd8"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d5666e78ac5853abc884bd1",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5666e78ac5853abc884bd1\",\"username\":\"test1\",\"password\":\"$2a$10$nTy1F6krkBgmj5Gpsq5KveHx/OXsFwzsmHrabMGoW.xDEYgJomSk.\",\"createDate\":\"2019-08-16T08:18:47.667Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.076ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:18:47.831Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5666e78ac5853abc884bd9"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d5666e78ac5853abc884bd1",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.273ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:18:47.839Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5666e78ac5853abc884bda"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d5666e78ac5853abc884bd1\",\"5d5666e78ac5853abc884bd3\",\"5d5666e78ac5853abc884bd5\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.017ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:18:47.847Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56676decdb8a0974689b57"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.618ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T08:21:01.359Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56676decdb8a0974689b58"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.346ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T08:21:01.436Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5667869c50ea28d84947a2"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.405ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T08:21:26.616Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5667869c50ea28d84947a3"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "65.634ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T08:21:26.695Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56678e9a56693f9427d669"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.733ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T08:21:34.74Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56678e9a56693f9427d66a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "65.328ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T08:21:34.819Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5667efd880863408042e24"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.919ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T08:23:11.701Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5667efd880863408042e25"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.404ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T08:23:11.778Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5667efd880863408042e27"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$y0efDCvWEG.j2N.OyiSUx.T/ozxm3PrkEQ0/FLb9tLujlHr4RuJQG\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.837ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:23:11.86Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5667efd880863408042e29"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$4dihQs3eUYqN56QMlMNfCecvwYRvm2KsKdzxH934qN.zUer67bj3W\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.272ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:23:11.929Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5667efd880863408042e2b"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$sCAwacYNP4ZLa5x5hrGKT.qPXd8WsMBSkspXSlCPIMiL58RS.0Wuy\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.722ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:23:11.998Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5667f0d880863408042e2c"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5667efd880863408042e26\",\"username\":\"testtest\",\"password\":\"$2a$10$y0efDCvWEG.j2N.OyiSUx.T/ozxm3PrkEQ0/FLb9tLujlHr4RuJQG\",\"createDate\":\"2019-08-16T08:23:11.857Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "4.987ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:23:12.015Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5667f0d880863408042e2d"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d5667efd880863408042e26",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5667efd880863408042e26\",\"username\":\"test1\",\"password\":\"$2a$10$y0efDCvWEG.j2N.OyiSUx.T/ozxm3PrkEQ0/FLb9tLujlHr4RuJQG\",\"createDate\":\"2019-08-16T08:23:11.857Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.202ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:23:12.023Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5667f0d880863408042e2e"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d5667efd880863408042e26",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.291ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:23:12.031Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5667f0d880863408042e2f"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d5667efd880863408042e26\",\"5d5667efd880863408042e28\",\"5d5667efd880863408042e2a\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.959ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:23:12.04Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5668052fd2114224ae094b"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "86.720ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T08:23:33.096Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5668052fd2114224ae094c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.440ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T08:23:33.198Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5668052fd2114224ae094e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$EX4eGX52PULAKf4EbKscN.wbZQ41jLppybUCHzLo.tyF3WiaQuTAe\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.575ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:23:33.279Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5668052fd2114224ae0950"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$ttDljhRSD7iX6mZftNBux..ffmL6zGxKSpffsDP9OOSgYyoVYbRua\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "63.001ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:23:33.348Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5668052fd2114224ae0952"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$M4YXN13a6V2KY.DGQ6mJI.a0Ym/bBR96EA1gDJlZ6RYTgL1fhIHo2\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.698ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:23:33.416Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5668052fd2114224ae0953"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5668052fd2114224ae094d\",\"username\":\"testtest\",\"password\":\"$2a$10$EX4eGX52PULAKf4EbKscN.wbZQ41jLppybUCHzLo.tyF3WiaQuTAe\",\"createDate\":\"2019-08-16T08:23:33.276Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.019ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:23:33.433Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5668052fd2114224ae0954"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d5668052fd2114224ae094d",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d5668052fd2114224ae094d\",\"username\":\"test1\",\"password\":\"$2a$10$EX4eGX52PULAKf4EbKscN.wbZQ41jLppybUCHzLo.tyF3WiaQuTAe\",\"createDate\":\"2019-08-16T08:23:33.276Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.137ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:23:33.441Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5668052fd2114224ae0955"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d5668052fd2114224ae094d",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.204ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:23:33.449Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5668052fd2114224ae0956"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d5668052fd2114224ae094d\",\"5d5668052fd2114224ae094f\",\"5d5668052fd2114224ae0951\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.830ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T08:23:33.457Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56745aabd4163d6c926c27"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "87.550ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-16T09:16:10.424Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56745aabd4163d6c926c29"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test1\",\"password\":\"$2a$10$gcfAquVLyB77sME040mZB.3GsghkBWB5a5Tg3dkczKmoyt4dwcKTm\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "64.105ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T09:16:10.514Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56745aabd4163d6c926c2b"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test2\",\"password\":\"$2a$10$rcuv5YP15vQzPfkLBFmP4u45SuzSBPSKuPhA7SxKuRlq9lDfyIZ5C\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.853ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T09:16:10.583Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56745aabd4163d6c926c2d"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"test3\",\"password\":\"$2a$10$EBAccGHrNndZADS/H4yyjOdRhj625uWRxxOtPwrs1nhQ7n1/5PypK\"}",
+    userAgent: "node-superagent/3.8.3",
+    time: "62.630ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T09:16:10.651Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56745aabd4163d6c926c2e"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d56745aabd4163d6c926c28\",\"username\":\"testtest\",\"password\":\"$2a$10$gcfAquVLyB77sME040mZB.3GsghkBWB5a5Tg3dkczKmoyt4dwcKTm\",\"createDate\":\"2019-08-16T09:16:10.511Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "5.318ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T09:16:10.668Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56745aabd4163d6c926c2f"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d56745aabd4163d6c926c28",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"status\":1,\"roleIdList\":[],\"_id\":\"5d56745aabd4163d6c926c28\",\"username\":\"test1\",\"password\":\"$2a$10$gcfAquVLyB77sME040mZB.3GsghkBWB5a5Tg3dkczKmoyt4dwcKTm\",\"createDate\":\"2019-08-16T09:16:10.511Z\",\"__v\":0}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.085ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T09:16:10.676Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56745aabd4163d6c926c30"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5d56745aabd4163d6c926c28",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "node-superagent/3.8.3",
+    time: "2.105ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T09:16:10.684Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d56745aabd4163d6c926c31"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d56745aabd4163d6c926c28\",\"5d56745aabd4163d6c926c2a\",\"5d56745aabd4163d6c926c2c\"]",
+    userAgent: "node-superagent/3.8.3",
+    time: "1.950ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-16T09:16:10.692Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5e3ad3459d2133e4acfd3e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"uuid\":\"\",\"captcha\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "87.964ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-22T06:48:51.041Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5e3ee6f67b475088c0dd32"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/param",
+    error: "Validation Failed:[{\"message\":\"required\",\"field\":\"name\",\"code\":\"missing_field\"}]",
+    ip: "127.0.0.1",
+    params: "{\"paramCode\":\"1\",\"paramValue\":\"1\",\"remark\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "3.643ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-22T07:06:14.785Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5e3f09f67b475088c0dd33"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/param",
+    error: "Validation Failed:[{\"message\":\"required\",\"field\":\"name\",\"code\":\"missing_field\"}]",
+    ip: "127.0.0.1",
+    params: "{\"paramCode\":\"1\",\"paramValue\":\"1\",\"remark\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "2.149ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-22T07:06:49.653Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5e3f37d518eb4dd4edc9a7"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/param",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"paramCode\":\"1\",\"paramValue\":\"1\",\"remark\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "25.589ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-22T07:07:35.357Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5e3f40d518eb4dd4edc9a8"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/param",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"id\":\"5d5e3f37d518eb4dd4edc9a6\",\"paramCode\":\"123\",\"paramValue\":\"123\",\"remark\":\"\",\"_id\":\"5d5e3f37d518eb4dd4edc9a6\",\"createDate\":\"2019-08-22T07:07:35.331Z\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "6.095ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-22T07:07:44.883Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5e3f46d518eb4dd4edc9a9"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/param",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"id\":\"5d5e3f37d518eb4dd4edc9a6\",\"paramCode\":\"123\",\"paramValue\":\"123\",\"remark\":\"666\",\"_id\":\"5d5e3f37d518eb4dd4edc9a6\",\"createDate\":\"2019-08-22T07:07:35.331Z\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "2.064ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-22T07:07:50.484Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5e3f4bd518eb4dd4edc9ab"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/param",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"paramCode\":\"22\",\"paramValue\":\"22\",\"remark\":\"\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "1.586ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-22T07:07:55.131Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5e3f4fd518eb4dd4edc9ac"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/param",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d5e3f4bd518eb4dd4edc9aa\",\"5d5e3f37d518eb4dd4edc9a6\"]",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "1.780ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-22T07:07:59.951Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5e3f55d518eb4dd4edc9ae"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/param",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"paramCode\":\"1\",\"paramValue\":\"1\",\"remark\":\"\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "1.347ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-22T07:08:05.637Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5e3f57d518eb4dd4edc9af"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/param",
+    error: "",
+    ip: "127.0.0.1",
+    params: "[\"5d5e3f55d518eb4dd4edc9ad\"]",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "1.120ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-22T07:08:07.634Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5e3f85d518eb4dd4edc9b1"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/param",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"paramCode\":\"1\",\"paramValue\":\"1\",\"remark\":\"\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "1.349ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-22T07:08:53.452Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5e4897f5a58604ec344c2b"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/dict",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"id\":\"5d5e47f814bc4222080064c3\",\"pid\":\"5d5e441614bc4222080064c2\",\"dictName\":\"男男\",\"dictType\":\"gender\",\"dictValue\":\"1\",\"sort\":0,\"remark\":\"\",\"_id\":\"5d5e47f814bc4222080064c3\",\"createDate\":\"2019-08-06T14:08:15.000Z\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "6.846ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-22T07:47:35.266Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5e489bf5a58604ec344c2c"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/dict",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"id\":\"5d5e480414bc4222080064c4\",\"pid\":\"5d5e441614bc4222080064c2\",\"dictName\":\"女\",\"dictType\":\"gender\",\"dictValue\":\"0\",\"sort\":1,\"remark\":\"\",\"_id\":\"5d5e480414bc4222080064c4\",\"createDate\":\"2019-08-06T14:08:15.000Z\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "3.100ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-22T07:47:39.587Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5e48acf5a58604ec344c2d"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/dict",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"id\":\"5d5e480414bc4222080064c4\",\"pid\":\"5d5e441614bc4222080064c2\",\"dictName\":\"女\",\"dictType\":\"gender\",\"dictValue\":\"0\",\"sort\":0,\"remark\":\"\",\"_id\":\"5d5e480414bc4222080064c4\",\"createDate\":\"2019-08-06T14:08:15.000Z\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "2.345ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-22T07:47:56.844Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5e48aff5a58604ec344c2e"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/dict",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"id\":\"5d5e47f814bc4222080064c3\",\"pid\":\"5d5e441614bc4222080064c2\",\"dictName\":\"男男\",\"dictType\":\"gender\",\"dictValue\":\"1\",\"sort\":1,\"remark\":\"\",\"_id\":\"5d5e47f814bc4222080064c3\",\"createDate\":\"2019-08-06T14:08:15.000Z\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "2.327ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-22T07:47:59.801Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5e4aabfc8e474ecc6c043f"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/dict",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"pid\":\"0\",\"dictName\":\"合同类型\",\"dictType\":\"contract\",\"dictValue\":\"\",\"sort\":1,\"remark\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "7.104ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-22T07:56:27.682Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5e4ab3fc8e474ecc6c0440"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/dict",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"id\":\"5d5e4aabfc8e474ecc6c043e\",\"pid\":\"0\",\"dictName\":\"合同\",\"dictType\":\"contract\",\"dictValue\":\"\",\"sort\":1,\"remark\":\"\",\"_id\":\"5d5e4aabfc8e474ecc6c043e\",\"createDate\":\"2019-08-22T07:56:27.675Z\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "5.462ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-22T07:56:35.761Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5e4abafc8e474ecc6c0441"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/dict",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"id\":\"5d5e4aabfc8e474ecc6c043e\",\"pid\":\"0\",\"dictName\":\"合同类型\",\"dictType\":\"contract\",\"dictValue\":\"\",\"sort\":1,\"remark\":\"\",\"_id\":\"5d5e4aabfc8e474ecc6c043e\",\"createDate\":\"2019-08-22T07:56:27.675Z\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "2.248ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-22T07:56:42.332Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5e4acafc8e474ecc6c0443"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/dict",
+    error: "E11000 duplicate key error collection: d2admin.dicts index: _id_ dup key: { : ObjectId('5d5e4aabfc8e474ecc6c043e') }",
+    ip: "127.0.0.1",
+    params: "{\"pid\":\"5d5e4aabfc8e474ecc6c043e\",\"dictName\":\"采购合同\",\"dictType\":\"contract\",\"dictValue\":\"0\",\"sort\":0,\"remark\":\"\",\"_id\":\"5d5e4aabfc8e474ecc6c043e\",\"createDate\":\"2019-08-22T07:56:27.675Z\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "4.131ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-22T07:56:58.589Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5e4ad5fc8e474ecc6c0445"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/dict",
+    error: "E11000 duplicate key error collection: d2admin.dicts index: _id_ dup key: { : ObjectId('5d5e4aabfc8e474ecc6c043e') }",
+    ip: "127.0.0.1",
+    params: "{\"pid\":\"5d5e4aabfc8e474ecc6c043e\",\"dictName\":\"采购合同\",\"dictType\":\"contract\",\"dictValue\":\"0\",\"sort\":0,\"remark\":\"\",\"_id\":\"5d5e4aabfc8e474ecc6c043e\",\"createDate\":\"2019-08-22T07:56:27.675Z\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "2.522ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-22T07:57:09.061Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5e4af21f079e0d304addc8"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/dict",
+    error: "E11000 duplicate key error collection: d2admin.dicts index: _id_ dup key: { : ObjectId('5d5e4aabfc8e474ecc6c043e') }",
+    ip: "127.0.0.1",
+    params: "{\"pid\":\"5d5e4aabfc8e474ecc6c043e\",\"dictName\":\"采购合同\",\"dictType\":\"contract\",\"dictValue\":\"0\",\"sort\":0,\"remark\":\"\",\"_id\":\"5d5e4aabfc8e474ecc6c043e\",\"createDate\":\"2019-08-22T07:56:27.675Z\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "15.895ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-22T07:57:38.817Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5e4bda1f079e0d304addca"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/dict",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"pid\":\"5d5e4aabfc8e474ecc6c043e\",\"dictName\":\"草狗合同\",\"dictType\":\"contract\",\"dictValue\":\"1\",\"sort\":0,\"remark\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "1.912ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-22T08:01:30.723Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5e4be01f079e0d304addcb"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/dict",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"id\":\"5d5e4bda1f079e0d304addc9\",\"pid\":\"5d5e4aabfc8e474ecc6c043e\",\"dictName\":\"采购合同\",\"dictType\":\"contract\",\"dictValue\":\"1\",\"sort\":0,\"remark\":\"\",\"_id\":\"5d5e4bda1f079e0d304addc9\",\"createDate\":\"2019-08-22T08:01:30.720Z\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "6.179ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-22T08:01:36.63Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5e4bf51f079e0d304addcd"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/dict",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"pid\":\"5d5e441614bc4222080064c2\",\"dictName\":\"人妖\",\"dictType\":\"gender\",\"dictValue\":\"10\",\"sort\":2,\"remark\":\"\",\"createDate\":\"2019-08-22T08:01:30.720Z\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "1.407ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-22T08:01:57.105Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5e4c051f079e0d304addce"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/dict",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"id\":\"5d5e47f814bc4222080064c3\",\"pid\":\"5d5e441614bc4222080064c2\",\"dictName\":\"男\",\"dictType\":\"gender\",\"dictValue\":\"1\",\"sort\":1,\"remark\":\"\",\"_id\":\"5d5e47f814bc4222080064c3\",\"createDate\":\"2019-08-06T14:08:15.000Z\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "2.620ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-22T08:02:13.261Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d5e4c6d1f079e0d304addd0"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/dict",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"pid\":\"5d5e4aabfc8e474ecc6c043e\",\"dictName\":\"销售合同\",\"dictType\":\"contract\",\"dictValue\":\"2\",\"sort\":0,\"remark\":\"\",\"createDate\":\"2019-08-22T07:56:27.675Z\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "1.368ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2019-08-22T08:03:57.578Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d64dee6a2eed43df8e10145"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"uuid\":\"\",\"captcha\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "193.139ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2019-08-27T07:42:30.386Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d64e122a05337450cf4829f"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/upload?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjVkM2ZlNWEzOWZmM2M2NTliY2M0MjdmMCJ9LCJleHAiOjE1NjY5NzgxNTAsImlhdCI6MTU2Njg5MTc1MH0.fpl3SVv94bOU4Jiavy9guzLSt4EgO1NcI0VmPdrcknU",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "20.971ms",
+    type: "action",
+    createDate: ISODate("2019-08-27T07:52:02.119Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d64e1ba2bd233557c5a5cad"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/upload?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjVkM2ZlNWEzOWZmM2M2NTliY2M0MjdmMCJ9LCJleHAiOjE1NjY5NzgxNTAsImlhdCI6MTU2Njg5MTc1MH0.fpl3SVv94bOU4Jiavy9guzLSt4EgO1NcI0VmPdrcknU",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "16.295ms",
+    type: "action",
+    createDate: ISODate("2019-08-27T07:54:34.265Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d64e51e92494a50c49cc480"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/upload%7D",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "1.485ms",
+    type: "action",
+    createDate: ISODate("2019-08-27T08:09:02.718Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d64e53460d52843d893a64e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/upload%7D",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "1.554ms",
+    type: "action",
+    createDate: ISODate("2019-08-27T08:09:24.354Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d64e548ca409252d4ff78f2"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/upload%7D",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "0.381ms",
+    type: "action",
+    createDate: ISODate("2019-08-27T08:09:44.538Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d64e562ca409252d4ff78f4"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/upload",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "7.754ms",
+    type: "action",
+    createDate: ISODate("2019-08-27T08:10:10.971Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5d64e56aca409252d4ff78f6"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/upload",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36",
+    time: "3.783ms",
+    type: "action",
+    createDate: ISODate("2019-08-27T08:10:18.398Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5e72d73d8918703498c138e3"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "密码错误",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"admin\",\"uuid\":\"\",\"captcha\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.69 Safari/537.36 Edg/81.0.416.34",
+    time: "258.476ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2020-03-19T02:21:49.948Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5e72d7498918703498c138e4"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "密码错误",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"admin\",\"uuid\":\"\",\"captcha\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.69 Safari/537.36 Edg/81.0.416.34",
+    time: "65.871ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2020-03-19T02:22:01.478Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5e72d7548918703498c138e5"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"uuid\":\"\",\"captcha\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.69 Safari/537.36 Edg/81.0.416.34",
+    time: "67.582ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2020-03-19T02:22:12.044Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5e72d9308918703498c138e6"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/dict",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"id\":\"5d5e4c6d1f079e0d304addcf\",\"pid\":\"5d5e4aabfc8e474ecc6c043e\",\"dictName\":\"销售合同\",\"dictType\":\"contract\",\"dictValue\":\"2\",\"sort\":1,\"remark\":\"\",\"_id\":\"5d5e4c6d1f079e0d304addcf\",\"createDate\":\"2019-08-22T07:56:27.675Z\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.69 Safari/537.36 Edg/81.0.416.34",
+    time: "5.395ms",
+    username: "admin",
+    type: "action",
+    createDate: ISODate("2020-03-19T02:30:08.483Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5e7451a759da832ac48af523"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"grant_type\":\"password\",\"username\":\"admin\",\"password\":\"admin\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.69 Safari/537.36 Edg/81.0.416.34",
+    time: "0.604ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2020-03-20T05:16:23.907Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5e7451f859da832ac48af524"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"grant_type\":\"password\",\"username\":\"admin\",\"password\":\"admin\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.69 Safari/537.36 Edg/81.0.416.34",
+    time: "0.154ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2020-03-20T05:17:44.04Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5e7451fe59da832ac48af525"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"grant_type\":\"password\",\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.69 Safari/537.36 Edg/81.0.416.34",
+    time: "0.089ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2020-03-20T05:17:50.406Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5e74520459da832ac48af526"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"grant_type\":\"password\",\"username\":\"Lyoko\",\"password\":\"123456\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.69 Safari/537.36 Edg/81.0.416.34",
+    time: "0.086ms",
+    type: "login",
+    username: "Lyoko",
+    createDate: ISODate("2020-03-20T05:17:56.77Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5e74520859da832ac48af527"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"grant_type\":\"password\",\"username\":\"Lyoko\",\"password\":\"admin\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.69 Safari/537.36 Edg/81.0.416.34",
+    time: "0.093ms",
+    type: "login",
+    username: "Lyoko",
+    createDate: ISODate("2020-03-20T05:18:00.471Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5e7455b259da832ac48af528"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "PostmanRuntime/7.22.0",
+    time: "0.097ms",
+    type: "login",
+    createDate: ISODate("2020-03-20T05:33:38.345Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5e7455f759da832ac48af529"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "PostmanRuntime/7.22.0",
+    time: "0.095ms",
+    type: "login",
+    createDate: ISODate("2020-03-20T05:34:47.432Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5e74564912820314f489fa15"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "密码错误",
+    ip: "127.0.0.1",
+    params: "{\"grant_type\":\"password\",\"username\":\"admin\",\"password\":\"admin\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.69 Safari/537.36 Edg/81.0.416.34",
+    time: "110.851ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2020-03-20T05:36:09.657Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5e74564e12820314f489fa16"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"grant_type\":\"password\",\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.69 Safari/537.36 Edg/81.0.416.34",
+    time: "66.391ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2020-03-20T05:36:14.548Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5e74663db464c34d5c8fb81c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"grant_type\":\"password\",\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.69 Safari/537.36 Edg/81.0.416.34",
+    time: "84.688ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2020-03-20T06:44:13.69Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5e7468de66ce19526ca6fc88"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "密码错误",
+    ip: "127.0.0.1",
+    params: "{\"grant_type\":\"password\",\"username\":\"admin\",\"password\":\"admin\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.69 Safari/537.36 Edg/81.0.416.34",
+    time: "92.398ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2020-03-20T06:55:26.12Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5e7468e366ce19526ca6fc89"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"grant_type\":\"password\",\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.69 Safari/537.36 Edg/81.0.416.34",
+    time: "66.955ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2020-03-20T06:55:31.314Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5e78320d8e5fca406cdf294f"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"grant_type\":\"password\",\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.69 Safari/537.36 Edg/81.0.416.34",
+    time: "95.428ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2020-03-23T03:50:37.615Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5e7832b58e5fca406cdf2950"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"grant_type\":\"password\",\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.69 Safari/537.36 Edg/81.0.416.34",
+    time: "66.688ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2020-03-23T03:53:25.6Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5e8ee1a0bdbe2030c483508d"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "密码错误",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"admin\",\"uuid\":\"\",\"captcha\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36 Edg/80.0.361.111",
+    time: "66.020ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2020-04-09T08:49:36.47Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5e8ee1a4bdbe2030c483508e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"uuid\":\"\",\"captcha\":\"\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36 Edg/80.0.361.111",
+    time: "63.747ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2020-04-09T08:49:40.746Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5e8fcd5053bb8c0864193f14"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "192.168.1.10",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"code\":\"v9am\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36 Edg/80.0.361.111",
+    time: "89.069ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2020-04-10T01:35:12.653Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5e8fe0fa53bb8c0864193f15"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "192.168.1.10",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"code\":\"v9am\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36 Edg/80.0.361.111",
+    time: "157.514ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2020-04-10T02:59:06.515Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5e901afff0ac9e634ce60c58"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"code\":\"v9am\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36 Edg/80.0.361.111",
+    time: "83.526ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2020-04-10T07:06:39.119Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5e9026911324af3274c76db1"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"code\":\"v9am\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36 Edg/80.0.361.111",
+    time: "80.637ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2020-04-10T07:56:01.093Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5e9037d11324af3274c76db2"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"code\":\"v9am\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36 Edg/80.0.361.111",
+    time: "64.467ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2020-04-10T09:09:37.976Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5e9037eb1324af3274c76db3"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"code\":\"v9am\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36 Edg/80.0.361.111",
+    time: "63.591ms",
+    type: "login",
+    username: "admin",
+    createDate: ISODate("2020-04-10T09:10:03.558Z"),
+    __v: NumberInt("0")
+} ]);
+
+// ----------------------------
+// Collection structure for menus
+// ----------------------------
+db.getCollection("menus").drop();
+db.createCollection("menus");
+
+// ----------------------------
+// Documents of menus
+// ----------------------------
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2d6ce414bc421d10003a54"),
+    pid: "0",
+    children: [ ],
+    name: "权限管理",
+    url: "",
+    type: NumberInt("0"),
+    icon: "icon-safetycertificate",
+    permissions: "",
+    sort: NumberInt("0"),
+    createDate: ISODate("2018-12-28T22:19:40.000Z"),
+    parentName: "一级菜单",
+    cache: false,
+    title: "权限管理",
+    path: "/permission",
+    component: "Layout",
+    auth: true
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2d6d6814bc421d10003a55"),
+    pid: "0",
+    children: [ ],
+    name: "系统设置",
+    url: "",
+    type: 0,
+    icon: "icon-setting",
+    permissions: "",
+    sort: 1,
+    createDate: ISODate("2018-12-28T22:19:47.000Z"),
+    parentName: "一级菜单",
+    cache: false,
+    title: "系统设置",
+    path: "/system",
+    component: "Layout",
+    auth: true
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2d6da414bc421d10003a56"),
+    pid: "0",
+    children: [ ],
+    name: "工作流程",
+    url: "",
+    type: 0,
+    icon: "icon-cluster",
+    permissions: "",
+    sort: 2,
+    createDate: ISODate("2018-12-28T22:19:43.000Z"),
+    parentName: "一级菜单",
+    cache: false,
+    title: "工作流程",
+    path: "/workflow",
+    component: "Layout",
+    auth: true
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2d6dae14bc421d10003a57"),
+    pid: "0",
+    children: [ ],
+    name: "消息管理",
+    url: "",
+    type: 0,
+    icon: "icon-message",
+    permissions: "",
+    sort: 3,
+    createDate: ISODate("2018-12-28T22:19:45.000Z"),
+    parentName: "一级菜单",
+    cache: false,
+    title: "消息管理",
+    path: "/message",
+    component: "Layout",
+    auth: true
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2d6db814bc421d10003a58"),
+    pid: "0",
+    children: [ ],
+    name: "日志管理",
+    url: "",
+    type: 0,
+    icon: "icon-container",
+    permissions: "",
+    sort: 4,
+    createDate: ISODate("2018-12-28T22:19:48.000Z"),
+    parentName: "一级菜单",
+    cache: false,
+    title: "日志管理",
+    path: "/log",
+    component: "Layout",
+    auth: true
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2d6dc314bc421d10003a59"),
+    pid: "0",
+    children: [ ],
+    name: "系统监控",
+    url: "",
+    type: 0,
+    icon: "icon-desktop",
+    permissions: "",
+    sort: 5,
+    createDate: ISODate("2018-12-28T22:19:48.000Z"),
+    parentName: "一级菜单",
+    cache: false,
+    title: "系统监控",
+    path: "/monitor",
+    component: "Layout",
+    auth: true
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2d6dcb14bc421d10003a5a"),
+    pid: "0",
+    children: [ ],
+    name: "功能示例",
+    url: "",
+    type: 0,
+    icon: "icon-windows",
+    permissions: "",
+    sort: 6,
+    createDate: ISODate("2018-12-28T22:19:48.000Z"),
+    parentName: "一级菜单",
+    cache: false,
+    title: "功能示例",
+    path: "/demo",
+    component: "Layout",
+    auth: true
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006717"),
+    pid: "5d2d6ce414bc421d10003a54",
+    children: [ ],
+    title: "用户管理",
+    url: "sys/user",
+    type: NumberInt("0"),
+    icon: "icon-user",
+    permissions: "",
+    sort: NumberInt("0"),
+    createDate: ISODate("2018-12-28T22:19:48.000Z"),
+    parentName: "权限管理",
+    cache: true,
+    name: "用户管理",
+    component: "",
+    path: "/sys/user",
+    auth: true
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006718"),
+    pid: "5d2e832314bc4247ac006717",
+    children: [ ],
+    name: "查看",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:user:page,sys:user:info",
+    sort: 0,
+    createDate: ISODate("2018-12-28T22:19:48.000Z"),
+    parentName: "用户管理",
+    cache: false,
+    title: "查看",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006719"),
+    pid: "5d2e832314bc4247ac006717",
+    children: [ ],
+    name: "新增",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:user:save,sys:dept:list,sys:role:list",
+    sort: 1,
+    createDate: ISODate("2018-12-28T22:19:40.000Z"),
+    parentName: "用户管理",
+    cache: false,
+    title: "新增",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac00671a"),
+    pid: "5d2e832314bc4247ac006717",
+    children: [ ],
+    name: "修改",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:user:update,sys:dept:list,sys:role:list",
+    sort: 2,
+    createDate: ISODate("2018-12-28T22:19:41.000Z"),
+    parentName: "用户管理",
+    cache: false,
+    title: "修改",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac00671b"),
+    pid: "5d2e832314bc4247ac006717",
+    children: [ ],
+    name: "删除",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:user:delete",
+    sort: 3,
+    createDate: ISODate("2018-12-28T22:19:41.000Z"),
+    parentName: "用户管理",
+    cache: false,
+    title: "删除",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac00671c"),
+    pid: "5d2e832314bc4247ac006717",
+    children: [ ],
+    name: "导出",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:user:export",
+    sort: 4,
+    createDate: ISODate("2018-12-28T22:19:42.000Z"),
+    parentName: "用户管理",
+    cache: false,
+    title: "导出",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac00671d"),
+    pid: "5d2d6ce414bc421d10003a54",
+    children: [ ],
+    name: "部门管理",
+    url: "sys/dept",
+    type: 0,
+    icon: "icon-apartment",
+    permissions: "",
+    sort: 1,
+    createDate: ISODate("2018-12-28T22:19:42.000Z"),
+    parentName: "权限管理",
+    cache: true,
+    title: "部门管理",
+    path: "/sys/dept",
+    component: "",
+    auth: true
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac00671e"),
+    pid: "5d2e832314bc4247ac00671d",
+    children: [ ],
+    name: "查看",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:dept:list,sys:dept:info",
+    sort: 0,
+    createDate: ISODate("2018-12-28T22:19:43.000Z"),
+    parentName: "部门管理",
+    cache: false,
+    title: "查看",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac00671f"),
+    pid: "5d2e832314bc4247ac00671d",
+    children: [ ],
+    name: "新增",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:dept:save",
+    sort: 1,
+    createDate: ISODate("2018-12-28T22:19:43.000Z"),
+    parentName: "部门管理",
+    cache: false,
+    title: "新增",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006720"),
+    pid: "5d2e832314bc4247ac00671d",
+    children: [ ],
+    name: "修改",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:dept:update",
+    sort: 2,
+    createDate: ISODate("2018-12-28T22:19:44.000Z"),
+    parentName: "部门管理",
+    cache: false,
+    title: "修改",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006721"),
+    pid: "5d2e832314bc4247ac00671d",
+    children: [ ],
+    name: "删除",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:dept:delete",
+    sort: 3,
+    createDate: ISODate("2018-12-28T22:19:44.000Z"),
+    parentName: "部门管理",
+    cache: false,
+    title: "删除",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006722"),
+    pid: "5d2d6ce414bc421d10003a54",
+    children: [ ],
+    name: "角色管理",
+    url: "sys/role",
+    type: 0,
+    icon: "icon-team",
+    permissions: "",
+    sort: 2,
+    createDate: ISODate("2018-12-28T22:19:42.000Z"),
+    parentName: "权限管理",
+    cache: true,
+    title: "角色管理",
+    path: "/sys/role",
+    component: "",
+    auth: true
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006723"),
+    pid: "5d2e832314bc4247ac006722",
+    children: [ ],
+    name: "查看",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:role:page,sys:role:info",
+    sort: 0,
+    createDate: ISODate("2018-12-28T22:19:42.000Z"),
+    parentName: "角色管理",
+    cache: false,
+    title: "查看",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006724"),
+    pid: "5d2e832314bc4247ac006722",
+    children: [ ],
+    name: "新增",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:role:save,sys:menu:select,sys:dept:list",
+    sort: 1,
+    createDate: ISODate("2018-12-28T22:19:42.000Z"),
+    parentName: "角色管理",
+    cache: false,
+    title: "新增",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006725"),
+    pid: "5d2e832314bc4247ac006722",
+    children: [ ],
+    name: "修改",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:role:update,sys:menu:select,sys:dept:list",
+    sort: 2,
+    createDate: ISODate("2018-12-28T22:19:42.000Z"),
+    parentName: "角色管理",
+    cache: false,
+    title: "修改",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006726"),
+    pid: "5d2e832314bc4247ac006722",
+    children: [ ],
+    name: "删除",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:role:delete",
+    sort: 3,
+    createDate: ISODate("2018-12-28T22:19:42.000Z"),
+    parentName: "角色管理",
+    cache: false,
+    title: "删除",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006727"),
+    pid: "5d2d6d6814bc421d10003a55",
+    children: [ ],
+    name: "菜单管理",
+    url: "sys/menu",
+    type: 0,
+    icon: "icon-unorderedlist",
+    permissions: "",
+    sort: 0,
+    createDate: ISODate("2018-12-28T22:19:46.000Z"),
+    parentName: "系统设置",
+    cache: true,
+    title: "菜单管理",
+    component: "sys/menu",
+    path: "/sys/menu",
+    auth: true
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006728"),
+    pid: "5d2e832314bc4247ac006727",
+    children: [ ],
+    name: "查看",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:menu:list,sys:menu:info",
+    sort: 0,
+    createDate: ISODate("2018-12-28T22:19:46.000Z"),
+    parentName: "菜单管理",
+    cache: false,
+    title: "查看",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006729"),
+    pid: "5d2e832314bc4247ac006727",
+    children: [ ],
+    name: "新增",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:menu:save",
+    sort: 1,
+    createDate: ISODate("2018-12-28T22:19:46.000Z"),
+    parentName: "菜单管理",
+    cache: false,
+    title: "新增",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac00672a"),
+    pid: "5d2e832314bc4247ac006727",
+    children: [ ],
+    name: "修改",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:menu:update",
+    sort: 2,
+    createDate: ISODate("2018-12-28T22:19:46.000Z"),
+    parentName: "菜单管理",
+    cache: false,
+    title: "修改",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac00672b"),
+    pid: "5d2e832314bc4247ac006727",
+    children: [ ],
+    name: "删除",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:menu:delete",
+    sort: 3,
+    createDate: ISODate("2018-12-28T22:19:46.000Z"),
+    parentName: "菜单管理",
+    cache: false,
+    title: "删除",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac00672c"),
+    pid: "5d2d6d6814bc421d10003a55",
+    children: [ ],
+    name: "参数管理",
+    url: "sys/params",
+    type: 0,
+    icon: "icon-fileprotect",
+    permissions: "",
+    sort: 1,
+    createDate: ISODate("2018-12-28T22:19:47.000Z"),
+    parentName: "系统设置",
+    cache: true,
+    title: "参数管理",
+    component: "",
+    path: "/sys/params",
+    auth: true
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac00672d"),
+    pid: "5d2e832314bc4247ac00672c",
+    children: [ ],
+    name: "查看",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:params:page,sys:params:info",
+    sort: 0,
+    createDate: ISODate("2018-12-28T22:19:49.000Z"),
+    parentName: "参数管理",
+    cache: false,
+    title: "查看",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac00672e"),
+    pid: "5d2e832314bc4247ac00672c",
+    children: [ ],
+    name: "新增",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:params:save",
+    sort: 1,
+    createDate: ISODate("2018-12-28T22:19:48.000Z"),
+    parentName: "参数管理",
+    cache: false,
+    title: "新增",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac00672f"),
+    pid: "5d2e832314bc4247ac00672c",
+    children: [ ],
+    name: "修改",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:params:update",
+    sort: 2,
+    createDate: ISODate("2018-12-28T22:19:49.000Z"),
+    parentName: "参数管理",
+    cache: false,
+    title: "修改",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006730"),
+    pid: "5d2e832314bc4247ac00672c",
+    children: [ ],
+    name: "删除",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:params:delete",
+    sort: 3,
+    createDate: ISODate("2018-12-28T22:19:49.000Z"),
+    parentName: "参数管理",
+    cache: false,
+    title: "删除",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006731"),
+    pid: "5d2e832314bc4247ac00672c",
+    children: [ ],
+    name: "导出",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:params:export",
+    sort: 4,
+    createDate: ISODate("2018-12-28T22:19:48.000Z"),
+    parentName: "参数管理",
+    cache: false,
+    title: "导出",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006732"),
+    pid: "5d2d6d6814bc421d10003a55",
+    children: [ ],
+    name: "字典管理",
+    url: "sys/dict",
+    type: 0,
+    icon: "icon-golden-fill",
+    permissions: "",
+    sort: 2,
+    createDate: ISODate("2018-12-28T22:19:47.000Z"),
+    parentName: "系统设置",
+    cache: true,
+    title: "字典管理",
+    component: "",
+    path: "/sys/dict",
+    auth: true
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006733"),
+    pid: "5d2e832314bc4247ac006732",
+    children: [ ],
+    name: "查看",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:dict:page,sys:dict:info",
+    sort: 0,
+    createDate: ISODate("2018-12-28T22:19:47.000Z"),
+    parentName: "字典管理",
+    cache: false,
+    title: "查看",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006734"),
+    pid: "5d2e832314bc4247ac006732",
+    children: [ ],
+    name: "新增",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:dict:save",
+    sort: 1,
+    createDate: ISODate("2018-12-28T22:19:47.000Z"),
+    parentName: "字典管理",
+    cache: false,
+    title: "新增",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006735"),
+    pid: "5d2e832314bc4247ac006732",
+    children: [ ],
+    name: "修改",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:dict:update",
+    sort: 2,
+    createDate: ISODate("2018-12-28T22:19:47.000Z"),
+    parentName: "字典管理",
+    cache: false,
+    title: "修改",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006736"),
+    pid: "5d2e832314bc4247ac006732",
+    children: [ ],
+    name: "删除",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:dict:delete",
+    sort: 3,
+    createDate: ISODate("2018-12-28T22:19:48.000Z"),
+    parentName: "字典管理",
+    cache: false,
+    title: "删除",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006737"),
+    pid: "5d2d6d6814bc421d10003a55",
+    children: [ ],
+    name: "定时任务",
+    url: "job/schedule",
+    type: 0,
+    icon: "icon-dashboard",
+    permissions: "",
+    sort: 3,
+    createDate: ISODate("2018-12-28T22:19:46.000Z"),
+    parentName: "系统设置",
+    cache: true,
+    title: "定时任务",
+    component: "",
+    path: "job/schedule",
+    auth: true
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006738"),
+    pid: "5d2e832314bc4247ac006737",
+    children: [ ],
+    name: "查看",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:schedule:page,sys:schedule:info",
+    sort: 0,
+    createDate: ISODate("2018-12-28T22:19:46.000Z"),
+    parentName: "定时任务",
+    cache: false,
+    title: "查看",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006739"),
+    pid: "5d2e832314bc4247ac006737",
+    children: [ ],
+    name: "新增",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:schedule:save",
+    sort: 1,
+    createDate: ISODate("2018-12-28T22:19:46.000Z"),
+    parentName: "定时任务",
+    cache: false,
+    title: "新增",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac00673a"),
+    pid: "5d2e832314bc4247ac006737",
+    children: [ ],
+    name: "修改",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:schedule:update",
+    sort: 2,
+    createDate: ISODate("2018-12-28T22:19:47.000Z"),
+    parentName: "定时任务",
+    cache: false,
+    title: "修改",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac00673b"),
+    pid: "5d2e832314bc4247ac006737",
+    children: [ ],
+    name: "删除",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:schedule:delete",
+    sort: 3,
+    createDate: ISODate("2018-12-28T22:19:47.000Z"),
+    parentName: "定时任务",
+    cache: false,
+    title: "删除",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac00673c"),
+    pid: "5d2e832314bc4247ac006737",
+    children: [ ],
+    name: "暂停",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:schedule:pause",
+    sort: 4,
+    createDate: ISODate("2018-12-28T22:19:47.000Z"),
+    parentName: "定时任务",
+    cache: false,
+    title: "暂停",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac00673d"),
+    pid: "5d2e832314bc4247ac006737",
+    children: [ ],
+    name: "恢复",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:schedule:resume",
+    sort: 5,
+    createDate: ISODate("2018-12-28T22:19:47.000Z"),
+    parentName: "定时任务",
+    cache: false,
+    title: "恢复",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac00673e"),
+    pid: "5d2e832314bc4247ac006737",
+    children: [ ],
+    name: "立即执行",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:schedule:run",
+    sort: 6,
+    createDate: ISODate("2018-12-28T22:19:47.000Z"),
+    parentName: "定时任务",
+    cache: false,
+    title: "立即执行",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac00673f"),
+    pid: "5d2e832314bc4247ac006737",
+    children: [ ],
+    name: "日志列表",
+    url: "",
+    type: 1,
+    icon: "",
+    permissions: "sys:schedule:log",
+    sort: 7,
+    createDate: ISODate("2018-12-28T22:19:47.000Z"),
+    parentName: "定时任务",
+    cache: false,
+    title: "日志列表",
+    component: "",
+    path: "",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006740"),
+    pid: "5d2d6d6814bc421d10003a55",
+    children: [ ],
+    name: "文件上传",
+    url: "oss/oss",
+    type: 0,
+    icon: "icon-upload",
+    permissions: "sys:oss:all",
+    sort: 4,
+    createDate: ISODate("2018-12-28T22:19:48.000Z"),
+    parentName: "系统设置",
+    cache: true,
+    title: "文件上传",
+    component: "",
+    path: "oss/oss",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006741"),
+    pid: "5d2d6da414bc421d10003a56",
+    children: [ ],
+    name: "流程管理",
+    url: "activiti/process",
+    type: 0,
+    icon: "icon-detail",
+    permissions: "sys:process:all",
+    sort: 0,
+    createDate: ISODate("2018-12-28T22:19:44.000Z"),
+    parentName: "工作流程",
+    cache: true,
+    title: "流程管理",
+    component: "",
+    path: "activiti/process",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006742"),
+    pid: "5d2d6da414bc421d10003a56",
+    children: [ ],
+    name: "模型管理",
+    url: "activiti/model",
+    type: 0,
+    icon: "icon-appstore-fill",
+    permissions: "sys:model:all",
+    sort: 1,
+    createDate: ISODate("2018-12-28T22:19:44.000Z"),
+    parentName: "工作流程",
+    cache: true,
+    title: "模型管理",
+    component: "",
+    path: "activiti/model",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006743"),
+    pid: "5d2d6da414bc421d10003a56",
+    children: [ ],
+    name: "运行中的流程",
+    url: "activiti/running",
+    type: 0,
+    icon: "icon-play-square",
+    permissions: "sys:running:all",
+    sort: 2,
+    createDate: ISODate("2018-12-28T22:19:44.000Z"),
+    parentName: "工作流程",
+    cache: true,
+    title: "运行中的流程",
+    component: "",
+    path: "activiti/running",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006744"),
+    pid: "5d2d6dae14bc421d10003a57",
+    children: [ ],
+    name: "短信服务",
+    url: "message/sms",
+    type: 0,
+    icon: "icon-message-fill",
+    permissions: "sys:sms:all",
+    sort: 0,
+    createDate: ISODate("2018-12-28T22:19:45.000Z"),
+    parentName: "消息管理",
+    cache: true,
+    title: "短信服务",
+    component: "",
+    path: "message/sms",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006745"),
+    pid: "5d2d6dae14bc421d10003a57",
+    children: [ ],
+    name: "邮件模板",
+    url: "message/mail_template",
+    type: 0,
+    icon: "icon-mail",
+    permissions: "sys:mail:all",
+    sort: 1,
+    createDate: ISODate("2018-12-28T22:19:45.000Z"),
+    parentName: "消息管理",
+    cache: true,
+    title: "邮件模板",
+    component: "",
+    path: "message/mail_template",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006746"),
+    pid: "5d2d6dae14bc421d10003a57",
+    children: [ ],
+    name: "邮件发送记录",
+    url: "message/mail_log",
+    type: 0,
+    icon: "icon-detail-fill",
+    permissions: "sys:mail:log",
+    sort: 2,
+    createDate: ISODate("2018-12-28T22:19:45.000Z"),
+    parentName: "消息管理",
+    cache: true,
+    title: "邮件发送记录",
+    component: "",
+    path: "message/mail_log",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006747"),
+    pid: "5d2d6db814bc421d10003a58",
+    children: [ ],
+    name: "登录日志",
+    url: "sys/log-login",
+    type: 0,
+    icon: "icon-filedone",
+    permissions: "sys:log:login",
+    sort: 0,
+    createDate: ISODate("2018-12-28T22:19:48.000Z"),
+    parentName: "日志管理",
+    cache: true,
+    title: "登录日志",
+    component: "",
+    path: "sys/log-login",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006748"),
+    pid: "5d2d6db814bc421d10003a58",
+    children: [ ],
+    name: "操作日志",
+    url: "sys/log-operation",
+    type: 0,
+    icon: "icon-solution",
+    permissions: "sys:log:operation",
+    sort: 1,
+    createDate: ISODate("2018-12-28T22:19:48.000Z"),
+    parentName: "日志管理",
+    cache: true,
+    title: "操作日志",
+    component: "",
+    path: "sys/log-operation",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac006749"),
+    pid: "5d2d6db814bc421d10003a58",
+    children: [ ],
+    name: "异常日志",
+    url: "sys/log-error",
+    type: 0,
+    icon: "icon-file-exception",
+    permissions: "sys:log:error",
+    sort: 2,
+    createDate: ISODate("2018-12-28T22:19:48.000Z"),
+    parentName: "日志管理",
+    cache: true,
+    title: "异常日志",
+    component: "",
+    path: "sys/log-error",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac00674a"),
+    pid: "5d2d6dc314bc421d10003a59",
+    children: [ ],
+    name: "SQL监控",
+    url: "{{ window.SITE_CONFIG[\"apiURL\"] }}/druid/sql.html",
+    type: 0,
+    icon: "icon-database",
+    permissions: "",
+    sort: 0,
+    createDate: ISODate("2018-12-28T22:19:48.000Z"),
+    parentName: "系统监控",
+    cache: true,
+    title: "SQL监控",
+    component: "",
+    path: "/druid/sql.html",
+    auth: false
+} ]);
+db.getCollection("menus").insert([ {
+    _id: ObjectId("5d2e832314bc4247ac00674b"),
+    pid: "5d2d6dcb14bc421d10003a5a",
+    children: [ ],
+    name: "新闻管理",
+    url: "demo/news",
+    type: 0,
+    icon: "icon-file-word",
+    permissions: "demo:news:all",
+    sort: 0,
+    createDate: ISODate("2018-12-28T22:19:48.000Z"),
+    parentName: "功能示例",
+    cache: true,
+    title: "新闻管理",
+    component: "",
+    path: "demo/news",
+    auth: false
+} ]);
+
+// ----------------------------
+// Collection structure for params
+// ----------------------------
+db.getCollection("params").drop();
+db.createCollection("params");
+
+// ----------------------------
+// Documents of params
+// ----------------------------
+db.getCollection("params").insert([ {
+    _id: ObjectId("5d5e3f85d518eb4dd4edc9b0"),
+    paramCode: "1",
+    paramValue: "1",
+    remark: "",
+    __v: NumberInt("0"),
+    createDate: ISODate("2019-08-22T07:08:53.45Z")
+} ]);
+
+// ----------------------------
+// Collection structure for roles
+// ----------------------------
+db.getCollection("roles").drop();
+db.createCollection("roles");
+
+// ----------------------------
+// Documents of roles
+// ----------------------------
+db.getCollection("roles").insert([ {
+    _id: ObjectId("5d2d882a14bc421d10003a5b"),
+    name: "管理员",
+    remark: "",
+    createDate: ISODate("2018-12-28T22:22:46.000Z"),
+    menuIdList: [
+        "5d2d6ce414bc421d10003a54",
+        "5d2e832314bc4247ac006717",
+        "5d2e832314bc4247ac006718",
+        "5d2e832314bc4247ac006719",
+        "5d2e832314bc4247ac00671a",
+        "5d2e832314bc4247ac00671b",
+        "5d2e832314bc4247ac00671c",
+        "5d2e832314bc4247ac00671d",
+        "5d2e832314bc4247ac00671e",
+        "5d2e832314bc4247ac00671f",
+        "5d2e832314bc4247ac006720",
+        "5d2e832314bc4247ac006721",
+        "5d2e832314bc4247ac006722",
+        "5d2e832314bc4247ac006723",
+        "5d2e832314bc4247ac006724",
+        "5d2e832314bc4247ac006725",
+        "5d2e832314bc4247ac006726",
+        "5d2d6d6814bc421d10003a55",
+        "5d2e832314bc4247ac006727",
+        "5d2e832314bc4247ac006728",
+        "5d2e832314bc4247ac006729",
+        "5d2e832314bc4247ac00672a",
+        "5d2e832314bc4247ac00672b",
+        "5d2e832314bc4247ac00672c",
+        "5d2e832314bc4247ac00672d",
+        "5d2e832314bc4247ac00672e",
+        "5d2e832314bc4247ac00672f",
+        "5d2e832314bc4247ac006730",
+        "5d2e832314bc4247ac006731",
+        "5d2e832314bc4247ac006732",
+        "5d2e832314bc4247ac006733",
+        "5d2e832314bc4247ac006734",
+        "5d2e832314bc4247ac006735",
+        "5d2e832314bc4247ac006736",
+        "5d2e832314bc4247ac006737",
+        "5d2e832314bc4247ac006738",
+        "5d2e832314bc4247ac006739",
+        "5d2e832314bc4247ac00673a",
+        "5d2e832314bc4247ac00673b",
+        "5d2e832314bc4247ac00673c",
+        "5d2e832314bc4247ac00673d",
+        "5d2e832314bc4247ac00673e",
+        "5d2e832314bc4247ac00673f",
+        "5d2e832314bc4247ac006740",
+        "5d2d6da414bc421d10003a56",
+        "5d2e832314bc4247ac006741",
+        "5d2e832314bc4247ac006742",
+        "5d2e832314bc4247ac006743",
+        "5d2d6dae14bc421d10003a57",
+        "5d2e832314bc4247ac006744",
+        "5d2e832314bc4247ac006745",
+        "5d2e832314bc4247ac006746",
+        "5d2d6db814bc421d10003a58",
+        "5d2e832314bc4247ac006747",
+        "5d2e832314bc4247ac006748",
+        "5d2e832314bc4247ac006749",
+        "5d2d6dc314bc421d10003a59",
+        "5d2e832314bc4247ac00674a"
+    ],
+    deptIdList: [
+        "5d2ecffb14bc4247ac00674e",
+        "5d2fde5814bc42288c0045e2",
+        "5d2fde5814bc42288c0045e3",
+        "5d2fde5814bc42288c0045e4",
+        "5d2fde5814bc42288c0045e5",
+        "5d2fde5814bc42288c0045e6",
+        "5d2fde5814bc42288c0045e7"
+    ]
+} ]);
+db.getCollection("roles").insert([ {
+    _id: ObjectId("5d2d884d14bc421d10003a5c"),
+    name: "普通用户",
+    remark: "",
+    createDate: ISODate("2018-12-28T22:37:12.000Z"),
+    menuIdList: [
+        "5d2d6da414bc421d10003a56",
+        "5d2e832314bc4247ac006741",
+        "5d2e832314bc4247ac006742",
+        "5d2e832314bc4247ac006743",
+        "5d2d6dae14bc421d10003a57",
+        "5d2e832314bc4247ac006744",
+        "5d2e832314bc4247ac006745",
+        "5d2e832314bc4247ac006746",
+        "5d2d6dcb14bc421d10003a5a",
+        "5d2e832314bc4247ac00674b"
+    ],
+    deptIdList: [ ]
+} ]);
+
+// ----------------------------
+// Collection structure for tests
+// ----------------------------
+db.getCollection("tests").drop();
+db.createCollection("tests");
+
+// ----------------------------
+// Collection structure for users
+// ----------------------------
+db.getCollection("users").drop();
+db.createCollection("users");
+db.getCollection("users").createIndex({
+    username: NumberInt("1")
+}, {
+    name: "username_1",
+    background: true,
+    unique: true
+});
+
+// ----------------------------
+// Documents of users
+// ----------------------------
+db.getCollection("users").insert([ {
+    _id: ObjectId("5d3fe5a39ff3c659bcc427f0"),
+    username: "admin",
+    deptId: "5d2ecffb14bc4247ac00674e",
+    deptName: "人人开源集团",
+    password: "$2a$10$9olmWv2SR9pliNwUt8Q77e0xU74ZZilzRES7DjGQIFm39JKH8QRvS",
+    realName: "",
+    gender: NumberInt("0"),
+    email: "",
+    mobile: "",
+    status: NumberInt("1"),
+    roleIdList: [
+        "5d2d882a14bc421d10003a5b"
+    ],
+    createDate: ISODate("2019-07-30T06:37:23.927Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("5d3fe5ae9ff3c659bcc427f1"),
+    username: "Lyoko",
+    deptId: "5d2ecffb14bc4247ac00674e",
+    deptName: "人人开源集团",
+    password: "$2a$10$zV8Ix5pFOahXCZTholwtRu.vyk0ldiovzI1nKqwDKt7JFNdwxcvvW",
+    realName: "",
+    gender: NumberInt("0"),
+    email: "",
+    mobile: "",
+    status: NumberInt("1"),
+    roleIdList: [
+        "5d2d882a14bc421d10003a5b"
+    ],
+    createDate: ISODate("2019-07-30T06:37:34.68Z"),
+    __v: NumberInt("0")
+} ]);
