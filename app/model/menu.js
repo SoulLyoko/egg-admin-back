@@ -1,20 +1,6 @@
-module.exports = (app) => {
-  const mongoose = app.mongoose;
-  const MenuSchema = new mongoose.Schema({
-    pid: { type: String, required: true },
-    name: { type: String, required: true },
-    type: { type: Number, required: true },
-    icon: { type: String },
-    permissions: { type: String },
-    sort: { type: Number, required: true },
-    createDate: { type: Date, default: Date.now },
-    parentName: { type: String, required: true },
-    children: { type: Array },
-    cache: { type: Boolean, default: false },
-    title: { type: String },
-    path: { type: String },
-    component: { type: String }
-  });
-
-  return mongoose.model("Menu", MenuSchema);
+module.exports = app => {
+  const { mongoose, contractModel } = app;
+  const model = contractModel("Menu");
+  const schema = new mongoose.Schema(model);
+  return mongoose.model("Menu", schema);
 };

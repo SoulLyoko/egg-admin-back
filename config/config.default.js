@@ -77,9 +77,9 @@ module.exports = appInfo => {
       }
     },
     enableSecurity: true,
-    // enableValidate: true,
+    enableValidate: true,
     routerMap: false,
-    enable: true
+    enable: process.env.NODE_ENV === "development"
   };
 
   config.static = {

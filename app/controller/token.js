@@ -17,7 +17,7 @@ class TokenController extends Controller {
    * @summary 获取token
    * @router post /api/token
    * @request body string obj eg:{"username":"admin","password":"123456"}
-   * @response 200 baseRes
+   * @response 200 indexRes
    */
   async token() {
     const { ctx, service } = this

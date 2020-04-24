@@ -1,0 +1,3 @@
+
+  // template
+  router.resources('template', '/api/template', app.jwt, controller.template);

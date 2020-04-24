@@ -1,29 +1,20 @@
-const Controller = require('egg').Controller
+const Controller = require("egg").Controller;
 
 /**
  * @Controller user 用户
  */
 class UserController extends Controller {
   constructor(ctx) {
-    super(ctx)
+    super(ctx);
 
-    this.UserCreateTransfer = {
-      username: { type: 'string', required: true, allowEmpty: false },
-      password: { type: 'password', required: true, allowEmpty: false, min: 4 }
-    }
-
-    this.UserUpdateTransfer = {
-      username: { type: 'string', required: true, allowEmpty: false }
-    }
-
-    this.UserLoginTransfer = {
-      username: { type: 'string', required: true, allowEmpty: false },
-      password: { type: 'string', required: true, allowEmpty: false }
-    }
-    this.UserResetPswTransfer = {
-      password: { type: 'password', required: true, allowEmpty: false, min: 4 },
-      oldPassword: { type: 'password', required: true, allowEmpty: false, min: 4 }
-    }
+    this.loginRule = {
+      username: { type: "string", required: true, allowEmpty: false },
+      password: { type: "string", required: true, allowEmpty: false, min: 4 }
+    };
+    this.resetPswRule = {
+      password: { type: "password", required: true, allowEmpty: false, min: 4 },
+      oldPassword: { type: "password", required: true, allowEmpty: false, min: 4 }
+    };
   }
 
   /**
@@ -32,169 +23,135 @@ class UserController extends Controller {
    * @request query string username 用户名
    * @request query integer page 页数
    * @request query integer limit 每页条数
-   * @response 200 baseRes
+   * @response 200 indexRes
    * @Bearer
    */
   async index() {
-    const { ctx, service } = this
+    const { ctx, service } = this;
     // 组装参数
-    const payload = ctx.query
+    const payload = ctx.query;
     // 调用 Service 进行业务处理
-    const res = await service.user.index(payload)
+    const res = await service.user.index(payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ res })
+    ctx.helper.success({ res });
   }
 
   /**
    * @summary 创建数据
    * @router post /api/user
-   * @request body baseReq
+   * @request body User
    * @Bearer
    */
   async create() {
-    const { ctx, service } = this
-    // 校验参数
-    ctx.validate(this.UserCreateTransfer)
+    const { ctx, service } = this;
     // 组装参数
-    const payload = ctx.request.body || {}
+    const payload = ctx.request.body || {};
     // 调用 Service 进行业务处理
-    const res = await service.user.create(payload)
+    const res = await service.user.create(payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ res })
+    ctx.helper.success({ res });
   }
 
-  /**
-   * @summary 更新数据
-   * @router put /api/user
-   * @request body baseReq
-   * @Bearer
-   */
   /**
    * @summary 更新数据/:id
    * @router put /api/user/{id}
-   * @request body baseReq
    * @request path string *id
+   * @request body User
    * @Bearer
    */
   async update() {
-    const { ctx, service } = this
-    // 校验参数
+    const { ctx, service } = this;
     // 组装参数
-    const payload = ctx.request.body || {}
-    const id = ctx.params.id || payload._id
-    if (id === 'password') {
-      return this.resetPsw()
-    }
-    ctx.validate(this.UserUpdateTransfer)
+    const payload = ctx.request.body || {};
+    const id = ctx.params.id;
     // 调用 Service 进行业务处理
-    await service.user.update(id, payload)
+    await service.user.update(id, payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success({})
-  }
-
-  /**
-   * @summary 删除多条数据[ids]
-   * @router delete /api/user
-   * @request body string ids eg:[""]
-   * @Bearer
-   */
-  async removes() {
-    const { ctx, service } = this
-    // 组装参数
-    const payload = ctx.request.body || []
-    // 调用 Service 进行业务处理
-    await service.user.removes(payload)
-    // 设置响应内容和响应状态码
-    ctx.helper.success({})
+    ctx.helper.success();
   }
 
   /**
    * @summary 获取单条数据/:id
    * @router get /api/user/{id}
    * @request path string *id
-   * @response 200 baseRes
+   * @response 200 showRes
    * @Bearer
    */
   async show() {
-    const { ctx, service } = this
+    const { ctx, service } = this;
     // 组装参数
-    const { id } = ctx.params
-    if (id === 'current') {
-      //获取当前用户
-      return this.current()
-    }
+    const { id } = ctx.params;
     // 调用 Service 进行业务处理
-    const res = await service.user.show(id)
+    const res = await service.user.show(id);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ res })
+    ctx.helper.success({ res });
   }
 
   /**
-   * @summary 删除单条数据/:id
+   * @summary 删除数据/:id
    * @router delete /api/user/{id}
    * @request path string *id
    * @Bearer
    */
   async destroy() {
-    const { ctx, service } = this
+    const { ctx, service } = this;
     // 校验参数
-    const { id } = ctx.params
+    const { id } = ctx.params;
     // 调用 Service 进行业务处理
-    await service.user.destroy(id)
+    await service.user.destroy(id);
     // 设置响应内容和响应状态码
-    ctx.helper.success({})
+    ctx.helper.success();
   }
 
   /**
    * @summary 用户登录
    * @router post /api/user/login
    * @request body string obj eg:{"username":"admin","password":"123456"}
-   * @response 200 baseRes
+   * @response 200 showRes
    */
   async login() {
-    const { ctx, service } = this
+    const { ctx, service } = this;
     // 校验参数
-    ctx.validate(this.UserLoginTransfer)
+    ctx.validate(this.loginRule);
     // 组装参数
-    const payload = ctx.request.body || {}
+    const payload = ctx.request.body || {};
     // 调用 Service 进行业务处理
-    const res = await service.user.login(payload)
+    const res = await service.user.login(payload);
     // 设置响应内容和响应状态码
-    console.log(res)
-    ctx.helper.success({ res })
+    console.log(res);
+    ctx.helper.success({ res });
   }
 
   /**
    * @summary 获取当前用户信息
-   * @router get /api/user/current
-   * @response 200 baseRes
+   * @router get /api/user/current/get
+   * @response 200 showRes
    * @Bearer
    */
   async current() {
-    const { ctx, service } = this
-    const res = await service.user.current()
+    const { ctx, service } = this;
+    const res = await service.user.current();
     // 设置响应内容和响应状态码
-    ctx.helper.success({ res })
+    ctx.helper.success({ res });
   }
 
   /**
    * @summary 修改密码
    * @router put /api/user/password
-   * @response 200 baseRes
+   * @request body string obj eg:{"oldPassword":"1234","password":"123456"}
    * @Bearer
    */
   async resetPsw() {
-    const { ctx, service } = this
+    const { ctx, service } = this;
     // 校验参数
-    ctx.validate(this.UserResetPswTransfer)
+    ctx.validate(this.resetPswRule);
     // 组装参数
-    const payload = ctx.request.body || {}
-    console.log(payload)
+    const payload = ctx.request.body || {};
     // 调用 Service 进行业务处理
-    await service.user.resetPsw(payload)
+    await service.user.resetPsw(payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success({})
+    ctx.helper.success();
   }
 }
 
-module.exports = UserController
+module.exports = UserController;

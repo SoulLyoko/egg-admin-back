@@ -1,14 +1,30 @@
 const dayjs = require("dayjs");
-const codeGenerator = require("./genarator.js");
 
 module.exports = {
-  //代码生成器
-  codeGenerator,
+  // 处理成功响应
+  success({ res = null, msg = "请求成功" } = {}) {
+    this.ctx.body = {
+      result: true,
+      code: 0,
+      data: res,
+      msg
+    };
+    this.ctx.status = 200;
+  },
+
+  // 处理失败响应
+  fail({ code = -1, msg = "请求失败", error = null } = {}) {
+    this.ctx.body = {
+      result: false,
+      code,
+      msg
+    };
+    this.ctx.status = code === -1 ? 200 : code;
+  },
+
   //生成随机id
   genRid(length = 10) {
-    return Math.random()
-      .toString(36)
-      .substr(3, length);
+    return Math.random().toString(36).substr(3, length);
   },
 
   //生成uuid
@@ -53,25 +69,17 @@ module.exports = {
     return dayjs(new Date(time)).format("YYYY-MM-DD HH:mm:ss");
   },
 
-  // 处理成功响应
-  success({ res = null, msg = "请求成功" }) {
-    this.ctx.body = {
-      result: true,
-      code: 0,
-      data: res,
-      msg
-    };
-    this.ctx.status = 200;
+  //数组扁平化
+  flatten(arr) {
+    while (arr.some(item => Array.isArray(item))) {
+      arr = [].concat(...arr);
+    }
+    return arr;
   },
 
-  // 处理失败响应
-  fail({ code = -1, msg = "请求失败", error = null }) {
-    this.ctx.body = {
-      result: false,
-      code,
-      msg
-    };
-    this.ctx.status = code === -1 ? 200 : code;
+  //首字母大写
+  capitalize([first, ...rest]) {
+    return first.toUpperCase() + rest.join("");
   },
 
   /**
@@ -80,7 +88,7 @@ module.exports = {
    * @returns {Array} res 最后生成的树
    */
   buildTree(list) {
-    const roots = list.filter(item => item.pid == "0");
+    const roots = list.filter(item => item.parentId == "0");
     const res = roots.map(rootNode => {
       let rootChildren = this.buildTreeByRecursive(list, rootNode);
       rootNode.children = rootChildren;
@@ -98,7 +106,7 @@ module.exports = {
   buildTreeByRecursive(treeNodes, root) {
     let trees = [];
     treeNodes.forEach(treeNode => {
-      if (root._id == treeNode.pid) {
+      if (root._id == treeNode.parentId) {
         trees.push(this.findChildren(treeNode, treeNodes));
       }
     });
@@ -113,7 +121,7 @@ module.exports = {
    */
   findChildren(treeNode, treeNodes) {
     treeNodes.forEach(it => {
-      if (treeNode._id == it.pid) {
+      if (treeNode._id == it.parentId) {
         if (!treeNode.children) {
           treeNode.children = [];
         }
@@ -124,21 +132,21 @@ module.exports = {
   },
 
   /**
-   * @description 递归删除子节点
-   * @param {String} coll 集合名
-   * @param {String} pid 父节点的_id
+   * @description 删除本级及子节点
+   * @param {String} model 集合名
+   * @param {String} parentId 父节点的_id
    * @returns 返回数据库操作结果
    */
-  async removeChildren({ coll, pid }) {
-    const children = await this.ctx.model[coll].find({ pid: pid });
+  async removeChildren(model, parentId) {
+    const children = await this.ctx.model[model].find({ parentId });
     let ids = [];
-    if (children.length > 0) {
-      children.forEach(async item => {
+    if (children.length) {
+      for (const item of children) {
         ids.push(item._id);
-        this.removeChildren({ coll, pid: item._id });
-      });
+        await this.removeChildren(model, item._id);
+      }
     }
-    return this.ctx.model[coll].deleteMany({ _id: { $in: ids } });
+    return this.ctx.model[model].deleteMany({ _id: { $in: ids } });
   },
 
   /**
@@ -158,7 +166,7 @@ module.exports = {
     let total = 0;
 
     //整理排序参数
-    let sort = { createDate: -1 };
+    let sort = { createTime: -1 };
     if (orderField && order) {
       sort = { [orderField]: orderName[order] }; //eg: sort = {name:1}
     }
@@ -169,41 +177,31 @@ module.exports = {
     //查询数据库
     if (page && limit) {
       //分页
-      res = await this.ctx.model[coll]
-        .find(findObj)
-        .skip(skip)
-        .limit(Number(limit))
-        .sort(sort)
-        .exec();
+      res = await this.ctx.model[coll].find(findObj).skip(skip).limit(Number(limit)).sort(sort).exec();
     } else {
       //不分页
-      res = await this.ctx.model[coll]
-        .find(findObj)
-        .sort(sort)
-        .exec();
+      res = await this.ctx.model[coll].find(findObj).sort(sort).exec();
     }
     // 总条数
-    total = await this.ctx.model[coll]
-      .find(findObj)
-      .countDocuments()
-      .exec();
+    total = await this.ctx.model[coll].find(findObj).countDocuments().exec();
     // total = res.length
     // if (!conditions || !conditions.length) {
     //   total = await this.ctx.model[coll].countDocuments({}).exec()
     // }
-    let data = this.assignDoc(res);
+    let data = this.assignDocs(res);
     return { data, total };
   },
 
-  // 整理数据源,添加key和id
+  // 整理数据源
+  assignDocs(res) {
+    return res.map(item => this.assignDoc(item));
+  },
+
   assignDoc(res) {
-    let data = res.map((e, i) => {
-      const jsonObject = Object.assign({}, e._doc);
-      // jsonObject.key = i;
-      // jsonObject.id = e._id;
-      jsonObject.createDate = this.formatTime(e.createDate);
-      return jsonObject;
-    });
+    if (!res) return res;
+    const data = Object.assign({}, res._doc);
+    data.createTime = this.formatTime(data.createTime);
+    data.updateTime = this.formatTime(data.updateTime);
     return data;
   }
 };
