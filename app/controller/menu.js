@@ -1,7 +1,7 @@
 const Controller = require("egg").Controller;
 
 /**
- * @Controller menu 菜单
+ * @Controller menu 菜单管理
  */
 class MenuController extends Controller {
   /**
@@ -19,7 +19,7 @@ class MenuController extends Controller {
     // 调用 Service 进行业务处理
     const res = await service.menu.index(payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ res });
+    ctx.success({ res });
   }
 
   /**
@@ -35,7 +35,7 @@ class MenuController extends Controller {
     // 调用 Service 进行业务处理
     const res = await service.menu.create(payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ res });
+    ctx.success({ res });
   }
 
   /**
@@ -53,7 +53,7 @@ class MenuController extends Controller {
     // 调用 Service 进行业务处理
     await service.menu.update(id, payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success();
+    ctx.success();
   }
 
   /**
@@ -70,7 +70,7 @@ class MenuController extends Controller {
     // 调用 Service 进行业务处理
     const res = await service.menu.show(id);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ res });
+    ctx.success({ res });
   }
 
   /**
@@ -86,7 +86,7 @@ class MenuController extends Controller {
     // 调用 Service 进行业务处理
     await service.menu.destroy(id);
     // 设置响应内容和响应状态码
-    ctx.helper.success();
+    ctx.success();
   }
 
   /**
@@ -102,7 +102,7 @@ class MenuController extends Controller {
     // 调用 Service 进行业务处理
     const res = await service.menu.tree(payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ res });
+    ctx.success({ res });
   }
 
   /**
@@ -118,7 +118,7 @@ class MenuController extends Controller {
     // 调用 Service 进行业务处理
     const res = await service.menu.nav(payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ res });
+    ctx.success({ res });
   }
 
   /**
@@ -130,7 +130,7 @@ class MenuController extends Controller {
   async permissions() {
     const res = await this.ctx.service.menu.permissions();
     // 设置响应内容和响应状态码
-    this.ctx.helper.success({ res });
+    this.ctx.success({ res });
   }
 }
 

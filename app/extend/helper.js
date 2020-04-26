@@ -1,27 +1,6 @@
 const dayjs = require("dayjs");
 
 module.exports = {
-  // 处理成功响应
-  success({ res = null, msg = "请求成功" } = {}) {
-    this.ctx.body = {
-      result: true,
-      code: 0,
-      data: res,
-      msg
-    };
-    this.ctx.status = 200;
-  },
-
-  // 处理失败响应
-  fail({ code = -1, msg = "请求失败", error = null } = {}) {
-    this.ctx.body = {
-      result: false,
-      code,
-      msg
-    };
-    this.ctx.status = code === -1 ? 200 : code;
-  },
-
   //生成随机id
   genRid(length = 10) {
     return Math.random().toString(36).substr(3, length);
@@ -83,52 +62,25 @@ module.exports = {
   },
 
   /**
-   * @description 建树，过滤出根节点
+   * @description 递归建树
    * @param {Array} list 需要建树的数据
-   * @returns {Array} res 最后生成的树
+   * @param {String} parentId 上级id
+   * @returns {Array} 最后生成的树
    */
-  buildTree(list) {
-    const roots = list.filter(item => item.parentId == "0");
-    const res = roots.map(rootNode => {
-      let rootChildren = this.buildTreeByRecursive(list, rootNode);
-      rootNode.children = rootChildren;
-      return rootNode;
-    });
-    return res;
-  },
-
-  /**
-   * @description 使用递归方法建树
-   * @param {Array} treeNodes 所有树节点
-   * @param {Object} root 根节点
-   * @returns {Array} trees 根节点的子树
-   */
-  buildTreeByRecursive(treeNodes, root) {
-    let trees = [];
-    treeNodes.forEach(treeNode => {
-      if (root._id == treeNode.parentId) {
-        trees.push(this.findChildren(treeNode, treeNodes));
-      }
-    });
-    return trees;
-  },
-
-  /**
-   * @description 递归查找子节点
-   * @param {Object} treeNode 当前节点
-   * @param {Array} treeNodes 所有树节点
-   * @returns {Array} treeNode 子树
-   */
-  findChildren(treeNode, treeNodes) {
-    treeNodes.forEach(it => {
-      if (treeNode._id == it.parentId) {
-        if (!treeNode.children) {
-          treeNode.children = [];
+  buildTree(list, parentId = "0") {
+    return list
+      .filter(item => item.parentId === parentId)
+      .map(parent => {
+        let children = [];
+        const hasChildren = list.some(item => String(item.parentId) === String(parent._id));
+        if (hasChildren) {
+          children = this.buildTree(list, String(parent._id));
         }
-        treeNode.children.push(this.findChildren(it, treeNodes));
-      }
-    });
-    return treeNode;
+        return {
+          ...parent,
+          children
+        };
+      });
   },
 
   /**
@@ -147,49 +99,6 @@ module.exports = {
       }
     }
     return this.ctx.model[model].deleteMany({ _id: { $in: ids } });
-  },
-
-  /**
-   * @description 从数据库中查询(全部/分页/条件)
-   * @param {String} coll 集合名
-   * @param {Object} payload 参数
-   * @param {Array} conditions 查询条件数组
-   * @returns {Object} {data,total} {数据,条数/总数}
-   */
-  async search({ coll, payload = {}, conditions = [] }) {
-    //从参数中获取->排序顺序asc(升序)/desc(降序)，排序字段，页码，每页条数
-    const { order, orderField, page, limit } = payload;
-    const skip = (Number(page) - 1) * Number(limit || 10);
-    const orderName = { asc: 1, desc: -1 };
-    const findObj = {};
-    let res = [];
-    let total = 0;
-
-    //整理排序参数
-    let sort = { createTime: -1 };
-    if (orderField && order) {
-      sort = { [orderField]: orderName[order] }; //eg: sort = {name:1}
-    }
-    //加入查询条件
-    if (conditions && conditions.length) {
-      findObj.$and = conditions;
-    }
-    //查询数据库
-    if (page && limit) {
-      //分页
-      res = await this.ctx.model[coll].find(findObj).skip(skip).limit(Number(limit)).sort(sort).exec();
-    } else {
-      //不分页
-      res = await this.ctx.model[coll].find(findObj).sort(sort).exec();
-    }
-    // 总条数
-    total = await this.ctx.model[coll].find(findObj).countDocuments().exec();
-    // total = res.length
-    // if (!conditions || !conditions.length) {
-    //   total = await this.ctx.model[coll].countDocuments({}).exec()
-    // }
-    let data = this.assignDocs(res);
-    return { data, total };
   },
 
   // 整理数据源

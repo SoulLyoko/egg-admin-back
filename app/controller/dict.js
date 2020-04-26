@@ -1,7 +1,7 @@
 const Controller = require("egg").Controller;
 
 /**
- * @Controller dict 测试
+ * @Controller dict 字典管理
  */
 class DictController extends Controller {
   /**
@@ -20,7 +20,7 @@ class DictController extends Controller {
     // 调用 Service 进行业务处理
     const res = await service.dict.index(payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ res });
+    ctx.success({ res });
   }
 
   /**
@@ -36,7 +36,7 @@ class DictController extends Controller {
     // 调用 Service 进行业务处理
     await service.dict.create(payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success();
+    ctx.success();
   }
 
   /**
@@ -54,7 +54,7 @@ class DictController extends Controller {
     // 调用 Service 进行业务处理
     await service.dict.update(id, payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success();
+    ctx.success();
   }
 
   /**
@@ -71,7 +71,7 @@ class DictController extends Controller {
     // 调用 Service 进行业务处理
     const res = await service.dict.show(id);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ res });
+    ctx.success({ res });
   }
 
   /**
@@ -87,7 +87,7 @@ class DictController extends Controller {
     // 调用 Service 进行业务处理
     await service.dict.destroy(id);
     // 设置响应内容和响应状态码
-    ctx.helper.success();
+    ctx.success();
   }
 
   /**
@@ -103,7 +103,7 @@ class DictController extends Controller {
     // 调用 Service 进行业务处理
     const res = await service.dict.tree(payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ res });
+    ctx.success({ res });
   }
 
   /**
@@ -120,7 +120,7 @@ class DictController extends Controller {
     // 调用 Service 进行业务处理
     const res = await service.dict.type(type);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ res });
+    ctx.success({ res });
   }
 }
 

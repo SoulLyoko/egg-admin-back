@@ -1,29 +1,13 @@
 const Service = require("egg").Service;
 
 class DictService extends Service {
-  // 获取字典树
-  async tree(payload) {
-    const { label, type } = payload;
-    payload = {
-      order: "asc",
-      orderField: "sort"
-    };
-    let conditions = []; //查询条件数组
-    label && conditions.push({ label: { $regex: label } });
-    type && conditions.push({ type: { $regex: type } });
-    const { data } = await this.ctx.helper.search({ coll: "Dict", payload, conditions });
-    const tree = this.ctx.helper.buildTree(data);
-    return { total: tree.length, data: tree };
-  }
-
   //获取数据(全部/分页/模糊)
   async index(payload) {
     const { label, type } = payload;
     let conditions = []; //查询条件数组
     label && conditions.push({ label: { $regex: label } });
     type && conditions.push({ type: { $regex: type } });
-    const { data, total } = await this.ctx.helper.search({ coll: "Dict", payload, conditions });
-    return { total, data };
+    return await this.ctx._list({ model: "Dict", payload, conditions });
   }
 
   //创建数据
@@ -43,6 +27,9 @@ class DictService extends Service {
 
   //删除数据
   async destroy(id) {
+    for (const _id of id.split(",")) {
+      await this.ctx.helper.removeChildren("Dict", _id);
+    }
     return this.ctx._remove("Dict", id);
   }
 
@@ -50,6 +37,26 @@ class DictService extends Service {
   async type(type) {
     const data = await this.ctx._find("Dict", { type, parentId: { $ne: "0" } });
     return { data };
+  }
+
+  // 获取字典树
+  async tree(payload) {
+    const { label, type } = payload;
+    let conditions = []; //查询条件数组
+    label && conditions.push({ label: { $regex: label } });
+    type && conditions.push({ type: { $regex: type } });
+    const { data: parents } = await this.ctx._list({
+      model: "Dict",
+      payload: { ...payload },
+      conditions: [...conditions, { parentId: "0" }]
+    });
+    const { data: children } = await this.ctx._list({
+      model: "Dict",
+      payload: { order: "asc", orderField: "sort" },
+      conditions: [...conditions, { parentId: { $ne: "0" } }]
+    });
+    const tree = this.ctx.helper.buildTree([...parents, ...children]);
+    return { data: tree, total: tree.length };
   }
 }
 

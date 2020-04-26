@@ -6,8 +6,7 @@ class RoleService extends Service {
     const { name } = payload;
     let conditions = []; //查询条件数组
     name && conditions.push({ name: { $regex: name } });
-    const { data, total } = await this.ctx.helper.search({ coll: "Role", payload, conditions });
-    return { total: total, data };
+    return await this.ctx._list({ model: "Role", payload, conditions });
   }
 
   //创建数据

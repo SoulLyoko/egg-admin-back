@@ -1,7 +1,7 @@
 const Controller = require("egg").Controller;
 
 /**
- * @Controller param 测试
+ * @Controller param 参数管理
  */
 class ParamController extends Controller {
   /**
@@ -19,7 +19,7 @@ class ParamController extends Controller {
     // 调用 Service 进行业务处理
     const res = await service.param.index(payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ res });
+    ctx.success({ res });
   }
 
   /**
@@ -35,7 +35,7 @@ class ParamController extends Controller {
     // 调用 Service 进行业务处理
     await service.param.create(payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success();
+    ctx.success();
   }
 
   /**
@@ -53,7 +53,7 @@ class ParamController extends Controller {
     // 调用 Service 进行业务处理
     await service.param.update(id, payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success();
+    ctx.success();
   }
 
   /**
@@ -70,7 +70,7 @@ class ParamController extends Controller {
     // 调用 Service 进行业务处理
     const res = await service.param.show(id);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ res });
+    ctx.success({ res });
   }
 
   /**
@@ -86,7 +86,7 @@ class ParamController extends Controller {
     // 调用 Service 进行业务处理
     await service.param.destroy(id);
     // 设置响应内容和响应状态码
-    ctx.helper.success();
+    ctx.success();
   }
 }
 

@@ -19,7 +19,7 @@ class TemplateController extends Controller {
     // 调用 Service 进行业务处理
     const res = await service.template.index(payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ res });
+    ctx.success({ res });
   }
 
   /**
@@ -35,7 +35,7 @@ class TemplateController extends Controller {
     // 调用 Service 进行业务处理
     await service.template.create(payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success();
+    ctx.success();
   }
 
   /**
@@ -53,7 +53,7 @@ class TemplateController extends Controller {
     // 调用 Service 进行业务处理
     await service.template.update(id, payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success();
+    ctx.success();
   }
 
   /**
@@ -70,7 +70,7 @@ class TemplateController extends Controller {
     // 调用 Service 进行业务处理
     const res = await service.template.show(id);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ res });
+    ctx.success({ res });
   }
 
   /**
@@ -86,7 +86,7 @@ class TemplateController extends Controller {
     // 调用 Service 进行业务处理
     await service.template.destroy(id);
     // 设置响应内容和响应状态码
-    ctx.helper.success();
+    ctx.success();
   }
 }
 

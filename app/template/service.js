@@ -6,8 +6,7 @@ class TemplateService extends Service {
     const { name } = payload;
     let conditions = []; //查询条件数组
     name && conditions.push({ name: { $regex: name } });
-    const { data, total } = await this.ctx.helper.search({ coll: "Template", payload, conditions });
-    return { total: total, list: data };
+    return await this.ctx._list({ model: "Template", payload, conditions });
   }
 
   //创建数据

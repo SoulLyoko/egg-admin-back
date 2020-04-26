@@ -1,9 +1,8 @@
 module.exports = {
   object: {},
-  baseReq: {},
   baseModel: {
-    createTime: { type: "Date", default: Date.now },
-    updateTime: { type: "Date", default: Date.now },
+    createTime: { type: "date", default: Date.now },
+    updateTime: { type: "date", default: Date.now },
     createBy: { type: "string" },
     updateBy: { type: "string" }
   },

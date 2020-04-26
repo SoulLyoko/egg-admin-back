@@ -20,7 +20,7 @@ class DeptController extends Controller {
     // 调用 Service 进行业务处理
     const res = await service.dept.index(payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ res });
+    ctx.success({ res });
   }
 
   /**
@@ -36,7 +36,7 @@ class DeptController extends Controller {
     // 调用 Service 进行业务处理
     await service.dept.create(payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success();
+    ctx.success();
   }
 
   /**
@@ -54,7 +54,7 @@ class DeptController extends Controller {
     // 调用 Service 进行业务处理
     await service.dept.update(id, payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success();
+    ctx.success();
   }
 
   /**
@@ -71,7 +71,7 @@ class DeptController extends Controller {
     // 调用 Service 进行业务处理
     const res = await service.dept.show(id);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ res });
+    ctx.success({ res });
   }
 
   /**
@@ -87,7 +87,7 @@ class DeptController extends Controller {
     // 调用 Service 进行业务处理
     await service.dept.destroy(id);
     // 设置响应内容和响应状态码
-    ctx.helper.success();
+    ctx.success();
   }
 
   /**
@@ -98,12 +98,10 @@ class DeptController extends Controller {
    */
   async tree() {
     const { ctx, service } = this;
-    // 组装参数
-    // const payload = ctx.query
     // 调用 Service 进行业务处理
     const res = await service.dept.tree();
     // 设置响应内容和响应状态码
-    ctx.helper.success({ res });
+    ctx.success({ res });
   }
 }
 

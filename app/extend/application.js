@@ -1,15 +1,9 @@
-const contract = require("../contract/models");
-const { baseModel } = require("../contract/base");
+const contract = require("../contract");
+const { baseModel } = require("../contract/response/base");
 
 module.exports = {
   contractModel(modelName, base = true) {
-    let model = contract[modelName];
-    Object.keys(model).forEach(key => {
-      const { type } = model[key];
-      if (type === "integer") {
-        model[key].type = "number";
-      }
-    });
+    let model = Object.assign({}, contract[modelName]);
     if (base) {
       model = {
         ...model,

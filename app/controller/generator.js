@@ -26,7 +26,7 @@ class GenController extends Controller {
     ctx.validate(this.genRule);
     const payload = ctx.request.body || {};
     service.generator.create(payload);
-    ctx.helper.success();
+    ctx.success();
   }
 
   /**
@@ -41,7 +41,7 @@ class GenController extends Controller {
     const { ctx, service } = this;
     const { name } = ctx.params;
     await service.generator.destroy(name);
-    ctx.helper.success();
+    ctx.success();
   }
 }
 

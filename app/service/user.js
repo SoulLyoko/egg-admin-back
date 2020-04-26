@@ -4,20 +4,20 @@ class UserService extends Service {
   //获取数据(全部/分页/模糊)
   async index(payload) {
     const { username } = payload;
-    let conditions = []; //查询条件数组
+    const conditions = []; //查询条件数组
     username && conditions.push({ username: { $regex: username } });
-    let { data, total } = await this.ctx.helper.search({ coll: "User", payload, conditions });
+    let { data, total } = await this.ctx._list({ model: "User", payload, conditions });
     data = await Promise.all(
       data.map(async item => {
         return {
           ...item,
           password: "******",
-          roleIdNames: item.roleIds && (await this.ctx._find("Role", { _id: { $in: item.roleIds } })),
-          deptIdName: item.deptId && (await this.ctx._findOne("Dept", { _id: item.deptId }))
+          roles: await this.ctx._find("Role", { _id: { $in: item.roleIds } }),
+          dept: await this.ctx._findOne("Dept", { _id: item.deptId })
         };
       })
     );
-    return { total: total, data };
+    return { data, total };
   }
 
   //创建数据

@@ -8,8 +8,7 @@ class LogService extends Service {
     type && conditions.push({ type });
     username && conditions.push({ username: { $regex: username } });
     status !== undefined && status !== "" && conditions.push({ status });
-    const { data, total } = await this.ctx.helper.search({ coll: "Log", payload, conditions });
-    return { total: total, list: data };
+    return await this.ctx._list({ model: "Log", payload, conditions });
   }
 
   //创建数据

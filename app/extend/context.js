@@ -1,23 +1,23 @@
 module.exports = {
   // 处理成功响应
   success({ res = null, msg = "请求成功" } = {}) {
-    this.ctx.body = {
+    this.body = {
       result: true,
       code: 0,
       data: res,
       msg
     };
-    this.ctx.status = 200;
+    this.status = 200;
   },
 
   // 处理失败响应
   fail({ code = -1, msg = "请求失败", error = null } = {}) {
-    this.ctx.body = {
+    this.body = {
       result: false,
       code,
       msg
     };
-    this.ctx.status = code === -1 ? 200 : code;
+    this.status = code === -1 ? 200 : code;
   },
 
   //文档计数
@@ -55,5 +55,44 @@ module.exports = {
   //删除数据(多个用逗号隔开)
   async _remove(model, id) {
     return await this.model[model].deleteMany({ _id: { $in: id.split(",") || [] } });
+  },
+  /**
+   * @description 从数据库中查询(全部/分页/条件)
+   * @param {String} model 集合名
+   * @param {Object} payload 参数
+   * @param {Array} conditions 查询条件数组
+   * @param {Array} populate 连表查询
+   * @returns {Object} {data,total} {数据,条数/总数}
+   */
+  async _list({ model, payload = {}, conditions = [], populate = [] }) {
+    //从参数中获取->排序顺序asc(升序)/desc(降序)，排序字段，页码，每页条数
+    const { order, orderField, currentPage, pageSize } = payload;
+    const orderName = { asc: 1, desc: -1 };
+    const findObj = {};
+    let res = [];
+    let total = 0;
+    let sort = { createTime: -1 };
+
+    //整理排序参数
+    if (orderField && order) {
+      sort = { [orderField]: orderName[order] }; //eg: sort = {name:1}
+    }
+    //加入查询条件
+    if (conditions && conditions.length) {
+      findObj.$and = conditions;
+    }
+    //查询数据库
+    if (currentPage && pageSize) {
+      //分页
+      const skip = (Number(currentPage) - 1) * Number(pageSize || 10);
+      res = await this.model[model].find(findObj).skip(skip).limit(Number(pageSize)).sort(sort).populate(populate).exec();
+    } else {
+      //不分页
+      res = await this.model[model].find(findObj).sort(sort).populate(populate).exec();
+    }
+    // 总条数
+    total = await this.model[model].find(findObj).countDocuments().exec();
+    const data = this.helper.assignDocs(res);
+    return { data, total };
   }
 };

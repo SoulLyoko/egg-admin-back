@@ -35,7 +35,7 @@ class UploadController extends Controller {
     // 调用 Service 进行业务处理
     const res = await service.upload.create(attachment);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ ctx, res });
+    ctx.success({ ctx, res });
   }
 
   // 通过URL添加单个图片: 如果网络地址不合法，EGG会返回500错误
@@ -62,7 +62,7 @@ class UploadController extends Controller {
       throw err;
     }
     // 设置响应内容和响应状态码
-    ctx.helper.success({ ctx, res });
+    ctx.success({ ctx, res });
   }
 
   // 上传多个文件
@@ -119,7 +119,7 @@ class UploadController extends Controller {
         files.push(`${attachment._id}`); // console.log(result)
       }
     }
-    ctx.helper.success({ ctx, res: { _ids: files } });
+    ctx.success({ ctx, res: { _ids: files } });
   }
 
   // 删除单个文件
@@ -130,7 +130,7 @@ class UploadController extends Controller {
     // 调用 Service 进行业务处理
     await service.upload.destroy(id);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ ctx });
+    ctx.success({ ctx });
   }
 
   // 修改单个文件
@@ -161,7 +161,7 @@ class UploadController extends Controller {
     // 调用Service 保持原图片ID不变，更新其他属性
     await service.upload.update(id, attachment);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ ctx });
+    ctx.success({ ctx });
   }
 
   // 添加图片描述
@@ -172,7 +172,7 @@ class UploadController extends Controller {
     const payload = ctx.request.body || {};
     await service.upload.extra(id, payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ ctx });
+    ctx.success({ ctx });
   }
 
   // 获取单个文件
@@ -183,7 +183,7 @@ class UploadController extends Controller {
     // 调用 Service 进行业务处理
     const res = await service.upload.show(id);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ ctx, res });
+    ctx.success({ ctx, res });
   }
 
   // 获取所有文件(分页/模糊)
@@ -194,7 +194,7 @@ class UploadController extends Controller {
     // 调用 Service 进行业务处理
     const res = await service.upload.index(payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ ctx, res });
+    ctx.success({ ctx, res });
   }
 
   // 删除所选文件(条件id[])
@@ -210,7 +210,7 @@ class UploadController extends Controller {
       await service.upload.destroy(attachment);
     }
     // 设置响应内容和响应状态码
-    ctx.helper.success({ ctx });
+    ctx.success({ ctx });
   }
 }
 

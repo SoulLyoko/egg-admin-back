@@ -29,7 +29,7 @@ class TokenController extends Controller {
     const res = await service.token.token(payload)
     // 设置响应内容和响应状态码
     console.log(res)
-    ctx.helper.success({ res })
+    ctx.success({ res })
   }
 }
 

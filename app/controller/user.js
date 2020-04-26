@@ -1,7 +1,7 @@
 const Controller = require("egg").Controller;
 
 /**
- * @Controller user 用户
+ * @Controller user 用户管理
  */
 class UserController extends Controller {
   constructor(ctx) {
@@ -33,7 +33,7 @@ class UserController extends Controller {
     // 调用 Service 进行业务处理
     const res = await service.user.index(payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ res });
+    ctx.success({ res });
   }
 
   /**
@@ -49,7 +49,7 @@ class UserController extends Controller {
     // 调用 Service 进行业务处理
     const res = await service.user.create(payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ res });
+    ctx.success({ res });
   }
 
   /**
@@ -67,7 +67,7 @@ class UserController extends Controller {
     // 调用 Service 进行业务处理
     await service.user.update(id, payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success();
+    ctx.success();
   }
 
   /**
@@ -84,7 +84,7 @@ class UserController extends Controller {
     // 调用 Service 进行业务处理
     const res = await service.user.show(id);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ res });
+    ctx.success({ res });
   }
 
   /**
@@ -100,7 +100,7 @@ class UserController extends Controller {
     // 调用 Service 进行业务处理
     await service.user.destroy(id);
     // 设置响应内容和响应状态码
-    ctx.helper.success();
+    ctx.success();
   }
 
   /**
@@ -119,7 +119,7 @@ class UserController extends Controller {
     const res = await service.user.login(payload);
     // 设置响应内容和响应状态码
     console.log(res);
-    ctx.helper.success({ res });
+    ctx.success({ res });
   }
 
   /**
@@ -132,12 +132,12 @@ class UserController extends Controller {
     const { ctx, service } = this;
     const res = await service.user.current();
     // 设置响应内容和响应状态码
-    ctx.helper.success({ res });
+    ctx.success({ res });
   }
 
   /**
    * @summary 修改密码
-   * @router put /api/user/password
+   * @router put /api/user/password/reset
    * @request body string obj eg:{"oldPassword":"1234","password":"123456"}
    * @Bearer
    */
@@ -150,7 +150,7 @@ class UserController extends Controller {
     // 调用 Service 进行业务处理
     await service.user.resetPsw(payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success();
+    ctx.success();
   }
 }
 

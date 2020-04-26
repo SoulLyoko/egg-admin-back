@@ -6,8 +6,7 @@ class ParamService extends Service {
     const { name } = payload;
     let conditions = []; //查询条件数组
     name && conditions.push({ name });
-    const { data, total } = await this.ctx.helper.search({ coll: "Param", payload, conditions });
-    return { total: total, list: data };
+    return await this.ctx._list({ model: "Param", payload, conditions });
   }
 
   //创建数据

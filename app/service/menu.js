@@ -6,23 +6,22 @@ class MenuService extends Service {
     const { name } = payload;
     let conditions = []; //查询条件数组
     name && conditions.push({ name: { $regex: name } });
-    const { data, total } = await this.ctx.helper.search({ coll: "Menu", payload, conditions });
-    return { total: total, data };
+    return await this.ctx._list({ model: "Menu", payload, conditions });
   }
 
   //创建数据
   async create(payload) {
-    return this.ctx.helper._create("Menu", payload);
+    return this.ctx._create("Menu", payload);
   }
 
   //更新数据
   async update(_id, payload) {
-    return this.ctx.helper._update("Menu", _id, payload);
+    return this.ctx._update("Menu", _id, payload);
   }
 
   //获取单条数据
   async show(_id) {
-    return this.ctx.helper._findOne("Menu", { _id });
+    return this.ctx._findOne("Menu", { _id });
   }
 
   //删除数据
@@ -30,40 +29,31 @@ class MenuService extends Service {
     for (const _id of id.split(",")) {
       await this.ctx.helper.removeChildren("Menu", _id);
     }
-    return this.ctx.helper._remove("Menu", id);
+    return this.ctx._remove("Menu", id);
   }
 
   //菜单管理列表
   async tree(payload) {
     const { type } = payload;
-    payload = {
-      order: "asc",
-      orderField: "sort"
-    };
     let conditions = []; //查询条件数组
     type && conditions.push({ type: Number(type) });
-    const { data } = await this.ctx.helper.search({ coll: "Menu", payload, conditions });
-    const res = this.ctx.helper.buildTree(data);
-    return { data: res };
+    const { data } = await this.ctx._list({ model: "Menu", payload: { order: "asc", orderField: "sort" }, conditions });
+    const tree = this.ctx.helper.buildTree(data);
+    return { data: tree };
   }
 
   //导航菜单
   async nav() {
-    const payload = {
-      order: "asc",
-      orderField: "sort"
-    };
-    const menuIds = await this.getUserMenu();
+    const menuIds = await this.getUserMenuIds();
     const conditions = [{ type: "0" }, { _id: { $in: menuIds } }]; //排除按钮权限,查询当前用户拥有的菜单权限
-    const { data } = await this.ctx.helper.search({ coll: "Menu", conditions, payload });
+    const { data } = await this.ctx._list({ model: "Menu", payload: { order: "asc", orderField: "sort" }, conditions });
     const res = this.ctx.helper.buildTree(data);
     return res;
   }
 
   //获取当前用户拥有的菜单权限id
   async getUserMenuIds() {
-    const { state, helper } = this.ctx;
-    const user = await this.ctx._findOne("User", { _id: state.user.data._id });
+    const user = await this.ctx._findOne("User", { _id: this.ctx.state.user.data._id });
     const roles = await this.ctx._find("Role", { _id: { $in: user.roleIds } });
     const menuIds = roles.flatMap(role => role.menuIds);
     return menuIds;

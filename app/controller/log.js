@@ -1,7 +1,7 @@
 const Controller = require("egg").Controller;
 
 /**
- * @Controller log 测试
+ * @Controller log 日志管理
  */
 class LogController extends Controller {
   /**
@@ -19,7 +19,7 @@ class LogController extends Controller {
     // 调用 Service 进行业务处理
     const res = await service.log.index(payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ res });
+    ctx.success({ res });
   }
 
   /**
@@ -35,7 +35,7 @@ class LogController extends Controller {
     // 调用 Service 进行业务处理
     await service.log.create(payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success();
+    ctx.success();
   }
 
   /**
@@ -53,7 +53,7 @@ class LogController extends Controller {
     // 调用 Service 进行业务处理
     await service.log.update(id, payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success();
+    ctx.success();
   }
 
   /**
@@ -70,7 +70,7 @@ class LogController extends Controller {
     // 调用 Service 进行业务处理
     const res = await service.log.show(id);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ res });
+    ctx.success({ res });
   }
 
   /**
@@ -86,7 +86,7 @@ class LogController extends Controller {
     // 调用 Service 进行业务处理
     await service.log.destroy(id);
     // 设置响应内容和响应状态码
-    ctx.helper.success();
+    ctx.success();
   }
 
   /**
@@ -105,7 +105,7 @@ class LogController extends Controller {
     payload.type = "login";
     const res = await service.log.index(payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ res });
+    ctx.success({ res });
   }
 
   /**
@@ -124,7 +124,7 @@ class LogController extends Controller {
     payload.type = "action";
     const res = await service.log.index(payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ res });
+    ctx.success({ res });
   }
 
   /**
@@ -143,7 +143,7 @@ class LogController extends Controller {
     payload.status = 0;
     const res = await service.log.index(payload);
     // 设置响应内容和响应状态码
-    ctx.helper.success({ res });
+    ctx.success({ res });
   }
 }
 

@@ -49,7 +49,7 @@ module.exports = (option, app) => {
     } else {
       if (ctx.state.user) {
         const _id = ctx.state.user.data._id;
-        const user = await ctx.helper._findOne("User", { _id });
+        const user = await ctx._findOne("User", { _id });
         payload.username = user.username;
       }
       payload.type = "action";

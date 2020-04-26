@@ -21,7 +21,7 @@ class GeneratorService extends Service {
   createContract(name) {
     const { capitalize } = this.ctx.helper;
     const tempFile = fs.readFileSync(`./app/template/contract.temp`, "utf8"); //读取模板内容
-    const originContract = fs.readFileSync("./app/contract/models.js", "utf8");
+    const originContract = fs.readFileSync("./app/contract/index.js", "utf8");
     if (originContract.includes(`${capitalize(name)}`)) {
       //已存在此contract
       console.log(`已存在数据结构定义${capitalize(name)}`);

@@ -3,7 +3,7 @@
  * @param {Egg.Application} app - egg application
  */
 module.exports = app => {
-  const { router, controller } = app;
+  const { router, controller, jwt } = app;
   router.get("/", controller.home.index);
 
   // genenerator
@@ -27,34 +27,35 @@ module.exports = app => {
   router.post("/api/token", controller.token.token);
 
   // user
-  router.resources("user", "/api/user", app.jwt, controller.user);
+  router.resources("user", "/api/user", jwt, controller.user);
   router.post("/api/user/login", controller.user.login);
-  router.get("/api/user/current/get", app.jwt, controller.user.current);
+  router.get("/api/user/current/get", jwt, controller.user.current);
+  router.put("/api/user/password/reset", jwt, controller.user.resetPsw);
 
   // menu
-  router.resources("menu", "/api/menu", app.jwt, controller.menu);
-  router.get("/api/menu/tree/get", app.jwt, controller.menu.tree);
-  router.get("/api/menu/nav/get", app.jwt, controller.menu.nav);
-  router.get("/api/menu/permissions/get", app.jwt, controller.menu.permissions);
+  router.resources("menu", "/api/menu", jwt, controller.menu);
+  router.get("/api/menu/tree/get", jwt, controller.menu.tree);
+  router.get("/api/menu/nav/get", jwt, controller.menu.nav);
+  router.get("/api/menu/permissions/get", jwt, controller.menu.permissions);
 
   // dept
-  router.resources("dept", "/api/dept", app.jwt, controller.dept);
-  router.get("/api/dept/tree/get", app.jwt, controller.dept.tree);
+  router.resources("dept", "/api/dept", jwt, controller.dept);
+  router.get("/api/dept/tree/get", jwt, controller.dept.tree);
 
   // role
-  router.resources("role", "/api/role", app.jwt, controller.role);
+  router.resources("role", "/api/role", jwt, controller.role);
 
   // log
-  router.resources("role", "/api/log", app.jwt, controller.log);
-  router.get("/api/log/login/get", app.jwt, controller.log.login);
-  router.get("/api/log/action/get", app.jwt, controller.log.action);
-  router.get("/api/log/error/get", app.jwt, controller.log.error);
+  router.resources("role", "/api/log", jwt, controller.log);
+  router.get("/api/log/login/get", jwt, controller.log.login);
+  router.get("/api/log/action/get", jwt, controller.log.action);
+  router.get("/api/log/error/get", jwt, controller.log.error);
 
   // dict
-  router.resources("dict", "/api/dict", app.jwt, controller.dict);
-  router.get("/api/dict/type/:type", app.jwt, controller.dict.type);
-  router.get("/api/dict/tree/get", app.jwt, controller.dict.tree);
+  router.resources("dict", "/api/dict", jwt, controller.dict);
+  router.get("/api/dict/type/:type", jwt, controller.dict.type);
+  router.get("/api/dict/tree/get", jwt, controller.dict.tree);
 
   // param
-  router.resources("param", "/api/param", app.jwt, controller.param);
+  router.resources("param", "/api/param", jwt, controller.param);
 };
