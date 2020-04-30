@@ -5,16 +5,16 @@
   "private": true,
   "dependencies": {
     "await-stream-ready": "^1.0.0",
+    "dayjs": "^1.8.0",
     "egg": "^2.0.0",
     "egg-bcrypt": "^1.1.0",
     "egg-cors": "^2.2.0",
     "egg-jwt": "^3.1.0",
     "egg-mongoose": "^3.2.0",
     "egg-scripts": "^2.0.0",
-    "egg-validate": "^2.0.0",
     "egg-swagger-doc": "^2.3.0",
+    "egg-validate": "^2.0.0",
     "image-downloader": "^3.5.0",
-    "dayjs": "^1.8.0",
     "stream-to-array": "^2.3.0",
     "stream-wormhole": "^1.1.0"
   },
@@ -24,6 +24,7 @@
     "egg-bin": "^4.0.0",
     "egg-ci": "^1.13.0",
     "egg-mock": "^4.0.0",
+    "eslint": "^6.8.0",
     "mocha": "^7.1.0"
   },
   "engines": {

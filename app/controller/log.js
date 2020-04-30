@@ -1,4 +1,4 @@
-const Controller = require("egg").Controller;
+const Controller = require('egg').Controller;
 
 /**
  * @Controller log 日志管理
@@ -102,7 +102,7 @@ class LogController extends Controller {
     // 组装参数
     const payload = ctx.query;
     // 调用 Service 进行业务处理
-    payload.type = "login";
+    payload.type = 'login';
     const res = await service.log.index(payload);
     // 设置响应内容和响应状态码
     ctx.success({ res });
@@ -121,7 +121,7 @@ class LogController extends Controller {
     // 组装参数
     const payload = ctx.query;
     // 调用 Service 进行业务处理
-    payload.type = "action";
+    payload.type = 'action';
     const res = await service.log.index(payload);
     // 设置响应内容和响应状态码
     ctx.success({ res });

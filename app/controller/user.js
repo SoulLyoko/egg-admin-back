@@ -1,4 +1,4 @@
-const Controller = require("egg").Controller;
+const Controller = require('egg').Controller;
 
 /**
  * @Controller user 用户管理
@@ -8,12 +8,12 @@ class UserController extends Controller {
     super(ctx);
 
     this.loginRule = {
-      username: { type: "string", required: true, allowEmpty: false },
-      password: { type: "string", required: true, allowEmpty: false, min: 4 }
+      username: { type: 'string', required: true, allowEmpty: false },
+      password: { type: 'string', required: true, allowEmpty: false, min: 4 }
     };
     this.resetPswRule = {
-      password: { type: "password", required: true, allowEmpty: false, min: 4 },
-      oldPassword: { type: "password", required: true, allowEmpty: false, min: 4 }
+      password: { type: 'password', required: true, allowEmpty: false, min: 4 },
+      oldPassword: { type: 'password', required: true, allowEmpty: false, min: 4 }
     };
   }
 
@@ -106,7 +106,7 @@ class UserController extends Controller {
   /**
    * @summary 用户登录
    * @router post /api/user/login
-   * @request body string obj eg:{"username":"admin","password":"123456"}
+   * @request body string obj eg:{'username':'admin','password':'123456'}
    * @response 200 showRes
    */
   async login() {
@@ -138,7 +138,7 @@ class UserController extends Controller {
   /**
    * @summary 修改密码
    * @router put /api/user/password/reset
-   * @request body string obj eg:{"oldPassword":"1234","password":"123456"}
+   * @request body string obj eg:{'oldPassword':'1234','password':'123456'}
    * @Bearer
    */
   async resetPsw() {

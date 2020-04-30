@@ -1,5 +1,5 @@
-const contract = require("../contract");
-const { baseModel } = require("../contract/response/base");
+const contract = require('../contract');
+const { baseModel } = require('../contract/response/base');
 
 module.exports = {
   contractModel(modelName, base = true) {

@@ -1,4 +1,4 @@
-const Service = require("egg").Service;
+const Service = require('egg').Service;
 
 class TokenService extends Service {
   async apply(data) {

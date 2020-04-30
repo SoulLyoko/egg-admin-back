@@ -1,5 +1,5 @@
-const Service = require("egg").Service;
-const fs = require("fs");
+const Service = require('egg').Service;
+const fs = require('fs');
 
 class GeneratorService extends Service {
   /**
@@ -20,33 +20,33 @@ class GeneratorService extends Service {
   //创建数据结构定义
   createContract(name) {
     const { capitalize } = this.ctx.helper;
-    const tempFile = fs.readFileSync(`./app/template/contract.temp`, "utf8"); //读取模板内容
-    const originContract = fs.readFileSync("./app/contract/index.js", "utf8");
+    const tempFile = fs.readFileSync(`./app/template/contract.temp`, 'utf8'); //读取模板内容
+    const originContract = fs.readFileSync('./app/contract/index.js', 'utf8');
     if (originContract.includes(`${capitalize(name)}`)) {
       //已存在此contract
       console.log(`已存在数据结构定义${capitalize(name)}`);
     } else {
       let content = tempFile.replace(/Template/g, capitalize(name));
-      const index = originContract.lastIndexOf("};");
-      content = originContract.substring(0, index) + content + "};\n";
-      fs.writeFileSync("./app/contract/models.js", content);
+      const index = originContract.lastIndexOf('};');
+      content = originContract.substring(0, index) + content + '};\n';
+      fs.writeFileSync('./app/contract/index.js', content);
       console.log(`已创建数据结构定义${capitalize(name)}`);
     }
   }
 
   //创建路由
   createRouter(name) {
-    const tempFile = fs.readFileSync(`./app/template/router.temp`, "utf8"); //读取模板内容
-    const path = "./app/router.js";
-    const originRouter = fs.readFileSync(path, "utf8");
+    const tempFile = fs.readFileSync(`./app/template/router.temp`, 'utf8'); //读取模板内容
+    const path = './app/router.js';
+    const originRouter = fs.readFileSync(path, 'utf8');
     if (originRouter.includes(`/api/${name}`)) {
       //已存在此router
       console.log(`已存在路由${name}`);
     } else {
       let content = tempFile.replace(/template/g, name);
       // content = originRouter.replace(/[&}]$/, content + '}')
-      const index = originRouter.lastIndexOf("};");
-      content = originRouter.substring(0, index) + content + "};\n";
+      const index = originRouter.lastIndexOf('};');
+      content = originRouter.substring(0, index) + content + '};\n';
       fs.writeFileSync(path, content);
       console.log(`已创建路由${name}`);
     }
@@ -54,9 +54,9 @@ class GeneratorService extends Service {
 
   //创建controller,service,model文件
   createFiles(name) {
-    const dirNames = ["controller", "service", "model"];
+    const dirNames = ['controller', 'service', 'model'];
     for (const dirName of dirNames) {
-      const tempFile = fs.readFileSync(`./app/template/${dirName}.js`, "utf8"); //读取模板内容
+      const tempFile = fs.readFileSync(`./app/template/${dirName}.js`, 'utf8'); //读取模板内容
       const path = `./app/${dirName}/${name}.js`;
       const isExist = fs.existsSync(path);
       if (isExist) {
@@ -74,12 +74,12 @@ class GeneratorService extends Service {
 
   //删除路由
   removeRouter(name) {
-    const path = "./app/router.js";
-    const originRouter = fs.readFileSync(path, "utf8");
+    const path = './app/router.js';
+    const originRouter = fs.readFileSync(path, 'utf8');
     if (originRouter.includes(`/api/${name}`)) {
-      const tempFile = fs.readFileSync(`./app/template/router.temp`, "utf8"); //读取模板内容
+      const tempFile = fs.readFileSync(`./app/template/router.temp`, 'utf8'); //读取模板内容
       let content = tempFile.replace(/template/g, name);
-      content = originRouter.replace(content, "");
+      content = originRouter.replace(content, '');
       fs.writeFileSync(path, content);
       console.log(`已删除路由${name}`);
     } else {
@@ -90,7 +90,7 @@ class GeneratorService extends Service {
 
   //删除controller,service,model文件
   removeFiles(name) {
-    const dirNames = ["controller", "service", "model"];
+    const dirNames = ['controller', 'service', 'model'];
     for (const dirName of dirNames) {
       const path = `./app/${dirName}/${name}.js`;
       const isExist = fs.existsSync(path);

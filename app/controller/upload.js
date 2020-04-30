@@ -1,9 +1,9 @@
-const fs = require("fs");
-const path = require("path");
-const Controller = require("egg").Controller;
-const awaitWriteStream = require("await-stream-ready").write;
-const sendToWormhole = require("stream-wormhole");
-const download = require("image-downloader");
+const fs = require('fs');
+const path = require('path');
+const Controller = require('egg').Controller;
+const awaitWriteStream = require('await-stream-ready').write;
+const sendToWormhole = require('stream-wormhole');
+const download = require('image-downloader');
 
 class UploadController extends Controller {
   // 上传单个文件
@@ -22,7 +22,7 @@ class UploadController extends Controller {
     attachment.filename = filename;
     attachment.url = `/uploads/${attachment._id.toString()}${extname}`;
     // 组装参数 stream
-    const target = path.join(this.config.baseDir, "app/public/uploads", `${attachment._id.toString()}${attachment.extname}`);
+    const target = path.join(this.config.baseDir, 'app/public/uploads', `${attachment._id.toString()}${attachment.extname}`);
     const writeStream = fs.createWriteStream(target);
     // 文件处理，上传到云存储等等
     try {
@@ -48,19 +48,15 @@ class UploadController extends Controller {
     const extname = path.extname(url).toLowerCase(); // 文件扩展名称
     const options = {
       url: url,
-      dest: path.join(this.config.baseDir, "app/public/uploads", `${attachment._id.toString()}${extname}`)
+      dest: path.join(this.config.baseDir, 'app/public/uploads', `${attachment._id.toString()}${extname}`)
     };
     let res;
-    try {
-      // 写入文件 const { filename, image}
-      await download.image(options);
-      attachment.extname = extname;
-      attachment.filename = filename;
-      attachment.url = `/uploads/${attachment._id.toString()}${extname}`;
-      res = await service.upload.create(attachment);
-    } catch (err) {
-      throw err;
-    }
+    // 写入文件 const { filename, image}
+    await download.image(options);
+    attachment.extname = extname;
+    attachment.filename = filename;
+    attachment.url = `/uploads/${attachment._id.toString()}${extname}`;
+    res = await service.upload.create(attachment);
     // 设置响应内容和响应状态码
     ctx.success({ ctx, res });
   }
@@ -70,7 +66,6 @@ class UploadController extends Controller {
     // 要获取同时上传的多个文件，不能通过 ctx.getFileStream() 来获取
     const { ctx, service } = this;
     const parts = ctx.multipart();
-    const res = {};
     const files = [];
 
     let part; // parts() return a promise
@@ -102,15 +97,14 @@ class UploadController extends Controller {
         attachment.filename = filename;
         attachment.url = `/uploads/${attachment._id.toString()}${extname}`;
         // const target = path.join(this.config.baseDir, 'app/public/uploads', filename)
-        const target = path.join(this.config.baseDir, "app/public/uploads", `${attachment._id.toString()}${extname}`);
+        const target = path.join(this.config.baseDir, 'app/public/uploads', `${attachment._id.toString()}${extname}`);
         const writeStream = fs.createWriteStream(target);
         // 文件处理，上传到云存储等等
-        let res;
         try {
           // result = await ctx.oss.put('egg-multipart-test/' + part.filename, part)
           await awaitWriteStream(part.pipe(writeStream));
           // 调用Service
-          res = await service.upload.create(attachment);
+          await service.upload.create(attachment);
         } catch (err) {
           // 必须将上传的文件流消费掉，要不然浏览器响应会卡死
           await sendToWormhole(part);
@@ -148,7 +142,7 @@ class UploadController extends Controller {
     attachment.extname = extname;
     attachment.filename = filename;
     attachment.url = `/uploads/${attachment._id.toString()}${extname}`;
-    const target_U = path.join(this.config.baseDir, "app/public/uploads", `${attachment._id}${extname}`);
+    const target_U = path.join(this.config.baseDir, 'app/public/uploads', `${attachment._id}${extname}`);
     const writeStream = fs.createWriteStream(target_U);
     // 文件处理，上传到云存储等等
     try {
@@ -203,7 +197,7 @@ class UploadController extends Controller {
     // 组装参数
     // const values = ctx.queries.id
     const { id } = ctx.request.body;
-    const payload = id.split(",") || [];
+    const payload = id.split(',') || [];
     // 设置响应内容和响应状态码
     for (let attachment of payload) {
       // 调用 Service 进行业务处理
