@@ -3,8 +3,11 @@ const Service = require('egg').Service;
 class LogService extends Service {
   //获取数据(全部/分页/模糊)
   async index(payload) {
-    const { type, status, username } = payload;
+    const { method, url, ip, type, status, username } = payload;
     let conditions = []; //查询条件数组
+    method && conditions.push({ method });
+    url && conditions.push({ url: { $regex: url } });
+    ip && conditions.push({ ip });
     type && conditions.push({ type });
     username && conditions.push({ username: { $regex: username } });
     status !== undefined && status !== '' && conditions.push({ status });
