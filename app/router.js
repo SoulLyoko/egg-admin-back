@@ -23,14 +23,14 @@ module.exports = app => {
   router.delete('/api/upload', controller.upload.removes);
   // router.resources('upload', '/api/upload', controller.upload)
 
-  // token
-  router.post('/api/token', controller.token.token);
-
   // user
   router.resources('user', '/api/user', jwt, controller.user);
-  router.post('/api/user/login', controller.user.login);
-  router.get('/api/user/current/get', jwt, controller.user.current);
-  router.put('/api/user/password/reset', jwt, controller.user.resetPsw);
+
+  // account
+  router.post('/api/account/login', controller.account.login);
+  router.get('/api/account/current', jwt, controller.account.current);
+  router.put('/api/account/resetPsw', jwt, controller.account.resetPsw);
+  router.get('/api/account/captcha', controller.account.captcha);
 
   // menu
   router.resources('menu', '/api/menu', jwt, controller.menu);
@@ -58,4 +58,7 @@ module.exports = app => {
 
   // param
   router.resources('param', '/api/param', jwt, controller.param);
+
+  // sys
+  router.get('/api/sys/info', controller.sys.info);
 };

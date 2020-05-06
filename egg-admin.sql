@@ -11,7 +11,7 @@
  Target Server Version : 40009
  File Encoding         : 65001
 
- Date: 30/04/2020 17:29:51
+ Date: 06/05/2020 17:01:41
 */
 
 
@@ -84,10 +84,12 @@ db.createCollection("depts");
 // ----------------------------
 db.getCollection("depts").insert([ {
     _id: ObjectId("5d2ecffb14bc4247ac00674e"),
-    name: "人人开源集团",
+    name: "D2集团",
     sort: NumberInt("0"),
     createTime: ISODate("2018-12-28T22:20:17.000Z"),
-    parentId: "0"
+    parentId: "0",
+    updateBy: "admin",
+    updateTime: ISODate("2020-05-06T08:26:24.914Z")
 } ]);
 db.getCollection("depts").insert([ {
     _id: ObjectId("5d2fde5814bc42288c0045e2"),
@@ -26895,6 +26897,556 @@ db.getCollection("logs").insert([ {
     updateBy: "admin",
     __v: NumberInt("0")
 } ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb21774ccef8022b4343f67"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/account/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68",
+    time: "95.315ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-05-06T01:48:36.452Z"),
+    updateTime: ISODate("2020-05-06T01:48:36.452Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb2179d35af1724900e0cc6"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/account/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68",
+    time: "97.466ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-05-06T01:49:17.725Z"),
+    updateTime: ISODate("2020-05-06T01:49:17.725Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb21885ce95362a5850fa9f"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/account/login",
+    error: "验证码错误",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68",
+    time: "7.446ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-05-06T01:53:09.96Z"),
+    updateTime: ISODate("2020-05-06T01:53:09.96Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb218aace95362a5850faa0"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/account/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"captcha\":\"MscT\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68",
+    time: "90.557ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-05-06T01:53:46.675Z"),
+    updateTime: ISODate("2020-05-06T01:53:46.675Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb21c21c66e3f459c5a64f2"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/account/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"captcha\":\"wzlr\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68",
+    time: "90.165ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-05-06T02:08:33.175Z"),
+    updateTime: ISODate("2020-05-06T02:08:33.175Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb21ca4c66e3f459c5a64f3"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/account/login",
+    error: "验证码错误",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"captcha\":\"aaaa\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68",
+    time: "2.696ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-05-06T02:10:44.341Z"),
+    updateTime: ISODate("2020-05-06T02:10:44.341Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb21caac66e3f459c5a64f4"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/account/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"captcha\":\"fxbw\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68",
+    time: "65.108ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-05-06T02:10:50.341Z"),
+    updateTime: ISODate("2020-05-06T02:10:50.341Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb21d21c66e3f459c5a64f5"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/account/login",
+    error: "验证码错误",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"captcha\":\"dddd\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68",
+    time: "1.719ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-05-06T02:12:49.453Z"),
+    updateTime: ISODate("2020-05-06T02:12:49.453Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb21d23c66e3f459c5a64f6"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/account/login",
+    error: "验证码错误",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"captcha\":\"dddd\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68",
+    time: "1.567ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-05-06T02:12:51.949Z"),
+    updateTime: ISODate("2020-05-06T02:12:51.949Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb21d25c66e3f459c5a64f7"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/account/login",
+    error: "验证码错误",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"captcha\":\"dddd\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68",
+    time: "2.008ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-05-06T02:12:53.896Z"),
+    updateTime: ISODate("2020-05-06T02:12:53.896Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb21d29c66e3f459c5a64f8"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/account/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"captcha\":\"zkom\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68",
+    time: "64.937ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-05-06T02:12:57.412Z"),
+    updateTime: ISODate("2020-05-06T02:12:57.412Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb21de5c66e3f459c5a64f9"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/menu/5ea6838635897525e4e89605",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"parentId\":\"5d2d6dc314bc421d10003a59\",\"title\":\"接口文档\",\"icon\":\"file-code-o\",\"type\":\"0\",\"path\":\"http://127.0.0.1:7001/swagger-ui.html\",\"component\":\"Blank\",\"name\":\"swagger\",\"sort\":4,\"permissions\":\"\",\"cache\":true,\"_id\":\"5ea6838635897525e4e89605\",\"createTime\":\"2020-04-27 15:02:30\",\"updateTime\":1588731365796,\"createBy\":\"admin\",\"updateBy\":\"admin\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68",
+    time: "4.166ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-05-06T02:16:05.801Z"),
+    updateTime: ISODate("2020-05-06T02:16:05.801Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb21f23c66e3f459c5a64fa"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/menu/5ea6838635897525e4e89605",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"parentId\":\"5d2d6dc314bc421d10003a59\",\"title\":\"接口文档\",\"icon\":\"file-code-o\",\"type\":\"0\",\"path\":\"http://127.0.0.1:7001/swagger-ui.html\",\"component\":\"Iframe\",\"name\":\"swagger\",\"sort\":4,\"permissions\":\"\",\"cache\":true,\"_id\":\"5ea6838635897525e4e89605\",\"createTime\":\"2020-04-27 15:02:30\",\"updateTime\":1588731683079,\"createBy\":\"admin\",\"updateBy\":\"admin\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68",
+    time: "1.853ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-05-06T02:21:23.081Z"),
+    updateTime: ISODate("2020-05-06T02:21:23.081Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb224c7e331a611e0bba890"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/account/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"captcha\":\"qzzl\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36",
+    time: "87.496ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-05-06T02:45:27.402Z"),
+    updateTime: ISODate("2020-05-06T02:45:27.402Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb224e2e331a611e0bba891"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/account/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"captcha\":\"dh82\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko",
+    time: "66.155ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-05-06T02:45:54.224Z"),
+    updateTime: ISODate("2020-05-06T02:45:54.224Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb22789faba393ad04db88f"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/user",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"123\",\"password\":\"$2a$10$mWmk7VhUMawE/dYfAy9t5O0sytkjHilGW9zpLDb3tYkDR6xYSDJzi\",\"deptId\":\"\",\"roleIds\":[],\"realName\":\"\",\"gender\":\"\",\"email\":\"\",\"mobile\":\"\",\"status\":\"1\",\"createTime\":1588733833948,\"updateTime\":1588733833948,\"createBy\":\"admin\",\"updateBy\":\"admin\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68",
+    time: "84.621ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-05-06T02:57:13.956Z"),
+    updateTime: ISODate("2020-05-06T02:57:13.956Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb22ea9ad0bb64bf8f038aa"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/account/login",
+    error: "验证码错误",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"captcha\":\"5tyy\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68",
+    time: "3.159ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-05-06T03:27:37.734Z"),
+    updateTime: ISODate("2020-05-06T03:27:37.734Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb22eaead0bb64bf8f038ab"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/account/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"captcha\":\"pt5c\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68",
+    time: "87.356ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-05-06T03:27:42.137Z"),
+    updateTime: ISODate("2020-05-06T03:27:42.137Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb22ebfad0bb64bf8f038ac"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/user/5eb22789faba393ad04db88e",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68",
+    time: "2.029ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-05-06T03:27:59.947Z"),
+    updateTime: ISODate("2020-05-06T03:27:59.947Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb26e9cfcbedd3fcc83efe4"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/account/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"captcha\":\"u7ps\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68",
+    time: "80.452ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-05-06T08:00:28.002Z"),
+    updateTime: ISODate("2020-05-06T08:00:28.002Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb27225fcbedd3fcc83efe5"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/account/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"captcha\":\"foyc\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68",
+    time: "64.818ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-05-06T08:15:33.769Z"),
+    updateTime: ISODate("2020-05-06T08:15:33.769Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb2723ffcbedd3fcc83efe6"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/account/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"captcha\":\"0kr9\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68",
+    time: "65.628ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-05-06T08:15:59.567Z"),
+    updateTime: ISODate("2020-05-06T08:15:59.567Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb272b3fcbedd3fcc83efe7"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/account/login",
+    error: "验证码错误",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"captcha\":\"nzlf\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68",
+    time: "22.392ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-05-06T08:17:55.445Z"),
+    updateTime: ISODate("2020-05-06T08:17:55.445Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb272b9fcbedd3fcc83efe8"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/account/login",
+    error: "验证码错误",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"captcha\":\"usl1\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68",
+    time: "1.612ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-05-06T08:18:01.496Z"),
+    updateTime: ISODate("2020-05-06T08:18:01.496Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb272e2fcbedd3fcc83efe9"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/account/login",
+    error: "验证码错误",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"captcha\":\"asdf\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68",
+    time: "1.568ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-05-06T08:18:42.129Z"),
+    updateTime: ISODate("2020-05-06T08:18:42.129Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb272e5fcbedd3fcc83efea"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/account/login",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"captcha\":\"xpgr\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68",
+    time: "64.729ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-05-06T08:18:45.448Z"),
+    updateTime: ISODate("2020-05-06T08:18:45.448Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb2738eadde791cb4e7175f"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/menu/5d2e832314bc4247ac00672c",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"parentId\":\"5d2d6d6814bc421d10003a55\",\"title\":\"参数管理\",\"icon\":\"align-center\",\"type\":\"0\",\"path\":\"/param\",\"component\":\"admin/param\",\"name\":\"param\",\"sort\":6,\"permissions\":\"\",\"cache\":true,\"_id\":\"5d2e832314bc4247ac00672c\",\"createTime\":\"2018-12-29 06:19:47\",\"updateBy\":\"admin\",\"updateTime\":1588753294988}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68",
+    time: "4.827ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-05-06T08:21:34.994Z"),
+    updateTime: ISODate("2020-05-06T08:21:34.994Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb27417adde791cb4e71760"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/param/5d5e3f85d518eb4dd4edc9b0",
+    error: "this.find is not a function",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"a\",\"content\":\"a\",\"_id\":\"5d5e3f85d518eb4dd4edc9b0\",\"paramCode\":\"1\",\"paramValue\":\"1\",\"remark\":\"\",\"__v\":0,\"createTime\":\"2019-08-22 15:08:53\",\"updateTime\":\"2020-05-06 16:23:20\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68",
+    time: "2.458ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-05-06T08:23:51.243Z"),
+    updateTime: ISODate("2020-05-06T08:23:51.243Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb27462adde791cb4e71761"),
+    status: NumberInt("0"),
+    method: "PUT",
+    url: "/api/param/5d5e3f85d518eb4dd4edc9b0",
+    error: "this.find is not a function",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"a\",\"value\":\"a\",\"remark\":\"\",\"_id\":\"5d5e3f85d518eb4dd4edc9b0\",\"paramCode\":\"1\",\"paramValue\":\"1\",\"__v\":0,\"createTime\":\"2019-08-22 15:08:53\",\"updateTime\":\"2020-05-06 16:25:02\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68",
+    time: "2.178ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-05-06T08:25:06.605Z"),
+    updateTime: ISODate("2020-05-06T08:25:06.605Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb274817a044f33883340c9"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/param/5d5e3f85d518eb4dd4edc9b0",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"a\",\"value\":\"a\",\"remark\":\"\",\"_id\":\"5d5e3f85d518eb4dd4edc9b0\",\"paramCode\":\"1\",\"paramValue\":\"1\",\"__v\":0,\"createTime\":\"2019-08-22 15:08:53\",\"updateTime\":1588753537687,\"updateBy\":\"admin\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68",
+    time: "13.462ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-05-06T08:25:37.702Z"),
+    updateTime: ISODate("2020-05-06T08:25:37.702Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb274847a044f33883340ca"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/param/5d5e3f85d518eb4dd4edc9b0",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"name\":\"a\",\"value\":\"a\",\"remark\":\"a\",\"_id\":\"5d5e3f85d518eb4dd4edc9b0\",\"paramCode\":\"1\",\"paramValue\":\"1\",\"__v\":0,\"createTime\":\"2019-08-22 15:08:53\",\"updateBy\":\"admin\",\"updateTime\":1588753540994}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68",
+    time: "3.325ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-05-06T08:25:40.999Z"),
+    updateTime: ISODate("2020-05-06T08:25:40.999Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb274877a044f33883340cb"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/param/5d5e3f85d518eb4dd4edc9b0",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68",
+    time: "2.068ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-05-06T08:25:43.446Z"),
+    updateTime: ISODate("2020-05-06T08:25:43.446Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5eb274b07a044f33883340cc"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/dept/5d2ecffb14bc4247ac00674e",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"parentId\":\"0\",\"name\":\"D2集团\",\"sort\":0,\"_id\":\"5d2ecffb14bc4247ac00674e\",\"createTime\":\"2018-12-29 06:20:17\",\"updateTime\":1588753584914,\"updateBy\":\"admin\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36 Edg/81.0.416.68",
+    time: "1.797ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-05-06T08:26:24.917Z"),
+    updateTime: ISODate("2020-05-06T08:26:24.917Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
 
 // ----------------------------
 // Collection structure for menus
@@ -27237,19 +27789,19 @@ db.getCollection("menus").insert([ {
 } ]);
 db.getCollection("menus").insert([ {
     _id: ObjectId("5d2e832314bc4247ac00672c"),
-    name: "params",
+    name: "param",
     type: "0",
     icon: "align-center",
     permissions: "",
     sort: NumberInt("6"),
     cache: true,
     title: "参数管理",
-    component: "admin/params",
-    path: "/params",
+    component: "admin/param",
+    path: "/param",
     createTime: ISODate("2018-12-28T22:19:47.000Z"),
     parentId: "5d2d6d6814bc421d10003a55",
     updateBy: "admin",
-    updateTime: ISODate("2020-04-30T08:26:51.634Z")
+    updateTime: ISODate("2020-05-06T08:21:34.988Z")
 } ]);
 db.getCollection("menus").insert([ {
     _id: ObjectId("5d2e832314bc4247ac00672d"),
@@ -27615,7 +28167,7 @@ db.getCollection("menus").insert([ {
     sort: NumberInt("4"),
     permissions: "",
     createTime: ISODate("2020-04-27T07:02:30.000Z"),
-    updateTime: ISODate("2020-04-30T08:31:50.216Z"),
+    updateTime: ISODate("2020-05-06T02:21:23.079Z"),
     createBy: "admin",
     updateBy: "admin",
     __v: NumberInt("0")
@@ -27626,18 +28178,6 @@ db.getCollection("menus").insert([ {
 // ----------------------------
 db.getCollection("params").drop();
 db.createCollection("params");
-
-// ----------------------------
-// Documents of params
-// ----------------------------
-db.getCollection("params").insert([ {
-    _id: ObjectId("5d5e3f85d518eb4dd4edc9b0"),
-    paramCode: "1",
-    paramValue: "1",
-    remark: "",
-    __v: NumberInt("0"),
-    createTime: ISODate("2019-08-22T07:08:53.45Z")
-} ]);
 
 // ----------------------------
 // Collection structure for roles

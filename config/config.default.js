@@ -26,10 +26,9 @@ module.exports = appInfo => {
 
   config.security = {
     csrf: {
-      enable: false,
-      ignoreJSON: true
+      enable: false
     },
-    domainWhiteList: ['*']
+    domainWhiteList: []
   };
 
   config.cors = {
@@ -85,9 +84,8 @@ module.exports = appInfo => {
     },
     enableSecurity: true,
     enableValidate: true,
-    enableCORS: false,
     routerMap: false,
-    enable: process.env.NODE_ENV === 'development'
+    enable: true
   };
 
   config.static = {

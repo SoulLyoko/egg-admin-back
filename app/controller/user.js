@@ -4,19 +4,6 @@ const Controller = require('egg').Controller;
  * @Controller user 用户管理
  */
 class UserController extends Controller {
-  constructor(ctx) {
-    super(ctx);
-
-    this.loginRule = {
-      username: { type: 'string', required: true, allowEmpty: false },
-      password: { type: 'string', required: true, allowEmpty: false, min: 4 }
-    };
-    this.resetPswRule = {
-      password: { type: 'password', required: true, allowEmpty: false, min: 4 },
-      oldPassword: { type: 'password', required: true, allowEmpty: false, min: 4 }
-    };
-  }
-
   /**
    * @summary 获取数据(全部/分页/模糊)
    * @router get /api/user
@@ -99,56 +86,6 @@ class UserController extends Controller {
     const { id } = ctx.params;
     // 调用 Service 进行业务处理
     await service.user.destroy(id);
-    // 设置响应内容和响应状态码
-    ctx.success();
-  }
-
-  /**
-   * @summary 用户登录
-   * @router post /api/user/login
-   * @request body string obj eg:{'username':'admin','password':'123456'}
-   * @response 200 showRes
-   */
-  async login() {
-    const { ctx, service } = this;
-    // 校验参数
-    ctx.validate(this.loginRule);
-    // 组装参数
-    const payload = ctx.request.body || {};
-    // 调用 Service 进行业务处理
-    const res = await service.user.login(payload);
-    // 设置响应内容和响应状态码
-    console.log(res);
-    ctx.success({ res });
-  }
-
-  /**
-   * @summary 获取当前用户信息
-   * @router get /api/user/current/get
-   * @response 200 showRes
-   * @Bearer
-   */
-  async current() {
-    const { ctx, service } = this;
-    const res = await service.user.current();
-    // 设置响应内容和响应状态码
-    ctx.success({ res });
-  }
-
-  /**
-   * @summary 修改密码
-   * @router put /api/user/password/reset
-   * @request body string obj eg:{'oldPassword':'1234','password':'123456'}
-   * @Bearer
-   */
-  async resetPsw() {
-    const { ctx, service } = this;
-    // 校验参数
-    ctx.validate(this.resetPswRule);
-    // 组装参数
-    const payload = ctx.request.body || {};
-    // 调用 Service 进行业务处理
-    await service.user.resetPsw(payload);
     // 设置响应内容和响应状态码
     ctx.success();
   }

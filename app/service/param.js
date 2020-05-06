@@ -16,7 +16,6 @@ class ParamService extends Service {
 
   //更新数据
   async update(_id, payload) {
-    await this.find(_id);
     return this.ctx._update('Param', _id, payload);
   }
 
