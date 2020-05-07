@@ -1,6 +1,6 @@
 const Service = require('egg').Service;
 const os = require('os');
-Math.fixed;
+
 class UserService extends Service {
   async info() {
     const data = {};
