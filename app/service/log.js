@@ -3,7 +3,7 @@ const Service = require('egg').Service;
 class LogService extends Service {
   //获取数据(全部/分页/模糊)
   async index(payload) {
-    const { method, url, ip, type, status, username } = payload;
+    const { method, url, ip, type, status, username, createTime } = payload;
     let conditions = []; //查询条件数组
     method && conditions.push({ method });
     url && conditions.push({ url: { $regex: url } });
@@ -11,6 +11,7 @@ class LogService extends Service {
     type && conditions.push({ type });
     username && conditions.push({ username: { $regex: username } });
     status !== undefined && status !== '' && conditions.push({ status });
+    createTime && createTime.length === 2 && conditions.push(...[{ createTime: { $gt: createTime[0] } }, { createTime: { $lt: createTime[1] } }]);
     return await this.ctx._list({ model: 'Log', payload, conditions });
   }
 

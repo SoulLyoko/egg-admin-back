@@ -32,6 +32,7 @@ module.exports = {
     icon: { type: 'string', description: '图标' },
     path: { type: 'string', description: '路由路径' },
     component: { type: 'string', description: '前端组件文件路径' },
+    url: { type: 'string', description: 'Iframe地址' },
     permissions: { type: 'string', description: '权限' },
     cache: { type: 'boolean', default: false, description: '是否开启路由缓存' },
     sort: { type: 'number', description: '排序' }

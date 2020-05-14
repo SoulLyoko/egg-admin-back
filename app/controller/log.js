@@ -16,6 +16,8 @@ class LogController extends Controller {
     const { ctx, service } = this;
     // 组装参数
     const payload = ctx.query;
+    const createTime = ctx.queries.createTime;
+    createTime && (payload.createTime = createTime);
     // 调用 Service 进行业务处理
     const res = await service.log.index(payload);
     // 设置响应内容和响应状态码
