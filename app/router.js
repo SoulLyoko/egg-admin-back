@@ -8,20 +8,11 @@ module.exports = app => {
 
   // genenerator
   router.post('/api/generator', controller.generator.create);
-  router.delete('/api/generator/:name', controller.generator.destroy);
+  router.delete('/api/generator/:name', jwt, controller.generator.destroy);
 
   // upload
-  router.post('/api/upload', controller.upload.create);
-  router.post('/api/upload/url', controller.upload.url);
-  router.post('/api/uploads', controller.upload.multiple);
-  router.delete('/api/upload/:id', controller.upload.destroy);
-  // router.put('/api/upload/:id', controller.upload.update)
-  router.post('/api/upload/:id', controller.upload.update); // Ant Design Pro
-  router.put('/api/upload/:id/extra', controller.upload.extra);
-  router.get('/api/upload/:id', controller.upload.show);
-  router.get('/api/upload', controller.upload.index);
-  router.delete('/api/upload', controller.upload.removes);
-  // router.resources('upload', '/api/upload', controller.upload)
+  router.resources('upload', '/api/upload', jwt, controller.upload);
+  router.post('/api/uploads', jwt, controller.upload.multiple);
 
   // user
   router.resources('user', '/api/user', jwt, controller.user);

@@ -61,6 +61,20 @@ module.exports = {
     return first.toUpperCase() + rest.join('');
   },
 
+
+  /**
+   * @description 获取文件大小
+   * @param {Number} size 文件大小
+   * @param {Number} unit 单位
+   */
+  getFileSize(size, unit = 0) {
+    const units = ['B', 'KB', 'MB', 'GB', 'TB'];
+    if (size <= 1024) {
+      return size.toFixed(2) + units[unit];
+    }
+    return this.getFileSize(size / 1024, unit + 1);
+  },
+
   /**
    * @description 递归建树
    * @param {Array} list 需要建树的数据

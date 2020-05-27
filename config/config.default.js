@@ -37,7 +37,8 @@ module.exports = appInfo => {
   };
 
   config.multipart = {
-    fileExtensions: ['.apk', '.pptx', '.docx', '.csv', '.doc', '.ppt', '.pdf', '.pages', '.wav', '.mov'] // 增加对 .apk 扩展名的支持
+    mode: 'stream',
+    fileExtensions: ['.pdf', '.doc', '.docx', '.xls', '.xlsx', '.ppt', '.pptx']
   };
   config.bcrypt = {
     saltRounds: 10 // default 10
@@ -89,7 +90,7 @@ module.exports = appInfo => {
   };
 
   config.static = {
-    prefix: '/public/',
+    prefix: '/api/public/',
     dir: path.join(appInfo.baseDir, 'app/public'),
     dynamic: true,
     preload: false,

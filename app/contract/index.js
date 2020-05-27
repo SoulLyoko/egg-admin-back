@@ -61,5 +61,13 @@ module.exports = {
     realName: { type: 'string', description: '真实姓名' },
     deptId: { type: 'string', description: '所属部门id' },
     roleIds: { type: 'array', itemType: 'string', description: '角色ids' }
+  },
+  Upload: {
+    filename: { type: 'string', description: '文件名' },
+    extname: { type: 'string', description: '文件扩展名' },
+    mime: { type: 'string', description: '文件类型' },
+    size: { type: 'string', description: '文件大小' },
+    url: { type: 'string', description: '静态文件路径' },
+    target: { type: 'string', description: '目标文件' }
   }
 };
