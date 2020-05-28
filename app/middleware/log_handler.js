@@ -14,11 +14,11 @@ module.exports = (option, app) => {
       app.emit('error', err, this);
       const status = err.status || 500;
       // 生产环境时 500 错误的详细错误内容不返回给客户端，因为可能包含敏感信息
-      const msg = status === 500 && app.config.env === 'prod' ? '内部服务器错误' : logError;
+      const message = status === 500 && app.config.env === 'prod' ? '内部服务器错误' : logError;
       // 从 error 对象上读出各个属性，设置到响应中
       ctx.body = {
         code: status, // 服务端自身的处理逻辑错误(包含框架错误500 及 自定义业务逻辑错误533开始 ) 客户端请求参数导致的错误(4xx开始)，设置不同的状态码
-        msg
+        message
       };
       // if (status === 422) {
       //   ctx.body.detail = err.errors;
@@ -26,6 +26,7 @@ module.exports = (option, app) => {
       // ctx.status = 200
       ctx.status = status;
     }
+
     if (ctx.request.method === 'GET') {
       return;
     }
@@ -44,8 +45,6 @@ module.exports = (option, app) => {
     if (url.includes('login') || url.includes('Login') || url.includes('token')) {
       payload.type = 'login';
       payload.username = body.username;
-    } else if (url.includes('upload')) {
-      payload.type = 'action';
     } else {
       if (ctx.state.user) {
         const _id = ctx.state.user.data._id;
@@ -54,6 +53,6 @@ module.exports = (option, app) => {
       }
       payload.type = 'action';
     }
-    ctx.service.log.create(payload);
+    ctx._create('Log', payload);
   };
 };

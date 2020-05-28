@@ -7,12 +7,16 @@ class UploadService extends Service {
     const { id } = payload;
     const conditions = []; //查询条件数组
     id && conditions.push({ _id: { $in: id.split(',') } });
-    return await this.ctx._list({ model: 'Upload', payload, conditions });
+    const { data, total } = await this.ctx._list({ model: 'Upload', payload, conditions });
+    data.forEach(item => delete item.target);
+    return { data, total };
   }
 
   //创建数据
   async create(payload) {
-    return this.ctx._create('Upload', payload);
+    const res = await this.ctx._create('Upload', payload);
+    delete res.target;
+    return res;
   }
 
   //获取单条数据

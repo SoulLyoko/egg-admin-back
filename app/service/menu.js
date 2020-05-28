@@ -37,7 +37,7 @@ class MenuService extends Service {
     const { type } = payload;
     let conditions = []; //查询条件数组
     type && conditions.push({ type: Number(type) });
-    const { data } = await this.ctx._list({ model: 'Menu', payload: { order: 'asc', orderField: 'sort' }, conditions });
+    const { data } = await this.ctx._list({ model: 'Menu', payload: { order: 'ascending', prop: 'sort' }, conditions });
     const tree = this.ctx.helper.buildTree(data);
     return { data: tree };
   }
@@ -46,7 +46,7 @@ class MenuService extends Service {
   async nav() {
     const menuIds = await this.getUserMenuIds();
     const conditions = [{ type: '0' }, { _id: { $in: menuIds } }]; //排除按钮权限,查询当前用户拥有的菜单权限
-    const { data } = await this.ctx._list({ model: 'Menu', payload: { order: 'asc', orderField: 'sort' }, conditions });
+    const { data } = await this.ctx._list({ model: 'Menu', payload: { order: 'ascending', prop: 'sort' }, conditions });
     const res = this.ctx.helper.buildTree(data);
     return res;
   }

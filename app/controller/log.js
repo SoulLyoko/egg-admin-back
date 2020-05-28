@@ -90,63 +90,6 @@ class LogController extends Controller {
     // 设置响应内容和响应状态码
     ctx.success();
   }
-
-  /**
-   * @summary 分页获取登录日志
-   * @router get /api/log/login/get
-   * @request query integer page 页数
-   * @request query integer limit 每页条数
-   * @response 200 indexRes
-   * @Bearer
-   */
-  async login() {
-    const { ctx, service } = this;
-    // 组装参数
-    const payload = ctx.query;
-    // 调用 Service 进行业务处理
-    payload.type = 'login';
-    const res = await service.log.index(payload);
-    // 设置响应内容和响应状态码
-    ctx.success({ res });
-  }
-
-  /**
-   * @summary 分页获取操作日志
-   * @router get /api/log/action/get
-   * @request query integer page 页数
-   * @request query integer limit 每页条数
-   * @response 200 indexRes
-   * @Bearer
-   */
-  async action() {
-    const { ctx, service } = this;
-    // 组装参数
-    const payload = ctx.query;
-    // 调用 Service 进行业务处理
-    payload.type = 'action';
-    const res = await service.log.index(payload);
-    // 设置响应内容和响应状态码
-    ctx.success({ res });
-  }
-
-  /**
-   * @summary 分页获取异常日志
-   * @router get /api/log/error/get
-   * @request query integer page 页数
-   * @request query integer limit 每页条数
-   * @response 200 indexRes
-   * @Bearer
-   */
-  async error() {
-    const { ctx, service } = this;
-    // 组装参数
-    const payload = ctx.query;
-    // 调用 Service 进行业务处理
-    payload.status = 0;
-    const res = await service.log.index(payload);
-    // 设置响应内容和响应状态码
-    ctx.success({ res });
-  }
 }
 
 module.exports = LogController;

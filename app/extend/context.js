@@ -1,21 +1,21 @@
 module.exports = {
   // 处理成功响应
-  success({ res = null, msg = '请求成功' } = {}) {
+  success({ res = null, message = '请求成功' } = {}) {
     this.body = {
       result: true,
       code: 0,
       data: res,
-      msg
+      message
     };
     this.status = 200;
   },
 
   // 处理失败响应
-  fail({ code = -1, msg = '请求失败', error = null } = {}) {
+  fail({ code = -1, message = '请求失败', error = null } = {}) {
     this.body = {
       result: false,
       code,
-      msg
+      message
     };
     this.status = code === -1 ? 200 : code;
   },
@@ -32,7 +32,9 @@ module.exports = {
       payload.createBy = this.state.user.data.username;
       payload.updateBy = this.state.user.data.username;
     }
-    return await this.model[model].create(payload);
+    const res = await this.model[model].create(payload);
+    const data = this.helper.assignDoc(res);
+    return data;
   },
   //获取单条数据
   async _findOne(model, query = {}, populate = []) {
@@ -65,17 +67,17 @@ module.exports = {
    * @returns {Object} {data,total} {数据,条数/总数}
    */
   async _list({ model, payload = {}, conditions = [], populate = [] }) {
-    //从参数中获取->排序顺序asc(升序)/desc(降序)，排序字段，页码，每页条数
-    const { order, orderField, currentPage, pageSize } = payload;
-    const orderName = { asc: 1, desc: -1 };
+    //从参数中获取->排序顺序ascending(升序)/descending(降序)，排序字段，页码，每页条数
+    const { order, prop, currentPage, pageSize } = payload;
+    const orderName = { ascending: 1, descending: -1 };
     const findObj = {};
     let res = [];
     let total = 0;
     let sort = { createTime: -1 };
 
     //整理排序参数
-    if (orderField && order) {
-      sort = { [orderField]: orderName[order] }; //eg: sort = {name:1}
+    if (order && prop) {
+      sort = { [prop]: orderName[order] }; //eg: sort = {name:1}
     }
     //加入查询条件
     if (conditions && conditions.length) {

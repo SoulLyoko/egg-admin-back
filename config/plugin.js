@@ -29,3 +29,8 @@ exports.swaggerdoc = {
   enable: true,
   package: 'egg-swagger-doc',
 }
+
+exports.logview = {
+  package: 'egg-logview',
+  // env: ['local', 'default', 'test', 'unittest']
+};

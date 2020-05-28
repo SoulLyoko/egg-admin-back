@@ -10,12 +10,12 @@ module.exports = {
     result: { type: 'boolean' },
     code: { type: 'integer' },
     data: { type: 'array', itemType: 'object' },
-    msg: { type: 'string' }
+    message: { type: 'string' }
   },
   showRes: {
     result: { type: 'boolean' },
     code: { type: 'integer' },
     data: { type: 'object' },
-    msg: { type: 'string' }
+    message: { type: 'string' }
   }
 };

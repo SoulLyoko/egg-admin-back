@@ -52,7 +52,7 @@ class DictService extends Service {
     });
     const { data: children } = await this.ctx._list({
       model: 'Dict',
-      payload: { order: 'asc', orderField: 'sort' },
+      payload: { order: 'ascending', prop: 'sort' },
       conditions: [...conditions, { parentId: { $ne: '0' } }]
     });
     const tree = this.ctx.helper.buildTree([...parents, ...children]);

@@ -29,7 +29,7 @@ module.exports = {
       ip = req.ip;
     }
     const ipArr = ip.match(/\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/g);
-    return ipArr && ipArr.length > 0 ? ipArr[0] : '127.0.0.1';
+    return ipArr && ipArr.length ? ipArr[0] : '127.0.0.1';
   },
 
   /**
@@ -60,7 +60,6 @@ module.exports = {
   capitalize([first, ...rest]) {
     return first.toUpperCase() + rest.join('');
   },
-
 
   /**
    * @description 获取文件大小

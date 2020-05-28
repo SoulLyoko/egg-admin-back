@@ -38,9 +38,6 @@ module.exports = app => {
 
   // log
   router.resources('role', '/api/log', jwt, controller.log);
-  router.get('/api/log/login/get', jwt, controller.log.login);
-  router.get('/api/log/action/get', jwt, controller.log.action);
-  router.get('/api/log/error/get', jwt, controller.log.error);
 
   // dict
   router.resources('dict', '/api/dict', jwt, controller.dict);

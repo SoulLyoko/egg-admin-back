@@ -34,7 +34,7 @@ class DeptService extends Service {
 
   // 部门树
   async tree() {
-    const { data } = await this.ctx._list({ model: 'Dept', payload: { order: 'asc', orderField: 'sort' } });
+    const { data } = await this.ctx._list({ model: 'Dept', payload: { order: 'ascending', prop: 'sort' } });
     const tree = this.ctx.helper.buildTree(data);
     return { data: tree };
   }
