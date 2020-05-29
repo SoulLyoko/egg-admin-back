@@ -32,9 +32,11 @@ module.exports = (option, app) => {
     }
     const { getIP, calcResponseTime } = ctx.helper;
     const { method, url, header, body, query } = ctx.request;
+    const summary = await app.getSwaggerSummary({ method, url });
     let payload = {
       method,
       url,
+      summary,
       status: logStatus,
       error: logError,
       ip: getIP(ctx.request),

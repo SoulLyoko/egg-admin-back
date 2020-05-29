@@ -3,7 +3,9 @@ class AppBootHook {
     this.app = app;
   }
 
-  configDidLoad() {}
+  async serverDidReady() {
+    this.app.getSwagger()
+  }
 }
 
 module.exports = AppBootHook;

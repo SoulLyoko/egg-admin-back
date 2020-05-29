@@ -56,7 +56,7 @@ class UploadController extends Controller {
     let part; // parts() return a promise
     while ((part = await parts()) != null) {
       if (part.length) {
-        // 如果是数组的话是 filed
+        // 如果是数组的话是 field
         // console.log('field: ' + part[0])
         // console.log('value: ' + part[1])
         // console.log('valueTruncated: ' + part[2])

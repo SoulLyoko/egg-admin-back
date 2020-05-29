@@ -69,8 +69,8 @@ module.exports = appInfo => {
       version: '1.0.0'
     },
     schemes: ['http', 'https'],
-    consumes: ['application/json'],
-    produces: ['application/json'],
+    consumes: ['application/json', 'multipart/form-data'],
+    produces: ['application/json', 'multipart/form-data'],
     securityDefinitions: {
       Bearer: {
         type: 'apiKey',
@@ -97,6 +97,18 @@ module.exports = appInfo => {
     buffer: true,
     maxFiles: 1000,
     maxAge: 31536000
+  };
+
+  exports.lru = {
+    client: {
+      // all lru cache config available here
+      max: 1000,
+      maxAge: 0
+    },
+    // load into app, default is open
+    app: true,
+    // load into agent, default is close
+    agent: false
   };
 
   return config;

@@ -15,6 +15,7 @@ module.exports = {
   Log: {
     method: { type: 'string', description: '请求方式' },
     url: { type: 'string', description: '请求地址' },
+    summary: { type: 'string', description: '操作名称' },
     ip: { type: 'string', description: 'ip地址' },
     time: { type: 'string', description: '请求耗时' },
     params: { type: 'string', description: '请求参数' },

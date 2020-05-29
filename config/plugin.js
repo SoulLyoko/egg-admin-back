@@ -34,3 +34,8 @@ exports.logview = {
   package: 'egg-logview',
   // env: ['local', 'default', 'test', 'unittest']
 };
+
+exports.lru = {
+  enable: true,
+  package: 'egg-lru',
+};
