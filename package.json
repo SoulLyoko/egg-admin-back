@@ -11,8 +11,8 @@
     "egg-cors": "^2.2.0",
     "egg-jwt": "^3.1.0",
     "egg-logview": "^2.0.1",
-    "egg-lru": "^1.0.1",
     "egg-mongoose": "^3.2.0",
+    "egg-redis": "^2.4.0",
     "egg-scripts": "^2.0.0",
     "egg-security": "^2.8.0",
     "egg-swagger-doc": "^2.3.0",
@@ -42,7 +42,7 @@
     "test": "npm run lint -- --fix && npm run test-local",
     "test-local": "egg-bin test",
     "cov": "egg-bin cov",
-    "lint": "eslint .",
+    "lint": "eslint . --fix",
     "ci": "npm run lint && npm run cov",
     "autod": "autod"
   },

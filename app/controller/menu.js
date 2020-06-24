@@ -1,4 +1,4 @@
-const Controller = require('egg').Controller;
+const Controller = require("egg").Controller;
 
 /**
  * @Controller menu 菜单管理

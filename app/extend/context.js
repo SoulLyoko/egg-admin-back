@@ -1,6 +1,6 @@
 module.exports = {
   // 处理成功响应
-  success({ res = null, message = '请求成功' } = {}) {
+  success({ res = null, message = "请求成功" } = {}) {
     this.body = {
       result: true,
       code: 0,
@@ -11,7 +11,7 @@ module.exports = {
   },
 
   // 处理失败响应
-  fail({ code = -1, message = '请求失败', error = null } = {}) {
+  fail({ code = -1, message = "请求失败" } = {}) {
     this.body = {
       result: false,
       code,
@@ -56,7 +56,7 @@ module.exports = {
   },
   //删除数据(多个用逗号隔开)
   async _remove(model, id) {
-    return await this.model[model].deleteMany({ _id: { $in: id.split(',') || [] } });
+    return await this.model[model].deleteMany({ _id: { $in: id.split(",") || [] } });
   },
   /**
    * @description 从数据库中查询(全部/分页/条件)
@@ -87,7 +87,13 @@ module.exports = {
     if (currentPage && pageSize) {
       //分页
       const skip = (Number(currentPage) - 1) * Number(pageSize || 10);
-      res = await this.model[model].find(findObj).skip(skip).limit(Number(pageSize)).sort(sort).populate(populate).exec();
+      res = await this.model[model]
+        .find(findObj)
+        .skip(skip)
+        .limit(Number(pageSize))
+        .sort(sort)
+        .populate(populate)
+        .exec();
     } else {
       //不分页
       res = await this.model[model].find(findObj).sort(sort).populate(populate).exec();

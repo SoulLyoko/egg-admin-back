@@ -1,4 +1,4 @@
-const Controller = require('egg').Controller;
+const Controller = require("egg").Controller;
 
 /**
  * @Controller dict 字典管理

@@ -2,40 +2,40 @@
 // exports.static = true;
 exports.validate = {
   enable: true,
-  package: 'egg-validate',
-}
+  package: "egg-validate"
+};
 
 exports.bcrypt = {
   enable: true,
-  package: 'egg-bcrypt'
-}
+  package: "egg-bcrypt"
+};
 
 exports.mongoose = {
   enable: true,
-  package: 'egg-mongoose',
-}
+  package: "egg-mongoose"
+};
 
 exports.jwt = {
   enable: true,
-  package: 'egg-jwt',
-}
+  package: "egg-jwt"
+};
 
 exports.cors = {
   enable: true,
-  package: 'egg-cors',
-}
+  package: "egg-cors"
+};
 
 exports.swaggerdoc = {
   enable: true,
-  package: 'egg-swagger-doc',
-}
+  package: "egg-swagger-doc"
+};
 
 exports.logview = {
-  package: 'egg-logview',
+  package: "egg-logview"
   // env: ['local', 'default', 'test', 'unittest']
 };
 
-exports.lru = {
+exports.redis = {
   enable: true,
-  package: 'egg-lru',
+  package: "egg-redis"
 };

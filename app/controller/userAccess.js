@@ -1,10 +1,10 @@
-'use strict'
-const fs = require('fs')
-const path = require('path')
-const awaitWriteStream = require('await-stream-ready').write
-const sendToWormhole = require('stream-wormhole')
-const download = require('image-downloader')
-const Controller = require('egg').Controller
+"use strict"
+const fs = require("fs")
+const path = require("path")
+const awaitWriteStream = require("await-stream-ready").write
+const sendToWormhole = require("stream-wormhole")
+// const download = require('image-downloader')
+const Controller = require("egg").Controller
 
 class UserAccessController extends Controller {
   constructor(ctx) {
@@ -21,7 +21,7 @@ class UserAccessController extends Controller {
     attachment.extname = extname
     attachment.filename = filename
     attachment.url = `/uploads/avatar/${attachment._id.toString()}${extname}`
-    const target = path.join(this.config.baseDir, 'app/public/uploads/avatar', `${attachment._id.toString()}${attachment.extname}`)
+    const target = path.join(this.config.baseDir, "app/public/uploads/avatar", `${attachment._id.toString()}${attachment.extname}`)
     const writeStream = fs.createWriteStream(target)
     try {
       await awaitWriteStream(stream.pipe(writeStream))

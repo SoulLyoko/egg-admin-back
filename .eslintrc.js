@@ -4,13 +4,16 @@ module.exports = {
     commonjs: true,
     es6: true
   },
-  extends: 'eslint:recommended',
+  extends: "eslint:recommended",
   globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly'
+    Atomics: "readonly",
+    SharedArrayBuffer: "readonly",
+    process: true
   },
   parserOptions: {
     ecmaVersion: 2018
   },
-  rules: {}
+  rules: {
+    quotes: [0, "double"]
+  }
 };

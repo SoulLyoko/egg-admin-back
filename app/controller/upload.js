@@ -1,9 +1,9 @@
-const fs = require('fs');
-const path = require('path');
-const Controller = require('egg').Controller;
-const awaitWriteStream = require('await-stream-ready').write;
-const sendToWormhole = require('stream-wormhole');
-const dayjs = require('dayjs');
+const fs = require("fs");
+const path = require("path");
+const Controller = require("egg").Controller;
+const awaitWriteStream = require("await-stream-ready").write;
+const sendToWormhole = require("stream-wormhole");
+const dayjs = require("dayjs");
 
 /**
  * @Controller upload 文件上传
@@ -18,7 +18,7 @@ class UploadController extends Controller {
     const stream = await ctx.getFileStream();
     // 所有表单字段都能通过 `stream.fields` 获取到
     // 组装参数 model
-    const uploadDir = `uploads/${dayjs().format('YYYY-MM-DD')}`;
+    const uploadDir = `uploads/${dayjs().format("YYYY-MM-DD")}`;
     const targetDir = path.join(this.config.static.dir, uploadDir);
     if (!fs.existsSync(targetDir)) {
       fs.mkdirSync(targetDir, { recursive: true });
@@ -69,7 +69,7 @@ class UploadController extends Controller {
         }
         // part 是上传的文件流
         // 组装参数
-        const uploadDir = `uploads/${dayjs().format('YYYY-MM-DD')}`;
+        const uploadDir = `uploads/${dayjs().format("YYYY-MM-DD")}`;
         const targetDir = path.join(this.config.static.dir, uploadDir);
         if (!fs.existsSync(targetDir)) {
           fs.mkdirSync(targetDir);

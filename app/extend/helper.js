@@ -1,4 +1,4 @@
-const dayjs = require('dayjs');
+const dayjs = require("dayjs");
 
 module.exports = {
   //生成随机id
@@ -8,12 +8,12 @@ module.exports = {
 
   //生成uuid
   genUid(length = 10) {
-    const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+    const chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     var id = [];
     for (let i = 0; i < length; i++) {
       id[i] = chars.charAt(Math.random() * chars.length);
     }
-    return id.join('');
+    return id.join("");
   },
 
   /**
@@ -22,14 +22,14 @@ module.exports = {
    * @return {string} 格式化IP
    */
   getIP(req) {
-    let ip = req.get('x-forwarded-for'); // 获取代理前的ip地址
-    if (ip && ip.split(',').length > 0) {
-      ip = ip.split(',')[0];
+    let ip = req.get("x-forwarded-for"); // 获取代理前的ip地址
+    if (ip && ip.split(",").length > 0) {
+      ip = ip.split(",")[0];
     } else {
       ip = req.ip;
     }
     const ipArr = ip.match(/\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/g);
-    return ipArr && ipArr.length ? ipArr[0] : '127.0.0.1';
+    return ipArr && ipArr.length ? ipArr[0] : "127.0.0.1";
   },
 
   /**
@@ -45,7 +45,7 @@ module.exports = {
 
   // 格式化时间
   formatTime(time) {
-    return dayjs(new Date(time)).format('YYYY-MM-DD HH:mm:ss');
+    return dayjs(new Date(time)).format("YYYY-MM-DD HH:mm:ss");
   },
 
   //数组扁平化
@@ -58,7 +58,7 @@ module.exports = {
 
   //首字母大写
   capitalize([first, ...rest]) {
-    return first.toUpperCase() + rest.join('');
+    return first.toUpperCase() + rest.join("");
   },
 
   /**
@@ -67,7 +67,7 @@ module.exports = {
    * @param {Number} unit 单位
    */
   getFileSize(size, unit = 0) {
-    const units = ['B', 'KB', 'MB', 'GB', 'TB'];
+    const units = ["B", "KB", "MB", "GB", "TB"];
     if (size <= 1024) {
       return size.toFixed(2) + units[unit];
     }
@@ -80,7 +80,7 @@ module.exports = {
    * @param {String} parentId 上级id
    * @returns {Array} 最后生成的树
    */
-  buildTree(list, parentId = '0') {
+  buildTree(list, parentId = "0") {
     return list
       .filter(item => item.parentId === parentId)
       .map(parent => {

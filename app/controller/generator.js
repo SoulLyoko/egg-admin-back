@@ -1,4 +1,4 @@
-const Controller = require('egg').Controller;
+const Controller = require("egg").Controller;
 
 /**
  * @Controller gen 代码生成器
@@ -8,7 +8,7 @@ class GenController extends Controller {
     super(ctx);
 
     this.genRule = {
-      name: { type: 'string', required: true, allowEmpty: false }
+      name: { type: "string", required: true, allowEmpty: false }
     };
   }
 
@@ -19,7 +19,7 @@ class GenController extends Controller {
    * @response 200 showRes
    */
   async create() {
-    if (process.env.NODE_ENV !== 'development') {
+    if (process.env.NODE_ENV !== "development") {
       return ctx.fail();
     }
     const { ctx, service } = this;
@@ -35,7 +35,7 @@ class GenController extends Controller {
    * @request path string *name eg:'test' 接口名
    */
   async destroy() {
-    if (process.env.NODE_ENV !== 'development') {
+    if (process.env.NODE_ENV !== "development") {
       return ctx.fail();
     }
     const { ctx, service } = this;

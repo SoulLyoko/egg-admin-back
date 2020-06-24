@@ -1,4 +1,4 @@
-const Controller = require('egg').Controller;
+const Controller = require("egg").Controller;
 
 /**
  * @Controller accont 账户
@@ -8,12 +8,12 @@ class AccountController extends Controller {
     super(ctx);
 
     this.loginRule = {
-      username: { type: 'string', required: true, allowEmpty: false },
-      password: { type: 'string', required: true, allowEmpty: false, min: 4 }
+      username: { type: "string", required: true, allowEmpty: false },
+      password: { type: "string", required: true, allowEmpty: false, min: 4 }
     };
     this.resetPswRule = {
-      password: { type: 'password', required: true, allowEmpty: false, min: 4 },
-      oldPassword: { type: 'password', required: true, allowEmpty: false, min: 4 }
+      password: { type: "password", required: true, allowEmpty: false, min: 4 },
+      oldPassword: { type: "password", required: true, allowEmpty: false, min: 4 }
     };
   }
 
