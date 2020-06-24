@@ -12,12 +12,30 @@ module.exports = {
     }
     return model;
   },
-  async setSwagger() {
-    const swagger = await this.curl("http://127.0.0.1:7001/swagger-doc", { dataType: "json" });
-    this.redis.set("swagger", JSON.stringify(swagger));
+  async setRedis(key, value, exp) {
+    if (exp) {
+      await this.redis.set(key, JSON.stringify(value), "EX", exp);
+    } else {
+      await this.redis.set(key, JSON.stringify(value));
+    }
+  },
+  async getRedis(key) {
+    let data = await this.redis.get(key);
+    if (!data) return;
+    return JSON.parse(data);
+  },
+  async getSwagger() {
+    let swagger = await this.getRedis("swagger");
+    if (!swagger) {
+      swagger = await this.curl("http://127.0.0.1:7001/swagger-doc", { dataType: "json" });
+      await this.setRedis("swagger", swagger);
+    }
+    return swagger;
   },
   async getSwaggerSummary({ method, url }) {
-    const { tags, paths } = JSON.parse(this.redis.get("swagger"));
+    const {
+      data: { tags, paths }
+    } = await this.getSwagger();
     const { stack: stacks } = this.router;
     const router = stacks.filter(stack => stack.methods.includes(method) && stack.regexp.test(url))[0];
     let summary = "";

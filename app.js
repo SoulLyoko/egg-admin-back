@@ -4,7 +4,7 @@ class AppBootHook {
   }
 
   async serverDidReady() {
-    this.app.setSwagger();
+    this.app.getSwagger();
   }
 }
 
