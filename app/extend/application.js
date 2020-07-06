@@ -27,7 +27,9 @@ module.exports = {
   async getSwagger() {
     let swagger = await this.getRedis("swagger");
     if (!swagger) {
-      swagger = await this.curl("http://127.0.0.1:7001/swagger-doc", { dataType: "json" });
+      swagger = await this.curl("http://127.0.0.1:7001/swagger-doc", {
+        dataType: "json"
+      });
       await this.setRedis("swagger", swagger);
     }
     return swagger;
@@ -37,7 +39,9 @@ module.exports = {
       data: { tags, paths }
     } = await this.getSwagger();
     const { stack: stacks } = this.router;
-    const router = stacks.filter(stack => stack.methods.includes(method) && stack.regexp.test(url))[0];
+    const router = stacks.find(
+      stack => stack.methods.includes(method) && stack.regexp.test(url)
+    );
     let summary = "";
     if (paths && router) {
       let path = router.path;
@@ -49,7 +53,7 @@ module.exports = {
       }
       const obj = paths[path][method] || paths[path][method.toLowerCase()];
       if (obj) {
-        const tag = tags.filter(item => item.name === obj.tags[0])[0].description;
+        const tag = tags.find(item => item.name === obj.tags[0]).description;
         summary = tag + " - " + obj.summary;
       }
     }
