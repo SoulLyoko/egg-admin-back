@@ -92,7 +92,7 @@ class DeptController extends Controller {
 
   /**
    * @summary 获取部门树
-   * @router get /api/dept/tree/get
+   * @router get /api/dept/get/tree
    * @response 200 indexRes
    * @Bearer
    */
@@ -103,6 +103,22 @@ class DeptController extends Controller {
     // 设置响应内容和响应状态码
     ctx.success({ res });
   }
+
+  /**
+   * @summary 获取部门用户树
+   * @router get /api/dept/get/userTree
+   * @response 200 indexRes
+   * @Bearer
+   */
+  async userTree() {
+    const { ctx, service } = this;
+    // 调用 Service 进行业务处理
+    const res = await service.dept.userTree();
+    // 设置响应内容和响应状态码
+    ctx.success({ res });
+  }
+
+
 }
 
 module.exports = DeptController;

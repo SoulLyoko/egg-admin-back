@@ -34,9 +34,34 @@ class DeptService extends Service {
 
   // 部门树
   async tree() {
-    const { data } = await this.ctx._list({ model: "Dept", payload: { order: "ascending", prop: "sort" } });
+    const { data } = await this.ctx._list({
+      model: "Dept",
+      payload: { order: "ascending", prop: "sort" }
+    });
     const tree = this.ctx.helper.buildTree(data);
     return { data: tree };
+  }
+
+  //部门用户树
+  async userTree() {
+    const { data } = await this.ctx._list({
+      model: "Dept",
+      payload: { order: "ascending", prop: "sort" }
+    });
+    const userData = await Promise.all(
+      data.map(async item => {
+        const { data: users } = await this.ctx._list({
+          model: "User",
+          conditions: [{ deptId: item._id }]
+        });
+        return {
+          ...item,
+          users
+        };
+      })
+    );
+    const tree = this.ctx.helper.buildTree(userData);
+    return tree;
   }
 }
 

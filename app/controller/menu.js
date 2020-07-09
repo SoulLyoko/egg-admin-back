@@ -91,7 +91,7 @@ class MenuController extends Controller {
 
   /**
    * @summary 全部菜单树
-   * @router get /api/menu/tree/get
+   * @router get /api/menu/get/tree
    * @response 200 indexRes
    * @Bearer
    */
@@ -107,7 +107,7 @@ class MenuController extends Controller {
 
   /**
    * @summary 导航菜单
-   * @router get /api/menu/nav/get
+   * @router get /api/menu/get/nav
    * @response 200 indexRes
    * @Bearer
    */
@@ -123,7 +123,7 @@ class MenuController extends Controller {
 
   /**
    * @summary 用户权限
-   * @router get /api/menu/permissions/get
+   * @router get /api/menu/get/permissions
    * @response 200 indexRes
    * @Bearer
    */

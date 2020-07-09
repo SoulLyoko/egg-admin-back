@@ -25,13 +25,14 @@ module.exports = app => {
 
   // menu
   router.resources("menu", "/api/menu", jwt, controller.menu);
-  router.get("/api/menu/tree/get", jwt, controller.menu.tree);
-  router.get("/api/menu/nav/get", jwt, controller.menu.nav);
-  router.get("/api/menu/permissions/get", jwt, controller.menu.permissions);
+  router.get("/api/menu/get/tree", jwt, controller.menu.tree);
+  router.get("/api/menu/get/nav", jwt, controller.menu.nav);
+  router.get("/api/menu/get/permissions", jwt, controller.menu.permissions);
 
   // dept
   router.resources("dept", "/api/dept", jwt, controller.dept);
-  router.get("/api/dept/tree/get", jwt, controller.dept.tree);
+  router.get("/api/dept/get/tree", jwt, controller.dept.tree);
+  router.get("/api/dept/get/userTree", jwt, controller.dept.userTree);
 
   // role
   router.resources("role", "/api/role", jwt, controller.role);
@@ -42,7 +43,7 @@ module.exports = app => {
   // dict
   router.resources("dict", "/api/dict", jwt, controller.dict);
   router.get("/api/dict/type/:type", jwt, controller.dict.type);
-  router.get("/api/dict/tree/get", jwt, controller.dict.tree);
+  router.get("/api/dict/get/tree", jwt, controller.dict.tree);
 
   // param
   router.resources("param", "/api/param", jwt, controller.param);

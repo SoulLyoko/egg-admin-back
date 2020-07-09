@@ -92,7 +92,7 @@ class DictController extends Controller {
 
   /**
    * @summary 获取字典树
-   * @router get /api/dict/tree/get
+   * @router get /api/dict/get/tree
    * @response 200 indexRes
    * @Bearer
    */
