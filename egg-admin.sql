@@ -11,7 +11,7 @@
  Target Server Version : 40206
  File Encoding         : 65001
 
- Date: 06/07/2020 17:58:20
+ Date: 09/07/2020 17:50:24
 */
 
 
@@ -89,7 +89,7 @@ db.getCollection("depts").insert([ {
     createTime: ISODate("2018-12-28T22:20:17.000Z"),
     parentId: "0",
     updateBy: "admin",
-    updateTime: ISODate("2020-07-06T06:04:29.226Z")
+    updateTime: ISODate("2020-07-08T06:57:46.111Z")
 } ]);
 db.getCollection("depts").insert([ {
     _id: ObjectId("5d2fde5814bc42288c0045e2"),
@@ -139,7 +139,9 @@ db.getCollection("depts").insert([ {
     name: "广州分公司",
     sort: NumberInt("2"),
     createTime: ISODate("2020-04-15T07:30:50.000Z"),
-    __v: NumberInt("0")
+    __v: NumberInt("0"),
+    updateBy: "admin",
+    updateTime: ISODate("2020-07-08T06:58:36.814Z")
 } ]);
 db.getCollection("depts").insert([ {
     _id: ObjectId("5e96b95ba16a80400c5ef5a2"),
@@ -196,6 +198,47 @@ db.getCollection("dicts").insert([ {
     sort: NumberInt("0"),
     createTime: ISODate("2020-04-26T08:59:23.88Z"),
     updateTime: ISODate("2020-04-26T08:59:23.88Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("dicts").insert([ {
+    _id: ObjectId("5f052e6e6260551db8adecea"),
+    type: "status",
+    parentId: "0",
+    label: " 状态",
+    value: " status",
+    remark: "",
+    createTime: ISODate("2020-07-08T02:24:46.000Z"),
+    updateTime: ISODate("2020-07-08T02:33:20.623Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("dicts").insert([ {
+    _id: ObjectId("5f052f756260551db8adecec"),
+    type: "status",
+    parentId: "5f052e6e6260551db8adecea",
+    label: "禁用",
+    value: "0",
+    remark: "",
+    sort: NumberInt("0"),
+    createTime: ISODate("2020-07-08T02:29:09.000Z"),
+    updateTime: ISODate("2020-07-08T02:33:25.244Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("dicts").insert([ {
+    _id: ObjectId("5f052f836260551db8adecee"),
+    type: "status",
+    parentId: "5f052e6e6260551db8adecea",
+    label: "启用",
+    value: "1",
+    remark: "",
+    sort: NumberInt("1"),
+    createTime: ISODate("2020-07-08T02:29:23.000Z"),
+    updateTime: ISODate("2020-07-08T02:33:29.061Z"),
     createBy: "admin",
     updateBy: "admin",
     __v: NumberInt("0")
@@ -39154,6 +39197,524 @@ db.getCollection("logs").insert([ {
     updateTime: ISODate("2020-07-06T09:41:42.346Z"),
     __v: NumberInt("0")
 } ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f03cbde4a74bd2c2c4c53dc"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/account/login",
+    summary: "账户 - 用户登录 ",
+    error: "验证码错误",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"captcha\":\"iphl\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.68 Safari/537.36 Edg/84.0.522.28",
+    time: "19.124ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-07-07T01:11:58.988Z"),
+    updateTime: ISODate("2020-07-07T01:11:58.988Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f03cbe34a74bd2c2c4c53dd"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/account/login",
+    summary: "账户 - 用户登录 ",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"captcha\":\"rls7\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.68 Safari/537.36 Edg/84.0.522.28",
+    time: "107.466ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-07-07T01:12:03.677Z"),
+    updateTime: ISODate("2020-07-07T01:12:03.677Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f03d958146fba3a00a446fd"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/account/login",
+    summary: "账户 - 用户登录 ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"captcha\":\"5faq\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.68 Safari/537.36 Edg/84.0.522.28",
+    time: "95.134ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-07-07T02:09:28.742Z"),
+    updateTime: ISODate("2020-07-07T02:09:28.742Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f03ddec146fba3a00a446fe"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/menu/5ec5fcd99cb30106ec3120c8",
+    summary: "菜单管理 - 更新数据/:id ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"parentId\":\"0\",\"title\":\"权限管理\",\"type\":\"0\",\"icon\":\"eicon-crown\",\"path\":\"/upms\",\"component\":\"Layout\",\"query\":\"\",\"name\":\"upms\",\"url\":\"\",\"blank\":false,\"sort\":2,\"permissions\":\"\",\"cache\":false,\"_id\":\"5ec5fcd99cb30106ec3120c8\",\"createTime\":\"2020-05-21 12:00:25\",\"updateBy\":\"admin\",\"updateTime\":1594088940102,\"createBy\":\"admin\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.68 Safari/537.36 Edg/84.0.522.28",
+    time: "6.269ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-07T02:29:00.109Z"),
+    updateTime: ISODate("2020-07-07T02:29:00.109Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f03de0e146fba3a00a446ff"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/menu/5d2e832314bc4247ac006717",
+    summary: "菜单管理 - 更新数据/:id ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"parentId\":\"5ec5fcd99cb30106ec3120c8\",\"title\":\"用户管理\",\"type\":\"0\",\"icon\":\"eicon-user\",\"path\":\"/user\",\"component\":\"upms/user\",\"query\":\"\",\"name\":\"upms-user\",\"url\":\"\",\"blank\":false,\"sort\":1,\"permissions\":\"sys_user_list\",\"cache\":true,\"_id\":\"5d2e832314bc4247ac006717\",\"createTime\":\"2018-12-29 06:19:48\",\"updateBy\":\"admin\",\"updateTime\":1594088974705,\"createBy\":\"admin\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.68 Safari/537.36 Edg/84.0.522.28",
+    time: "3.921ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-07T02:29:34.71Z"),
+    updateTime: ISODate("2020-07-07T02:29:34.71Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f03de29146fba3a00a44700"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/menu/5d2e832314bc4247ac00671d",
+    summary: "菜单管理 - 更新数据/:id ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"parentId\":\"5ec5fcd99cb30106ec3120c8\",\"title\":\"部门管理\",\"type\":\"0\",\"icon\":\"eicon-branches\",\"path\":\"/dept\",\"component\":\"upms/dept\",\"query\":\"\",\"name\":\"upms-dept\",\"url\":\"\",\"blank\":false,\"sort\":2,\"permissions\":\"sys_dept_list\",\"cache\":true,\"_id\":\"5d2e832314bc4247ac00671d\",\"createTime\":\"2018-12-29 06:19:42\",\"updateBy\":\"admin\",\"updateTime\":1594089001660,\"createBy\":\"admin\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.68 Safari/537.36 Edg/84.0.522.28",
+    time: "3.850ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-07T02:30:01.664Z"),
+    updateTime: ISODate("2020-07-07T02:30:01.664Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f03de3b146fba3a00a44701"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/menu/5d2e832314bc4247ac006722",
+    summary: "菜单管理 - 更新数据/:id ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"parentId\":\"5ec5fcd99cb30106ec3120c8\",\"title\":\"角色管理\",\"type\":\"0\",\"icon\":\"eicon-crown\",\"path\":\"/role\",\"component\":\"upms/role\",\"query\":\"\",\"name\":\"upms-role\",\"url\":\"\",\"blank\":false,\"sort\":3,\"permissions\":\"sys_role_list\",\"cache\":true,\"_id\":\"5d2e832314bc4247ac006722\",\"createTime\":\"2018-12-29 06:19:42\",\"updateBy\":\"admin\",\"updateTime\":1594089019913,\"createBy\":\"admin\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.68 Safari/537.36 Edg/84.0.522.28",
+    time: "3.203ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-07T02:30:19.917Z"),
+    updateTime: ISODate("2020-07-07T02:30:19.917Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f03de4d146fba3a00a44702"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/menu/5ec5fcd99cb30106ec3120c8",
+    summary: "菜单管理 - 更新数据/:id ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"parentId\":\"0\",\"title\":\"权限管理\",\"type\":\"0\",\"icon\":\"eicon-lock\",\"path\":\"/upms\",\"component\":\"Layout\",\"query\":\"\",\"name\":\"upms\",\"url\":\"\",\"blank\":false,\"sort\":2,\"permissions\":\"\",\"cache\":false,\"_id\":\"5ec5fcd99cb30106ec3120c8\",\"createTime\":\"2020-05-21 12:00:25\",\"updateBy\":\"admin\",\"updateTime\":1594089037229,\"createBy\":\"admin\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.68 Safari/537.36 Edg/84.0.522.28",
+    time: "4.086ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-07T02:30:37.233Z"),
+    updateTime: ISODate("2020-07-07T02:30:37.233Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f03de59146fba3a00a44703"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/menu/5d2d6dc314bc421d10003a59",
+    summary: "菜单管理 - 更新数据/:id ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"parentId\":\"0\",\"title\":\"系统监控\",\"type\":\"0\",\"icon\":\"eicon-desktop\",\"path\":\"/monitor\",\"component\":\"Layout\",\"query\":\"\",\"name\":\"monitor\",\"url\":\"\",\"blank\":false,\"sort\":3,\"permissions\":\"\",\"cache\":false,\"_id\":\"5d2d6dc314bc421d10003a59\",\"createTime\":\"2018-12-29 06:19:48\",\"updateBy\":\"admin\",\"updateTime\":1594089049522,\"createBy\":\"admin\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.68 Safari/537.36 Edg/84.0.522.28",
+    time: "3.562ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-07T02:30:49.526Z"),
+    updateTime: ISODate("2020-07-07T02:30:49.526Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f03de74146fba3a00a44704"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/menu/5ec745f7114cdf382c1ba493",
+    summary: "菜单管理 - 更新数据/:id ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"parentId\":\"5d2d6dc314bc421d10003a59\",\"title\":\"系统日志\",\"type\":\"0\",\"icon\":\"eicon-file\",\"path\":\"/sys-log\",\"component\":\"Main\",\"query\":\"\",\"name\":\"sys-log\",\"url\":\"\",\"blank\":false,\"sort\":0,\"permissions\":\"\",\"cache\":true,\"_id\":\"5ec745f7114cdf382c1ba493\",\"createTime\":\"2020-05-22 11:24:39\",\"updateBy\":\"admin\",\"updateTime\":1594089076408,\"createBy\":\"admin\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.68 Safari/537.36 Edg/84.0.522.28",
+    time: "3.518ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-07T02:31:16.412Z"),
+    updateTime: ISODate("2020-07-07T02:31:16.412Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f03de88146fba3a00a44705"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/menu/5ea6838635897525e4e89605",
+    summary: "菜单管理 - 更新数据/:id ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"parentId\":\"5d2d6dc314bc421d10003a59\",\"title\":\"接口文档\",\"type\":\"0\",\"icon\":\"eicon-code\",\"path\":\"/swagger\",\"component\":\"Iframe\",\"query\":\"\",\"name\":\"swagger\",\"url\":\"http://127.0.0.1:7001/swagger-ui.html\",\"blank\":true,\"sort\":4,\"permissions\":\"\",\"cache\":true,\"_id\":\"5ea6838635897525e4e89605\",\"createTime\":\"2020-04-27 15:02:30\",\"updateBy\":\"admin\",\"updateTime\":1594089096642,\"createBy\":\"admin\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.68 Safari/537.36 Edg/84.0.522.28",
+    time: "3.139ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-07T02:31:36.646Z"),
+    updateTime: ISODate("2020-07-07T02:31:36.646Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f03de93146fba3a00a44706"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/menu/5d2e832314bc4247ac00674a",
+    summary: "菜单管理 - 更新数据/:id ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"parentId\":\"5d2d6dc314bc421d10003a59\",\"title\":\"Log监控\",\"type\":\"0\",\"icon\":\"eicon-database\",\"path\":\"/log\",\"component\":\"Iframe\",\"query\":\"\",\"name\":\"log\",\"url\":\"http://127.0.0.1:7001/__logs\",\"blank\":true,\"sort\":5,\"permissions\":\"\",\"cache\":true,\"_id\":\"5d2e832314bc4247ac00674a\",\"createTime\":\"2018-12-29 06:19:48\",\"updateBy\":\"admin\",\"updateTime\":1594089107712,\"createBy\":\"admin\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.68 Safari/537.36 Edg/84.0.522.28",
+    time: "4.112ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-07T02:31:47.717Z"),
+    updateTime: ISODate("2020-07-07T02:31:47.717Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f03efa0c04a29339873e3b3"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/menu/5d2d6d6814bc421d10003a55",
+    summary: "菜单管理 - 更新数据/:id ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"parentId\":\"0\",\"title\":\"系统设置\",\"type\":\"0\",\"icon\":\"eisetting\",\"path\":\"/admin\",\"component\":\"Layout\",\"query\":\"\",\"name\":\"sys\",\"url\":\"\",\"blank\":false,\"sort\":1,\"permissions\":\"\",\"cache\":false,\"_id\":\"5d2d6d6814bc421d10003a55\",\"createTime\":\"2018-12-29 06:19:47\",\"updateBy\":\"admin\",\"updateTime\":1594093472741}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.68 Safari/537.36 Edg/84.0.522.28",
+    time: "7.480ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-07T03:44:32.749Z"),
+    updateTime: ISODate("2020-07-07T03:44:32.749Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f03efb0c04a29339873e3b4"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/menu/5d2d6d6814bc421d10003a55",
+    summary: "菜单管理 - 更新数据/:id ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"parentId\":\"0\",\"title\":\"系统设置\",\"type\":\"0\",\"icon\":\"eicon-setting\",\"path\":\"/admin\",\"component\":\"Layout\",\"query\":\"\",\"name\":\"sys\",\"url\":\"\",\"blank\":false,\"sort\":1,\"permissions\":\"\",\"cache\":false,\"_id\":\"5d2d6d6814bc421d10003a55\",\"createTime\":\"2018-12-29 06:19:47\",\"updateBy\":\"admin\",\"updateTime\":1594093488167}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.68 Safari/537.36 Edg/84.0.522.28",
+    time: "3.756ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-07T03:44:48.172Z"),
+    updateTime: ISODate("2020-07-07T03:44:48.172Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f0523016260551db8adece5"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/menu/5d2e832314bc4247ac006717",
+    summary: "菜单管理 - 更新数据/:id ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"parentId\":\"5ec5fcd99cb30106ec3120c8\",\"title\":\"用户管理\",\"type\":\"0\",\"icon\":\"eicon-user\",\"path\":\"/user\",\"component\":\"upms/user\",\"query\":\"\",\"name\":\"upms-user\",\"url\":\"\",\"blank\":false,\"sort\":1,\"permissions\":\"sys_user_list\",\"cache\":false,\"_id\":\"5d2e832314bc4247ac006717\",\"createTime\":\"2018-12-29 06:19:48\",\"updateBy\":\"admin\",\"updateTime\":1594172161889,\"__v\":0,\"createBy\":\"admin\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.68 Safari/537.36 Edg/84.0.522.28",
+    time: "7.475ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-08T01:36:01.897Z"),
+    updateTime: ISODate("2020-07-08T01:36:01.897Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f0523206260551db8adece6"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/menu/5d2e832314bc4247ac006717",
+    summary: "菜单管理 - 更新数据/:id ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"parentId\":\"5ec5fcd99cb30106ec3120c8\",\"title\":\"用户管理\",\"type\":\"0\",\"icon\":\"eicon-user\",\"path\":\"/user\",\"component\":\"upms/user\",\"query\":\"\",\"name\":\"upms-user\",\"url\":\"\",\"blank\":false,\"sort\":1,\"permissions\":\"sys_user_list\",\"cache\":true,\"_id\":\"5d2e832314bc4247ac006717\",\"createTime\":\"2018-12-29 06:19:48\",\"updateBy\":\"admin\",\"updateTime\":1594172192714,\"__v\":0,\"createBy\":\"admin\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.68 Safari/537.36 Edg/84.0.522.28",
+    time: "3.989ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-08T01:36:32.718Z"),
+    updateTime: ISODate("2020-07-08T01:36:32.718Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f052aa56260551db8adece7"),
+    status: NumberInt("0"),
+    method: "POST",
+    url: "/api/account/login",
+    summary: "账户 - 用户登录 ",
+    error: "验证码错误",
+    ip: "192.168.1.8",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"captcha\":\"habh\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.68 Safari/537.36 Edg/84.0.522.28",
+    time: "28.943ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-07-08T02:08:37.657Z"),
+    updateTime: ISODate("2020-07-08T02:08:37.657Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f052aa96260551db8adece8"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/account/login",
+    summary: "账户 - 用户登录 ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"captcha\":\"8gcy\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.68 Safari/537.36 Edg/84.0.522.28",
+    time: "128.611ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-07-08T02:08:41.444Z"),
+    updateTime: ISODate("2020-07-08T02:08:41.444Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f052cfd6260551db8adece9"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/account/login",
+    summary: "账户 - 用户登录 ",
+    error: "",
+    ip: "127.0.0.1",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"captcha\":\"8y8m\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.68 Safari/537.36 Edg/84.0.522.28",
+    time: "77.737ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-07-08T02:18:37.414Z"),
+    updateTime: ISODate("2020-07-08T02:18:37.414Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f052e6e6260551db8adeceb"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/dict",
+    summary: "字典管理 - 创建数据 ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"type\":\" status\",\"parentId\":\"0\",\"label\":\" 状态\",\"value\":\" status\",\"remark\":\"\",\"createTime\":1594175086123,\"updateTime\":1594175086123,\"createBy\":\"admin\",\"updateBy\":\"admin\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.68 Safari/537.36 Edg/84.0.522.28",
+    time: "10.835ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-08T02:24:46.135Z"),
+    updateTime: ISODate("2020-07-08T02:24:46.135Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f052f756260551db8adeced"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/dict",
+    summary: "字典管理 - 创建数据 ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"type\":\" status\",\"parentId\":\"5f052e6e6260551db8adecea\",\"label\":\"禁用\",\"value\":\"0\",\"remark\":\"\",\"sort\":0,\"createTime\":1594175349524,\"updateTime\":1594175349524,\"createBy\":\"admin\",\"updateBy\":\"admin\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.68 Safari/537.36 Edg/84.0.522.28",
+    time: "3.426ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-08T02:29:09.528Z"),
+    updateTime: ISODate("2020-07-08T02:29:09.528Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f052f836260551db8adecef"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/dict",
+    summary: "字典管理 - 创建数据 ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"type\":\" status\",\"parentId\":\"5f052e6e6260551db8adecea\",\"label\":\"启用\",\"value\":\"1\",\"remark\":\"\",\"sort\":1,\"createTime\":1594175363466,\"updateTime\":1594175363466,\"createBy\":\"admin\",\"updateBy\":\"admin\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.68 Safari/537.36 Edg/84.0.522.28",
+    time: "3.280ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-08T02:29:23.471Z"),
+    updateTime: ISODate("2020-07-08T02:29:23.471Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f053070aff41d22d88baeb4"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/dict/5f052e6e6260551db8adecea",
+    summary: "字典管理 - 更新数据/:id ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"type\":\"status\",\"parentId\":\"0\",\"label\":\" 状态\",\"value\":\" status\",\"remark\":\"\",\"_id\":\"5f052e6e6260551db8adecea\",\"createTime\":\"2020-07-08 10:24:46\",\"updateTime\":1594175600623,\"createBy\":\"admin\",\"updateBy\":\"admin\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.68 Safari/537.36 Edg/84.0.522.28",
+    time: "8.964ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-08T02:33:20.634Z"),
+    updateTime: ISODate("2020-07-08T02:33:20.634Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f053075aff41d22d88baeb5"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/dict/5f052f756260551db8adecec",
+    summary: "字典管理 - 更新数据/:id ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"type\":\"status\",\"parentId\":\"5f052e6e6260551db8adecea\",\"label\":\"禁用\",\"value\":\"0\",\"remark\":\"\",\"sort\":0,\"_id\":\"5f052f756260551db8adecec\",\"createTime\":\"2020-07-08 10:29:09\",\"updateTime\":1594175605244,\"createBy\":\"admin\",\"updateBy\":\"admin\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.68 Safari/537.36 Edg/84.0.522.28",
+    time: "6.296ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-08T02:33:25.251Z"),
+    updateTime: ISODate("2020-07-08T02:33:25.251Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f053079aff41d22d88baeb6"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/dict/5f052f836260551db8adecee",
+    summary: "字典管理 - 更新数据/:id ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"type\":\"status\",\"parentId\":\"5f052e6e6260551db8adecea\",\"label\":\"启用\",\"value\":\"1\",\"remark\":\"\",\"sort\":1,\"_id\":\"5f052f836260551db8adecee\",\"createTime\":\"2020-07-08 10:29:23\",\"updateTime\":1594175609061,\"createBy\":\"admin\",\"updateBy\":\"admin\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.68 Safari/537.36 Edg/84.0.522.28",
+    time: "6.305ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-08T02:33:29.068Z"),
+    updateTime: ISODate("2020-07-08T02:33:29.068Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f056e6abaefb54478fff392"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/dept/5d2ecffb14bc4247ac00674e",
+    summary: "部门管理 - 更新数据/:id ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"parentId\":\"5e96b95ba16a80400c5ef5a2\",\"name\":\"集团总部\",\"sort\":0,\"_id\":\"5d2ecffb14bc4247ac00674e\",\"createTime\":\"2018-12-29 06:20:17\",\"updateBy\":\"admin\",\"updateTime\":1594191466111}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.68 Safari/537.36 Edg/84.0.522.28",
+    time: "7.821ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-08T06:57:46.121Z"),
+    updateTime: ISODate("2020-07-08T06:57:46.121Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f056e9cbaefb54478fff393"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/dept/5e96b82a1383202d98f79523",
+    summary: "部门管理 - 更新数据/:id ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"parentId\":\"5e96b95ba16a80400c5ef5a2\",\"name\":\"广州分公司\",\"sort\":2,\"_id\":\"5e96b82a1383202d98f79523\",\"createTime\":\"2020-04-15 15:30:50\",\"__v\":0,\"updateTime\":1594191516814,\"updateBy\":\"admin\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.68 Safari/537.36 Edg/84.0.522.28",
+    time: "4.920ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-08T06:58:36.821Z"),
+    updateTime: ISODate("2020-07-08T06:58:36.821Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f06c1b238462402188fc3a9"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/account/login",
+    summary: "账户 - 用户登录 ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"captcha\":\"gux9\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.68 Safari/537.36 Edg/84.0.522.28",
+    time: "116.750ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-07-09T07:05:22.053Z"),
+    updateTime: ISODate("2020-07-09T07:05:22.053Z"),
+    __v: NumberInt("0")
+} ]);
 
 // ----------------------------
 // Collection structure for menus
@@ -39179,7 +39740,7 @@ db.getCollection("menus").insert([ {
     parentId: "0",
     blank: false,
     updateBy: "admin",
-    updateTime: ISODate("2020-07-06T02:23:05.877Z"),
+    updateTime: ISODate("2020-07-07T03:44:48.167Z"),
     url: "",
     query: ""
 } ]);
@@ -39187,7 +39748,7 @@ db.getCollection("menus").insert([ {
     _id: ObjectId("5d2d6dc314bc421d10003a59"),
     name: "monitor",
     type: "0",
-    icon: "desktop",
+    icon: "eicon-desktop",
     permissions: "",
     sort: NumberInt("3"),
     cache: false,
@@ -39199,14 +39760,16 @@ db.getCollection("menus").insert([ {
     blank: false,
     query: "",
     updateBy: "admin",
-    updateTime: ISODate("2020-05-25T07:25:14.548Z"),
-    url: ""
+    updateTime: ISODate("2020-07-07T02:30:49.522Z"),
+    url: "",
+    __v: NumberInt("0"),
+    createBy: "admin"
 } ]);
 db.getCollection("menus").insert([ {
     _id: ObjectId("5d2e832314bc4247ac006717"),
     title: "用户管理",
     type: "0",
-    icon: "user",
+    icon: "eicon-user",
     permissions: "sys_user_list",
     sort: NumberInt("1"),
     cache: true,
@@ -39216,9 +39779,12 @@ db.getCollection("menus").insert([ {
     createTime: ISODate("2018-12-28T22:19:48.000Z"),
     parentId: "5ec5fcd99cb30106ec3120c8",
     updateBy: "admin",
-    updateTime: ISODate("2020-05-21T06:40:13.404Z"),
+    updateTime: ISODate("2020-07-08T01:36:32.714Z"),
     blank: false,
-    url: ""
+    url: "",
+    __v: NumberInt("0"),
+    createBy: "admin",
+    query: ""
 } ]);
 db.getCollection("menus").insert([ {
     _id: ObjectId("5d2e832314bc4247ac006718"),
@@ -39314,7 +39880,7 @@ db.getCollection("menus").insert([ {
     _id: ObjectId("5d2e832314bc4247ac00671d"),
     name: "upms-dept",
     type: "0",
-    icon: "code-fork",
+    icon: "eicon-branches",
     permissions: "sys_dept_list",
     sort: NumberInt("2"),
     cache: true,
@@ -39324,9 +39890,12 @@ db.getCollection("menus").insert([ {
     createTime: ISODate("2018-12-28T22:19:42.000Z"),
     parentId: "5ec5fcd99cb30106ec3120c8",
     updateBy: "admin",
-    updateTime: ISODate("2020-05-21T06:40:23.447Z"),
+    updateTime: ISODate("2020-07-07T02:30:01.66Z"),
     blank: false,
-    url: ""
+    url: "",
+    __v: NumberInt("0"),
+    createBy: "admin",
+    query: ""
 } ]);
 db.getCollection("menus").insert([ {
     _id: ObjectId("5d2e832314bc4247ac00671e"),
@@ -39392,7 +39961,7 @@ db.getCollection("menus").insert([ {
     _id: ObjectId("5d2e832314bc4247ac006722"),
     name: "upms-role",
     type: "0",
-    icon: "users",
+    icon: "eicon-crown",
     permissions: "sys_role_list",
     sort: NumberInt("3"),
     cache: true,
@@ -39402,9 +39971,12 @@ db.getCollection("menus").insert([ {
     createTime: ISODate("2018-12-28T22:19:42.000Z"),
     parentId: "5ec5fcd99cb30106ec3120c8",
     updateBy: "admin",
-    updateTime: ISODate("2020-05-21T06:40:31.694Z"),
+    updateTime: ISODate("2020-07-07T02:30:19.913Z"),
     blank: false,
-    url: ""
+    url: "",
+    __v: NumberInt("0"),
+    createBy: "admin",
+    query: ""
 } ]);
 db.getCollection("menus").insert([ {
     _id: ObjectId("5d2e832314bc4247ac006723"),
@@ -39982,7 +40554,7 @@ db.getCollection("menus").insert([ {
     _id: ObjectId("5d2e832314bc4247ac00674a"),
     name: "log",
     type: "0",
-    icon: "database",
+    icon: "eicon-database",
     permissions: "",
     sort: NumberInt("5"),
     cache: true,
@@ -39992,17 +40564,19 @@ db.getCollection("menus").insert([ {
     createTime: ISODate("2018-12-28T22:19:48.000Z"),
     parentId: "5d2d6dc314bc421d10003a59",
     updateBy: "admin",
-    updateTime: ISODate("2020-05-28T08:19:18.192Z"),
+    updateTime: ISODate("2020-07-07T02:31:47.712Z"),
     url: "http://127.0.0.1:7001/__logs",
     blank: true,
-    query: ""
+    query: "",
+    __v: NumberInt("0"),
+    createBy: "admin"
 } ]);
 db.getCollection("menus").insert([ {
     _id: ObjectId("5ea6838635897525e4e89605"),
     cache: true,
     parentId: "5d2d6dc314bc421d10003a59",
     title: "接口文档",
-    icon: "file-code-o",
+    icon: "eicon-code",
     type: "0",
     path: "/swagger",
     component: "Iframe",
@@ -40010,7 +40584,7 @@ db.getCollection("menus").insert([ {
     sort: NumberInt("4"),
     permissions: "",
     createTime: ISODate("2020-04-27T07:02:30.000Z"),
-    updateTime: ISODate("2020-05-28T06:17:57.273Z"),
+    updateTime: ISODate("2020-07-07T02:31:36.642Z"),
     createBy: "admin",
     updateBy: "admin",
     __v: NumberInt("0"),
@@ -40024,7 +40598,7 @@ db.getCollection("menus").insert([ {
     parentId: "0",
     title: "权限管理",
     type: "0",
-    icon: "graduation-cap",
+    icon: "eicon-lock",
     path: "/upms",
     component: "Layout",
     name: "upms",
@@ -40033,7 +40607,7 @@ db.getCollection("menus").insert([ {
     sort: NumberInt("2"),
     permissions: "",
     createTime: ISODate("2020-05-21T04:00:25.000Z"),
-    updateTime: ISODate("2020-05-25T07:25:10.961Z"),
+    updateTime: ISODate("2020-07-07T02:30:37.229Z"),
     createBy: "admin",
     updateBy: "admin",
     __v: NumberInt("0"),
@@ -40045,7 +40619,7 @@ db.getCollection("menus").insert([ {
     parentId: "5d2d6dc314bc421d10003a59",
     title: "系统日志",
     type: "0",
-    icon: "file-text-o",
+    icon: "eicon-file",
     path: "/sys-log",
     component: "Main",
     query: "",
@@ -40054,8 +40628,8 @@ db.getCollection("menus").insert([ {
     blank: false,
     sort: NumberInt("0"),
     permissions: "",
-    createTime: ISODate("2020-05-22T03:24:39.633Z"),
-    updateTime: ISODate("2020-05-22T03:24:39.633Z"),
+    createTime: ISODate("2020-05-22T03:24:39.000Z"),
+    updateTime: ISODate("2020-07-07T02:31:16.408Z"),
     createBy: "admin",
     updateBy: "admin",
     __v: NumberInt("0")
