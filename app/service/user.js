@@ -3,9 +3,10 @@ const Service = require("egg").Service;
 class UserService extends Service {
   //获取数据(全部/分页/模糊)
   async index(payload) {
-    const { username } = payload;
+    const { username, deptId } = payload;
     const conditions = []; //查询条件数组
     username && conditions.push({ username: { $regex: username } });
+    deptId && conditions.push({ deptId });
     let { data, total } = await this.ctx._list({ model: "User", payload, conditions });
     data = await Promise.all(
       data.map(async item => {
