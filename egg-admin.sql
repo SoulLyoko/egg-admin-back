@@ -11,7 +11,7 @@
  Target Server Version : 40206
  File Encoding         : 65001
 
- Date: 09/07/2020 17:50:24
+ Date: 14/07/2020 17:29:37
 */
 
 
@@ -242,6 +242,75 @@ db.getCollection("dicts").insert([ {
     createBy: "admin",
     updateBy: "admin",
     __v: NumberInt("0")
+} ]);
+db.getCollection("dicts").insert([ {
+    _id: ObjectId("5f07dc4287ba7035b0aa2009"),
+    type: "request_method",
+    parentId: "0",
+    label: "请求方式",
+    value: "request_method",
+    remark: "",
+    createTime: ISODate("2020-07-10T03:10:58.965Z"),
+    updateTime: ISODate("2020-07-10T03:10:58.965Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("dicts").insert([ {
+    _id: ObjectId("5f07dc5387ba7035b0aa200b"),
+    type: "request_method",
+    parentId: "5f07dc4287ba7035b0aa2009",
+    label: "GET",
+    value: "GET",
+    remark: "",
+    createTime: ISODate("2020-07-10T03:11:15.000Z"),
+    updateTime: ISODate("2020-07-10T03:11:57.034Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0"),
+    sort: NumberInt("0")
+} ]);
+db.getCollection("dicts").insert([ {
+    _id: ObjectId("5f07dc6387ba7035b0aa200d"),
+    type: "request_method",
+    parentId: "5f07dc4287ba7035b0aa2009",
+    label: "POST",
+    value: "POST",
+    remark: "",
+    createTime: ISODate("2020-07-10T03:11:31.000Z"),
+    updateTime: ISODate("2020-07-10T03:12:05.043Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0"),
+    sort: NumberInt("1")
+} ]);
+db.getCollection("dicts").insert([ {
+    _id: ObjectId("5f07dc6b87ba7035b0aa200f"),
+    type: "request_method",
+    parentId: "5f07dc4287ba7035b0aa2009",
+    label: "PUT",
+    value: "PUT",
+    remark: "",
+    createTime: ISODate("2020-07-10T03:11:39.000Z"),
+    updateTime: ISODate("2020-07-10T03:12:11.624Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0"),
+    sort: NumberInt("2")
+} ]);
+db.getCollection("dicts").insert([ {
+    _id: ObjectId("5f07dc7087ba7035b0aa2011"),
+    type: "request_method",
+    parentId: "5f07dc4287ba7035b0aa2009",
+    label: "DELETE",
+    value: "DELETE",
+    remark: "",
+    createTime: ISODate("2020-07-10T03:11:44.000Z"),
+    updateTime: ISODate("2020-07-10T03:12:16.011Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0"),
+    sort: NumberInt("3")
 } ]);
 
 // ----------------------------
@@ -39715,6 +39784,395 @@ db.getCollection("logs").insert([ {
     updateTime: ISODate("2020-07-09T07:05:22.053Z"),
     __v: NumberInt("0")
 } ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f07dc4287ba7035b0aa200a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/dict",
+    summary: "字典管理 - 创建数据 ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"type\":\"request_method\",\"parentId\":\"0\",\"label\":\"请求方式\",\"value\":\"request_method\",\"remark\":\"\",\"createTime\":1594350658965,\"updateTime\":1594350658965,\"createBy\":\"admin\",\"updateBy\":\"admin\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.85 Safari/537.36 Edg/84.0.522.35",
+    time: "12.515ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-10T03:10:58.978Z"),
+    updateTime: ISODate("2020-07-10T03:10:58.978Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f07dc5387ba7035b0aa200c"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/dict",
+    summary: "字典管理 - 创建数据 ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"type\":\"request_method\",\"parentId\":\"5f07dc4287ba7035b0aa2009\",\"label\":\"GET\",\"value\":\"GET\",\"remark\":\"\",\"createTime\":1594350675304,\"updateTime\":1594350675304,\"createBy\":\"admin\",\"updateBy\":\"admin\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.85 Safari/537.36 Edg/84.0.522.35",
+    time: "3.264ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-10T03:11:15.308Z"),
+    updateTime: ISODate("2020-07-10T03:11:15.308Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f07dc6387ba7035b0aa200e"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/dict",
+    summary: "字典管理 - 创建数据 ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"type\":\"request_method\",\"parentId\":\"5f07dc4287ba7035b0aa2009\",\"label\":\"POST\",\"value\":\"POST\",\"remark\":\"\",\"createTime\":1594350691757,\"updateTime\":1594350691757,\"createBy\":\"admin\",\"updateBy\":\"admin\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.85 Safari/537.36 Edg/84.0.522.35",
+    time: "3.266ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-10T03:11:31.762Z"),
+    updateTime: ISODate("2020-07-10T03:11:31.762Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f07dc6b87ba7035b0aa2010"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/dict",
+    summary: "字典管理 - 创建数据 ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"type\":\"request_method\",\"parentId\":\"5f07dc4287ba7035b0aa2009\",\"label\":\"PUT\",\"value\":\"PUT\",\"remark\":\"\",\"createTime\":1594350699559,\"updateTime\":1594350699559,\"createBy\":\"admin\",\"updateBy\":\"admin\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.85 Safari/537.36 Edg/84.0.522.35",
+    time: "6.246ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-10T03:11:39.566Z"),
+    updateTime: ISODate("2020-07-10T03:11:39.566Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f07dc7087ba7035b0aa2012"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/dict",
+    summary: "字典管理 - 创建数据 ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"type\":\"request_method\",\"parentId\":\"5f07dc4287ba7035b0aa2009\",\"label\":\"DELETE\",\"value\":\"DELETE\",\"remark\":\"\",\"createTime\":1594350704863,\"updateTime\":1594350704863,\"createBy\":\"admin\",\"updateBy\":\"admin\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.85 Safari/537.36 Edg/84.0.522.35",
+    time: "3.398ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-10T03:11:44.867Z"),
+    updateTime: ISODate("2020-07-10T03:11:44.867Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f07dc7d87ba7035b0aa2013"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/dict/5f07dc5387ba7035b0aa200b",
+    summary: "字典管理 - 更新数据/:id ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"type\":\"request_method\",\"parentId\":\"5f07dc4287ba7035b0aa2009\",\"label\":\"GET\",\"value\":\"GET\",\"remark\":\"\",\"sort\":0,\"_id\":\"5f07dc5387ba7035b0aa200b\",\"createTime\":\"2020-07-10 11:11:15\",\"updateTime\":1594350717034,\"createBy\":\"admin\",\"updateBy\":\"admin\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.85 Safari/537.36 Edg/84.0.522.35",
+    time: "15.622ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-10T03:11:57.05Z"),
+    updateTime: ISODate("2020-07-10T03:11:57.05Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f07dc8587ba7035b0aa2014"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/dict/5f07dc6387ba7035b0aa200d",
+    summary: "字典管理 - 更新数据/:id ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"type\":\"request_method\",\"parentId\":\"5f07dc4287ba7035b0aa2009\",\"label\":\"POST\",\"value\":\"POST\",\"remark\":\"\",\"sort\":1,\"_id\":\"5f07dc6387ba7035b0aa200d\",\"createTime\":\"2020-07-10 11:11:31\",\"updateTime\":1594350725043,\"createBy\":\"admin\",\"updateBy\":\"admin\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.85 Safari/537.36 Edg/84.0.522.35",
+    time: "2.889ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-10T03:12:05.046Z"),
+    updateTime: ISODate("2020-07-10T03:12:05.046Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f07dc8b87ba7035b0aa2015"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/dict/5f07dc6b87ba7035b0aa200f",
+    summary: "字典管理 - 更新数据/:id ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"type\":\"request_method\",\"parentId\":\"5f07dc4287ba7035b0aa2009\",\"label\":\"PUT\",\"value\":\"PUT\",\"remark\":\"\",\"sort\":2,\"_id\":\"5f07dc6b87ba7035b0aa200f\",\"createTime\":\"2020-07-10 11:11:39\",\"updateTime\":1594350731624,\"createBy\":\"admin\",\"updateBy\":\"admin\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.85 Safari/537.36 Edg/84.0.522.35",
+    time: "2.797ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-10T03:12:11.628Z"),
+    updateTime: ISODate("2020-07-10T03:12:11.628Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f07dc9087ba7035b0aa2016"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/dict/5f07dc7087ba7035b0aa2011",
+    summary: "字典管理 - 更新数据/:id ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"type\":\"request_method\",\"parentId\":\"5f07dc4287ba7035b0aa2009\",\"label\":\"DELETE\",\"value\":\"DELETE\",\"remark\":\"\",\"sort\":3,\"_id\":\"5f07dc7087ba7035b0aa2011\",\"createTime\":\"2020-07-10 11:11:44\",\"updateTime\":1594350736011,\"createBy\":\"admin\",\"updateBy\":\"admin\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.85 Safari/537.36 Edg/84.0.522.35",
+    time: "3.232ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-10T03:12:16.014Z"),
+    updateTime: ISODate("2020-07-10T03:12:16.014Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f081be8714b531d64f0bbe4"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/account/login",
+    summary: "账户 - 用户登录 ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"captcha\":\"kaer\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.85 Safari/537.36 Edg/84.0.522.35",
+    time: "95.853ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-07-10T07:42:32.282Z"),
+    updateTime: ISODate("2020-07-10T07:42:32.282Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f081c68714b531d64f0bbe5"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d3fe5ae9ff3c659bcc427f1",
+    summary: "用户管理 - 更新数据/:id ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"username\":\"Lyoko\",\"deptId\":\"5d2ecffb14bc4247ac00674e\",\"roleIds\":[\"5d2d882a14bc421d10003a5b\",\"5d2d884d14bc421d10003a5c\"],\"realName\":\"LIU\",\"gender\":\"1\",\"email\":\"\",\"mobile\":\"\",\"status\":\"1\",\"_id\":\"5d3fe5ae9ff3c659bcc427f1\",\"__v\":0,\"createTime\":\"2019-07-30 14:37:34\",\"updateBy\":\"admin\",\"updateTime\":1594367080897,\"roles\":[{\"menuIds\":[\"5d2d6d6814bc421d10003a55\",\"5d2e832314bc4247ac006727\",\"5d2e832314bc4247ac006728\",\"5d2e832314bc4247ac006729\",\"5d2e832314bc4247ac00672a\",\"5d2e832314bc4247ac00672b\",\"5d2e832314bc4247ac006732\",\"5d2e832314bc4247ac006733\",\"5d2e832314bc4247ac006734\",\"5d2e832314bc4247ac006735\",\"5d2e832314bc4247ac006736\",\"5d2e832314bc4247ac00672c\",\"5d2e832314bc4247ac00672d\",\"5d2e832314bc4247ac00672e\",\"5d2e832314bc4247ac00672f\",\"5d2e832314bc4247ac006730\",\"5d2e832314bc4247ac006731\",\"5d2e832314bc4247ac006737\",\"5d2e832314bc4247ac006738\",\"5d2e832314bc4247ac006739\",\"5d2e832314bc4247ac00673a\",\"5d2e832314bc4247ac00673b\",\"5d2e832314bc4247ac00673c\",\"5d2e832314bc4247ac00673d\",\"5d2e832314bc4247ac00673e\",\"5d2e832314bc4247ac00673f\",\"5d2e832314bc4247ac006740\",\"5ec5fcd99cb30106ec3120c8\",\"5d2e832314bc4247ac006717\",\"5d2e832314bc4247ac006718\",\"5d2e832314bc4247ac006719\",\"5d2e832314bc4247ac00671a\",\"5d2e832314bc4247ac00671b\",\"5d2e832314bc4247ac00671c\",\"5d2e832314bc4247ac00671d\",\"5d2e832314bc4247ac00671e\",\"5d2e832314bc4247ac00671f\",\"5d2e832314bc4247ac006720\",\"5d2e832314bc4247ac006721\",\"5d2e832314bc4247ac006722\",\"5d2e832314bc4247ac006723\",\"5d2e832314bc4247ac006724\",\"5d2e832314bc4247ac006725\",\"5d2e832314bc4247ac006726\",\"5d2d6dc314bc421d10003a59\",\"5ec745f7114cdf382c1ba493\",\"5d2e832314bc4247ac006747\",\"5d2e832314bc4247ac006748\",\"5d2e832314bc4247ac006749\",\"5ea6838635897525e4e89605\",\"5d2e832314bc4247ac00674a\"],\"_id\":\"5d2d882a14bc421d10003a5b\",\"name\":\"管理员\",\"remark\":\"\",\"createTime\":\"2018-12-29 06:22:46\",\"code\":\"ROLE_ADMIN\",\"updateBy\":\"admin\",\"updateTime\":\"2020-05-25 17:20:40\"}],\"dept\":{\"_id\":\"5d2ecffb14bc4247ac00674e\",\"name\":\"集团总部\",\"sort\":0,\"createTime\":\"2018-12-29 06:20:17\",\"parentId\":\"0\",\"updateBy\":\"admin\",\"updateTime\":\"2020-07-08 14:57:46\"}}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.85 Safari/537.36 Edg/84.0.522.35",
+    time: "9.743ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-10T07:44:40.906Z"),
+    updateTime: ISODate("2020-07-10T07:44:40.906Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f081f39714b531d64f0bbe7"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/menu",
+    summary: "菜单管理 - 创建数据 ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"parentId\":\"0\",\"title\":\"监狱医院\",\"type\":\"0\",\"icon\":\"eicon-right-square\",\"path\":\"/hospital\",\"component\":\"Iframe\",\"query\":\"\",\"name\":\"hospital\",\"url\":\"http://192.168.1.8:9999/\",\"blank\":false,\"sort\":10,\"permissions\":\"\",\"cache\":true,\"createTime\":1594367801482,\"updateTime\":1594367801482,\"createBy\":\"admin\",\"updateBy\":\"admin\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.85 Safari/537.36 Edg/84.0.522.35",
+    time: "5.422ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-10T07:56:41.488Z"),
+    updateTime: ISODate("2020-07-10T07:56:41.488Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f081f49714b531d64f0bbe8"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/role/5d2d882a14bc421d10003a5b",
+    summary: "角色管理 - 更新数据/:id ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"_id\":\"5d2d882a14bc421d10003a5b\",\"menuIds\":[\"5d2d6d6814bc421d10003a55\",\"5d2e832314bc4247ac006727\",\"5d2e832314bc4247ac006728\",\"5d2e832314bc4247ac006729\",\"5d2e832314bc4247ac00672a\",\"5d2e832314bc4247ac00672b\",\"5d2e832314bc4247ac006732\",\"5d2e832314bc4247ac006733\",\"5d2e832314bc4247ac006734\",\"5d2e832314bc4247ac006735\",\"5d2e832314bc4247ac006736\",\"5d2e832314bc4247ac00672c\",\"5d2e832314bc4247ac00672d\",\"5d2e832314bc4247ac00672e\",\"5d2e832314bc4247ac00672f\",\"5d2e832314bc4247ac006730\",\"5d2e832314bc4247ac006731\",\"5d2e832314bc4247ac006740\",\"5d2e832314bc4247ac006737\",\"5d2e832314bc4247ac006738\",\"5d2e832314bc4247ac006739\",\"5d2e832314bc4247ac00673a\",\"5d2e832314bc4247ac00673b\",\"5d2e832314bc4247ac00673c\",\"5d2e832314bc4247ac00673d\",\"5d2e832314bc4247ac00673e\",\"5d2e832314bc4247ac00673f\",\"5ec5fcd99cb30106ec3120c8\",\"5d2e832314bc4247ac006717\",\"5d2e832314bc4247ac006718\",\"5d2e832314bc4247ac006719\",\"5d2e832314bc4247ac00671a\",\"5d2e832314bc4247ac00671b\",\"5d2e832314bc4247ac00671c\",\"5d2e832314bc4247ac00671d\",\"5d2e832314bc4247ac00671e\",\"5d2e832314bc4247ac00671f\",\"5d2e832314bc4247ac006720\",\"5d2e832314bc4247ac006721\",\"5d2e832314bc4247ac006722\",\"5d2e832314bc4247ac006723\",\"5d2e832314bc4247ac006724\",\"5d2e832314bc4247ac006725\",\"5d2e832314bc4247ac006726\",\"5d2d6dc314bc421d10003a59\",\"5ec745f7114cdf382c1ba493\",\"5d2e832314bc4247ac006747\",\"5d2e832314bc4247ac006748\",\"5d2e832314bc4247ac006749\",\"5ea6838635897525e4e89605\",\"5d2e832314bc4247ac00674a\",\"5f081f39714b531d64f0bbe6\"],\"updateTime\":1594367817771,\"updateBy\":\"admin\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.85 Safari/537.36 Edg/84.0.522.35",
+    time: "3.296ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-10T07:56:57.775Z"),
+    updateTime: ISODate("2020-07-10T07:56:57.775Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f081f60714b531d64f0bbe9"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/menu/5f081f39714b531d64f0bbe6",
+    summary: "菜单管理 - 更新数据/:id ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"parentId\":\"5d2d6d6814bc421d10003a55\",\"title\":\"监狱医院\",\"type\":\"0\",\"icon\":\"eicon-right-square\",\"path\":\"/hospital\",\"component\":\"Iframe\",\"query\":\"\",\"name\":\"hospital\",\"url\":\"http://192.168.1.8:9999/\",\"blank\":false,\"sort\":10,\"permissions\":\"\",\"cache\":true,\"_id\":\"5f081f39714b531d64f0bbe6\",\"createTime\":\"2020-07-10 15:56:41\",\"updateTime\":1594367840604,\"createBy\":\"admin\",\"updateBy\":\"admin\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.85 Safari/537.36 Edg/84.0.522.35",
+    time: "3.592ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-10T07:57:20.608Z"),
+    updateTime: ISODate("2020-07-10T07:57:20.608Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f081fff714b531d64f0bbea"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/menu/5f081f39714b531d64f0bbe6",
+    summary: "菜单管理 - 更新数据/:id ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"parentId\":\"5d2d6d6814bc421d10003a55\",\"title\":\"监狱医院\",\"type\":\"0\",\"icon\":\"eicon-right-square\",\"path\":\"/hospital\",\"component\":\"Iframe\",\"query\":\"\",\"name\":\"hospital\",\"url\":\"http://127.0.0.1:9999/\",\"blank\":false,\"sort\":10,\"permissions\":\"\",\"cache\":true,\"_id\":\"5f081f39714b531d64f0bbe6\",\"createTime\":\"2020-07-10 15:56:41\",\"updateTime\":1594367999814,\"createBy\":\"admin\",\"updateBy\":\"admin\",\"__v\":0}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.85 Safari/537.36 Edg/84.0.522.35",
+    time: "7.071ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-10T07:59:59.822Z"),
+    updateTime: ISODate("2020-07-10T07:59:59.822Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f08200f714b531d64f0bbeb"),
+    status: NumberInt("1"),
+    method: "DELETE",
+    url: "/api/menu/5f081f39714b531d64f0bbe6",
+    summary: "菜单管理 - 删除数据/:id ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.85 Safari/537.36 Edg/84.0.522.35",
+    time: "13.109ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-10T08:00:15.47Z"),
+    updateTime: ISODate("2020-07-10T08:00:15.47Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f0823d162a3c3094822dfdf"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/account/login",
+    summary: "账户 - 用户登录 ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"captcha\":\"dwdk\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko",
+    time: "84.909ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-07-10T08:16:17.603Z"),
+    updateTime: ISODate("2020-07-10T08:16:17.603Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f0835a862a3c3094822dfe0"),
+    status: NumberInt("1"),
+    method: "PUT",
+    url: "/api/user/5d3fe5ae9ff3c659bcc427f1",
+    summary: "用户管理 - 更新数据/:id ",
+    error: "",
+    ip: "192.168.1.8",
+    params: "{\"username\":\"Lyoko\",\"deptId\":\"5d2ecffb14bc4247ac00674e\",\"roleIds\":[\"5d2d882a14bc421d10003a5b\"],\"realName\":\"LIU\",\"gender\":\"1\",\"email\":\"\",\"mobile\":\"\",\"status\":\"1\",\"_id\":\"5d3fe5ae9ff3c659bcc427f1\",\"__v\":0,\"createTime\":\"2019-07-30 14:37:34\",\"updateBy\":\"admin\",\"updateTime\":1594373544418,\"roles\":[{\"menuIds\":[\"5d2d6d6814bc421d10003a55\",\"5d2e832314bc4247ac006727\",\"5d2e832314bc4247ac006728\",\"5d2e832314bc4247ac006729\",\"5d2e832314bc4247ac00672a\",\"5d2e832314bc4247ac00672b\",\"5d2e832314bc4247ac006732\",\"5d2e832314bc4247ac006733\",\"5d2e832314bc4247ac006734\",\"5d2e832314bc4247ac006735\",\"5d2e832314bc4247ac006736\",\"5d2e832314bc4247ac00672c\",\"5d2e832314bc4247ac00672d\",\"5d2e832314bc4247ac00672e\",\"5d2e832314bc4247ac00672f\",\"5d2e832314bc4247ac006730\",\"5d2e832314bc4247ac006731\",\"5d2e832314bc4247ac006740\",\"5d2e832314bc4247ac006737\",\"5d2e832314bc4247ac006738\",\"5d2e832314bc4247ac006739\",\"5d2e832314bc4247ac00673a\",\"5d2e832314bc4247ac00673b\",\"5d2e832314bc4247ac00673c\",\"5d2e832314bc4247ac00673d\",\"5d2e832314bc4247ac00673e\",\"5d2e832314bc4247ac00673f\",\"5ec5fcd99cb30106ec3120c8\",\"5d2e832314bc4247ac006717\",\"5d2e832314bc4247ac006718\",\"5d2e832314bc4247ac006719\",\"5d2e832314bc4247ac00671a\",\"5d2e832314bc4247ac00671b\",\"5d2e832314bc4247ac00671c\",\"5d2e832314bc4247ac00671d\",\"5d2e832314bc4247ac00671e\",\"5d2e832314bc4247ac00671f\",\"5d2e832314bc4247ac006720\",\"5d2e832314bc4247ac006721\",\"5d2e832314bc4247ac006722\",\"5d2e832314bc4247ac006723\",\"5d2e832314bc4247ac006724\",\"5d2e832314bc4247ac006725\",\"5d2e832314bc4247ac006726\",\"5d2d6dc314bc421d10003a59\",\"5ec745f7114cdf382c1ba493\",\"5d2e832314bc4247ac006747\",\"5d2e832314bc4247ac006748\",\"5d2e832314bc4247ac006749\",\"5ea6838635897525e4e89605\",\"5d2e832314bc4247ac00674a\",\"5f081f39714b531d64f0bbe6\"],\"_id\":\"5d2d882a14bc421d10003a5b\",\"name\":\"管理员\",\"remark\":\"\",\"createTime\":\"2018-12-29 06:22:46\",\"code\":\"ROLE_ADMIN\",\"updateBy\":\"admin\",\"updateTime\":\"2020-07-10 15:56:57\"},{\"menuIds\":[],\"_id\":\"5d2d884d14bc421d10003a5c\",\"name\":\"普通用户\",\"remark\":\"\",\"createTime\":\"2018-12-29 06:37:12\",\"code\":\"ROLE_USER\",\"updateTime\":\"2020-07-10 16:35:34\"}],\"dept\":{\"_id\":\"5d2ecffb14bc4247ac00674e\",\"name\":\"集团总部\",\"sort\":0,\"createTime\":\"2018-12-29 06:20:17\",\"parentId\":\"0\",\"updateBy\":\"admin\",\"updateTime\":\"2020-07-08 14:57:46\"}}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.85 Safari/537.36 Edg/84.0.522.35",
+    time: "8.726ms",
+    username: "admin",
+    type: "action",
+    createTime: ISODate("2020-07-10T09:32:24.426Z"),
+    updateTime: ISODate("2020-07-10T09:32:24.426Z"),
+    createBy: "admin",
+    updateBy: "admin",
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f0d19d2840f2a1ff88f0673"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/account/login",
+    summary: "账户 - 用户登录 ",
+    error: "",
+    ip: "192.168.1.12",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"captcha\":\"jgpq\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.85 Safari/537.36 Edg/84.0.522.35",
+    time: "137.095ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-07-14T02:34:58.359Z"),
+    updateTime: ISODate("2020-07-14T02:34:58.359Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f0d2d94840f2a1ff88f0674"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/account/login",
+    summary: "账户 - 用户登录 ",
+    error: "",
+    ip: "192.168.1.12",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"captcha\":\"vvoq\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.85 Safari/537.36 Edg/84.0.522.35",
+    time: "74.232ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-07-14T03:59:16.324Z"),
+    updateTime: ISODate("2020-07-14T03:59:16.324Z"),
+    __v: NumberInt("0")
+} ]);
+db.getCollection("logs").insert([ {
+    _id: ObjectId("5f0d6b1ec55ea4093849a87a"),
+    status: NumberInt("1"),
+    method: "POST",
+    url: "/api/account/login",
+    summary: "账户 - 用户登录 ",
+    error: "",
+    ip: "192.168.1.12",
+    params: "{\"username\":\"admin\",\"password\":\"123456\",\"captcha\":\"kyzi\"}",
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.85 Safari/537.36 Edg/84.0.522.35",
+    time: "86.035ms",
+    type: "login",
+    username: "admin",
+    createTime: ISODate("2020-07-14T08:21:50.459Z"),
+    updateTime: ISODate("2020-07-14T08:21:50.459Z"),
+    __v: NumberInt("0")
+} ]);
 
 // ----------------------------
 // Collection structure for menus
@@ -40677,6 +41135,7 @@ db.getCollection("roles").insert([ {
         "5d2e832314bc4247ac00672f",
         "5d2e832314bc4247ac006730",
         "5d2e832314bc4247ac006731",
+        "5d2e832314bc4247ac006740",
         "5d2e832314bc4247ac006737",
         "5d2e832314bc4247ac006738",
         "5d2e832314bc4247ac006739",
@@ -40686,7 +41145,6 @@ db.getCollection("roles").insert([ {
         "5d2e832314bc4247ac00673d",
         "5d2e832314bc4247ac00673e",
         "5d2e832314bc4247ac00673f",
-        "5d2e832314bc4247ac006740",
         "5ec5fcd99cb30106ec3120c8",
         "5d2e832314bc4247ac006717",
         "5d2e832314bc4247ac006718",
@@ -40710,11 +41168,12 @@ db.getCollection("roles").insert([ {
         "5d2e832314bc4247ac006748",
         "5d2e832314bc4247ac006749",
         "5ea6838635897525e4e89605",
-        "5d2e832314bc4247ac00674a"
+        "5d2e832314bc4247ac00674a",
+        "5f081f39714b531d64f0bbe6"
     ],
     code: "ROLE_ADMIN",
     updateBy: "admin",
-    updateTime: ISODate("2020-05-25T09:20:40.063Z")
+    updateTime: ISODate("2020-07-10T07:56:57.771Z")
 } ]);
 db.getCollection("roles").insert([ {
     _id: ObjectId("5d2d884d14bc421d10003a5c"),
@@ -40795,5 +41254,5 @@ db.getCollection("users").insert([ {
         "5d2d882a14bc421d10003a5b"
     ],
     updateBy: "admin",
-    updateTime: ISODate("2020-05-25T09:18:35.751Z")
+    updateTime: ISODate("2020-07-10T09:32:24.418Z")
 } ]);
