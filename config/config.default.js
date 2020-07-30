@@ -25,7 +25,7 @@ module.exports = appInfo => {
   };
 
   config.security = {
-    csrf: {
+    xframe: {
       enable: false
     },
     domainWhiteList: []
@@ -98,7 +98,7 @@ module.exports = appInfo => {
     maxFiles: 1000,
     maxAge: 31536000
   };
-  
+
   config.redis = {
     client: {
       port: 6379, // Redis port
