@@ -35,8 +35,9 @@ class DictService extends Service {
 
   //根据类型获取字典项
   async type(type) {
-    const data = await this.ctx._find("Dict", { type, parentId: { $ne: "0" } });
-    return { data };
+    const data = await this.ctx._find("Dict", { type });
+    const tree = this.ctx.helper.buildTree(data);
+    return { data: (tree[0] && tree[0].children) || [] };
   }
 
   // 获取字典树

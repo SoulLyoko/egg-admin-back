@@ -84,7 +84,7 @@ module.exports = {
     return list
       .filter(item => item.parentId === parentId)
       .map(parent => {
-        let children = [];
+        let children = null;
         const hasChildren = list.some(item => String(item.parentId) === String(parent._id));
         if (hasChildren) {
           children = this.buildTree(list, String(parent._id));
