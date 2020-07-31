@@ -12,7 +12,7 @@ class AccountController extends Controller {
       password: { type: "string", required: true, allowEmpty: false, min: 4 }
     };
     this.resetPswRule = {
-      password: { type: "password", required: true, allowEmpty: false, min: 4 },
+      newPassword: { type: "password", required: true, allowEmpty: false, min: 4 },
       oldPassword: { type: "password", required: true, allowEmpty: false, min: 4 }
     };
   }

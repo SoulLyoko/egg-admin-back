@@ -33,20 +33,20 @@ class AccountService extends Service {
       this.ctx.throw(400, "密码错误");
     }
     // 生成Token令牌
-    return { token: await this.getToken(user), info: user };
+    return { token: await this.getToken(user), userInfo: user };
   }
 
   //修改密码
-  async resetPsw(values) {
+  async resetPsw(payload) {
     // ctx.state.user 可以提取到JWT编码的data
     const _id = this.ctx.state.user.data._id;
     const user = await this.ctx._findOne("User", { _id });
-    let verifyPsw = await this.ctx.compare(values.oldPassword, user.password);
+    let verifyPsw = await this.ctx.compare(payload.oldPassword, user.password);
     if (!verifyPsw) {
       this.ctx.throw(400, "原密码错误");
     } else {
       // 重置密码
-      const password = await this.ctx.genHash(values.password);
+      const password = await this.ctx.genHash(payload.newPassword);
       return this.ctx._update("User", _id, { password });
     }
   }
@@ -63,7 +63,7 @@ class AccountService extends Service {
     return this.ctx.app.jwt.sign(
       {
         data,
-        exp: Math.floor(Date.now() / 1000) + 60 * 60 * 24
+        exp: Math.floor(Date.now() / 1000) + 60 * 60 * 24 //秒
       },
       this.ctx.app.config.jwt.secret
     );
